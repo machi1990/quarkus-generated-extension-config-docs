@@ -1,0 +1,27 @@
+
+`quarkus.application.name`:: The name of the application.
+If not set, defaults to the name of the project.
+
+type: `java.lang.String`; The configuration is visible at build time only. 
+
+
+`quarkus.application.version`:: The version of the application.
+If not set, defaults to the version of the project
+
+type: `java.lang.String`; The configuration is visible at build time only. 
+
+
+`quarkus.jni.enable`:: Enable JNI support.
+
+type: `boolean`; default value: `false`. The configuration is visible at build time only. 
+
+
+`quarkus.jni.library-paths`:: Paths of library to load.
+
+type: `java.lang.String`; The configuration is visible at build time only. 
+
+
+`quarkus.ssl.native`:: Enable native SSL support.
+
+type: `java.lang.Boolean`; The configuration is visible at build time only. 
+
