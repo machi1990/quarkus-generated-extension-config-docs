@@ -1,5 +1,5 @@
-*
-
-!src/main/asciidoc
-!.gitignore
+target
+src/main/dot
+*.sh
+*.xml
 

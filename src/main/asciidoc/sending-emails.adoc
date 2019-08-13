@@ -63,7 +63,7 @@ quarkus.mailer.password=....
 
 The following table lists the properties that can be configured:
 
-include::generated/mailer-impl.adoc[]
+include::generated/quarkus-mailer.adoc[]
 
 
 == Sending simple emails
