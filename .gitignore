@@ -2,4 +2,4 @@ target
 src/main/dot
 *.sh
 *.xml
-
+src/main/asciidoc/generated/io.quarkus*.adoc
