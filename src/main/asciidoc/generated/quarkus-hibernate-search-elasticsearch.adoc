@@ -1,5 +1,5 @@
 
-`quarkus.hibernate-search.default-backend`:: null
+`quarkus.hibernate-search.default-backend`:: If not using the default backend configuration, the name of the default backend that is part of the `additional-backends`.
 
 type: `java.lang.String`; The configuration is visible at build and runtime time, read only at runtime. 
 
@@ -14,50 +14,46 @@ type: `java.lang.Class<?>`; The configuration is visible at build and runtime ti
 type: `java.lang.Class<?>`; The configuration is visible at build and runtime time, read only at runtime. 
 
 
-`quarkus.hibernate-search.elasticsearch.backends."<additional-backends>".version`:: The version of Elasticsearch used in the cluster.
-
-As the schema is generated without a connection to the server, this item is mandatory.
-
-It doesn't have to be the exact version (it can be 7 or 7.1 for instance) but it has to be sufficiently precise to
-choose a model dialect (the one used to generate the schema) compatible with the protocol dialect (the one used to
-communicate with Elasticsearch).
-
-There's no rule of thumb here as it depends on the schema incompatibilities introduced by Elasticsearch versions. In
-any case, if there is a problem, you will have an error when Hibernate Search tries to connect to the cluster.
+`quarkus.hibernate-search.elasticsearch.backends."<additional-backends>".version`:: The version of Elasticsearch used in the cluster. 
+ As the schema is generated without a connection to the server, this item is mandatory. 
+ It doesn't have to be the exact version (it can be 7 or 7.1 for instance) but it has to be sufficiently precise to choose a model dialect (the one used to generate the schema) compatible with the protocol dialect (the one used to communicate with Elasticsearch). 
+ There's no rule of thumb here as it depends on the schema incompatibilities introduced by Elasticsearch versions. In any case, if there is a problem, you will have an error when Hibernate Search tries to connect to the cluster.
 
 type: `org.hibernate.search.backend.elasticsearch.cfg.ElasticsearchVersion`; The configuration is visible at build and runtime time, read only at runtime. 
 
 
-`quarkus.hibernate-search.elasticsearch.version`:: The version of Elasticsearch used in the cluster.
-
-As the schema is generated without a connection to the server, this item is mandatory.
-
-It doesn't have to be the exact version (it can be 7 or 7.1 for instance) but it has to be sufficiently precise to
-choose a model dialect (the one used to generate the schema) compatible with the protocol dialect (the one used to
-communicate with Elasticsearch).
-
-There's no rule of thumb here as it depends on the schema incompatibilities introduced by Elasticsearch versions. In
-any case, if there is a problem, you will have an error when Hibernate Search tries to connect to the cluster.
+`quarkus.hibernate-search.elasticsearch.version`:: The version of Elasticsearch used in the cluster. 
+ As the schema is generated without a connection to the server, this item is mandatory. 
+ It doesn't have to be the exact version (it can be 7 or 7.1 for instance) but it has to be sufficiently precise to choose a model dialect (the one used to generate the schema) compatible with the protocol dialect (the one used to communicate with Elasticsearch). 
+ There's no rule of thumb here as it depends on the schema incompatibilities introduced by Elasticsearch versions. In any case, if there is a problem, you will have an error when Hibernate Search tries to connect to the cluster.
 
 type: `org.hibernate.search.backend.elasticsearch.cfg.ElasticsearchVersion`; The configuration is visible at build and runtime time, read only at runtime. 
 
 
-`quarkus.hibernate-search.elasticsearch.automatic-indexing.enable-dirty-check`:: null
+`quarkus.hibernate-search.elasticsearch.automatic-indexing.enable-dirty-check`:: Whether to check if dirty properties are relevant to indexing before actually reindexing an entity. 
+ When enabled, re-indexing of an entity is skipped if the only changes are on properties that are not used when indexing.
 
 type: `java.lang.Boolean`; The configuration is overridable at runtime. 
 
 
-`quarkus.hibernate-search.elasticsearch.automatic-indexing.synchronization-strategy`:: null
+`quarkus.hibernate-search.elasticsearch.automatic-indexing.synchronization-strategy`:: The synchronization strategy to use when indexing automatically. 
+ Defines the status for which you wait before considering the operation completed by Hibernate Search. 
+ Can be either one of "queued", "committed" or "searchable". 
+ Using "searchable" is recommend in unit tests.
 
 type: `org.hibernate.search.mapper.orm.cfg.HibernateOrmAutomaticIndexingSynchronizationStrategyName`; The configuration is overridable at runtime. 
 
 
-`quarkus.hibernate-search.elasticsearch.backends."<additional-backends>".automatic-indexing.enable-dirty-check`:: null
+`quarkus.hibernate-search.elasticsearch.backends."<additional-backends>".automatic-indexing.enable-dirty-check`:: Whether to check if dirty properties are relevant to indexing before actually reindexing an entity. 
+ When enabled, re-indexing of an entity is skipped if the only changes are on properties that are not used when indexing.
 
 type: `java.lang.Boolean`; The configuration is overridable at runtime. 
 
 
-`quarkus.hibernate-search.elasticsearch.backends."<additional-backends>".automatic-indexing.synchronization-strategy`:: null
+`quarkus.hibernate-search.elasticsearch.backends."<additional-backends>".automatic-indexing.synchronization-strategy`:: The synchronization strategy to use when indexing automatically. 
+ Defines the status for which you wait before considering the operation completed by Hibernate Search. 
+ Can be either one of "queued", "committed" or "searchable". 
+ Using "searchable" is recommend in unit tests.
 
 type: `org.hibernate.search.mapper.orm.cfg.HibernateOrmAutomaticIndexingSynchronizationStrategyName`; The configuration is overridable at runtime. 
 
@@ -67,7 +63,7 @@ type: `org.hibernate.search.mapper.orm.cfg.HibernateOrmAutomaticIndexingSynchron
 type: `java.time.Duration`. _See duration note below_; The configuration is overridable at runtime. 
 
 
-`quarkus.hibernate-search.elasticsearch.backends."<additional-backends>".discovery.default-scheme`:: null
+`quarkus.hibernate-search.elasticsearch.backends."<additional-backends>".discovery.default-scheme`:: The scheme that should be used for the new nodes discovered.
 
 type: `java.lang.String`; The configuration is overridable at runtime. 
 
@@ -77,7 +73,7 @@ type: `java.lang.String`; The configuration is overridable at runtime.
 type: `java.lang.Boolean`; The configuration is overridable at runtime. 
 
 
-`quarkus.hibernate-search.elasticsearch.backends."<additional-backends>".discovery.refresh-interval`:: null
+`quarkus.hibernate-search.elasticsearch.backends."<additional-backends>".discovery.refresh-interval`:: Refresh interval of the node list.
 
 type: `java.time.Duration`. _See duration note below_; The configuration is overridable at runtime. 
 
@@ -87,9 +83,8 @@ type: `java.time.Duration`. _See duration note below_; The configuration is over
 type: `java.lang.String`; The configuration is overridable at runtime. 
 
 
-`quarkus.hibernate-search.elasticsearch.backends."<additional-backends>".index-defaults.lifecycle.required-status`:: The minimal cluster status required.
-
-Must be one of: green, yellow, red.
+`quarkus.hibernate-search.elasticsearch.backends."<additional-backends>".index-defaults.lifecycle.required-status`:: The minimal cluster status required. 
+ Must be one of: green, yellow, red.
 
 type: `org.hibernate.search.backend.elasticsearch.cfg.ElasticsearchIndexStatus`; The configuration is overridable at runtime. 
 
@@ -99,9 +94,8 @@ type: `org.hibernate.search.backend.elasticsearch.cfg.ElasticsearchIndexStatus`;
 type: `java.time.Duration`. _See duration note below_; The configuration is overridable at runtime. 
 
 
-`quarkus.hibernate-search.elasticsearch.backends."<additional-backends>".index-defaults.lifecycle.strategy`:: The strategy used for index lifecycle.
-
-Must be one of: none, validate, update, create, drop-and-create or drop-and-create-and-drop.
+`quarkus.hibernate-search.elasticsearch.backends."<additional-backends>".index-defaults.lifecycle.strategy`:: The strategy used for index lifecycle. 
+ Must be one of: none, validate, update, create, drop-and-create or drop-and-create-and-drop.
 
 type: `org.hibernate.search.backend.elasticsearch.cfg.ElasticsearchIndexLifecycleStrategyName`; The configuration is overridable at runtime. 
 
@@ -111,9 +105,8 @@ type: `org.hibernate.search.backend.elasticsearch.cfg.ElasticsearchIndexLifecycl
 type: `java.lang.Boolean`; The configuration is overridable at runtime. 
 
 
-`quarkus.hibernate-search.elasticsearch.backends."<additional-backends>".indexes."<indexes>".lifecycle.required-status`:: The minimal cluster status required.
-
-Must be one of: green, yellow, red.
+`quarkus.hibernate-search.elasticsearch.backends."<additional-backends>".indexes."<indexes>".lifecycle.required-status`:: The minimal cluster status required. 
+ Must be one of: green, yellow, red.
 
 type: `org.hibernate.search.backend.elasticsearch.cfg.ElasticsearchIndexStatus`; The configuration is overridable at runtime. 
 
@@ -123,9 +116,8 @@ type: `org.hibernate.search.backend.elasticsearch.cfg.ElasticsearchIndexStatus`;
 type: `java.time.Duration`. _See duration note below_; The configuration is overridable at runtime. 
 
 
-`quarkus.hibernate-search.elasticsearch.backends."<additional-backends>".indexes."<indexes>".lifecycle.strategy`:: The strategy used for index lifecycle.
-
-Must be one of: none, validate, update, create, drop-and-create or drop-and-create-and-drop.
+`quarkus.hibernate-search.elasticsearch.backends."<additional-backends>".indexes."<indexes>".lifecycle.strategy`:: The strategy used for index lifecycle. 
+ Must be one of: none, validate, update, create, drop-and-create or drop-and-create-and-drop.
 
 type: `org.hibernate.search.backend.elasticsearch.cfg.ElasticsearchIndexLifecycleStrategyName`; The configuration is overridable at runtime. 
 
@@ -160,7 +152,7 @@ type: `java.lang.String`; The configuration is overridable at runtime.
 type: `java.time.Duration`. _See duration note below_; The configuration is overridable at runtime. 
 
 
-`quarkus.hibernate-search.elasticsearch.discovery.default-scheme`:: null
+`quarkus.hibernate-search.elasticsearch.discovery.default-scheme`:: The scheme that should be used for the new nodes discovered.
 
 type: `java.lang.String`; The configuration is overridable at runtime. 
 
@@ -170,7 +162,7 @@ type: `java.lang.String`; The configuration is overridable at runtime.
 type: `java.lang.Boolean`; The configuration is overridable at runtime. 
 
 
-`quarkus.hibernate-search.elasticsearch.discovery.refresh-interval`:: null
+`quarkus.hibernate-search.elasticsearch.discovery.refresh-interval`:: Refresh interval of the node list.
 
 type: `java.time.Duration`. _See duration note below_; The configuration is overridable at runtime. 
 
@@ -180,9 +172,8 @@ type: `java.time.Duration`. _See duration note below_; The configuration is over
 type: `java.lang.String`; The configuration is overridable at runtime. 
 
 
-`quarkus.hibernate-search.elasticsearch.index-defaults.lifecycle.required-status`:: The minimal cluster status required.
-
-Must be one of: green, yellow, red.
+`quarkus.hibernate-search.elasticsearch.index-defaults.lifecycle.required-status`:: The minimal cluster status required. 
+ Must be one of: green, yellow, red.
 
 type: `org.hibernate.search.backend.elasticsearch.cfg.ElasticsearchIndexStatus`; The configuration is overridable at runtime. 
 
@@ -192,9 +183,8 @@ type: `org.hibernate.search.backend.elasticsearch.cfg.ElasticsearchIndexStatus`;
 type: `java.time.Duration`. _See duration note below_; The configuration is overridable at runtime. 
 
 
-`quarkus.hibernate-search.elasticsearch.index-defaults.lifecycle.strategy`:: The strategy used for index lifecycle.
-
-Must be one of: none, validate, update, create, drop-and-create or drop-and-create-and-drop.
+`quarkus.hibernate-search.elasticsearch.index-defaults.lifecycle.strategy`:: The strategy used for index lifecycle. 
+ Must be one of: none, validate, update, create, drop-and-create or drop-and-create-and-drop.
 
 type: `org.hibernate.search.backend.elasticsearch.cfg.ElasticsearchIndexLifecycleStrategyName`; The configuration is overridable at runtime. 
 
@@ -204,9 +194,8 @@ type: `org.hibernate.search.backend.elasticsearch.cfg.ElasticsearchIndexLifecycl
 type: `java.lang.Boolean`; The configuration is overridable at runtime. 
 
 
-`quarkus.hibernate-search.elasticsearch.indexes."<indexes>".lifecycle.required-status`:: The minimal cluster status required.
-
-Must be one of: green, yellow, red.
+`quarkus.hibernate-search.elasticsearch.indexes."<indexes>".lifecycle.required-status`:: The minimal cluster status required. 
+ Must be one of: green, yellow, red.
 
 type: `org.hibernate.search.backend.elasticsearch.cfg.ElasticsearchIndexStatus`; The configuration is overridable at runtime. 
 
@@ -216,9 +205,8 @@ type: `org.hibernate.search.backend.elasticsearch.cfg.ElasticsearchIndexStatus`;
 type: `java.time.Duration`. _See duration note below_; The configuration is overridable at runtime. 
 
 
-`quarkus.hibernate-search.elasticsearch.indexes."<indexes>".lifecycle.strategy`:: The strategy used for index lifecycle.
-
-Must be one of: none, validate, update, create, drop-and-create or drop-and-create-and-drop.
+`quarkus.hibernate-search.elasticsearch.indexes."<indexes>".lifecycle.strategy`:: The strategy used for index lifecycle. 
+ Must be one of: none, validate, update, create, drop-and-create or drop-and-create-and-drop.
 
 type: `org.hibernate.search.backend.elasticsearch.cfg.ElasticsearchIndexLifecycleStrategyName`; The configuration is overridable at runtime. 
 

@@ -84,7 +84,7 @@ type: `java.util.List<java.lang.String>`; The configuration is overridable at ru
 type: `java.lang.String`; The configuration is overridable at runtime. 
 
 
-`quarkus.rt.map-of-numbers."<map-of-numbers>".{*}`:: Map of Integer conversion with {@link ConvertWith}
+`quarkus.rt.map-of-numbers."<map-of-numbers>".{*}`:: Map of Integer conversion with `ConvertWith`
 
 type: `java.lang.Integer`; The configuration is overridable at runtime. 
 
@@ -114,27 +114,27 @@ type: `io.quarkus.extest.runtime.config.MyEnum`; The configuration is overridabl
 type: `io.quarkus.extest.runtime.config.MyEnum`; The configuration is overridable at runtime. 
 
 
-`quarkus.rt.object-boolean`:: Boolean conversion with {@link ConvertWith}
+`quarkus.rt.object-boolean`:: Boolean conversion with `ConvertWith`
 
 type: `java.lang.Boolean`; default value: `NO`. The configuration is overridable at runtime. 
 
 
-`quarkus.rt.object-integer`:: Integer conversion with {@link ConvertWith}
+`quarkus.rt.object-integer`:: Integer conversion with `ConvertWith`
 
 type: `java.lang.Integer`; default value: `zero`. The configuration is overridable at runtime. 
 
 
-`quarkus.rt.one-to-nine`:: List of Integer conversion with {@link ConvertWith}
+`quarkus.rt.one-to-nine`:: List of Integer conversion with `ConvertWith`
 
 type: `java.lang.Integer`; default value: `one`. The configuration is overridable at runtime. 
 
 
-`quarkus.rt.primitive-boolean`:: Primitive boolean conversion with {@link ConvertWith}
+`quarkus.rt.primitive-boolean`:: Primitive boolean conversion with `ConvertWith`
 
 type: `boolean`; default value: `NO`. The configuration is overridable at runtime. 
 
 
-`quarkus.rt.primitive-integer`:: Primitive int conversion with {@link ConvertWith}
+`quarkus.rt.primitive-integer`:: Primitive int conversion with `ConvertWith`
 
 type: `int`; default value: `zero`. The configuration is overridable at runtime. 
 
@@ -274,7 +274,7 @@ type: `java.lang.String`; The configuration is visible at build and runtime time
 type: `java.lang.String`; default value: `btStringOptWithDefaultValue`. The configuration is visible at build and runtime time, read only at runtime. 
 
 
-`quarkus.btrt.map-of-numbers."<map-of-numbers>".{*}`:: Map of Integer conversion with {@link ConvertWith}
+`quarkus.btrt.map-of-numbers."<map-of-numbers>".{*}`:: Map of Integer conversion with `ConvertWith`
 
 type: `java.lang.Integer`; The configuration is visible at build and runtime time, read only at runtime. 
 

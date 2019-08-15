@@ -109,8 +109,7 @@ type: `java.lang.String`; The configuration is visible at build and runtime time
 type: `java.time.Duration`. _See duration note below_; default value: `PT1S`. The configuration is visible at build and runtime time, read only at runtime. 
 
 
-`quarkus.kubernetes-client.watch-reconnect-limit`:: Maximum reconnect attempts in case of watch failure
-By default there is no limit to the number of reconnect attempts
+`quarkus.kubernetes-client.watch-reconnect-limit`:: Maximum reconnect attempts in case of watch failure By default there is no limit to the number of reconnect attempts
 
 type: `java.lang.Integer`; default value: `-1`. The configuration is visible at build and runtime time, read only at runtime. 
 

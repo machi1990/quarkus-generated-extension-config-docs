@@ -1,7 +1,6 @@
 
-`quarkus.hibernate-orm.batch-fetch-size`:: The size of a batch when using batch loading to load entities and collections.
-
--1 means batch loading is disabled.
+`quarkus.hibernate-orm.batch-fetch-size`:: The size of a batch when using batch loading to load entities and collections. 
+ -1 means batch loading is disabled.
 
 type: `int`; default value: `-1`. The configuration is visible at build time only. 
 
@@ -31,9 +30,8 @@ type: `java.lang.String`; The configuration is visible at build time only.
 type: `java.lang.String`; The configuration is visible at build time only. 
 
 
-`quarkus.hibernate-orm.database.generation`:: Control how schema generation is happening in Hibernate ORM.
-
-Same as JPA's javax.persistence.schema-generation.database.action.
+`quarkus.hibernate-orm.database.generation`:: Control how schema generation is happening in Hibernate ORM. 
+ Same as JPA's javax.persistence.schema-generation.database.action.
 
 type: `java.lang.String`; The configuration is visible at build time only. 
 
@@ -48,9 +46,8 @@ type: `boolean`; default value: `false`. The configuration is visible at build t
 type: `java.lang.String`; The configuration is visible at build time only. 
 
 
-`quarkus.hibernate-orm.dialect.storage-engine`:: The storage engine used by the dialect if it supports several storage engines.
-
-This is the case of MariaDB.
+`quarkus.hibernate-orm.dialect.storage-engine`:: The storage engine used by the dialect if it supports several storage engines. 
+ This is the case of MariaDB.
 
 type: `java.lang.String`; The configuration is visible at build time only. 
 
@@ -70,23 +67,20 @@ type: `java.lang.Integer`; The configuration is visible at build time only.
 type: `java.lang.String`; The configuration is visible at build time only. 
 
 
-`quarkus.hibernate-orm.log.jdbc-warnings`:: Whether JDBC warnings should be collected and logged.
-
-Default value depends on the dialect.
+`quarkus.hibernate-orm.log.jdbc-warnings`:: Whether JDBC warnings should be collected and logged. 
+ Default value depends on the dialect.
 
 type: `java.lang.Boolean`; The configuration is visible at build time only. 
 
 
-`quarkus.hibernate-orm.log.sql`:: Whether we log all the SQL queries executed.
-
-Setting it to true is obviously not recommended in production.
+`quarkus.hibernate-orm.log.sql`:: Whether we log all the SQL queries executed. 
+ Setting it to true is obviously not recommended in production.
 
 type: `boolean`; default value: `false`. The configuration is visible at build time only. 
 
 
-`quarkus.hibernate-orm.query.default-null-ordering`:: The default ordering of nulls specific in the ORDER BY clause.
-
-Valid values are: none, first, last.
+`quarkus.hibernate-orm.query.default-null-ordering`:: The default ordering of nulls specific in the ORDER BY clause. 
+ Valid values are: none, first, last.
 
 type: `java.lang.String`; The configuration is visible at build time only. 
 
@@ -96,9 +90,7 @@ type: `java.lang.String`; The configuration is visible at build time only.
 type: `java.lang.String`; The configuration is visible at build time only. 
 
 
-`quarkus.hibernate-orm.sql-load-script`:: To populate the database tables with data before the application loads,
-specify the location of a load script.
-The location specified in this property is relative to the root of the persistence unit.
+`quarkus.hibernate-orm.sql-load-script`:: To populate the database tables with data before the application loads, specify the location of a load script. The location specified in this property is relative to the root of the persistence unit.
 
 type: `java.lang.String`; The configuration is visible at build time only. 
 

@@ -3,3 +3,5 @@ src/main/dot
 *.sh
 *.xml
 src/main/asciidoc/generated/io.quarkus*.adoc
+src/main/asciidoc/generated/*.properties
+

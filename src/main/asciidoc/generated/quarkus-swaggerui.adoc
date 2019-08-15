@@ -1,6 +1,5 @@
 
-`quarkus.swagger-ui.always-include`:: If this should be included every time. By default this is only included when the application is running
-in dev mode.
+`quarkus.swagger-ui.always-include`:: If this should be included every time. By default this is only included when the application is running in dev mode.
 
 type: `boolean`; default value: `false`. The configuration is visible at build time only. 
 

@@ -84,9 +84,7 @@ type: `java.util.logging.Level`; default value: `ALL`. The configuration is over
 type: `java.io.File`; default value: `quarkus.log`. The configuration is overridable at runtime. 
 
 
-`quarkus.log.file.rotation.file-suffix`:: File handler rotation file suffix.
-
-Example fileSuffix: .yyyy-MM-dd
+`quarkus.log.file.rotation.file-suffix`:: File handler rotation file suffix. Example fileSuffix: .yyyy-MM-dd
 
 type: `java.lang.String`; The configuration is overridable at runtime. 
 
@@ -141,9 +139,7 @@ type: `org.jboss.logmanager.handlers.AsyncHandler.OverflowAction`; default value
 type: `int`; default value: `512`. The configuration is overridable at runtime. 
 
 
-`quarkus.log.syslog.block-on-reconnect`:: Enables or disables blocking when attempting to reconnect a
-{@link org.jboss.logmanager.handlers.SyslogHandler.Protocol#TCP
-TCP} or {@link org.jboss.logmanager.handlers.SyslogHandler.Protocol#SSL_TCP SSL TCP} protocol
+`quarkus.log.syslog.block-on-reconnect`:: Enables or disables blocking when attempting to reconnect a `org.jboss.logmanager.handlers.SyslogHandler.Protocol#TCP TCP` or `org.jboss.logmanager.handlers.SyslogHandler.Protocol#SSL_TCP SSL TCP` protocol
 
 type: `boolean`; default value: `false`. The configuration is overridable at runtime. 
 
@@ -183,7 +179,7 @@ type: `java.util.logging.Level`; default value: `ALL`. The configuration is over
 type: `org.jboss.logmanager.handlers.SyslogHandler.Protocol`; default value: `TCP`. The configuration is overridable at runtime. 
 
 
-`quarkus.log.syslog.syslog-type`:: Set the {@link SyslogType syslog type} this handler should use to format the message sent
+`quarkus.log.syslog.syslog-type`:: Set the `SyslogType syslog type` this handler should use to format the message sent
 
 type: `org.jboss.logmanager.handlers.SyslogHandler.SyslogType`; default value: `RFC5424`. The configuration is overridable at runtime. 
 

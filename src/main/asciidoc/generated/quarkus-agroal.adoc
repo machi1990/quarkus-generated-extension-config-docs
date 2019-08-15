@@ -4,9 +4,8 @@
 type: `java.lang.String`; The configuration is visible at build and runtime time, read only at runtime. 
 
 
-`quarkus.datasource."<named-data-sources>".xa`:: Whether we want to use XA.
-
-If used, the driver has to support it.
+`quarkus.datasource."<named-data-sources>".xa`:: Whether we want to use XA. 
+ If used, the driver has to support it.
 
 type: `boolean`; default value: `false`. The configuration is visible at build and runtime time, read only at runtime. 
 
@@ -16,9 +15,8 @@ type: `boolean`; default value: `false`. The configuration is visible at build a
 type: `java.lang.String`; The configuration is visible at build and runtime time, read only at runtime. 
 
 
-`quarkus.datasource.xa`:: Whether we want to use XA.
-
-If used, the driver has to support it.
+`quarkus.datasource.xa`:: Whether we want to use XA. 
+ If used, the driver has to support it.
 
 type: `boolean`; default value: `false`. The configuration is visible at build and runtime time, read only at runtime. 
 

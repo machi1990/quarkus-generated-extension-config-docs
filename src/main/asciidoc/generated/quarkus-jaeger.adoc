@@ -9,8 +9,7 @@ type: `java.net.InetSocketAddress`; The configuration is overridable at runtime.
 type: `java.lang.String`; The configuration is overridable at runtime. 
 
 
-`quarkus.jaeger.endpoint`:: The traces endpoint, in case the client should connect directly to the Collector,
-like http://jaeger-collector:14268/api/traces
+`quarkus.jaeger.endpoint`:: The traces endpoint, in case the client should connect directly to the Collector, like http://jaeger-collector:14268/api/traces
 
 type: `java.net.URI`; The configuration is overridable at runtime. 
 
@@ -20,8 +19,7 @@ type: `java.net.URI`; The configuration is overridable at runtime.
 type: `java.lang.String`; The configuration is overridable at runtime. 
 
 
-`quarkus.jaeger.propagation`:: Comma separated list of formats to use for propagating the trace context. Defaults to the
-standard Jaeger format. Valid values are jaeger and b3
+`quarkus.jaeger.propagation`:: Comma separated list of formats to use for propagating the trace context. Defaults to the standard Jaeger format. Valid values are jaeger and b3
 
 type: `java.lang.String`; The configuration is overridable at runtime. 
 
@@ -66,10 +64,7 @@ type: `java.lang.String`; The configuration is overridable at runtime.
 type: `java.lang.String`; The configuration is overridable at runtime. 
 
 
-`quarkus.jaeger.tags`:: A comma separated list of name = value tracer level tags, which get added to all reported
-spans. The value can also refer to an environment variable using the format ${envVarName:default},
-where the :default is optional, and identifies a value to be used if the environment variable
-cannot be found
+`quarkus.jaeger.tags`:: A comma separated list of name = value tracer level tags, which get added to all reported spans. The value can also refer to an environment variable using the format ${envVarName:default}, where the :default is optional, and identifies a value to be used if the environment variable cannot be found
 
 type: `java.lang.String`; The configuration is overridable at runtime. 
 

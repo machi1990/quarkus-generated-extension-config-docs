@@ -14,7 +14,7 @@ type: `boolean`; default value: `true`. The configuration is visible at build ti
 type: `java.lang.String`; default value: `Quarkus-JWT`. The configuration is visible at build time only. 
 
 
-`quarkus.smallrye-jwt.rsa-sig-provider`:: The name of the {@linkplain java.security.Provider} that supports SHA256withRSA signatures
+`quarkus.smallrye-jwt.rsa-sig-provider`:: The name of the `java.security.Provider` that supports SHA256withRSA signatures
 
 type: `java.lang.String`; default value: `SunRsaSign`. The configuration is visible at build time only. 
 
