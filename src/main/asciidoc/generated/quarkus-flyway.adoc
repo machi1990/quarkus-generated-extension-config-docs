@@ -29,6 +29,11 @@ second before attempting to connect again, up to the maximum number of times spe
 type: `java.lang.Integer`; The configuration is overridable at runtime. 
 
 
+`quarkus.flyway.migrate-at-start`:: null
+
+type: `boolean`; default value: `false`. The configuration is overridable at runtime. 
+
+
 `quarkus.flyway.repeatable-sql-migration-prefix`:: The file name prefix for repeatable SQL migrations.
 
 Repeatable SQL migrations have the following file name structure: prefixSeparatorDESCRIPTIONsuffix , which using the
