@@ -1,7 +1,7 @@
 
 `quarkus.rt.all-values.double-primitive`:: a double primitive
 
-type: `double`; The configuration is overridable at runtime. 
+type: `double`; default value: `0d`. The configuration is overridable at runtime. 
 
 
 `quarkus.rt.all-values.expanded-default`:: A configuration item that has a default value that is an expression
@@ -16,7 +16,7 @@ type: `java.lang.Long`; The configuration is overridable at runtime.
 
 `quarkus.rt.all-values.long-primitive`:: a long primitive
 
-type: `long`; The configuration is overridable at runtime. 
+type: `long`; default value: `0l`. The configuration is overridable at runtime. 
 
 
 `quarkus.rt.all-values.long-value`:: a long value
@@ -166,12 +166,12 @@ type: `java.lang.String`; The configuration is visible at build and runtime time
 
 `quarkus.root.validate-build-config`:: 
 
-type: `boolean`; The configuration is visible at build and runtime time, read only at runtime. 
+type: `boolean`; default value: `false`. The configuration is visible at build and runtime time, read only at runtime. 
 
 
 `quarkus.btrt.all-values.double-primitive`:: a double primitive
 
-type: `double`; The configuration is visible at build and runtime time, read only at runtime. 
+type: `double`; default value: `0d`. The configuration is visible at build and runtime time, read only at runtime. 
 
 
 `quarkus.btrt.all-values.expanded-default`:: A configuration item that has a default value that is an expression
@@ -186,7 +186,7 @@ type: `java.lang.Long`; The configuration is visible at build and runtime time, 
 
 `quarkus.btrt.all-values.long-primitive`:: a long primitive
 
-type: `long`; The configuration is visible at build and runtime time, read only at runtime. 
+type: `long`; default value: `0l`. The configuration is visible at build and runtime time, read only at runtime. 
 
 
 `quarkus.btrt.all-values.long-value`:: a long value
@@ -291,7 +291,7 @@ type: `io.quarkus.extest.runtime.config.MyEnum`; The configuration is visible at
 
 `quarkus.bt.all-values.double-primitive`:: a double primitive
 
-type: `double`; The configuration is visible at build time only. 
+type: `double`; default value: `0d`. The configuration is visible at build time only. 
 
 
 `quarkus.bt.all-values.expanded-default`:: A configuration item that has a default value that is an expression
@@ -306,7 +306,7 @@ type: `java.lang.Long`; The configuration is visible at build time only.
 
 `quarkus.bt.all-values.long-primitive`:: a long primitive
 
-type: `long`; The configuration is visible at build time only. 
+type: `long`; default value: `0l`. The configuration is visible at build time only. 
 
 
 `quarkus.bt.all-values.long-value`:: a long value
