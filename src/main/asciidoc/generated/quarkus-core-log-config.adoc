@@ -64,11 +64,6 @@ type: `org.jboss.logmanager.handlers.AsyncHandler.OverflowAction`; default value
 type: `int`; default value: `512`. The configuration is overridable at runtime. 
 
 
-`quarkus.log.file.default_log_file_name`:: 
-
-type: `java.lang.String`; The configuration is overridable at runtime. 
-
-
 `quarkus.log.file.enable`:: If file logging should be enabled
 
 type: `boolean`; default value: `false`. The configuration is overridable at runtime. 

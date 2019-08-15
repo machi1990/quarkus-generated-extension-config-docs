@@ -159,16 +159,6 @@ type: `java.util.List<java.lang.String>`; The configuration is overridable at ru
 type: `java.lang.String`; The configuration is overridable at runtime. 
 
 
-`quarkus.root.dsa-key-location`:: 
-
-type: `java.lang.String`; The configuration is visible at build and runtime time, read only at runtime. 
-
-
-`quarkus.root.validate-build-config`:: 
-
-type: `boolean`; default value: `false`. The configuration is visible at build and runtime time, read only at runtime. 
-
-
 `quarkus.btrt.all-values.double-primitive`:: a double primitive
 
 type: `double`; default value: `0d`. The configuration is visible at build and runtime time, read only at runtime. 
