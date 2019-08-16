@@ -4,7 +4,7 @@
 type: `java.lang.String`; The configuration is visible at build time only. 
 
 
-`quarkus.keycloak.allow-any-hostname`:: If the Keycloak server requires HTTPS and this config option is set to true the Keycloak server’s certificate is validated via the truststore, but host name validation is not done. This setting should only be used during development and never in production as it will disable verification of SSL certificates. This seting may be useful in test environments
+`quarkus.keycloak.allow-any-hostname`:: If the Keycloak server requires HTTPS and this config option is set to true the Keycloak server’s certificate is validated via the truststore, but host name validation is not done. This setting should only be used during development and never in production as it will disable verification of SSL certificates. This setting may be useful in test environments
 
 type: `boolean`; default value: `false`. The configuration is visible at build time only. 
 
@@ -136,7 +136,7 @@ type: `boolean`; default value: `false`. The configuration is visible at build t
 
 `quarkus.keycloak.policy-enforcer.lazy-load-paths`:: Specifies how the adapter should fetch the server for resources associated with paths in your application. If true, the policy enforcer is going to fetch resources on-demand accordingly with the path being requested
 
-type: `java.lang.Boolean`; default value: `true`. The configuration is visible at build time only. 
+type: `boolean`; default value: `true`. The configuration is visible at build time only. 
 
 
 `quarkus.keycloak.policy-enforcer.on-deny-redirect-to`:: Defines a URL where a client request is redirected when an "access denied" message is obtained from the server. By default, the adapter responds with a 403 HTTP status code
@@ -224,7 +224,7 @@ type: `int`; default value: `86400`. The configuration is visible at build time 
 type: `java.lang.String`; The configuration is visible at build time only. 
 
 
-`quarkus.keycloak.realm-public-key`:: Name of the realm.
+`quarkus.keycloak.realm-public-key`:: Name of the realm key.
 
 type: `java.lang.String`; The configuration is visible at build time only. 
 
