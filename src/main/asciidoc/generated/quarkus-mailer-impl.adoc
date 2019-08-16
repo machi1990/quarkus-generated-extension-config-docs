@@ -40,7 +40,7 @@ type: `java.lang.String`; The configuration is overridable at runtime.
 type: `java.lang.String`; The configuration is overridable at runtime. 
 
 
-`quarkus.mailer.login`:: Set the login mode for the connection. Either `DISABLED`, @{code OPTIONAL} or `REQUIRED`
+`quarkus.mailer.login`:: Set the login mode for the connection. Either `DISABLED`, `OPTIONAL` or `REQUIRED`
 
 type: `java.lang.String`; The configuration is overridable at runtime. 
 
