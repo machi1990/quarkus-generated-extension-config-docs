@@ -1,7 +1,7 @@
 
-`quarkus.kubernetes.docker.registry`:: null
+`quarkus.kubernetes.docker.registry`:: The docker registry to which the images will be pushed
 
-type: `java.lang.String`; The configuration is visible at build time only. 
+type: `java.lang.String`; default value: `docker.io`. The configuration is visible at build time only. 
 
 
 `quarkus.kubernetes.group`:: The group of the application. This value will be use as: - docker image repo - labeling resources
