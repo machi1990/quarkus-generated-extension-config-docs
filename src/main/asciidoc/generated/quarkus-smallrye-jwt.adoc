@@ -1,20 +1,28 @@
 
 `quarkus.smallrye-jwt.auth-mechanism`:: The authentication mechanism
 
-type: `java.lang.String`; default value: `MP-JWT`. The configuration is visible at build time only. 
-
-
-`quarkus.smallrye-jwt.enabled`:: The MP-JWT configuration object
-
-type: `boolean`; default value: `true`. The configuration is visible at build time only. 
+Type: `java.lang.String` +
+Defaults to: `MP-JWT`. +
+The configuration is not overridable at runtime. 
 
 
 `quarkus.smallrye-jwt.realm-name`:: The authentication mechanism
 
-type: `java.lang.String`; default value: `Quarkus-JWT`. The configuration is visible at build time only. 
+Type: `java.lang.String` +
+Defaults to: `Quarkus-JWT`. +
+The configuration is not overridable at runtime. 
+
+
+`quarkus.smallrye-jwt.enabled`:: The MP-JWT configuration object
+
+Type: `boolean` +
+Defaults to: `true`. +
+The configuration is not overridable at runtime. 
 
 
 `quarkus.smallrye-jwt.rsa-sig-provider`:: The name of the `java.security.Provider` that supports SHA256withRSA signatures
 
-type: `java.lang.String`; default value: `SunRsaSign`. The configuration is visible at build time only. 
+Type: `java.lang.String` +
+Defaults to: `SunRsaSign`. +
+The configuration is not overridable at runtime. 
 

@@ -1,90 +1,116 @@
 
 `quarkus.http.cors`:: Enable the CORS filter.
 
-type: `boolean`; default value: `false`. The configuration is overridable at runtime. 
-
-
-`quarkus.http.cors.exposed-headers`:: HTTP headers exposed in CORS Comma separated list of valid headers. ex: X-Custom,Content-Disposition default: empty
-
-type: `java.lang.String`; The configuration is overridable at runtime. 
-
-
-`quarkus.http.cors.headers`:: HTTP headers allowed for CORS Comma separated list of valid headers. ex: X-Custom,Content-Disposition The filter allows any header if this is not set. default: returns any requested header as valid
-
-type: `java.lang.String`; The configuration is overridable at runtime. 
-
-
-`quarkus.http.cors.methods`:: HTTP methods allowed for CORS Comma separated list of valid methods. ex: GET,PUT,POST The filter allows any method if this is not set. default: returns any requested method as valid
-
-type: `java.lang.String`; The configuration is overridable at runtime. 
-
-
-`quarkus.http.cors.origins`:: Origins allowed for CORS Comma separated list of valid URLs. ex: http://www.quarkus.io,http://localhost:3000 The filter allows any origin if this is not set. default: returns any requested origin as valid
-
-type: `java.lang.String`; The configuration is overridable at runtime. 
-
-
-`quarkus.http.host`:: The HTTP host
-
-type: `java.lang.String`; default value: `0.0.0.0`. The configuration is overridable at runtime. 
-
-
-`quarkus.http.io-threads`:: The number if IO threads used to perform IO. This will be automatically set to a reasonable value based on the number of CPU cores if it is not provided
-
-type: `java.lang.Integer`; The configuration is overridable at runtime. 
+Type: `boolean` +
+Defaults to: `false`. +
+The configuration is overridable at runtime. 
 
 
 `quarkus.http.port`:: The HTTP port
 
-type: `int`; default value: `8080`. The configuration is overridable at runtime. 
-
-
-`quarkus.http.ssl-port`:: The HTTPS port
-
-type: `int`; default value: `8443`. The configuration is overridable at runtime. 
-
-
-`quarkus.http.ssl.certificate.file`:: The file path to a server certificate or certificate chain in PEM format.
-
-type: `java.nio.file.Path`; The configuration is overridable at runtime. 
-
-
-`quarkus.http.ssl.certificate.key-file`:: The file path to the corresponding certificate private key file in PEM format.
-
-type: `java.nio.file.Path`; The configuration is overridable at runtime. 
-
-
-`quarkus.http.ssl.certificate.key-store-file`:: An optional key store which holds the certificate information instead of specifying separate files.
-
-type: `java.nio.file.Path`; The configuration is overridable at runtime. 
-
-
-`quarkus.http.ssl.certificate.key-store-file-type`:: An optional parameter to specify type of the key store file. If not given, the type is automatically detected based on the file name.
-
-type: `java.lang.String`; The configuration is overridable at runtime. 
-
-
-`quarkus.http.ssl.certificate.key-store-password`:: A parameter to specify the password of the key store file. If not given, the default ("password") is used.
-
-type: `java.lang.String`; default value: `password`. The configuration is overridable at runtime. 
-
-
-`quarkus.http.ssl.cipher-suites`:: The cipher suites to use. If none is given, a reasonable default is selected.
-
-type: `java.lang.String`; The configuration is overridable at runtime. 
-
-
-`quarkus.http.ssl.protocols`:: The list of protocols to explicitly enable.
-
-type: `java.lang.String`; default value: `TLSv1.3,TLSv1.2`. The configuration is overridable at runtime. 
+Type: `int` +
+Defaults to: `8080`. +
+The configuration is overridable at runtime. 
 
 
 `quarkus.http.test-port`:: The HTTP port used to run tests
 
-type: `int`; default value: `8081`. The configuration is overridable at runtime. 
+Type: `int` +
+Defaults to: `8081`. +
+The configuration is overridable at runtime. 
+
+
+`quarkus.http.host`:: The HTTP host
+
+Type: `java.lang.String` +
+Defaults to: `0.0.0.0`. +
+The configuration is overridable at runtime. 
+
+
+`quarkus.http.ssl-port`:: The HTTPS port
+
+Type: `int` +
+Defaults to: `8443`. +
+The configuration is overridable at runtime. 
 
 
 `quarkus.http.test-ssl-port`:: The HTTPS port used to run tests
 
-type: `int`; default value: `8444`. The configuration is overridable at runtime. 
+Type: `int` +
+Defaults to: `8444`. +
+The configuration is overridable at runtime. 
+
+
+`quarkus.http.cors.origins`:: Origins allowed for CORS Comma separated list of valid URLs. ex: http://www.quarkus.io,http://localhost:3000 The filter allows any origin if this is not set. default: returns any requested origin as valid
+
+Type: `java.lang.String` +
+The configuration is overridable at runtime. 
+
+
+`quarkus.http.cors.methods`:: HTTP methods allowed for CORS Comma separated list of valid methods. ex: GET,PUT,POST The filter allows any method if this is not set. default: returns any requested method as valid
+
+Type: `java.lang.String` +
+The configuration is overridable at runtime. 
+
+
+`quarkus.http.cors.headers`:: HTTP headers allowed for CORS Comma separated list of valid headers. ex: X-Custom,Content-Disposition The filter allows any header if this is not set. default: returns any requested header as valid
+
+Type: `java.lang.String` +
+The configuration is overridable at runtime. 
+
+
+`quarkus.http.cors.exposed-headers`:: HTTP headers exposed in CORS Comma separated list of valid headers. ex: X-Custom,Content-Disposition default: empty
+
+Type: `java.lang.String` +
+The configuration is overridable at runtime. 
+
+
+`quarkus.http.ssl.certificate.file`:: The file path to a server certificate or certificate chain in PEM format.
+
+Type: `java.nio.file.Path` +
+The configuration is overridable at runtime. 
+
+
+`quarkus.http.ssl.certificate.key-file`:: The file path to the corresponding certificate private key file in PEM format.
+
+Type: `java.nio.file.Path` +
+The configuration is overridable at runtime. 
+
+
+`quarkus.http.ssl.certificate.key-store-file`:: An optional key store which holds the certificate information instead of specifying separate files.
+
+Type: `java.nio.file.Path` +
+The configuration is overridable at runtime. 
+
+
+`quarkus.http.ssl.certificate.key-store-file-type`:: An optional parameter to specify type of the key store file. If not given, the type is automatically detected based on the file name.
+
+Type: `java.lang.String` +
+The configuration is overridable at runtime. 
+
+
+`quarkus.http.ssl.certificate.key-store-password`:: A parameter to specify the password of the key store file. If not given, the default ("password") is used.
+
+Type: `java.lang.String` +
+Defaults to: `password`. +
+The configuration is overridable at runtime. 
+
+
+`quarkus.http.ssl.cipher-suites`:: The cipher suites to use. If none is given, a reasonable default is selected.
+
+Type: `java.lang.String` +
+The configuration is overridable at runtime. 
+
+
+`quarkus.http.ssl.protocols`:: The list of protocols to explicitly enable.
+
+Type: `java.lang.String` +
+Defaults to: `TLSv1.3,TLSv1.2`. +
+The configuration is overridable at runtime. 
+
+
+`quarkus.http.io-threads`:: The number if IO threads used to perform IO. This will be automatically set to a reasonable value based on the number of CPU cores if it is not provided
+
+Type: `java.lang.Integer` +
+The configuration is overridable at runtime. 
 

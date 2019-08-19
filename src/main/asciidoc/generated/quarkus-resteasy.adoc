@@ -1,13 +1,17 @@
 
 `quarkus.resteasy.gzip.enabled`:: If gzip is enabled
 
-type: `boolean`; default value: `false`. The configuration is visible at build time only. 
+Type: `boolean` +
+Defaults to: `false`. +
+The configuration is not overridable at runtime. 
 
 
 `quarkus.resteasy.gzip.max-input`:: Maximum deflated file bytes size 
  If the limit is exceeded, Resteasy will return Response with status 413("Request Entity Too Large")
 
-type: `io.quarkus.runtime.configuration.MemorySize`. _See memory size note below_; default value: `10M`. The configuration is visible at build time only. 
+Type: `io.quarkus.runtime.configuration.MemorySize`. _See memory size note below_ +
+Defaults to: `10M`. +
+The configuration is not overridable at runtime. 
 
 
 [NOTE]

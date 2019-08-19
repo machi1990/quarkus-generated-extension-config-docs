@@ -1,10 +1,13 @@
 
-`quarkus.jni.enable`:: Enable JNI support.
-
-type: `boolean`; default value: `false`. The configuration is visible at build time only. 
-
-
 `quarkus.jni.library-paths`:: Paths of library to load.
 
-type: `java.lang.String`; The configuration is visible at build time only. 
+Type: `java.lang.String` +
+The configuration is not overridable at runtime. 
+
+
+`quarkus.jni.enable`:: Enable JNI support.
+
+Type: `boolean` +
+Defaults to: `false`. +
+The configuration is not overridable at runtime. 
 

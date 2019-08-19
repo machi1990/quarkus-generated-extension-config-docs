@@ -1,17 +1,22 @@
 
-`quarkus.transaction-manager.default-transaction-timeout`:: The default transaction timeout
-
-type: `java.time.Duration`. _See duration note below_; default value: `60`. The configuration is overridable at runtime. 
-
-
 `quarkus.transaction-manager.node-name`:: The node name used by the transaction manager
 
-type: `java.lang.String`; default value: `quarkus`. The configuration is overridable at runtime. 
+Type: `java.lang.String` +
+Defaults to: `quarkus`. +
+The configuration is overridable at runtime. 
 
 
 `quarkus.transaction-manager.xa-node-name`:: The XA node name used by the transaction manager
 
-type: `java.lang.String`; The configuration is overridable at runtime. 
+Type: `java.lang.String` +
+The configuration is overridable at runtime. 
+
+
+`quarkus.transaction-manager.default-transaction-timeout`:: The default transaction timeout
+
+Type: `java.time.Duration`. _See duration note below_ +
+Defaults to: `60`. +
+The configuration is overridable at runtime. 
 
 
 [NOTE]
