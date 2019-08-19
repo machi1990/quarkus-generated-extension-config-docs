@@ -1,14 +1,14 @@
 
 `quarkus.tika.tika-config-path`:: The path to the tika-config.xml
-
++
 Type: `java.lang.String` +
-Defaults to: `tika-config.xml`. +
+Defaults to: `tika-config.xml` +
 The configuration is not overridable at runtime. 
 
 
 `quarkus.tika.append-embedded-content`:: Controls how the content of the embedded documents is parsed. By default it is appended to the master document content. Setting this property to false makes the content of each of the embedded documents available separately.
-
++
 Type: `boolean` +
-Defaults to: `true`. +
+Defaults to: `true` +
 The configuration is not overridable at runtime. 
 

@@ -1,13 +1,13 @@
 
 `quarkus.kubernetes.group`:: The group of the application. This value will be use as: - docker image repo - labeling resources
-
++
 Type: `java.lang.String` +
 The configuration is not overridable at runtime. 
 
 
 `quarkus.kubernetes.docker.registry`:: The docker registry to which the images will be pushed
-
++
 Type: `java.lang.String` +
-Defaults to: `docker.io`. +
+Defaults to: `docker.io` +
 The configuration is not overridable at runtime. 
 

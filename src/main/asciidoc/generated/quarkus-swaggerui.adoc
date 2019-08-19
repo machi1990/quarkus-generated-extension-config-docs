@@ -1,14 +1,14 @@
 
 `quarkus.swagger-ui.path`:: The path of the swagger-ui servlet.
-
++
 Type: `java.lang.String` +
-Defaults to: `/swagger-ui`. +
+Defaults to: `/swagger-ui` +
 The configuration is not overridable at runtime. 
 
 
 `quarkus.swagger-ui.always-include`:: If this should be included every time. By default this is only included when the application is running in dev mode.
-
++
 Type: `boolean` +
-Defaults to: `false`. +
+Defaults to: `false` +
 The configuration is not overridable at runtime. 
 

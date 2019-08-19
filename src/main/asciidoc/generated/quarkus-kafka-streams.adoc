@@ -1,25 +1,25 @@
 
 `quarkus.kafka-streams.application-id`:: A unique identifier for this Kafka Streams application.
-
++
 Type: `java.lang.String` +
 The configuration is overridable at runtime. 
 
 
 `quarkus.kafka-streams.bootstrap-servers`:: A comma-separated list of host:port pairs identifying the Kafka bootstrap server(s)
-
++
 Type: `java.net.InetSocketAddress` +
-Defaults to: `localhost:9012`. +
+Defaults to: `localhost:9012` +
 The configuration is overridable at runtime. 
 
 
 `quarkus.kafka-streams.application-server`:: A unique identifier of this application instance, typically in the form host:port.
-
++
 Type: `java.lang.String` +
 The configuration is overridable at runtime. 
 
 
 `quarkus.kafka-streams.topics`:: A comma-separated list of topic names processed by this stream processing application. The pipeline will only be started once all these topics are present in the Kafka cluster.
-
++
 Type: `java.lang.String` +
 The configuration is overridable at runtime. 
 

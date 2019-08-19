@@ -1,38 +1,38 @@
 
 `quarkus.oauth2.enabled`:: If the OAuth2 extension is enabled.
-
++
 Type: `boolean` +
-Defaults to: `true`. +
+Defaults to: `true` +
 The configuration is not overridable at runtime. 
 
 
 `quarkus.oauth2.client-id`:: The identifier of the client on the OAuth2 Authorization Server
-
++
 Type: `java.lang.String` +
 The configuration is not overridable at runtime. 
 
 
 `quarkus.oauth2.client-secret`:: The secret of the client
-
++
 Type: `java.lang.String` +
 The configuration is not overridable at runtime. 
 
 
 `quarkus.oauth2.introspection-url`:: The URL of token introspection endpoint
-
++
 Type: `java.lang.String` +
 The configuration is not overridable at runtime. 
 
 
 `quarkus.oauth2.ca-cert-file`:: The path to a custom cert file This is not supported in native mode
-
++
 Type: `java.lang.String` +
 The configuration is not overridable at runtime. 
 
 
 `quarkus.oauth2.role-claim`:: The claim that provides the roles
-
++
 Type: `java.lang.String` +
-Defaults to: `scope`. +
+Defaults to: `scope` +
 The configuration is not overridable at runtime. 
 

@@ -1,12 +1,12 @@
 
-`quarkus.hot-reload.password`:: null
-
+`quarkus.hot-reload.password`:: 
++
 Type: `java.lang.String` +
 The configuration is not overridable at runtime. 
 
 
-`quarkus.hot-reload.url`:: null
-
+`quarkus.hot-reload.url`:: 
++
 Type: `java.lang.String` +
 The configuration is not overridable at runtime. 
 

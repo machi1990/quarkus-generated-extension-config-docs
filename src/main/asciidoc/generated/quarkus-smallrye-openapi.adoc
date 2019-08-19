@@ -1,7 +1,7 @@
 
 `quarkus.smallrye-openapi.path`:: The path at which to register the OpenAPI Servlet.
-
++
 Type: `java.lang.String` +
-Defaults to: `/openapi`. +
+Defaults to: `/openapi` +
 The configuration is not overridable at runtime. 
 

@@ -1,13 +1,13 @@
 
 `quarkus.jni.library-paths`:: Paths of library to load.
-
++
 Type: `java.lang.String` +
 The configuration is not overridable at runtime. 
 
 
 `quarkus.jni.enable`:: Enable JNI support.
-
++
 Type: `boolean` +
-Defaults to: `false`. +
+Defaults to: `false` +
 The configuration is not overridable at runtime. 
 

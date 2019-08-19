@@ -1,149 +1,150 @@
 
 `quarkus.kubernetes-client.trust-certs`:: Whether or not the client should trust a self signed certificate if so presented by the API server
-
++
 Type: `boolean` +
-Defaults to: `false`. +
+Defaults to: `false` +
 The configuration is not overridable at runtime. 
 
 
 `quarkus.kubernetes-client.master-url`:: URL of the Kubernetes API server
-
++
 Type: `java.lang.String` +
 The configuration is not overridable at runtime. 
 
 
 `quarkus.kubernetes-client.namespace`:: Default namespace to use
-
++
 Type: `java.lang.String` +
 The configuration is not overridable at runtime. 
 
 
 `quarkus.kubernetes-client.ca-cert-file`:: CA certificate file
-
++
 Type: `java.lang.String` +
 The configuration is not overridable at runtime. 
 
 
 `quarkus.kubernetes-client.ca-cert-data`:: CA certificate data
-
++
 Type: `java.lang.String` +
 The configuration is not overridable at runtime. 
 
 
 `quarkus.kubernetes-client.client-cert-file`:: Client certificate file
-
++
 Type: `java.lang.String` +
 The configuration is not overridable at runtime. 
 
 
 `quarkus.kubernetes-client.client-cert-data`:: Client certificate data
-
++
 Type: `java.lang.String` +
 The configuration is not overridable at runtime. 
 
 
 `quarkus.kubernetes-client.client-key-file`:: Client key file
-
++
 Type: `java.lang.String` +
 The configuration is not overridable at runtime. 
 
 
 `quarkus.kubernetes-client.client-key-data`:: Client key data
-
++
 Type: `java.lang.String` +
 The configuration is not overridable at runtime. 
 
 
 `quarkus.kubernetes-client.client-key-algo`:: Client key algorithm
-
++
 Type: `java.lang.String` +
 The configuration is not overridable at runtime. 
 
 
 `quarkus.kubernetes-client.client-key-passphrase`:: Client key passphrase
-
++
 Type: `java.lang.String` +
 The configuration is not overridable at runtime. 
 
 
 `quarkus.kubernetes-client.username`:: Kubernetes auth username
-
++
 Type: `java.lang.String` +
 The configuration is not overridable at runtime. 
 
 
 `quarkus.kubernetes-client.password`:: Kubernetes auth password
-
++
 Type: `java.lang.String` +
 The configuration is not overridable at runtime. 
 
 
 `quarkus.kubernetes-client.watch-reconnect-interval`:: Watch reconnect interval
-
-Type: `java.time.Duration`. _See duration note below_ +
-Defaults to: `PT1S`. +
++
+Type: `java.time.Duration` - _see note below_ +
+Defaults to: `PT1S` +
 The configuration is not overridable at runtime. 
 
 
 `quarkus.kubernetes-client.watch-reconnect-limit`:: Maximum reconnect attempts in case of watch failure By default there is no limit to the number of reconnect attempts
-
++
 Type: `java.lang.Integer` +
-Defaults to: `-1`. +
+Defaults to: `-1` +
 The configuration is not overridable at runtime. 
 
 
 `quarkus.kubernetes-client.connection-timeout`:: Maximum amount of time to wait for a connection with the API server to be established
-
-Type: `java.time.Duration`. _See duration note below_ +
-Defaults to: `PT10S`. +
++
+Type: `java.time.Duration` - _see note below_ +
+Defaults to: `PT10S` +
 The configuration is not overridable at runtime. 
 
 
 `quarkus.kubernetes-client.request-timeout`:: Maximum amount of time to wait for a request to the API server to be completed
-
-Type: `java.time.Duration`. _See duration note below_ +
-Defaults to: `PT10S`. +
++
+Type: `java.time.Duration` - _see note below_ +
+Defaults to: `PT10S` +
 The configuration is not overridable at runtime. 
 
 
 `quarkus.kubernetes-client.rolling-timeout`:: Maximum amount of time in milliseconds to wait for a rollout to be completed
-
-Type: `java.time.Duration`. _See duration note below_ +
-Defaults to: `PT15M`. +
++
+Type: `java.time.Duration` - _see note below_ +
+Defaults to: `PT15M` +
 The configuration is not overridable at runtime. 
 
 
 `quarkus.kubernetes-client.http-proxy`:: HTTP proxy used to access the Kubernetes API server
-
++
 Type: `java.lang.String` +
 The configuration is not overridable at runtime. 
 
 
 `quarkus.kubernetes-client.https-proxy`:: HTTPS proxy used to access the Kubernetes API server
-
++
 Type: `java.lang.String` +
 The configuration is not overridable at runtime. 
 
 
 `quarkus.kubernetes-client.proxy-username`:: Proxy username
-
++
 Type: `java.lang.String` +
 The configuration is not overridable at runtime. 
 
 
 `quarkus.kubernetes-client.proxy-password`:: Proxy password
-
++
 Type: `java.lang.String` +
 The configuration is not overridable at runtime. 
 
 
 `quarkus.kubernetes-client.no-proxy`:: IP addresses or hosts to exclude from proxying
-
++
 Type: `java.lang.String` +
 The configuration is not overridable at runtime. 
 
 
 [NOTE]
+.About the Duration format.
 ====
 The format for durations uses the standard `java.time.Duration` format.
 You can learn more about it in the link:https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html#parse-java.lang.CharSequence-[Duration#parse() javadoc].

@@ -1,95 +1,96 @@
 
 `quarkus.jaeger.endpoint`:: The traces endpoint, in case the client should connect directly to the Collector, like http://jaeger-collector:14268/api/traces
-
++
 Type: `java.net.URI` +
 The configuration is overridable at runtime. 
 
 
 `quarkus.jaeger.auth-token`:: Authentication Token to send as "Bearer" to the endpoint
-
++
 Type: `java.lang.String` +
 The configuration is overridable at runtime. 
 
 
 `quarkus.jaeger.user`:: Username to send as part of "Basic" authentication to the endpoint
-
++
 Type: `java.lang.String` +
 The configuration is overridable at runtime. 
 
 
 `quarkus.jaeger.password`:: Password to send as part of "Basic" authentication to the endpoint
-
++
 Type: `java.lang.String` +
 The configuration is overridable at runtime. 
 
 
 `quarkus.jaeger.agent-host-port`:: The hostname and port for communicating with agent via UDP
-
++
 Type: `java.net.InetSocketAddress` +
 The configuration is overridable at runtime. 
 
 
 `quarkus.jaeger.reporter-log-spans`:: Whether the reporter should also log the spans
-
++
 Type: `java.lang.Boolean` +
 The configuration is overridable at runtime. 
 
 
 `quarkus.jaeger.reporter-max-queue-size`:: The reporter's maximum queue size
-
++
 Type: `java.lang.Integer` +
 The configuration is overridable at runtime. 
 
 
 `quarkus.jaeger.reporter-flush-interval`:: The reporter's flush interval
-
-Type: `java.time.Duration`. _See duration note below_ +
++
+Type: `java.time.Duration` - _see note below_ +
 The configuration is overridable at runtime. 
 
 
 `quarkus.jaeger.sampler-type`:: The sampler type (const, probabilistic, ratelimiting or remote)
-
++
 Type: `java.lang.String` +
 The configuration is overridable at runtime. 
 
 
 `quarkus.jaeger.sampler-param`:: The sampler parameter (number)
-
++
 Type: `java.math.BigDecimal` +
 The configuration is overridable at runtime. 
 
 
 `quarkus.jaeger.sampler-manager-host-port`:: The host name and port when using the remote controlled sampler
-
++
 Type: `java.net.InetSocketAddress` +
 The configuration is overridable at runtime. 
 
 
 `quarkus.jaeger.service-name`:: The service name
-
++
 Type: `java.lang.String` +
 The configuration is overridable at runtime. 
 
 
 `quarkus.jaeger.tags`:: A comma separated list of name = value tracer level tags, which get added to all reported spans. The value can also refer to an environment variable using the format ${envVarName:default}, where the :default is optional, and identifies a value to be used if the environment variable cannot be found
-
++
 Type: `java.lang.String` +
 The configuration is overridable at runtime. 
 
 
 `quarkus.jaeger.propagation`:: Comma separated list of formats to use for propagating the trace context. Defaults to the standard Jaeger format. Valid values are jaeger and b3
-
++
 Type: `java.lang.String` +
 The configuration is overridable at runtime. 
 
 
 `quarkus.jaeger.sender-factory`:: The sender factory class name
-
++
 Type: `java.lang.String` +
 The configuration is overridable at runtime. 
 
 
 [NOTE]
+.About the Duration format.
 ====
 The format for durations uses the standard `java.time.Duration` format.
 You can learn more about it in the link:https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html#parse-java.lang.CharSequence-[Duration#parse() javadoc].

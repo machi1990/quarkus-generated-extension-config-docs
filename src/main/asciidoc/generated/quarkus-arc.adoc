@@ -8,15 +8,15 @@
  - does not declare an observer, 
  - does not declare any producer which is eligible for injection to any injection point, 
  - is not directly eligible for injection into any `javax.enterprise.inject.Instance` injection point  If set to none (or false) no beans will ever be removed even if they are unused (according to the criteria set out above) If set to fwk, then all unused beans will be removed, except the unused beans whose classes are declared in the application code @see UnremovableBeanBuildItem
-
++
 Type: `java.lang.String` +
-Defaults to: `all`. +
+Defaults to: `all` +
 The configuration is not overridable at runtime. 
 
 
 `quarkus.arc.auto-inject-fields`:: If set to true `@Inject` is automatically added to all non-static fields that are annotated with one of the annotations defined by `AutoInjectAnnotationBuildItem`.
-
++
 Type: `boolean` +
-Defaults to: `true`. +
+Defaults to: `true` +
 The configuration is not overridable at runtime. 
 
