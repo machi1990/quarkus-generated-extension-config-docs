@@ -1,12 +1,15 @@
 
-`quarkus.application.name`:: The name of the application. If not set, defaults to the name of the project.
+`quarkus.application.name`📦:: The name of the application. If not set, defaults to the name of the project.
 +
 Type: `java.lang.String` +
-The configuration is not overridable at runtime. 
 
 
-`quarkus.application.version`:: The version of the application. If not set, defaults to the version of the project
+
+`quarkus.application.version`📦:: The version of the application. If not set, defaults to the version of the project
 +
 Type: `java.lang.String` +
-The configuration is not overridable at runtime. 
+
+
+
+ 📦 Configuration property fixed at build time - ⚙️️ Configuration property overridable at runtime 
 

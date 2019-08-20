@@ -1,274 +1,277 @@
 
-`quarkus.log.category."<categories>".min-level`:: The minimum level that this category can be set to
+`quarkus.log.category."<categories>".min-level`⚙️:: The minimum level that this category can be set to
 +
 Type: `java.lang.String` +
 Defaults to: `inherit` +
-The configuration is overridable at runtime. 
 
 
-`quarkus.log.category."<categories>".level`:: The log level level for this category
+
+`quarkus.log.category."<categories>".level`⚙️:: The log level level for this category
 +
 Type: `java.lang.String` +
 Defaults to: `inherit` +
-The configuration is overridable at runtime. 
 
 
-`quarkus.log.filter."<filters>".if-starts-with`:: The message starts to match
+
+`quarkus.log.filter."<filters>".if-starts-with`⚙️:: The message starts to match
 +
 Type: `java.lang.String` +
 Defaults to: `inherit` +
-The configuration is overridable at runtime. 
 
 
-`quarkus.log.level`:: The default log level
+
+`quarkus.log.level`⚙️:: The default log level
 +
 Type: `java.util.logging.Level` +
-The configuration is overridable at runtime. 
 
 
-`quarkus.log.min-level`:: The default minimum log level
+
+`quarkus.log.min-level`⚙️:: The default minimum log level
 +
 Type: `java.util.logging.Level` +
 Defaults to: `INFO` +
-The configuration is overridable at runtime. 
 
 
-`quarkus.log.console.enable`:: If console logging should be enabled
+
+`quarkus.log.console.enable`⚙️:: If console logging should be enabled
 +
 Type: `boolean` +
 Defaults to: `true` +
-The configuration is overridable at runtime. 
 
 
-`quarkus.log.console.format`:: The log format
+
+`quarkus.log.console.format`⚙️:: The log format
 +
 Type: `java.lang.String` +
 Defaults to: `%d{yyyy-MM-dd HH:mm:ss,SSS} %-5p [%c{3.}] (%t) %s%e%n` +
-The configuration is overridable at runtime. 
 
 
-`quarkus.log.console.level`:: The console log level
+
+`quarkus.log.console.level`⚙️:: The console log level
 +
 Type: `java.util.logging.Level` +
 Defaults to: `ALL` +
-The configuration is overridable at runtime. 
 
 
-`quarkus.log.console.color`:: If the console logging should be in color
+
+`quarkus.log.console.color`⚙️:: If the console logging should be in color
 +
 Type: `boolean` +
 Defaults to: `true` +
-The configuration is overridable at runtime. 
 
 
-`quarkus.log.console.darken`:: Specify how much the colors should be darkened
+
+`quarkus.log.console.darken`⚙️:: Specify how much the colors should be darkened
 +
 Type: `int` +
 Defaults to: `0` +
-The configuration is overridable at runtime. 
 
 
-`quarkus.log.console.async`:: Indicates whether to log asynchronously
+
+`quarkus.log.console.async`⚙️:: Indicates whether to log asynchronously
 +
 Type: `boolean` +
 Defaults to: `false` +
-The configuration is overridable at runtime. 
 
 
-`quarkus.log.console.async.queue-length`:: The queue length to use before flushing writing
+
+`quarkus.log.console.async.queue-length`⚙️:: The queue length to use before flushing writing
 +
 Type: `int` +
 Defaults to: `512` +
-The configuration is overridable at runtime. 
 
 
-`quarkus.log.console.async.overflow`:: Determine whether to block the publisher (rather than drop the message) when the queue is full
+
+`quarkus.log.console.async.overflow`⚙️:: Determine whether to block the publisher (rather than drop the message) when the queue is full
 +
 Type: `org.jboss.logmanager.handlers.AsyncHandler.OverflowAction` +
 Defaults to: `block` +
-The configuration is overridable at runtime. 
 
 
-`quarkus.log.file.enable`:: If file logging should be enabled
+
+`quarkus.log.file.enable`⚙️:: If file logging should be enabled
 +
 Type: `boolean` +
 Defaults to: `false` +
-The configuration is overridable at runtime. 
 
 
-`quarkus.log.file.format`:: The log format
+
+`quarkus.log.file.format`⚙️:: The log format
 +
 Type: `java.lang.String` +
 Defaults to: `%d{yyyy-MM-dd HH:mm:ss,SSS} %h %N[%i] %-5p [%c{3.}] (%t) %s%e%n` +
-The configuration is overridable at runtime. 
 
 
-`quarkus.log.file.level`:: The level of logs to be written into the file.
+
+`quarkus.log.file.level`⚙️:: The level of logs to be written into the file.
 +
 Type: `java.util.logging.Level` +
 Defaults to: `ALL` +
-The configuration is overridable at runtime. 
 
 
-`quarkus.log.file.path`:: The name of the file in which logs will be written.
+
+`quarkus.log.file.path`⚙️:: The name of the file in which logs will be written.
 +
 Type: `java.io.File` +
 Defaults to: `quarkus.log` +
-The configuration is overridable at runtime. 
 
 
-`quarkus.log.file.async`:: Indicates whether to log asynchronously
+
+`quarkus.log.file.async`⚙️:: Indicates whether to log asynchronously
 +
 Type: `boolean` +
 Defaults to: `false` +
-The configuration is overridable at runtime. 
 
 
-`quarkus.log.file.async.queue-length`:: The queue length to use before flushing writing
+
+`quarkus.log.file.async.queue-length`⚙️:: The queue length to use before flushing writing
 +
 Type: `int` +
 Defaults to: `512` +
-The configuration is overridable at runtime. 
 
 
-`quarkus.log.file.async.overflow`:: Determine whether to block the publisher (rather than drop the message) when the queue is full
+
+`quarkus.log.file.async.overflow`⚙️:: Determine whether to block the publisher (rather than drop the message) when the queue is full
 +
 Type: `org.jboss.logmanager.handlers.AsyncHandler.OverflowAction` +
 Defaults to: `block` +
-The configuration is overridable at runtime. 
 
 
-`quarkus.log.file.rotation.max-file-size`:: The maximum file size of the log file after which a rotation is executed.
+
+`quarkus.log.file.rotation.max-file-size`⚙️:: The maximum file size of the log file after which a rotation is executed.
 +
 Type: `io.quarkus.runtime.configuration.MemorySize` - _see note below_ +
-The configuration is overridable at runtime. 
 
 
-`quarkus.log.file.rotation.max-backup-index`:: The maximum number of backups to keep.
+
+`quarkus.log.file.rotation.max-backup-index`⚙️:: The maximum number of backups to keep.
 +
 Type: `int` +
 Defaults to: `1` +
-The configuration is overridable at runtime. 
 
 
-`quarkus.log.file.rotation.file-suffix`:: File handler rotation file suffix. Example fileSuffix: .yyyy-MM-dd
+
+`quarkus.log.file.rotation.file-suffix`⚙️:: File handler rotation file suffix. Example fileSuffix: .yyyy-MM-dd
 +
 Type: `java.lang.String` +
-The configuration is overridable at runtime. 
 
 
-`quarkus.log.file.rotation.rotate-on-boot`:: Indicates whether to rotate log files on server initialization.
+
+`quarkus.log.file.rotation.rotate-on-boot`⚙️:: Indicates whether to rotate log files on server initialization.
 +
 Type: `boolean` +
 Defaults to: `true` +
-The configuration is overridable at runtime. 
 
 
-`quarkus.log.syslog.enable`:: If syslog logging should be enabled
+
+`quarkus.log.syslog.enable`⚙️:: If syslog logging should be enabled
 +
 Type: `boolean` +
 Defaults to: `false` +
-The configuration is overridable at runtime. 
 
 
-`quarkus.log.syslog.endpoint`:: The IP address and port of the syslog server
+
+`quarkus.log.syslog.endpoint`⚙️:: The IP address and port of the syslog server
 +
 Type: `java.net.InetSocketAddress` +
 Defaults to: `localhost:514` +
-The configuration is overridable at runtime. 
 
 
-`quarkus.log.syslog.app-name`:: The app name used when formatting the message in RFC5424 format
+
+`quarkus.log.syslog.app-name`⚙️:: The app name used when formatting the message in RFC5424 format
 +
 Type: `java.lang.String` +
-The configuration is overridable at runtime. 
 
 
-`quarkus.log.syslog.hostname`:: The name of the host the messages are being sent from
+
+`quarkus.log.syslog.hostname`⚙️:: The name of the host the messages are being sent from
 +
 Type: `java.lang.String` +
-The configuration is overridable at runtime. 
 
 
-`quarkus.log.syslog.facility`:: Sets the facility used when calculating the priority of the message as defined by RFC-5424 and RFC-3164
+
+`quarkus.log.syslog.facility`⚙️:: Sets the facility used when calculating the priority of the message as defined by RFC-5424 and RFC-3164
 +
 Type: `org.jboss.logmanager.handlers.SyslogHandler.Facility` +
 Defaults to: `USER_LEVEL` +
-The configuration is overridable at runtime. 
 
 
-`quarkus.log.syslog.syslog-type`:: Set the `SyslogType syslog type` this handler should use to format the message sent
+
+`quarkus.log.syslog.syslog-type`⚙️:: Set the `SyslogType syslog type` this handler should use to format the message sent
 +
 Type: `org.jboss.logmanager.handlers.SyslogHandler.SyslogType` +
 Defaults to: `RFC5424` +
-The configuration is overridable at runtime. 
 
 
-`quarkus.log.syslog.protocol`:: Sets the protocol used to connect to the syslog server
+
+`quarkus.log.syslog.protocol`⚙️:: Sets the protocol used to connect to the syslog server
 +
 Type: `org.jboss.logmanager.handlers.SyslogHandler.Protocol` +
 Defaults to: `TCP` +
-The configuration is overridable at runtime. 
 
 
-`quarkus.log.syslog.use-counting-framing`:: Set to `true` if the message being sent should be prefixed with the size of the message
+
+`quarkus.log.syslog.use-counting-framing`⚙️:: Set to `true` if the message being sent should be prefixed with the size of the message
 +
 Type: `boolean` +
 Defaults to: `false` +
-The configuration is overridable at runtime. 
 
 
-`quarkus.log.syslog.truncate`:: Set to `true` if the message should be truncated
+
+`quarkus.log.syslog.truncate`⚙️:: Set to `true` if the message should be truncated
 +
 Type: `boolean` +
 Defaults to: `true` +
-The configuration is overridable at runtime. 
 
 
-`quarkus.log.syslog.block-on-reconnect`:: Enables or disables blocking when attempting to reconnect a `org.jboss.logmanager.handlers.SyslogHandler.Protocol#TCP TCP` or `org.jboss.logmanager.handlers.SyslogHandler.Protocol#SSL_TCP SSL TCP` protocol
+
+`quarkus.log.syslog.block-on-reconnect`⚙️:: Enables or disables blocking when attempting to reconnect a `org.jboss.logmanager.handlers.SyslogHandler.Protocol#TCP TCP` or `org.jboss.logmanager.handlers.SyslogHandler.Protocol#SSL_TCP SSL TCP` protocol
 +
 Type: `boolean` +
 Defaults to: `false` +
-The configuration is overridable at runtime. 
 
 
-`quarkus.log.syslog.format`:: The log message format
+
+`quarkus.log.syslog.format`⚙️:: The log message format
 +
 Type: `java.lang.String` +
 Defaults to: `%d{yyyy-MM-dd HH:mm:ss,SSS} %-5p [%c{3.}] (%t) %s%e%n` +
-The configuration is overridable at runtime. 
 
 
-`quarkus.log.syslog.level`:: The log level specifying, which message levels will be logged by syslog logger
+
+`quarkus.log.syslog.level`⚙️:: The log level specifying, which message levels will be logged by syslog logger
 +
 Type: `java.util.logging.Level` +
 Defaults to: `ALL` +
-The configuration is overridable at runtime. 
 
 
-`quarkus.log.syslog.async`:: Indicates whether to log asynchronously
+
+`quarkus.log.syslog.async`⚙️:: Indicates whether to log asynchronously
 +
 Type: `boolean` +
 Defaults to: `false` +
-The configuration is overridable at runtime. 
 
 
-`quarkus.log.syslog.async.queue-length`:: The queue length to use before flushing writing
+
+`quarkus.log.syslog.async.queue-length`⚙️:: The queue length to use before flushing writing
 +
 Type: `int` +
 Defaults to: `512` +
-The configuration is overridable at runtime. 
 
 
-`quarkus.log.syslog.async.overflow`:: Determine whether to block the publisher (rather than drop the message) when the queue is full
+
+`quarkus.log.syslog.async.overflow`⚙️:: Determine whether to block the publisher (rather than drop the message) when the queue is full
 +
 Type: `org.jboss.logmanager.handlers.AsyncHandler.OverflowAction` +
 Defaults to: `block` +
-The configuration is overridable at runtime. 
+
+
+
+ 📦 Configuration property fixed at build time - ⚙️️ Configuration property overridable at runtime 
 
 
 [NOTE]
-.About the MemorySize format.
+.About the MemorySize format
 ====
 A size configuration option recognises string in this format (shown as a regular expression): `[0-9]+[KkMmGgTtPpEeZzYy]?`.
 If no suffix is given, assume bytes.

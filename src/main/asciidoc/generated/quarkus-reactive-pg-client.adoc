@@ -1,36 +1,39 @@
 
-`quarkus.reactive-pg-client.cache-prepared-statements`:: Whether prepared statements should be cached on the client side.
+`quarkus.reactive-pg-client.cache-prepared-statements`⚙️:: Whether prepared statements should be cached on the client side.
 +
 Type: `java.lang.Boolean` +
-The configuration is overridable at runtime. 
 
 
-`quarkus.reactive-pg-client.pipelining-limit`:: The maximum number of inflight database commands that can be pipelined.
+
+`quarkus.reactive-pg-client.pipelining-limit`⚙️:: The maximum number of inflight database commands that can be pipelined.
 +
 Type: `java.lang.Integer` +
-The configuration is overridable at runtime. 
 
 
-`quarkus.datasource.url`:: The datasource URL.
+
+`quarkus.datasource.url`⚙️:: The datasource URL.
 +
 Type: `java.lang.String` +
-The configuration is overridable at runtime. 
 
 
-`quarkus.datasource.username`:: The datasource username.
+
+`quarkus.datasource.username`⚙️:: The datasource username.
 +
 Type: `java.lang.String` +
-The configuration is overridable at runtime. 
 
 
-`quarkus.datasource.password`:: The datasource password.
+
+`quarkus.datasource.password`⚙️:: The datasource password.
 +
 Type: `java.lang.String` +
-The configuration is overridable at runtime. 
 
 
-`quarkus.datasource.max-size`:: The datasource pool maximum size.
+
+`quarkus.datasource.max-size`⚙️:: The datasource pool maximum size.
 +
 Type: `java.lang.Integer` +
-The configuration is overridable at runtime. 
+
+
+
+ 📦 Configuration property fixed at build time - ⚙️️ Configuration property overridable at runtime 
 

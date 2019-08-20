@@ -1,18 +1,21 @@
 
-`quarkus.index-dependency."<index-dependency>".group-id`:: The maven groupId of the artifact to index
+`quarkus.index-dependency."<index-dependency>".group-id`📦:: The maven groupId of the artifact to index
 +
 Type: `java.lang.String` +
-The configuration is not overridable at runtime. 
 
 
-`quarkus.index-dependency."<index-dependency>".artifact-id`:: The maven artifactId of the artifact to index
+
+`quarkus.index-dependency."<index-dependency>".artifact-id`📦:: The maven artifactId of the artifact to index
 +
 Type: `java.lang.String` +
-The configuration is not overridable at runtime. 
 
 
-`quarkus.index-dependency."<index-dependency>".classifier`:: The maven classifier of the artifact to index
+
+`quarkus.index-dependency."<index-dependency>".classifier`📦:: The maven classifier of the artifact to index
 +
 Type: `java.lang.String` +
-The configuration is not overridable at runtime. 
+
+
+
+ 📦 Configuration property fixed at build time - ⚙️️ Configuration property overridable at runtime 
 

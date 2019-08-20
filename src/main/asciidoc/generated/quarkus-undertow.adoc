@@ -1,6 +1,9 @@
 
-`quarkus.servlet.context-path`:: The context path to serve all Servlet context from. This will also affect any resources that run as a Servlet, e.g. JAX-RS
+`quarkus.servlet.context-path`📦:: The context path to serve all Servlet context from. This will also affect any resources that run as a Servlet, e.g. JAX-RS
 +
 Type: `java.lang.String` +
-The configuration is not overridable at runtime. 
+
+
+
+ 📦 Configuration property fixed at build time - ⚙️️ Configuration property overridable at runtime 
 

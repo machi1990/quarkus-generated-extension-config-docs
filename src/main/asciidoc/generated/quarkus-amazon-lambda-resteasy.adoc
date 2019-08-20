@@ -1,7 +1,10 @@
 
-`quarkus.amazon-lambda-resteasy.debug`:: Indicates if we are in debug mode.
+`quarkus.amazon-lambda-resteasy.debug`📦:: Indicates if we are in debug mode.
 +
 Type: `boolean` +
 Defaults to: `false` +
-The configuration is not overridable at runtime. 
+
+
+
+ 📦 Configuration property fixed at build time - ⚙️️ Configuration property overridable at runtime 
 

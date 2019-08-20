@@ -1,26 +1,29 @@
 
-`quarkus.transaction-manager.node-name`:: The node name used by the transaction manager
+`quarkus.transaction-manager.node-name`⚙️:: The node name used by the transaction manager
 +
 Type: `java.lang.String` +
 Defaults to: `quarkus` +
-The configuration is overridable at runtime. 
 
 
-`quarkus.transaction-manager.xa-node-name`:: The XA node name used by the transaction manager
+
+`quarkus.transaction-manager.xa-node-name`⚙️:: The XA node name used by the transaction manager
 +
 Type: `java.lang.String` +
-The configuration is overridable at runtime. 
 
 
-`quarkus.transaction-manager.default-transaction-timeout`:: The default transaction timeout
+
+`quarkus.transaction-manager.default-transaction-timeout`⚙️:: The default transaction timeout
 +
 Type: `java.time.Duration` - _see note below_ +
 Defaults to: `60` +
-The configuration is overridable at runtime. 
+
+
+
+ 📦 Configuration property fixed at build time - ⚙️️ Configuration property overridable at runtime 
 
 
 [NOTE]
-.About the Duration format.
+.About the Duration format
 ====
 The format for durations uses the standard `java.time.Duration` format.
 You can learn more about it in the link:https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html#parse-java.lang.CharSequence-[Duration#parse() javadoc].

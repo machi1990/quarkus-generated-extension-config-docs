@@ -1,17 +1,20 @@
 
-`quarkus.resteasy.singleton-resources`:: If this is true then JAX-RS will use only a single instance of a resource class to service all requests. 
+`quarkus.resteasy.singleton-resources`📦:: If this is true then JAX-RS will use only a single instance of a resource class to service all requests. 
  If this is false then it will create a new instance of the resource per request. 
  If the resource class has an explicit CDI scope annotation then the value of this annotation will always be used to control the lifecycle of the resource class. 
  IMPLEMENTATION NOTE: `javax.ws.rs.Path` turns into a CDI stereotype with singleton scope. As a result, if a user annotates a JAX-RS resource with a stereotype which has a different default scope the deployment fails with IllegalStateException.
 +
 Type: `boolean` +
 Defaults to: `true` +
-The configuration is not overridable at runtime. 
 
 
-`quarkus.resteasy.path`:: Set this to override the default path for JAX-RS resources if there are no annotated application classes.
+
+`quarkus.resteasy.path`📦:: Set this to override the default path for JAX-RS resources if there are no annotated application classes.
 +
 Type: `java.lang.String` +
 Defaults to: `/` +
-The configuration is not overridable at runtime. 
+
+
+
+ 📦 Configuration property fixed at build time - ⚙️️ Configuration property overridable at runtime 
 

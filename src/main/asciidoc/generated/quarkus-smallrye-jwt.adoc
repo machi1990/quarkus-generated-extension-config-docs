@@ -1,28 +1,31 @@
 
-`quarkus.smallrye-jwt.auth-mechanism`:: The authentication mechanism
+`quarkus.smallrye-jwt.auth-mechanism`📦:: The authentication mechanism
 +
 Type: `java.lang.String` +
 Defaults to: `MP-JWT` +
-The configuration is not overridable at runtime. 
 
 
-`quarkus.smallrye-jwt.realm-name`:: The authentication mechanism
+
+`quarkus.smallrye-jwt.realm-name`📦:: The authentication mechanism
 +
 Type: `java.lang.String` +
 Defaults to: `Quarkus-JWT` +
-The configuration is not overridable at runtime. 
 
 
-`quarkus.smallrye-jwt.enabled`:: The MP-JWT configuration object
+
+`quarkus.smallrye-jwt.enabled`📦:: The MP-JWT configuration object
 +
 Type: `boolean` +
 Defaults to: `true` +
-The configuration is not overridable at runtime. 
 
 
-`quarkus.smallrye-jwt.rsa-sig-provider`:: The name of the `java.security.Provider` that supports SHA256withRSA signatures
+
+`quarkus.smallrye-jwt.rsa-sig-provider`📦:: The name of the `java.security.Provider` that supports SHA256withRSA signatures
 +
 Type: `java.lang.String` +
 Defaults to: `SunRsaSign` +
-The configuration is not overridable at runtime. 
+
+
+
+ 📦 Configuration property fixed at build time - ⚙️️ Configuration property overridable at runtime 
 

@@ -1,21 +1,24 @@
 
-`quarkus.smallrye-health.root-path`:: Root path for health-checking servlets.
+`quarkus.smallrye-health.root-path`📦:: Root path for health-checking servlets.
 +
 Type: `java.lang.String` +
 Defaults to: `/health` +
-The configuration is not overridable at runtime. 
 
 
-`quarkus.smallrye-health.liveness-path`:: The relative path of the liveness health-checking servlet.
+
+`quarkus.smallrye-health.liveness-path`📦:: The relative path of the liveness health-checking servlet.
 +
 Type: `java.lang.String` +
 Defaults to: `/live` +
-The configuration is not overridable at runtime. 
 
 
-`quarkus.smallrye-health.readiness-path`:: The relative path of the readiness health-checking servlet.
+
+`quarkus.smallrye-health.readiness-path`📦:: The relative path of the readiness health-checking servlet.
 +
 Type: `java.lang.String` +
 Defaults to: `/ready` +
-The configuration is not overridable at runtime. 
+
+
+
+ 📦 Configuration property fixed at build time - ⚙️️ Configuration property overridable at runtime 
 

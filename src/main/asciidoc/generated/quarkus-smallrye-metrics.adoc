@@ -1,7 +1,10 @@
 
-`quarkus.smallrye-metrics.path`:: The path to the metrics Servlet.
+`quarkus.smallrye-metrics.path`📦:: The path to the metrics Servlet.
 +
 Type: `java.lang.String` +
 Defaults to: `/metrics` +
-The configuration is not overridable at runtime. 
+
+
+
+ 📦 Configuration property fixed at build time - ⚙️️ Configuration property overridable at runtime 
 
