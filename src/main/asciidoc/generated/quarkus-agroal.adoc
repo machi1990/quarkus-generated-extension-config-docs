@@ -13,20 +13,6 @@ Defaults to: `false` +
 
 
 
-`quarkus.datasource."<named-data-sources>".driver`📦:: The datasource driver class name
-+
-Type: `java.lang.String` +
-
-
-
-`quarkus.datasource."<named-data-sources>".xa`📦:: Whether we want to use XA. 
- If used, the driver has to support it.
-+
-Type: `boolean` +
-Defaults to: `false` +
-
-
-
 `quarkus.datasource.url`⚙️:: The datasource URL
 +
 Type: `java.lang.String` +
@@ -105,6 +91,20 @@ Type: `io.agroal.api.configuration.AgroalConnectionFactoryConfiguration.Transact
 
 
 `quarkus.datasource.enable-metrics`⚙️:: Enable datasource metrics collection.
++
+Type: `boolean` +
+Defaults to: `false` +
+
+
+
+`quarkus.datasource."<named-data-sources>".driver`📦:: The datasource driver class name
++
+Type: `java.lang.String` +
+
+
+
+`quarkus.datasource."<named-data-sources>".xa`📦:: Whether we want to use XA. 
+ If used, the driver has to support it.
 +
 Type: `boolean` +
 Defaults to: `false` +
@@ -192,6 +192,8 @@ Type: `io.agroal.api.configuration.AgroalConnectionFactoryConfiguration.Transact
 +
 Type: `boolean` +
 Defaults to: `false` +
+
+
 
 📦 Configuration property fixed at build time - ⚙️️ Configuration property overridable at runtime 
 

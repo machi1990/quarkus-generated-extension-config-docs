@@ -160,48 +160,6 @@ Defaults to: `one` +
 
 
 
-`quarkus.rt.string-map."<string-map>"`⚙️:: A map of properties
-+
-Type: `java.lang.String` +
-
-
-
-`quarkus.rt.string-list-map."<string-list-map>"`⚙️:: A map of property lists
-+
-Type: `java.util.List<java.lang.String>` +
-
-
-
-`quarkus.rt.all-values.nested-config-map."<nested-config-map>".nested-value`⚙️:: A nested string value
-+
-Type: `java.lang.String` +
-
-
-
-`quarkus.rt.all-values.nested-config-map."<nested-config-map>".oov`⚙️:: A nested ObjectOfValue value
-+
-Type: `io.quarkus.extest.runtime.config.ObjectOfValue` +
-
-
-
-`quarkus.rt.all-values.string-map."<string-map>"`⚙️:: A map of properties
-+
-Type: `java.lang.String` +
-
-
-
-`quarkus.rt.all-values.string-list-map."<string-list-map>"`⚙️:: A map of property lists
-+
-Type: `java.util.List<java.lang.String>` +
-
-
-
-`quarkus.rt.map-of-numbers."<map-of-numbers>"`⚙️:: Map of Integer conversion with `ConvertWith`
-+
-Type: `java.lang.Integer` +
-
-
-
 `quarkus.root.dsa-key-location`📦:: 
 +
 Type: `java.lang.String` +
@@ -336,36 +294,6 @@ Type: `io.quarkus.extest.runtime.config.MyEnum` +
 
 
 
-`quarkus.btrt.all-values.nested-config-map."<nested-config-map>".nested-value`📦:: A nested string value
-+
-Type: `java.lang.String` +
-
-
-
-`quarkus.btrt.all-values.nested-config-map."<nested-config-map>".oov`📦:: A nested ObjectOfValue value
-+
-Type: `io.quarkus.extest.runtime.config.ObjectOfValue` +
-
-
-
-`quarkus.btrt.all-values.string-map."<string-map>"`📦:: A map of properties
-+
-Type: `java.lang.String` +
-
-
-
-`quarkus.btrt.all-values.string-list-map."<string-list-map>"`📦:: A map of property lists
-+
-Type: `java.util.List<java.lang.String>` +
-
-
-
-`quarkus.btrt.map-of-numbers."<map-of-numbers>"`📦:: Map of Integer conversion with `ConvertWith`
-+
-Type: `java.lang.Integer` +
-
-
-
 `quarkus.bt.bt-string-opt`📦:: A config string
 +
 Type: `java.lang.String` +
@@ -472,6 +400,78 @@ Type: `java.lang.Long` +
 +
 Type: `java.lang.String` +
 Defaults to: `${java.vm.version}` +
+
+
+
+`quarkus.rt.string-map."<string-map>"`⚙️:: A map of properties
++
+Type: `java.lang.String` +
+
+
+
+`quarkus.rt.string-list-map."<string-list-map>"`⚙️:: A map of property lists
++
+Type: `java.util.List<java.lang.String>` +
+
+
+
+`quarkus.rt.all-values.nested-config-map."<nested-config-map>".nested-value`⚙️:: A nested string value
++
+Type: `java.lang.String` +
+
+
+
+`quarkus.rt.all-values.nested-config-map."<nested-config-map>".oov`⚙️:: A nested ObjectOfValue value
++
+Type: `io.quarkus.extest.runtime.config.ObjectOfValue` +
+
+
+
+`quarkus.rt.all-values.string-map."<string-map>"`⚙️:: A map of properties
++
+Type: `java.lang.String` +
+
+
+
+`quarkus.rt.all-values.string-list-map."<string-list-map>"`⚙️:: A map of property lists
++
+Type: `java.util.List<java.lang.String>` +
+
+
+
+`quarkus.rt.map-of-numbers."<map-of-numbers>"`⚙️:: Map of Integer conversion with `ConvertWith`
++
+Type: `java.lang.Integer` +
+
+
+
+`quarkus.btrt.all-values.nested-config-map."<nested-config-map>".nested-value`📦:: A nested string value
++
+Type: `java.lang.String` +
+
+
+
+`quarkus.btrt.all-values.nested-config-map."<nested-config-map>".oov`📦:: A nested ObjectOfValue value
++
+Type: `io.quarkus.extest.runtime.config.ObjectOfValue` +
+
+
+
+`quarkus.btrt.all-values.string-map."<string-map>"`📦:: A map of properties
++
+Type: `java.lang.String` +
+
+
+
+`quarkus.btrt.all-values.string-list-map."<string-list-map>"`📦:: A map of property lists
++
+Type: `java.util.List<java.lang.String>` +
+
+
+
+`quarkus.btrt.map-of-numbers."<map-of-numbers>"`📦:: Map of Integer conversion with `ConvertWith`
++
+Type: `java.lang.Integer` +
 
 
 
