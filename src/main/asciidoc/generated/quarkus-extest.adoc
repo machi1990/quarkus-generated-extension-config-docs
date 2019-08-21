@@ -1,16 +1,4 @@
 
-`quarkus.rt.string-map."<string-map>"`⚙️:: A map of properties
-+
-Type: `java.lang.String` +
-
-
-
-`quarkus.rt.string-list-map."<string-list-map>"`⚙️:: A map of property lists
-+
-Type: `java.util.List<java.lang.String>` +
-
-
-
 `quarkus.rt.rt-string-opt`⚙️:: A run time object
 +
 Type: `java.lang.String` +
@@ -85,30 +73,6 @@ Type: `io.quarkus.extest.runtime.config.ObjectValueOf` +
 +
 Type: `io.quarkus.extest.runtime.config.ObjectValueOf` +
 Defaults to: `defaultPart1+defaultPart2` +
-
-
-
-`quarkus.rt.all-values.nested-config-map."<nested-config-map>".nested-value`⚙️:: A nested string value
-+
-Type: `java.lang.String` +
-
-
-
-`quarkus.rt.all-values.nested-config-map."<nested-config-map>".oov`⚙️:: A nested ObjectOfValue value
-+
-Type: `io.quarkus.extest.runtime.config.ObjectOfValue` +
-
-
-
-`quarkus.rt.all-values.string-map."<string-map>"`⚙️:: A map of properties
-+
-Type: `java.lang.String` +
-
-
-
-`quarkus.rt.all-values.string-list-map."<string-list-map>"`⚙️:: A map of property lists
-+
-Type: `java.util.List<java.lang.String>` +
 
 
 
@@ -193,6 +157,42 @@ Defaults to: `zero` +
 +
 Type: `java.lang.Integer` +
 Defaults to: `one` +
+
+
+
+`quarkus.rt.string-map."<string-map>"`⚙️:: A map of properties
++
+Type: `java.lang.String` +
+
+
+
+`quarkus.rt.string-list-map."<string-list-map>"`⚙️:: A map of property lists
++
+Type: `java.util.List<java.lang.String>` +
+
+
+
+`quarkus.rt.all-values.nested-config-map."<nested-config-map>".nested-value`⚙️:: A nested string value
++
+Type: `java.lang.String` +
+
+
+
+`quarkus.rt.all-values.nested-config-map."<nested-config-map>".oov`⚙️:: A nested ObjectOfValue value
++
+Type: `io.quarkus.extest.runtime.config.ObjectOfValue` +
+
+
+
+`quarkus.rt.all-values.string-map."<string-map>"`⚙️:: A map of properties
++
+Type: `java.lang.String` +
+
+
+
+`quarkus.rt.all-values.string-list-map."<string-list-map>"`⚙️:: A map of property lists
++
+Type: `java.util.List<java.lang.String>` +
 
 
 
@@ -305,6 +305,37 @@ Defaults to: `defaultPart1+defaultPart2` +
 
 
 
+`quarkus.btrt.all-values.string-list`📦:: A List of string values
++
+Type: `java.lang.String` +
+
+
+
+`quarkus.btrt.all-values.long-list`📦:: A List of long values
++
+Type: `java.lang.Long` +
+
+
+
+`quarkus.btrt.all-values.expanded-default`📦:: A configuration item that has a default value that is an expression
++
+Type: `java.lang.String` +
+Defaults to: `${java.vm.version}` +
+
+
+
+`quarkus.btrt.my-enum`📦:: Enum object
++
+Type: `io.quarkus.extest.runtime.config.MyEnum` +
+
+
+
+`quarkus.btrt.my-enums`📦:: Enum list of objects
++
+Type: `io.quarkus.extest.runtime.config.MyEnum` +
+
+
+
 `quarkus.btrt.all-values.nested-config-map."<nested-config-map>".nested-value`📦:: A nested string value
 +
 Type: `java.lang.String` +
@@ -329,40 +360,9 @@ Type: `java.util.List<java.lang.String>` +
 
 
 
-`quarkus.btrt.all-values.string-list`📦:: A List of string values
-+
-Type: `java.lang.String` +
-
-
-
-`quarkus.btrt.all-values.long-list`📦:: A List of long values
-+
-Type: `java.lang.Long` +
-
-
-
-`quarkus.btrt.all-values.expanded-default`📦:: A configuration item that has a default value that is an expression
-+
-Type: `java.lang.String` +
-Defaults to: `${java.vm.version}` +
-
-
-
 `quarkus.btrt.map-of-numbers."<map-of-numbers>"`📦:: Map of Integer conversion with `ConvertWith`
 +
 Type: `java.lang.Integer` +
-
-
-
-`quarkus.btrt.my-enum`📦:: Enum object
-+
-Type: `io.quarkus.extest.runtime.config.MyEnum` +
-
-
-
-`quarkus.btrt.my-enums`📦:: Enum list of objects
-+
-Type: `io.quarkus.extest.runtime.config.MyEnum` +
 
 
 
@@ -456,6 +456,25 @@ Defaults to: `defaultPart1+defaultPart2` +
 
 
 
+`quarkus.bt.all-values.string-list`📦:: A List of string values
++
+Type: `java.lang.String` +
+
+
+
+`quarkus.bt.all-values.long-list`📦:: A List of long values
++
+Type: `java.lang.Long` +
+
+
+
+`quarkus.bt.all-values.expanded-default`📦:: A configuration item that has a default value that is an expression
++
+Type: `java.lang.String` +
+Defaults to: `${java.vm.version}` +
+
+
+
 `quarkus.bt.all-values.nested-config-map."<nested-config-map>".nested-value`📦:: A nested string value
 +
 Type: `java.lang.String` +
@@ -480,24 +499,5 @@ Type: `java.util.List<java.lang.String>` +
 
 
 
-`quarkus.bt.all-values.string-list`📦:: A List of string values
-+
-Type: `java.lang.String` +
-
-
-
-`quarkus.bt.all-values.long-list`📦:: A List of long values
-+
-Type: `java.lang.Long` +
-
-
-
-`quarkus.bt.all-values.expanded-default`📦:: A configuration item that has a default value that is an expression
-+
-Type: `java.lang.String` +
-Defaults to: `${java.vm.version}` +
-
-
-
- 📦 Configuration property fixed at build time - ⚙️️ Configuration property overridable at runtime 
+📦 Configuration property fixed at build time - ⚙️️ Configuration property overridable at runtime 
 

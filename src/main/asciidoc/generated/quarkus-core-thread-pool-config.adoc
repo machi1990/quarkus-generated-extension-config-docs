@@ -53,7 +53,7 @@ Defaults to: `30` +
 
 
 
- 📦 Configuration property fixed at build time - ⚙️️ Configuration property overridable at runtime 
+📦 Configuration property fixed at build time - ⚙️️ Configuration property overridable at runtime 
 
 
 [NOTE]

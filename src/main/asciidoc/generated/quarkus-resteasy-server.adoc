@@ -16,5 +16,5 @@ Defaults to: `/` +
 
 
 
- 📦 Configuration property fixed at build time - ⚙️️ Configuration property overridable at runtime 
+📦 Configuration property fixed at build time - ⚙️️ Configuration property overridable at runtime 
 

@@ -103,18 +103,6 @@ Type: `java.lang.String` +
 
 
 
-`quarkus.keycloak.credentials.jwt."<jwt>"`📦:: The settings for client authentication with signed JWT
-+
-Type: `java.lang.String` +
-
-
-
-`quarkus.keycloak.credentials.secret-jwt."<secret-jwt>"`📦:: The settings for client authentication with JWT using client secret
-+
-Type: `java.lang.String` +
-
-
-
 `quarkus.keycloak.allow-any-hostname`📦:: If the Keycloak server requires HTTPS and this config option is set to true the Keycloak server’s certificate is validated via the truststore, but host name validation is not done. This setting should only be used during development and never in production as it will disable verification of SSL certificates. This setting may be useful in test environments
 +
 Type: `boolean` +
@@ -254,12 +242,6 @@ Type: `java.lang.String` +
 
 
 
-`quarkus.keycloak.redirect-rewrite-rules."<redirect-rewrite-rules>"`📦:: If needed, specify the Redirect URI rewrite rule. This is an object notation where the key is the regular expression to which the Redirect URI is to be matched and the value is the replacement String. $ character can be used for backreferences in the replacement String
-+
-Type: `java.lang.String` +
-
-
-
 `quarkus.keycloak.policy-enforcer.enable`📦:: Specifies how policies are enforced.
 +
 Type: `boolean` +
@@ -271,6 +253,65 @@ Defaults to: `false` +
 +
 Type: `java.lang.String` +
 Defaults to: `ENFORCING` +
+
+
+
+`quarkus.keycloak.policy-enforcer.path-cache.max-entries`📦:: Defines the time in milliseconds when the entry should be expired
++
+Type: `int` +
+Defaults to: `1000` +
+
+
+
+`quarkus.keycloak.policy-enforcer.path-cache.lifespan`📦:: Defines the limit of entries that should be kept in the cache
++
+Type: `long` +
+Defaults to: `30000` +
+
+
+
+`quarkus.keycloak.policy-enforcer.lazy-load-paths`📦:: Specifies how the adapter should fetch the server for resources associated with paths in your application. If true, the policy enforcer is going to fetch resources on-demand accordingly with the path being requested
++
+Type: `boolean` +
+Defaults to: `true` +
+
+
+
+`quarkus.keycloak.policy-enforcer.on-deny-redirect-to`📦:: Defines a URL where a client request is redirected when an "access denied" message is obtained from the server. By default, the adapter responds with a 403 HTTP status code
++
+Type: `java.lang.String` +
+
+
+
+`quarkus.keycloak.policy-enforcer.user-managed-access`📦:: Specifies that the adapter uses the UMA protocol.
++
+Type: `boolean` +
+Defaults to: `false` +
+
+
+
+`quarkus.keycloak.policy-enforcer.http-method-as-scope`📦:: Specifies how scopes should be mapped to HTTP methods. If set to true, the policy enforcer will use the HTTP method from the current request to check whether or not access should be granted
++
+Type: `boolean` +
+Defaults to: `false` +
+
+
+
+`quarkus.keycloak.credentials.jwt."<jwt>"`📦:: The settings for client authentication with signed JWT
++
+Type: `java.lang.String` +
+
+
+
+`quarkus.keycloak.credentials.secret-jwt."<secret-jwt>"`📦:: The settings for client authentication with JWT using client secret
++
+Type: `java.lang.String` +
+
+
+
+`quarkus.keycloak.redirect-rewrite-rules."<redirect-rewrite-rules>"`📦:: If needed, specify the Redirect URI rewrite rule. This is an object notation where the key is the regular expression to which the Redirect URI is to be matched and the value is the replacement String. $ character can be used for backreferences in the replacement String
++
+Type: `java.lang.String` +
 
 
 
@@ -324,40 +365,6 @@ Type: `java.util.Map<java.lang.String,java.lang.String>` +
 
 
 
-`quarkus.keycloak.policy-enforcer.path-cache.max-entries`📦:: Defines the time in milliseconds when the entry should be expired
-+
-Type: `int` +
-Defaults to: `1000` +
-
-
-
-`quarkus.keycloak.policy-enforcer.path-cache.lifespan`📦:: Defines the limit of entries that should be kept in the cache
-+
-Type: `long` +
-Defaults to: `30000` +
-
-
-
-`quarkus.keycloak.policy-enforcer.lazy-load-paths`📦:: Specifies how the adapter should fetch the server for resources associated with paths in your application. If true, the policy enforcer is going to fetch resources on-demand accordingly with the path being requested
-+
-Type: `boolean` +
-Defaults to: `true` +
-
-
-
-`quarkus.keycloak.policy-enforcer.on-deny-redirect-to`📦:: Defines a URL where a client request is redirected when an "access denied" message is obtained from the server. By default, the adapter responds with a 403 HTTP status code
-+
-Type: `java.lang.String` +
-
-
-
-`quarkus.keycloak.policy-enforcer.user-managed-access`📦:: Specifies that the adapter uses the UMA protocol.
-+
-Type: `boolean` +
-Defaults to: `false` +
-
-
-
 `quarkus.keycloak.policy-enforcer.claim-information-point."<complex-config>"`📦:: 
 +
 Type: `java.util.Map<java.lang.String,java.util.Map<java.lang.String,java.lang.String>>` +
@@ -370,12 +377,5 @@ Type: `java.util.Map<java.lang.String,java.lang.String>` +
 
 
 
-`quarkus.keycloak.policy-enforcer.http-method-as-scope`📦:: Specifies how scopes should be mapped to HTTP methods. If set to true, the policy enforcer will use the HTTP method from the current request to check whether or not access should be granted
-+
-Type: `boolean` +
-Defaults to: `false` +
-
-
-
- 📦 Configuration property fixed at build time - ⚙️️ Configuration property overridable at runtime 
+📦 Configuration property fixed at build time - ⚙️️ Configuration property overridable at runtime 
 

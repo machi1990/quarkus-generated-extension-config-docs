@@ -104,6 +104,13 @@ Type: `java.lang.Boolean` +
 
 
 
+`quarkus.hibernate-orm.statistics`📦:: Statistics configuration.
++
+Type: `boolean` +
+Defaults to: `false` +
+
+
+
 `quarkus.hibernate-orm.cache."<cache>".expiration.max-idle`📦:: The maximum time before an object is considered expired.
 +
 Type: `java.time.Duration` - _see note below_ +
@@ -116,14 +123,7 @@ Type: `java.lang.Long` +
 
 
 
-`quarkus.hibernate-orm.statistics`📦:: Statistics configuration.
-+
-Type: `boolean` +
-Defaults to: `false` +
-
-
-
- 📦 Configuration property fixed at build time - ⚙️️ Configuration property overridable at runtime 
+📦 Configuration property fixed at build time - ⚙️️ Configuration property overridable at runtime 
 
 
 [NOTE]

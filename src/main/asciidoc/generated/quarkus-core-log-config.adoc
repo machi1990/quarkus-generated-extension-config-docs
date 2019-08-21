@@ -1,25 +1,4 @@
 
-`quarkus.log.category."<categories>".min-level`⚙️:: The minimum level that this category can be set to
-+
-Type: `java.lang.String` +
-Defaults to: `inherit` +
-
-
-
-`quarkus.log.category."<categories>".level`⚙️:: The log level level for this category
-+
-Type: `java.lang.String` +
-Defaults to: `inherit` +
-
-
-
-`quarkus.log.filter."<filters>".if-starts-with`⚙️:: The message starts to match
-+
-Type: `java.lang.String` +
-Defaults to: `inherit` +
-
-
-
 `quarkus.log.level`⚙️:: The default log level
 +
 Type: `java.util.logging.Level` +
@@ -267,7 +246,28 @@ Defaults to: `block` +
 
 
 
- 📦 Configuration property fixed at build time - ⚙️️ Configuration property overridable at runtime 
+`quarkus.log.category."<categories>".min-level`⚙️:: The minimum level that this category can be set to
++
+Type: `java.lang.String` +
+Defaults to: `inherit` +
+
+
+
+`quarkus.log.category."<categories>".level`⚙️:: The log level level for this category
++
+Type: `java.lang.String` +
+Defaults to: `inherit` +
+
+
+
+`quarkus.log.filter."<filters>".if-starts-with`⚙️:: The message starts to match
++
+Type: `java.lang.String` +
+Defaults to: `inherit` +
+
+
+
+📦 Configuration property fixed at build time - ⚙️️ Configuration property overridable at runtime 
 
 
 [NOTE]

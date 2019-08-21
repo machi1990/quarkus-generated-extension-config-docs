@@ -55,6 +55,12 @@ Defaults to: `false` +
 
 
 
+`quarkus.security.security-providers`📦:: List of security providers to enable for reflection
++
+Type: `java.lang.String` +
+
+
+
 `quarkus.security.embedded.users."<users>"`📦:: The realm users user1=password\nuser2=password2... mapping
 +
 Type: `java.lang.String` +
@@ -67,11 +73,5 @@ Type: `java.lang.String` +
 
 
 
-`quarkus.security.security-providers`📦:: List of security providers to enable for reflection
-+
-Type: `java.lang.String` +
-
-
-
- 📦 Configuration property fixed at build time - ⚙️️ Configuration property overridable at runtime 
+📦 Configuration property fixed at build time - ⚙️️ Configuration property overridable at runtime 
 

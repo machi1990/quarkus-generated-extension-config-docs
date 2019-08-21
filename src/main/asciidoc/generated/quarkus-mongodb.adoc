@@ -197,19 +197,19 @@ Type: `java.lang.String` +
 
 
 
-`quarkus.mongodb.credentials.auth-mechanism-properties."<auth-mechanism-properties>"`⚙️:: Allows passing authentication mechanism properties.
-+
-Type: `java.lang.String` +
-
-
-
 `quarkus.mongodb.max-wait-queue-size`⚙️:: Configures the maximum number of concurrent operations allowed to wait for a server to become available. All further operations will get an exception immediately.
 +
 Type: `java.lang.Integer` +
 
 
 
- 📦 Configuration property fixed at build time - ⚙️️ Configuration property overridable at runtime 
+`quarkus.mongodb.credentials.auth-mechanism-properties."<auth-mechanism-properties>"`⚙️:: Allows passing authentication mechanism properties.
++
+Type: `java.lang.String` +
+
+
+
+📦 Configuration property fixed at build time - ⚙️️ Configuration property overridable at runtime 
 
 
 [NOTE]
