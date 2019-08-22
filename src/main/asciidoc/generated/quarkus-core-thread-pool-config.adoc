@@ -1,5 +1,8 @@
+== Summary
+
+📦 Configuration property fixed at build time - ⚙️️ Configuration property overridable at runtime 
 |===
-|key|type|default|build time/runtime icon
+|Configuration property|Type|Default|Lifecycle
 
 |<<quarkus.thread-pool.core-threads, quarkus.thread-pool.core-threads>>
 |int 
@@ -22,26 +25,28 @@
 | ⚙️
 
 |<<quarkus.thread-pool.shutdown-timeout, quarkus.thread-pool.shutdown-timeout>>
-|Duration  - _see note below_
+|Duration <<duration-note-anchor, _see note below_>>
 |1M
 | ⚙️
 
 |<<quarkus.thread-pool.shutdown-interrupt, quarkus.thread-pool.shutdown-interrupt>>
-|Duration  - _see note below_
+|Duration <<duration-note-anchor, _see note below_>>
 |10
 | ⚙️
 
 |<<quarkus.thread-pool.shutdown-check-interval, quarkus.thread-pool.shutdown-check-interval>>
-|Duration  - _see note below_
+|Duration <<duration-note-anchor, _see note below_>>
 |5
 | ⚙️
 
 |<<quarkus.thread-pool.keep-alive-time, quarkus.thread-pool.keep-alive-time>>
-|Duration  - _see note below_
+|Duration <<duration-note-anchor, _see note below_>>
 |30
 | ⚙️
 |===
 
+
+== Details
 
 [[quarkus.thread-pool.core-threads]]
 `quarkus.thread-pool.core-threads`⚙️:: The core thread pool size. This number of threads will always be kept alive.
@@ -76,7 +81,7 @@ Defaults to: `0` +
 [[quarkus.thread-pool.shutdown-timeout]]
 `quarkus.thread-pool.shutdown-timeout`⚙️:: The shutdown timeout. If all pending work has not been completed by this time then additional threads will be spawned to attempt to finish any pending tasks, and the shutdown process will continue
 +
-Type: `java.time.Duration` - _see note below_ +
+Type: `java.time.Duration` +
 Defaults to: `1M` +
 
 
@@ -84,7 +89,7 @@ Defaults to: `1M` +
 [[quarkus.thread-pool.shutdown-interrupt]]
 `quarkus.thread-pool.shutdown-interrupt`⚙️:: The amount of time to wait for thread pool shutdown before tasks should be interrupted. If this value is greater than or equal to the value for `shutdown-timeout`, then tasks will not be interrupted before the shutdown timeout occurs.
 +
-Type: `java.time.Duration` - _see note below_ +
+Type: `java.time.Duration` +
 Defaults to: `10` +
 
 
@@ -92,7 +97,7 @@ Defaults to: `10` +
 [[quarkus.thread-pool.shutdown-check-interval]]
 `quarkus.thread-pool.shutdown-check-interval`⚙️:: The frequency at which the status of the thread pool should be checked during shutdown. Information about waiting tasks and threads will be checked and possibly logged at this interval. Setting this key to an empty value disables the shutdown check interval.
 +
-Type: `java.time.Duration` - _see note below_ +
+Type: `java.time.Duration` +
 Defaults to: `5` +
 
 
@@ -100,15 +105,13 @@ Defaults to: `5` +
 [[quarkus.thread-pool.keep-alive-time]]
 `quarkus.thread-pool.keep-alive-time`⚙️:: The amount of time a thread will stay alive with no work.
 +
-Type: `java.time.Duration` - _see note below_ +
+Type: `java.time.Duration` +
 Defaults to: `30` +
 
 
 
-📦 Configuration property fixed at build time - ⚙️️ Configuration property overridable at runtime 
-
-
 [NOTE]
+[[duration-note-anchor]]
 .About the Duration format
 ====
 The format for durations uses the standard `java.time.Duration` format.

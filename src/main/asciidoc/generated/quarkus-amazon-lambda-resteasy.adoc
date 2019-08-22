@@ -1,5 +1,8 @@
+== Summary
+
+📦 Configuration property fixed at build time - ⚙️️ Configuration property overridable at runtime 
 |===
-|key|type|default|build time/runtime icon
+|Configuration property|Type|Default|Lifecycle
 
 |<<quarkus.amazon-lambda-resteasy.debug, quarkus.amazon-lambda-resteasy.debug>>
 |boolean 
@@ -8,13 +11,12 @@
 |===
 
 
+== Details
+
 [[quarkus.amazon-lambda-resteasy.debug]]
 `quarkus.amazon-lambda-resteasy.debug`📦:: Indicates if we are in debug mode.
 +
 Type: `boolean` +
 Defaults to: `false` +
 
-
-
-📦 Configuration property fixed at build time - ⚙️️ Configuration property overridable at runtime 
 

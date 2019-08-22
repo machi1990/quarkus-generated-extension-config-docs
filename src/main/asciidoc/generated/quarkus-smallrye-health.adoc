@@ -1,5 +1,8 @@
+== Summary
+
+📦 Configuration property fixed at build time - ⚙️️ Configuration property overridable at runtime 
 |===
-|key|type|default|build time/runtime icon
+|Configuration property|Type|Default|Lifecycle
 
 |<<quarkus.smallrye-health.root-path, quarkus.smallrye-health.root-path>>
 |String 
@@ -17,6 +20,8 @@
 | 📦
 |===
 
+
+== Details
 
 [[quarkus.smallrye-health.root-path]]
 `quarkus.smallrye-health.root-path`📦:: Root path for health-checking servlets.
@@ -40,7 +45,4 @@ Defaults to: `/live` +
 Type: `java.lang.String` +
 Defaults to: `/ready` +
 
-
-
-📦 Configuration property fixed at build time - ⚙️️ Configuration property overridable at runtime 
 

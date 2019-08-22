@@ -1,5 +1,8 @@
+== Summary
+
+📦 Configuration property fixed at build time - ⚙️️ Configuration property overridable at runtime 
 |===
-|key|type|default|build time/runtime icon
+|Configuration property|Type|Default|Lifecycle
 
 |<<quarkus.log.level, quarkus.log.level>>
 |Level 
@@ -87,7 +90,7 @@
 | ⚙️
 
 |<<quarkus.log.file.rotation.max-file-size, quarkus.log.file.rotation.max-file-size>>
-|MemorySize  - _see note below_
+|MemorySize <<memory-size-note-anchor, _see note below_>>
 |
 | ⚙️
 
@@ -197,6 +200,8 @@
 | ⚙️
 |===
 
+
+== Details
 
 [[quarkus.log.level]]
 `quarkus.log.level`⚙️:: The default log level
@@ -336,7 +341,7 @@ Defaults to: `block` +
 [[quarkus.log.file.rotation.max-file-size]]
 `quarkus.log.file.rotation.max-file-size`⚙️:: The maximum file size of the log file after which a rotation is executed.
 +
-Type: `io.quarkus.runtime.configuration.MemorySize` - _see note below_ +
+Type: `io.quarkus.runtime.configuration.MemorySize` +
 
 
 
@@ -505,10 +510,8 @@ Defaults to: `inherit` +
 
 
 
-📦 Configuration property fixed at build time - ⚙️️ Configuration property overridable at runtime 
-
-
 [NOTE]
+[[memory-size-note-anchor]]
 .About the MemorySize format
 ====
 A size configuration option recognises string in this format (shown as a regular expression): `[0-9]+[KkMmGgTtPpEeZzYy]?`.

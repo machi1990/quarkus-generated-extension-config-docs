@@ -1,5 +1,8 @@
+== Summary
+
+📦 Configuration property fixed at build time - ⚙️️ Configuration property overridable at runtime 
 |===
-|key|type|default|build time/runtime icon
+|Configuration property|Type|Default|Lifecycle
 
 |<<quarkus.flyway.locations, quarkus.flyway.locations>>
 |String 
@@ -52,6 +55,8 @@
 | ⚙️
 |===
 
+
+== Details
 
 [[quarkus.flyway.locations]]
 `quarkus.flyway.locations`📦:: Comma-separated list of locations to scan recursively for migrations. The location type is determined by its prefix. Unprefixed locations or locations starting with classpath: point to a package on the classpath and may contain both SQL and Java-based migrations. Locations starting with filesystem: point to a directory on the filesystem, may only contain SQL migrations and are only scanned recursively down non-hidden directories.
@@ -123,7 +128,4 @@ Type: `java.lang.String` +
 +
 Type: `java.lang.String` +
 
-
-
-📦 Configuration property fixed at build time - ⚙️️ Configuration property overridable at runtime 
 

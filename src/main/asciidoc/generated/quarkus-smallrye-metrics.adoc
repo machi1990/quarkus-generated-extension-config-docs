@@ -1,5 +1,8 @@
+== Summary
+
+📦 Configuration property fixed at build time - ⚙️️ Configuration property overridable at runtime 
 |===
-|key|type|default|build time/runtime icon
+|Configuration property|Type|Default|Lifecycle
 
 |<<quarkus.smallrye-metrics.path, quarkus.smallrye-metrics.path>>
 |String 
@@ -8,13 +11,12 @@
 |===
 
 
+== Details
+
 [[quarkus.smallrye-metrics.path]]
 `quarkus.smallrye-metrics.path`📦:: The path to the metrics Servlet.
 +
 Type: `java.lang.String` +
 Defaults to: `/metrics` +
 
-
-
-📦 Configuration property fixed at build time - ⚙️️ Configuration property overridable at runtime 
 

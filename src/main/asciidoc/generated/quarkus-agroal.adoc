@@ -1,5 +1,8 @@
+== Summary
+
+📦 Configuration property fixed at build time - ⚙️️ Configuration property overridable at runtime 
 |===
-|key|type|default|build time/runtime icon
+|Configuration property|Type|Default|Lifecycle
 
 |<<quarkus.datasource.driver, quarkus.datasource.driver>>
 |String 
@@ -42,27 +45,27 @@
 | ⚙️
 
 |<<quarkus.datasource.background-validation-interval, quarkus.datasource.background-validation-interval>>
-|Duration  - _see note below_
+|Duration <<duration-note-anchor, _see note below_>>
 |2M
 | ⚙️
 
 |<<quarkus.datasource.acquisition-timeout, quarkus.datasource.acquisition-timeout>>
-|Duration  - _see note below_
+|Duration <<duration-note-anchor, _see note below_>>
 |5
 | ⚙️
 
 |<<quarkus.datasource.leak-detection-interval, quarkus.datasource.leak-detection-interval>>
-|Duration  - _see note below_
+|Duration <<duration-note-anchor, _see note below_>>
 |
 | ⚙️
 
 |<<quarkus.datasource.idle-removal-interval, quarkus.datasource.idle-removal-interval>>
-|Duration  - _see note below_
+|Duration <<duration-note-anchor, _see note below_>>
 |5M
 | ⚙️
 
 |<<quarkus.datasource.max-lifetime, quarkus.datasource.max-lifetime>>
-|Duration  - _see note below_
+|Duration <<duration-note-anchor, _see note below_>>
 |
 | ⚙️
 
@@ -117,27 +120,27 @@
 | ⚙️
 
 |<<quarkus.datasource.named-data-sources.background-validation-interval, quarkus.datasource."<named-data-sources>".background-validation-interval>>
-|Duration  - _see note below_
+|Duration <<duration-note-anchor, _see note below_>>
 |2M
 | ⚙️
 
 |<<quarkus.datasource.named-data-sources.acquisition-timeout, quarkus.datasource."<named-data-sources>".acquisition-timeout>>
-|Duration  - _see note below_
+|Duration <<duration-note-anchor, _see note below_>>
 |5
 | ⚙️
 
 |<<quarkus.datasource.named-data-sources.leak-detection-interval, quarkus.datasource."<named-data-sources>".leak-detection-interval>>
-|Duration  - _see note below_
+|Duration <<duration-note-anchor, _see note below_>>
 |
 | ⚙️
 
 |<<quarkus.datasource.named-data-sources.idle-removal-interval, quarkus.datasource."<named-data-sources>".idle-removal-interval>>
-|Duration  - _see note below_
+|Duration <<duration-note-anchor, _see note below_>>
 |5M
 | ⚙️
 
 |<<quarkus.datasource.named-data-sources.max-lifetime, quarkus.datasource."<named-data-sources>".max-lifetime>>
-|Duration  - _see note below_
+|Duration <<duration-note-anchor, _see note below_>>
 |
 | ⚙️
 
@@ -152,6 +155,8 @@
 | ⚙️
 |===
 
+
+== Details
 
 [[quarkus.datasource.driver]]
 `quarkus.datasource.driver`📦:: The datasource driver class name
@@ -216,7 +221,7 @@ Defaults to: `20` +
 [[quarkus.datasource.background-validation-interval]]
 `quarkus.datasource.background-validation-interval`⚙️:: The interval at which we validate idle connections in the background
 +
-Type: `java.time.Duration` - _see note below_ +
+Type: `java.time.Duration` +
 Defaults to: `2M` +
 
 
@@ -224,7 +229,7 @@ Defaults to: `2M` +
 [[quarkus.datasource.acquisition-timeout]]
 `quarkus.datasource.acquisition-timeout`⚙️:: The timeout before cancelling the acquisition of a new connection
 +
-Type: `java.time.Duration` - _see note below_ +
+Type: `java.time.Duration` +
 Defaults to: `5` +
 
 
@@ -232,14 +237,14 @@ Defaults to: `5` +
 [[quarkus.datasource.leak-detection-interval]]
 `quarkus.datasource.leak-detection-interval`⚙️:: The interval at which we check for connection leaks.
 +
-Type: `java.time.Duration` - _see note below_ +
+Type: `java.time.Duration` +
 
 
 
 [[quarkus.datasource.idle-removal-interval]]
 `quarkus.datasource.idle-removal-interval`⚙️:: The interval at which we try to remove idle connections.
 +
-Type: `java.time.Duration` - _see note below_ +
+Type: `java.time.Duration` +
 Defaults to: `5M` +
 
 
@@ -247,7 +252,7 @@ Defaults to: `5M` +
 [[quarkus.datasource.max-lifetime]]
 `quarkus.datasource.max-lifetime`⚙️:: The max lifetime of a connection.
 +
-Type: `java.time.Duration` - _see note below_ +
+Type: `java.time.Duration` +
 
 
 
@@ -329,7 +334,7 @@ Defaults to: `20` +
 [[quarkus.datasource.named-data-sources.background-validation-interval]]
 `quarkus.datasource."<named-data-sources>".background-validation-interval`⚙️:: The interval at which we validate idle connections in the background
 +
-Type: `java.time.Duration` - _see note below_ +
+Type: `java.time.Duration` +
 Defaults to: `2M` +
 
 
@@ -337,7 +342,7 @@ Defaults to: `2M` +
 [[quarkus.datasource.named-data-sources.acquisition-timeout]]
 `quarkus.datasource."<named-data-sources>".acquisition-timeout`⚙️:: The timeout before cancelling the acquisition of a new connection
 +
-Type: `java.time.Duration` - _see note below_ +
+Type: `java.time.Duration` +
 Defaults to: `5` +
 
 
@@ -345,14 +350,14 @@ Defaults to: `5` +
 [[quarkus.datasource.named-data-sources.leak-detection-interval]]
 `quarkus.datasource."<named-data-sources>".leak-detection-interval`⚙️:: The interval at which we check for connection leaks.
 +
-Type: `java.time.Duration` - _see note below_ +
+Type: `java.time.Duration` +
 
 
 
 [[quarkus.datasource.named-data-sources.idle-removal-interval]]
 `quarkus.datasource."<named-data-sources>".idle-removal-interval`⚙️:: The interval at which we try to remove idle connections.
 +
-Type: `java.time.Duration` - _see note below_ +
+Type: `java.time.Duration` +
 Defaults to: `5M` +
 
 
@@ -360,7 +365,7 @@ Defaults to: `5M` +
 [[quarkus.datasource.named-data-sources.max-lifetime]]
 `quarkus.datasource."<named-data-sources>".max-lifetime`⚙️:: The max lifetime of a connection.
 +
-Type: `java.time.Duration` - _see note below_ +
+Type: `java.time.Duration` +
 
 
 
@@ -379,10 +384,8 @@ Defaults to: `false` +
 
 
 
-📦 Configuration property fixed at build time - ⚙️️ Configuration property overridable at runtime 
-
-
 [NOTE]
+[[duration-note-anchor]]
 .About the Duration format
 ====
 The format for durations uses the standard `java.time.Duration` format.

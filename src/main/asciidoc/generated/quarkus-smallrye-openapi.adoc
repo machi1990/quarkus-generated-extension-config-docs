@@ -1,5 +1,8 @@
+== Summary
+
+📦 Configuration property fixed at build time - ⚙️️ Configuration property overridable at runtime 
 |===
-|key|type|default|build time/runtime icon
+|Configuration property|Type|Default|Lifecycle
 
 |<<quarkus.smallrye-openapi.path, quarkus.smallrye-openapi.path>>
 |String 
@@ -8,13 +11,12 @@
 |===
 
 
+== Details
+
 [[quarkus.smallrye-openapi.path]]
 `quarkus.smallrye-openapi.path`📦:: The path at which to register the OpenAPI Servlet.
 +
 Type: `java.lang.String` +
 Defaults to: `/openapi` +
 
-
-
-📦 Configuration property fixed at build time - ⚙️️ Configuration property overridable at runtime 
 

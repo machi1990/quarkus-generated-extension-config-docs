@@ -1,5 +1,8 @@
+== Summary
+
+📦 Configuration property fixed at build time - ⚙️️ Configuration property overridable at runtime 
 |===
-|key|type|default|build time/runtime icon
+|Configuration property|Type|Default|Lifecycle
 
 |<<quarkus.smallrye-jwt.auth-mechanism, quarkus.smallrye-jwt.auth-mechanism>>
 |String 
@@ -22,6 +25,8 @@
 | 📦
 |===
 
+
+== Details
 
 [[quarkus.smallrye-jwt.auth-mechanism]]
 `quarkus.smallrye-jwt.auth-mechanism`📦:: The authentication mechanism
@@ -53,7 +58,4 @@ Defaults to: `true` +
 Type: `java.lang.String` +
 Defaults to: `SunRsaSign` +
 
-
-
-📦 Configuration property fixed at build time - ⚙️️ Configuration property overridable at runtime 
 

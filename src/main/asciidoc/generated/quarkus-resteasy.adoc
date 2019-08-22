@@ -1,5 +1,8 @@
+== Summary
+
+📦 Configuration property fixed at build time - ⚙️️ Configuration property overridable at runtime 
 |===
-|key|type|default|build time/runtime icon
+|Configuration property|Type|Default|Lifecycle
 
 |<<quarkus.resteasy.gzip.enabled, quarkus.resteasy.gzip.enabled>>
 |boolean 
@@ -7,11 +10,13 @@
 | 📦
 
 |<<quarkus.resteasy.gzip.max-input, quarkus.resteasy.gzip.max-input>>
-|MemorySize  - _see note below_
+|MemorySize <<memory-size-note-anchor, _see note below_>>
 |10M
 | 📦
 |===
 
+
+== Details
 
 [[quarkus.resteasy.gzip.enabled]]
 `quarkus.resteasy.gzip.enabled`📦:: If gzip is enabled
@@ -25,15 +30,13 @@ Defaults to: `false` +
 `quarkus.resteasy.gzip.max-input`📦:: Maximum deflated file bytes size 
  If the limit is exceeded, Resteasy will return Response with status 413("Request Entity Too Large")
 +
-Type: `io.quarkus.runtime.configuration.MemorySize` - _see note below_ +
+Type: `io.quarkus.runtime.configuration.MemorySize` +
 Defaults to: `10M` +
 
 
 
-📦 Configuration property fixed at build time - ⚙️️ Configuration property overridable at runtime 
-
-
 [NOTE]
+[[memory-size-note-anchor]]
 .About the MemorySize format
 ====
 A size configuration option recognises string in this format (shown as a regular expression): `[0-9]+[KkMmGgTtPpEeZzYy]?`.

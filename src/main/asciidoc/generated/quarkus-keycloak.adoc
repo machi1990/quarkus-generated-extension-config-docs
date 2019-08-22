@@ -1,5 +1,8 @@
+== Summary
+
+📦 Configuration property fixed at build time - ⚙️️ Configuration property overridable at runtime 
 |===
-|key|type|default|build time/runtime icon
+|Configuration property|Type|Default|Lifecycle
 
 |<<quarkus.keycloak.realm, quarkus.keycloak.realm>>
 |String 
@@ -292,6 +295,8 @@
 | 📦
 |===
 
+
+== Details
 
 [[quarkus.keycloak.realm]]
 `quarkus.keycloak.realm`📦:: Name of the realm.
@@ -727,7 +732,4 @@ Type: `java.util.Map<java.lang.String,java.util.Map<java.lang.String,java.lang.S
 +
 Type: `java.util.Map<java.lang.String,java.lang.String>` +
 
-
-
-📦 Configuration property fixed at build time - ⚙️️ Configuration property overridable at runtime 
 

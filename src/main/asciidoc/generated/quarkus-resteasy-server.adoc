@@ -1,5 +1,8 @@
+== Summary
+
+📦 Configuration property fixed at build time - ⚙️️ Configuration property overridable at runtime 
 |===
-|key|type|default|build time/runtime icon
+|Configuration property|Type|Default|Lifecycle
 
 |<<quarkus.resteasy.singleton-resources, quarkus.resteasy.singleton-resources>>
 |boolean 
@@ -12,6 +15,8 @@
 | 📦
 |===
 
+
+== Details
 
 [[quarkus.resteasy.singleton-resources]]
 `quarkus.resteasy.singleton-resources`📦:: If this is true then JAX-RS will use only a single instance of a resource class to service all requests. 
@@ -30,7 +35,4 @@ Defaults to: `true` +
 Type: `java.lang.String` +
 Defaults to: `/` +
 
-
-
-📦 Configuration property fixed at build time - ⚙️️ Configuration property overridable at runtime 
 

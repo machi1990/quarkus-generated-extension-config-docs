@@ -1,5 +1,8 @@
+== Summary
+
+📦 Configuration property fixed at build time - ⚙️️ Configuration property overridable at runtime 
 |===
-|key|type|default|build time/runtime icon
+|Configuration property|Type|Default|Lifecycle
 
 |<<quarkus.oauth2.enabled, quarkus.oauth2.enabled>>
 |boolean 
@@ -32,6 +35,8 @@
 | 📦
 |===
 
+
+== Details
 
 [[quarkus.oauth2.enabled]]
 `quarkus.oauth2.enabled`📦:: If the OAuth2 extension is enabled.
@@ -75,7 +80,4 @@ Type: `java.lang.String` +
 Type: `java.lang.String` +
 Defaults to: `scope` +
 
-
-
-📦 Configuration property fixed at build time - ⚙️️ Configuration property overridable at runtime 
 

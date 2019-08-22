@@ -1,5 +1,8 @@
+== Summary
+
+📦 Configuration property fixed at build time - ⚙️️ Configuration property overridable at runtime 
 |===
-|key|type|default|build time/runtime icon
+|Configuration property|Type|Default|Lifecycle
 
 |<<quarkus.ssl.native, quarkus.ssl.native>>
 |Boolean 
@@ -8,12 +11,11 @@
 |===
 
 
+== Details
+
 [[quarkus.ssl.native]]
 `quarkus.ssl.native`📦:: Enable native SSL support.
 +
 Type: `java.lang.Boolean` +
 
-
-
-📦 Configuration property fixed at build time - ⚙️️ Configuration property overridable at runtime 
 

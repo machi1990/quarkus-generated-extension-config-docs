@@ -1,5 +1,8 @@
+== Summary
+
+📦 Configuration property fixed at build time - ⚙️️ Configuration property overridable at runtime 
 |===
-|key|type|default|build time/runtime icon
+|Configuration property|Type|Default|Lifecycle
 
 |<<quarkus.mongodb.connection-string, quarkus.mongodb.connection-string>>
 |String 
@@ -32,27 +35,27 @@
 | ⚙️
 
 |<<quarkus.mongodb.max-connection-idle-time, quarkus.mongodb.max-connection-idle-time>>
-|Duration  - _see note below_
+|Duration <<duration-note-anchor, _see note below_>>
 |
 | ⚙️
 
 |<<quarkus.mongodb.max-connection-life-time, quarkus.mongodb.max-connection-life-time>>
-|Duration  - _see note below_
+|Duration <<duration-note-anchor, _see note below_>>
 |
 | ⚙️
 
 |<<quarkus.mongodb.wait-queue-timeout, quarkus.mongodb.wait-queue-timeout>>
-|Duration  - _see note below_
+|Duration <<duration-note-anchor, _see note below_>>
 |
 | ⚙️
 
 |<<quarkus.mongodb.maintenance-frequency, quarkus.mongodb.maintenance-frequency>>
-|Duration  - _see note below_
+|Duration <<duration-note-anchor, _see note below_>>
 |
 | ⚙️
 
 |<<quarkus.mongodb.maintenance-initial-delay, quarkus.mongodb.maintenance-initial-delay>>
-|Duration  - _see note below_
+|Duration <<duration-note-anchor, _see note below_>>
 |
 | ⚙️
 
@@ -62,12 +65,12 @@
 | ⚙️
 
 |<<quarkus.mongodb.connect-timeout, quarkus.mongodb.connect-timeout>>
-|Duration  - _see note below_
+|Duration <<duration-note-anchor, _see note below_>>
 |
 | ⚙️
 
 |<<quarkus.mongodb.socket-timeout, quarkus.mongodb.socket-timeout>>
-|Duration  - _see note below_
+|Duration <<duration-note-anchor, _see note below_>>
 |
 | ⚙️
 
@@ -87,17 +90,17 @@
 | ⚙️
 
 |<<quarkus.mongodb.server-selection-timeout, quarkus.mongodb.server-selection-timeout>>
-|Duration  - _see note below_
+|Duration <<duration-note-anchor, _see note below_>>
 |
 | ⚙️
 
 |<<quarkus.mongodb.local-threshold, quarkus.mongodb.local-threshold>>
-|Duration  - _see note below_
+|Duration <<duration-note-anchor, _see note below_>>
 |
 | ⚙️
 
 |<<quarkus.mongodb.heartbeat-frequency, quarkus.mongodb.heartbeat-frequency>>
-|Duration  - _see note below_
+|Duration <<duration-note-anchor, _see note below_>>
 |
 | ⚙️
 
@@ -122,7 +125,7 @@
 | ⚙️
 
 |<<quarkus.mongodb.write-concern.w-timeout, quarkus.mongodb.write-concern.w-timeout>>
-|Duration  - _see note below_
+|Duration <<duration-note-anchor, _see note below_>>
 |
 | ⚙️
 
@@ -162,6 +165,8 @@
 | ⚙️
 |===
 
+
+== Details
 
 [[quarkus.mongodb.connection-string]]
 `quarkus.mongodb.connection-string`⚙️:: Configures the connection string. The format is: `mongodb://[username:password@]host1[:port1][,host2[:port2],...[,hostN[:portN]]][/[database.collection][?options]]` 
@@ -220,35 +225,35 @@ Type: `java.lang.Integer` +
 [[quarkus.mongodb.max-connection-idle-time]]
 `quarkus.mongodb.max-connection-idle-time`⚙️:: Maximum idle time of a pooled connection. A connection that exceeds this limit will be closed.
 +
-Type: `java.time.Duration` - _see note below_ +
+Type: `java.time.Duration` +
 
 
 
 [[quarkus.mongodb.max-connection-life-time]]
 `quarkus.mongodb.max-connection-life-time`⚙️:: Maximum life time of a pooled connection. A connection that exceeds this limit will be closed.
 +
-Type: `java.time.Duration` - _see note below_ +
+Type: `java.time.Duration` +
 
 
 
 [[quarkus.mongodb.wait-queue-timeout]]
 `quarkus.mongodb.wait-queue-timeout`⚙️:: The maximum wait time that a thread may wait for a connection to become available.
 +
-Type: `java.time.Duration` - _see note below_ +
+Type: `java.time.Duration` +
 
 
 
 [[quarkus.mongodb.maintenance-frequency]]
 `quarkus.mongodb.maintenance-frequency`⚙️:: Configures the time period between runs of the maintenance job.
 +
-Type: `java.time.Duration` - _see note below_ +
+Type: `java.time.Duration` +
 
 
 
 [[quarkus.mongodb.maintenance-initial-delay]]
 `quarkus.mongodb.maintenance-initial-delay`⚙️:: Configures period of time to wait before running the first maintenance job on the connection pool.
 +
-Type: `java.time.Duration` - _see note below_ +
+Type: `java.time.Duration` +
 
 
 
@@ -262,14 +267,14 @@ Type: `java.lang.Integer` +
 [[quarkus.mongodb.connect-timeout]]
 `quarkus.mongodb.connect-timeout`⚙️:: How long a connection can take to be opened before timing out.
 +
-Type: `java.time.Duration` - _see note below_ +
+Type: `java.time.Duration` +
 
 
 
 [[quarkus.mongodb.socket-timeout]]
 `quarkus.mongodb.socket-timeout`⚙️:: How long a send or receive on a socket can take before timing out.
 +
-Type: `java.time.Duration` - _see note below_ +
+Type: `java.time.Duration` +
 
 
 
@@ -299,21 +304,21 @@ Type: `java.lang.String` +
 [[quarkus.mongodb.server-selection-timeout]]
 `quarkus.mongodb.server-selection-timeout`⚙️:: How long the driver will wait for server selection to succeed before throwing an exception.
 +
-Type: `java.time.Duration` - _see note below_ +
+Type: `java.time.Duration` +
 
 
 
 [[quarkus.mongodb.local-threshold]]
 `quarkus.mongodb.local-threshold`⚙️:: When choosing among multiple MongoDB servers to send a request, the driver will only send that request to a server whose ping time is less than or equal to the server with the fastest ping time plus the local threshold.
 +
-Type: `java.time.Duration` - _see note below_ +
+Type: `java.time.Duration` +
 
 
 
 [[quarkus.mongodb.heartbeat-frequency]]
 `quarkus.mongodb.heartbeat-frequency`⚙️:: The frequency that the driver will attempt to determine the current state of each server in the cluster.
 +
-Type: `java.time.Duration` - _see note below_ +
+Type: `java.time.Duration` +
 
 
 
@@ -352,7 +357,7 @@ Defaults to: `false` +
 [[quarkus.mongodb.write-concern.w-timeout]]
 `quarkus.mongodb.write-concern.w-timeout`⚙️:: When set, the driver adds `wtimeout : ms` to all write commands. It requires `safe` to be `true`.
 +
-Type: `java.time.Duration` - _see note below_ +
+Type: `java.time.Duration` +
 
 
 
@@ -405,10 +410,8 @@ Type: `java.lang.String` +
 
 
 
-📦 Configuration property fixed at build time - ⚙️️ Configuration property overridable at runtime 
-
-
 [NOTE]
+[[duration-note-anchor]]
 .About the Duration format
 ====
 The format for durations uses the standard `java.time.Duration` format.

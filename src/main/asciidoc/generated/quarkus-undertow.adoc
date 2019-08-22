@@ -1,5 +1,8 @@
+== Summary
+
+📦 Configuration property fixed at build time - ⚙️️ Configuration property overridable at runtime 
 |===
-|key|type|default|build time/runtime icon
+|Configuration property|Type|Default|Lifecycle
 
 |<<quarkus.servlet.context-path, quarkus.servlet.context-path>>
 |String 
@@ -8,12 +11,11 @@
 |===
 
 
+== Details
+
 [[quarkus.servlet.context-path]]
 `quarkus.servlet.context-path`📦:: The context path to serve all Servlet context from. This will also affect any resources that run as a Servlet, e.g. JAX-RS
 +
 Type: `java.lang.String` +
 
-
-
-📦 Configuration property fixed at build time - ⚙️️ Configuration property overridable at runtime 
 

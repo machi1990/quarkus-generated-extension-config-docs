@@ -1,5 +1,8 @@
+== Summary
+
+📦 Configuration property fixed at build time - ⚙️️ Configuration property overridable at runtime 
 |===
-|key|type|default|build time/runtime icon
+|Configuration property|Type|Default|Lifecycle
 
 |<<quarkus.mailer.from, quarkus.mailer.from>>
 |String 
@@ -92,6 +95,8 @@
 | ⚙️
 |===
 
+
+== Details
 
 [[quarkus.mailer.from]]
 `quarkus.mailer.from`⚙️:: Configure the default `from` attribute. It's the sender email address.
@@ -225,7 +230,4 @@ Type: `java.lang.String` +
 +
 Type: `java.lang.String` +
 
-
-
-📦 Configuration property fixed at build time - ⚙️️ Configuration property overridable at runtime 
 

@@ -1,5 +1,8 @@
+== Summary
+
+📦 Configuration property fixed at build time - ⚙️️ Configuration property overridable at runtime 
 |===
-|key|type|default|build time/runtime icon
+|Configuration property|Type|Default|Lifecycle
 
 |<<quarkus.jaeger.endpoint, quarkus.jaeger.endpoint>>
 |URI 
@@ -37,7 +40,7 @@
 | ⚙️
 
 |<<quarkus.jaeger.reporter-flush-interval, quarkus.jaeger.reporter-flush-interval>>
-|Duration  - _see note below_
+|Duration <<duration-note-anchor, _see note below_>>
 |
 | ⚙️
 
@@ -77,6 +80,8 @@
 | ⚙️
 |===
 
+
+== Details
 
 [[quarkus.jaeger.endpoint]]
 `quarkus.jaeger.endpoint`⚙️:: The traces endpoint, in case the client should connect directly to the Collector, like http://jaeger-collector:14268/api/traces
@@ -130,7 +135,7 @@ Type: `java.lang.Integer` +
 [[quarkus.jaeger.reporter-flush-interval]]
 `quarkus.jaeger.reporter-flush-interval`⚙️:: The reporter's flush interval
 +
-Type: `java.time.Duration` - _see note below_ +
+Type: `java.time.Duration` +
 
 
 
@@ -183,10 +188,8 @@ Type: `java.lang.String` +
 
 
 
-📦 Configuration property fixed at build time - ⚙️️ Configuration property overridable at runtime 
-
-
 [NOTE]
+[[duration-note-anchor]]
 .About the Duration format
 ====
 The format for durations uses the standard `java.time.Duration` format.

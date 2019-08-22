@@ -1,5 +1,8 @@
+== Summary
+
+📦 Configuration property fixed at build time - ⚙️️ Configuration property overridable at runtime 
 |===
-|key|type|default|build time/runtime icon
+|Configuration property|Type|Default|Lifecycle
 
 |<<quarkus.jni.library-paths, quarkus.jni.library-paths>>
 |String 
@@ -12,6 +15,8 @@
 | 📦
 |===
 
+
+== Details
 
 [[quarkus.jni.library-paths]]
 `quarkus.jni.library-paths`📦:: Paths of library to load.
@@ -26,7 +31,4 @@ Type: `java.lang.String` +
 Type: `boolean` +
 Defaults to: `false` +
 
-
-
-📦 Configuration property fixed at build time - ⚙️️ Configuration property overridable at runtime 
 

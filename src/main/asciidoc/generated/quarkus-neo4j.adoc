@@ -1,5 +1,8 @@
+== Summary
+
+📦 Configuration property fixed at build time - ⚙️️ Configuration property overridable at runtime 
 |===
-|key|type|default|build time/runtime icon
+|Configuration property|Type|Default|Lifecycle
 
 |<<quarkus.neo4j.uri, quarkus.neo4j.uri>>
 |String 
@@ -37,21 +40,23 @@
 | ⚙️
 
 |<<quarkus.neo4j.pool.idle-time-before-connection-test, quarkus.neo4j.pool.idle-time-before-connection-test>>
-|Duration  - _see note below_
+|Duration <<duration-note-anchor, _see note below_>>
 |-0.001S
 | ⚙️
 
 |<<quarkus.neo4j.pool.max-connection-lifetime, quarkus.neo4j.pool.max-connection-lifetime>>
-|Duration  - _see note below_
+|Duration <<duration-note-anchor, _see note below_>>
 |1H
 | ⚙️
 
 |<<quarkus.neo4j.pool.connection-acquisition-timeout, quarkus.neo4j.pool.connection-acquisition-timeout>>
-|Duration  - _see note below_
+|Duration <<duration-note-anchor, _see note below_>>
 |1M
 | ⚙️
 |===
 
+
+== Details
 
 [[quarkus.neo4j.uri]]
 `quarkus.neo4j.uri`⚙️:: The uri this driver should connect to. The driver supports bolt, bolt+routing or neo4j as schemes.
@@ -112,7 +117,7 @@ Defaults to: `100` +
 [[quarkus.neo4j.pool.idle-time-before-connection-test]]
 `quarkus.neo4j.pool.idle-time-before-connection-test`⚙️:: Pooled connections that have been idle in the pool for longer than this timeout will be tested before they are used again. The value `0` means connections will always be tested for validity and negative values mean connections will never be tested.
 +
-Type: `java.time.Duration` - _see note below_ +
+Type: `java.time.Duration` +
 Defaults to: `-0.001S` +
 
 
@@ -120,7 +125,7 @@ Defaults to: `-0.001S` +
 [[quarkus.neo4j.pool.max-connection-lifetime]]
 `quarkus.neo4j.pool.max-connection-lifetime`⚙️:: Pooled connections older than this threshold will be closed and removed from the pool.
 +
-Type: `java.time.Duration` - _see note below_ +
+Type: `java.time.Duration` +
 Defaults to: `1H` +
 
 
@@ -128,15 +133,13 @@ Defaults to: `1H` +
 [[quarkus.neo4j.pool.connection-acquisition-timeout]]
 `quarkus.neo4j.pool.connection-acquisition-timeout`⚙️:: Acquisition of new connections will be attempted for at most configured timeout.
 +
-Type: `java.time.Duration` - _see note below_ +
+Type: `java.time.Duration` +
 Defaults to: `1M` +
 
 
 
-📦 Configuration property fixed at build time - ⚙️️ Configuration property overridable at runtime 
-
-
 [NOTE]
+[[duration-note-anchor]]
 .About the Duration format
 ====
 The format for durations uses the standard `java.time.Duration` format.

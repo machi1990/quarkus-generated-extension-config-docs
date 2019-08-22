@@ -1,5 +1,8 @@
+== Summary
+
+📦 Configuration property fixed at build time - ⚙️️ Configuration property overridable at runtime 
 |===
-|key|type|default|build time/runtime icon
+|Configuration property|Type|Default|Lifecycle
 
 |<<quarkus.hibernate-orm.dialect, quarkus.hibernate-orm.dialect>>
 |String 
@@ -87,7 +90,7 @@
 | 📦
 
 |<<quarkus.hibernate-orm.cache.cache.expiration.max-idle, quarkus.hibernate-orm.cache."<cache>".expiration.max-idle>>
-|Duration  - _see note below_
+|Duration <<duration-note-anchor, _see note below_>>
 |
 | 📦
 
@@ -97,6 +100,8 @@
 | 📦
 |===
 
+
+== Details
 
 [[quarkus.hibernate-orm.dialect]]
 `quarkus.hibernate-orm.dialect`📦:: The hibernate ORM dialect class name
@@ -230,7 +235,7 @@ Defaults to: `false` +
 [[quarkus.hibernate-orm.cache.cache.expiration.max-idle]]
 `quarkus.hibernate-orm.cache."<cache>".expiration.max-idle`📦:: The maximum time before an object is considered expired.
 +
-Type: `java.time.Duration` - _see note below_ +
+Type: `java.time.Duration` +
 
 
 
@@ -241,10 +246,8 @@ Type: `java.lang.Long` +
 
 
 
-📦 Configuration property fixed at build time - ⚙️️ Configuration property overridable at runtime 
-
-
 [NOTE]
+[[duration-note-anchor]]
 .About the Duration format
 ====
 The format for durations uses the standard `java.time.Duration` format.

@@ -1,5 +1,8 @@
+== Summary
+
+📦 Configuration property fixed at build time - ⚙️️ Configuration property overridable at runtime 
 |===
-|key|type|default|build time/runtime icon
+|Configuration property|Type|Default|Lifecycle
 
 |<<quarkus.vertx.caching, quarkus.vertx.caching>>
 |boolean 
@@ -17,12 +20,12 @@
 | ⚙️
 
 |<<quarkus.vertx.max-event-loop-execute-time, quarkus.vertx.max-event-loop-execute-time>>
-|Duration  - _see note below_
+|Duration <<duration-note-anchor, _see note below_>>
 |2
 | ⚙️
 
 |<<quarkus.vertx.warning-exception-time, quarkus.vertx.warning-exception-time>>
-|Duration  - _see note below_
+|Duration <<duration-note-anchor, _see note below_>>
 |2
 | ⚙️
 
@@ -32,7 +35,7 @@
 | ⚙️
 
 |<<quarkus.vertx.max-worker-execute-time, quarkus.vertx.max-worker-execute-time>>
-|Duration  - _see note below_
+|Duration <<duration-note-anchor, _see note below_>>
 |60
 | ⚙️
 
@@ -112,12 +115,12 @@
 | ⚙️
 
 |<<quarkus.vertx.eventbus.connect-timeout, quarkus.vertx.eventbus.connect-timeout>>
-|Duration  - _see note below_
+|Duration <<duration-note-anchor, _see note below_>>
 |60
 | ⚙️
 
 |<<quarkus.vertx.eventbus.idle-timeout, quarkus.vertx.eventbus.idle-timeout>>
-|Duration  - _see note below_
+|Duration <<duration-note-anchor, _see note below_>>
 |
 | ⚙️
 
@@ -132,7 +135,7 @@
 | ⚙️
 
 |<<quarkus.vertx.eventbus.reconnect-interval, quarkus.vertx.eventbus.reconnect-interval>>
-|Duration  - _see note below_
+|Duration <<duration-note-anchor, _see note below_>>
 |1
 | ⚙️
 
@@ -207,16 +210,18 @@
 | ⚙️
 
 |<<quarkus.vertx.cluster.ping-interval, quarkus.vertx.cluster.ping-interval>>
-|Duration  - _see note below_
+|Duration <<duration-note-anchor, _see note below_>>
 |20
 | ⚙️
 
 |<<quarkus.vertx.cluster.ping-reply-interval, quarkus.vertx.cluster.ping-reply-interval>>
-|Duration  - _see note below_
+|Duration <<duration-note-anchor, _see note below_>>
 |20
 | ⚙️
 |===
 
+
+== Details
 
 [[quarkus.vertx.caching]]
 `quarkus.vertx.caching`⚙️:: Enables or disables the Vert.x cache.
@@ -244,7 +249,7 @@ Type: `java.lang.Integer` +
 [[quarkus.vertx.max-event-loop-execute-time]]
 `quarkus.vertx.max-event-loop-execute-time`⚙️:: The maximum amount of time the event loop can be blocked.
 +
-Type: `java.time.Duration` - _see note below_ +
+Type: `java.time.Duration` +
 Defaults to: `2` +
 
 
@@ -252,7 +257,7 @@ Defaults to: `2` +
 [[quarkus.vertx.warning-exception-time]]
 `quarkus.vertx.warning-exception-time`⚙️:: The amount of time before a warning is displayed if the event loop is blocked.
 +
-Type: `java.time.Duration` - _see note below_ +
+Type: `java.time.Duration` +
 Defaults to: `2` +
 
 
@@ -268,7 +273,7 @@ Defaults to: `20` +
 [[quarkus.vertx.max-worker-execute-time]]
 `quarkus.vertx.max-worker-execute-time`⚙️:: The maximum amount of time the worker thread can be blocked.
 +
-Type: `java.time.Duration` - _see note below_ +
+Type: `java.time.Duration` +
 Defaults to: `60` +
 
 
@@ -384,7 +389,7 @@ Defaults to: `NONE` +
 [[quarkus.vertx.eventbus.connect-timeout]]
 `quarkus.vertx.eventbus.connect-timeout`⚙️:: The connect timeout.
 +
-Type: `java.time.Duration` - _see note below_ +
+Type: `java.time.Duration` +
 Defaults to: `60` +
 
 
@@ -392,7 +397,7 @@ Defaults to: `60` +
 [[quarkus.vertx.eventbus.idle-timeout]]
 `quarkus.vertx.eventbus.idle-timeout`⚙️:: The idle timeout in milliseconds.
 +
-Type: `java.time.Duration` - _see note below_ +
+Type: `java.time.Duration` +
 
 
 
@@ -414,7 +419,7 @@ Defaults to: `0` +
 [[quarkus.vertx.eventbus.reconnect-interval]]
 `quarkus.vertx.eventbus.reconnect-interval`⚙️:: The reconnection interval in milliseconds.
 +
-Type: `java.time.Duration` - _see note below_ +
+Type: `java.time.Duration` +
 Defaults to: `1` +
 
 
@@ -528,7 +533,7 @@ Defaults to: `false` +
 [[quarkus.vertx.cluster.ping-interval]]
 `quarkus.vertx.cluster.ping-interval`⚙️:: The ping interval.
 +
-Type: `java.time.Duration` - _see note below_ +
+Type: `java.time.Duration` +
 Defaults to: `20` +
 
 
@@ -536,15 +541,13 @@ Defaults to: `20` +
 [[quarkus.vertx.cluster.ping-reply-interval]]
 `quarkus.vertx.cluster.ping-reply-interval`⚙️:: The ping reply interval.
 +
-Type: `java.time.Duration` - _see note below_ +
+Type: `java.time.Duration` +
 Defaults to: `20` +
 
 
 
-📦 Configuration property fixed at build time - ⚙️️ Configuration property overridable at runtime 
-
-
 [NOTE]
+[[duration-note-anchor]]
 .About the Duration format
 ====
 The format for durations uses the standard `java.time.Duration` format.

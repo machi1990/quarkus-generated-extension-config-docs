@@ -1,5 +1,8 @@
+== Summary
+
+📦 Configuration property fixed at build time - ⚙️️ Configuration property overridable at runtime 
 |===
-|key|type|default|build time/runtime icon
+|Configuration property|Type|Default|Lifecycle
 
 |<<quarkus.hibernate-search.elasticsearch.version, quarkus.hibernate-search.elasticsearch.version>>
 |ElasticsearchVersion 
@@ -32,7 +35,7 @@
 | ⚙️
 
 |<<quarkus.hibernate-search.elasticsearch.connection-timeout, quarkus.hibernate-search.elasticsearch.connection-timeout>>
-|Duration  - _see note below_
+|Duration <<duration-note-anchor, _see note below_>>
 |
 | ⚙️
 
@@ -52,7 +55,7 @@
 | ⚙️
 
 |<<quarkus.hibernate-search.elasticsearch.discovery.refresh-interval, quarkus.hibernate-search.elasticsearch.discovery.refresh-interval>>
-|Duration  - _see note below_
+|Duration <<duration-note-anchor, _see note below_>>
 |
 | ⚙️
 
@@ -82,7 +85,7 @@
 | ⚙️
 
 |<<quarkus.hibernate-search.elasticsearch.index-defaults.lifecycle.required-status-wait-timeout, quarkus.hibernate-search.elasticsearch.index-defaults.lifecycle.required-status-wait-timeout>>
-|Duration  - _see note below_
+|Duration <<duration-note-anchor, _see note below_>>
 |
 | ⚙️
 
@@ -112,7 +115,7 @@
 | ⚙️
 
 |<<quarkus.hibernate-search.elasticsearch.indexes.indexes.lifecycle.required-status-wait-timeout, quarkus.hibernate-search.elasticsearch.indexes."<indexes>".lifecycle.required-status-wait-timeout>>
-|Duration  - _see note below_
+|Duration <<duration-note-anchor, _see note below_>>
 |
 | ⚙️
 
@@ -137,7 +140,7 @@
 | ⚙️
 
 |<<quarkus.hibernate-search.elasticsearch.backends.additional-backends.connection-timeout, quarkus.hibernate-search.elasticsearch.backends."<additional-backends>".connection-timeout>>
-|Duration  - _see note below_
+|Duration <<duration-note-anchor, _see note below_>>
 |
 | ⚙️
 
@@ -157,7 +160,7 @@
 | ⚙️
 
 |<<quarkus.hibernate-search.elasticsearch.backends.additional-backends.discovery.refresh-interval, quarkus.hibernate-search.elasticsearch.backends."<additional-backends>".discovery.refresh-interval>>
-|Duration  - _see note below_
+|Duration <<duration-note-anchor, _see note below_>>
 |
 | ⚙️
 
@@ -187,7 +190,7 @@
 | ⚙️
 
 |<<quarkus.hibernate-search.elasticsearch.backends.additional-backends.index-defaults.lifecycle.required-status-wait-timeout, quarkus.hibernate-search.elasticsearch.backends."<additional-backends>".index-defaults.lifecycle.required-status-wait-timeout>>
-|Duration  - _see note below_
+|Duration <<duration-note-anchor, _see note below_>>
 |
 | ⚙️
 
@@ -207,7 +210,7 @@
 | ⚙️
 
 |<<quarkus.hibernate-search.elasticsearch.backends.additional-backends.indexes.indexes.lifecycle.required-status-wait-timeout, quarkus.hibernate-search.elasticsearch.backends."<additional-backends>".indexes."<indexes>".lifecycle.required-status-wait-timeout>>
-|Duration  - _see note below_
+|Duration <<duration-note-anchor, _see note below_>>
 |
 | ⚙️
 
@@ -217,6 +220,8 @@
 | ⚙️
 |===
 
+
+== Details
 
 [[quarkus.hibernate-search.elasticsearch.version]]
 `quarkus.hibernate-search.elasticsearch.version`📦:: The version of Elasticsearch used in the cluster. 
@@ -266,7 +271,7 @@ Type: `java.lang.String` +
 [[quarkus.hibernate-search.elasticsearch.connection-timeout]]
 `quarkus.hibernate-search.elasticsearch.connection-timeout`⚙️:: The connection timeout.
 +
-Type: `java.time.Duration` - _see note below_ +
+Type: `java.time.Duration` +
 
 
 
@@ -294,7 +299,7 @@ Type: `java.lang.Boolean` +
 [[quarkus.hibernate-search.elasticsearch.discovery.refresh-interval]]
 `quarkus.hibernate-search.elasticsearch.discovery.refresh-interval`⚙️:: Refresh interval of the node list.
 +
-Type: `java.time.Duration` - _see note below_ +
+Type: `java.time.Duration` +
 
 
 
@@ -342,7 +347,7 @@ Type: `org.hibernate.search.backend.elasticsearch.cfg.ElasticsearchIndexStatus` 
 [[quarkus.hibernate-search.elasticsearch.index-defaults.lifecycle.required-status-wait-timeout]]
 `quarkus.hibernate-search.elasticsearch.index-defaults.lifecycle.required-status-wait-timeout`⚙️:: How long we should wait for the status before failing the bootstrap.
 +
-Type: `java.time.Duration` - _see note below_ +
+Type: `java.time.Duration` +
 
 
 
@@ -389,7 +394,7 @@ Type: `org.hibernate.search.backend.elasticsearch.cfg.ElasticsearchIndexStatus` 
 [[quarkus.hibernate-search.elasticsearch.indexes.indexes.lifecycle.required-status-wait-timeout]]
 `quarkus.hibernate-search.elasticsearch.indexes."<indexes>".lifecycle.required-status-wait-timeout`⚙️:: How long we should wait for the status before failing the bootstrap.
 +
-Type: `java.time.Duration` - _see note below_ +
+Type: `java.time.Duration` +
 
 
 
@@ -424,7 +429,7 @@ Type: `java.lang.String` +
 [[quarkus.hibernate-search.elasticsearch.backends.additional-backends.connection-timeout]]
 `quarkus.hibernate-search.elasticsearch.backends."<additional-backends>".connection-timeout`⚙️:: The connection timeout.
 +
-Type: `java.time.Duration` - _see note below_ +
+Type: `java.time.Duration` +
 
 
 
@@ -452,7 +457,7 @@ Type: `java.lang.Boolean` +
 [[quarkus.hibernate-search.elasticsearch.backends.additional-backends.discovery.refresh-interval]]
 `quarkus.hibernate-search.elasticsearch.backends."<additional-backends>".discovery.refresh-interval`⚙️:: Refresh interval of the node list.
 +
-Type: `java.time.Duration` - _see note below_ +
+Type: `java.time.Duration` +
 
 
 
@@ -500,7 +505,7 @@ Type: `org.hibernate.search.backend.elasticsearch.cfg.ElasticsearchIndexStatus` 
 [[quarkus.hibernate-search.elasticsearch.backends.additional-backends.index-defaults.lifecycle.required-status-wait-timeout]]
 `quarkus.hibernate-search.elasticsearch.backends."<additional-backends>".index-defaults.lifecycle.required-status-wait-timeout`⚙️:: How long we should wait for the status before failing the bootstrap.
 +
-Type: `java.time.Duration` - _see note below_ +
+Type: `java.time.Duration` +
 
 
 
@@ -530,7 +535,7 @@ Type: `org.hibernate.search.backend.elasticsearch.cfg.ElasticsearchIndexStatus` 
 [[quarkus.hibernate-search.elasticsearch.backends.additional-backends.indexes.indexes.lifecycle.required-status-wait-timeout]]
 `quarkus.hibernate-search.elasticsearch.backends."<additional-backends>".indexes."<indexes>".lifecycle.required-status-wait-timeout`⚙️:: How long we should wait for the status before failing the bootstrap.
 +
-Type: `java.time.Duration` - _see note below_ +
+Type: `java.time.Duration` +
 
 
 
@@ -541,10 +546,8 @@ Type: `java.lang.Boolean` +
 
 
 
-📦 Configuration property fixed at build time - ⚙️️ Configuration property overridable at runtime 
-
-
 [NOTE]
+[[duration-note-anchor]]
 .About the Duration format
 ====
 The format for durations uses the standard `java.time.Duration` format.

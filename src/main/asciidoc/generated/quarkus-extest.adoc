@@ -1,5 +1,8 @@
+== Summary
+
+📦 Configuration property fixed at build time - ⚙️️ Configuration property overridable at runtime 
 |===
-|key|type|default|build time/runtime icon
+|Configuration property|Type|Default|Lifecycle
 
 |<<quarkus.bt.bt-string-opt, quarkus.bt.bt-string-opt>>
 |String 
@@ -397,6 +400,8 @@
 | 📦
 |===
 
+
+== Details
 
 [[quarkus.bt.bt-string-opt]]
 `quarkus.bt.bt-string-opt`📦:: A config string
@@ -975,7 +980,4 @@ Type: `java.lang.String` +
 +
 Type: `java.util.List<java.lang.String>` +
 
-
-
-📦 Configuration property fixed at build time - ⚙️️ Configuration property overridable at runtime 
 

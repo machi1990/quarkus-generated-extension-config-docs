@@ -1,5 +1,8 @@
+== Summary
+
+📦 Configuration property fixed at build time - ⚙️️ Configuration property overridable at runtime 
 |===
-|key|type|default|build time/runtime icon
+|Configuration property|Type|Default|Lifecycle
 
 |<<quarkus.hot-reload.password, quarkus.hot-reload.password>>
 |String 
@@ -13,6 +16,8 @@
 |===
 
 
+== Details
+
 [[quarkus.hot-reload.password]]
 `quarkus.hot-reload.password`📦:: 
 +
@@ -25,7 +30,4 @@ Type: `java.lang.String` +
 +
 Type: `java.lang.String` +
 
-
-
-📦 Configuration property fixed at build time - ⚙️️ Configuration property overridable at runtime 
 

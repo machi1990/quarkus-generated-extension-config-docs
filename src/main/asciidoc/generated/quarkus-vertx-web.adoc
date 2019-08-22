@@ -1,5 +1,8 @@
+== Summary
+
+📦 Configuration property fixed at build time - ⚙️️ Configuration property overridable at runtime 
 |===
-|key|type|default|build time/runtime icon
+|Configuration property|Type|Default|Lifecycle
 
 |<<quarkus.http.cors, quarkus.http.cors>>
 |boolean 
@@ -52,7 +55,7 @@
 | ⚙️
 
 |<<quarkus.http.cors.access-control-max-age, quarkus.http.cors.access-control-max-age>>
-|Duration  - _see note below_
+|Duration <<duration-note-anchor, _see note below_>>
 |
 | ⚙️
 
@@ -102,6 +105,8 @@
 | ⚙️
 |===
 
+
+== Details
 
 [[quarkus.http.cors]]
 `quarkus.http.cors`⚙️:: Enable the CORS filter.
@@ -182,7 +187,7 @@ Type: `java.lang.String` +
 [[quarkus.http.cors.access-control-max-age]]
 `quarkus.http.cors.access-control-max-age`⚙️:: The `Access-Control-Max-Age` response header value indicating how long the results of a pre-flight request can be cached.
 +
-Type: `java.time.Duration` - _see note below_ +
+Type: `java.time.Duration` +
 
 
 
@@ -252,10 +257,8 @@ Defaults to: `false` +
 
 
 
-📦 Configuration property fixed at build time - ⚙️️ Configuration property overridable at runtime 
-
-
 [NOTE]
+[[duration-note-anchor]]
 .About the Duration format
 ====
 The format for durations uses the standard `java.time.Duration` format.

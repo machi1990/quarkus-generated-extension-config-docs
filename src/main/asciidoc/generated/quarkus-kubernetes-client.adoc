@@ -1,5 +1,8 @@
+== Summary
+
+📦 Configuration property fixed at build time - ⚙️️ Configuration property overridable at runtime 
 |===
-|key|type|default|build time/runtime icon
+|Configuration property|Type|Default|Lifecycle
 
 |<<quarkus.kubernetes-client.trust-certs, quarkus.kubernetes-client.trust-certs>>
 |boolean 
@@ -67,7 +70,7 @@
 | 📦
 
 |<<quarkus.kubernetes-client.watch-reconnect-interval, quarkus.kubernetes-client.watch-reconnect-interval>>
-|Duration  - _see note below_
+|Duration <<duration-note-anchor, _see note below_>>
 |PT1S
 | 📦
 
@@ -77,17 +80,17 @@
 | 📦
 
 |<<quarkus.kubernetes-client.connection-timeout, quarkus.kubernetes-client.connection-timeout>>
-|Duration  - _see note below_
+|Duration <<duration-note-anchor, _see note below_>>
 |PT10S
 | 📦
 
 |<<quarkus.kubernetes-client.request-timeout, quarkus.kubernetes-client.request-timeout>>
-|Duration  - _see note below_
+|Duration <<duration-note-anchor, _see note below_>>
 |PT10S
 | 📦
 
 |<<quarkus.kubernetes-client.rolling-timeout, quarkus.kubernetes-client.rolling-timeout>>
-|Duration  - _see note below_
+|Duration <<duration-note-anchor, _see note below_>>
 |PT15M
 | 📦
 
@@ -117,6 +120,8 @@
 | 📦
 |===
 
+
+== Details
 
 [[quarkus.kubernetes-client.trust-certs]]
 `quarkus.kubernetes-client.trust-certs`📦:: Whether or not the client should trust a self signed certificate if so presented by the API server
@@ -213,7 +218,7 @@ Type: `java.lang.String` +
 [[quarkus.kubernetes-client.watch-reconnect-interval]]
 `quarkus.kubernetes-client.watch-reconnect-interval`📦:: Watch reconnect interval
 +
-Type: `java.time.Duration` - _see note below_ +
+Type: `java.time.Duration` +
 Defaults to: `PT1S` +
 
 
@@ -229,7 +234,7 @@ Defaults to: `-1` +
 [[quarkus.kubernetes-client.connection-timeout]]
 `quarkus.kubernetes-client.connection-timeout`📦:: Maximum amount of time to wait for a connection with the API server to be established
 +
-Type: `java.time.Duration` - _see note below_ +
+Type: `java.time.Duration` +
 Defaults to: `PT10S` +
 
 
@@ -237,7 +242,7 @@ Defaults to: `PT10S` +
 [[quarkus.kubernetes-client.request-timeout]]
 `quarkus.kubernetes-client.request-timeout`📦:: Maximum amount of time to wait for a request to the API server to be completed
 +
-Type: `java.time.Duration` - _see note below_ +
+Type: `java.time.Duration` +
 Defaults to: `PT10S` +
 
 
@@ -245,7 +250,7 @@ Defaults to: `PT10S` +
 [[quarkus.kubernetes-client.rolling-timeout]]
 `quarkus.kubernetes-client.rolling-timeout`📦:: Maximum amount of time in milliseconds to wait for a rollout to be completed
 +
-Type: `java.time.Duration` - _see note below_ +
+Type: `java.time.Duration` +
 Defaults to: `PT15M` +
 
 
@@ -285,10 +290,8 @@ Type: `java.lang.String` +
 
 
 
-📦 Configuration property fixed at build time - ⚙️️ Configuration property overridable at runtime 
-
-
 [NOTE]
+[[duration-note-anchor]]
 .About the Duration format
 ====
 The format for durations uses the standard `java.time.Duration` format.

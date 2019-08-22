@@ -1,5 +1,8 @@
+== Summary
+
+📦 Configuration property fixed at build time - ⚙️️ Configuration property overridable at runtime 
 |===
-|key|type|default|build time/runtime icon
+|Configuration property|Type|Default|Lifecycle
 
 |<<quarkus.application.name, quarkus.application.name>>
 |String 
@@ -13,6 +16,8 @@
 |===
 
 
+== Details
+
 [[quarkus.application.name]]
 `quarkus.application.name`📦:: The name of the application. If not set, defaults to the name of the project.
 +
@@ -25,7 +30,4 @@ Type: `java.lang.String` +
 +
 Type: `java.lang.String` +
 
-
-
-📦 Configuration property fixed at build time - ⚙️️ Configuration property overridable at runtime 
 
