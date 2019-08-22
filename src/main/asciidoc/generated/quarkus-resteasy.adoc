@@ -1,4 +1,19 @@
+|===
+|key|type|default|build time/runtime icon
 
+|<<quarkus.resteasy.gzip.enabled, quarkus.resteasy.gzip.enabled>>
+|boolean 
+|false
+| 📦
+
+|<<quarkus.resteasy.gzip.max-input, quarkus.resteasy.gzip.max-input>>
+|MemorySize  - _see note below_
+|10M
+| 📦
+|===
+
+
+[[quarkus.resteasy.gzip.enabled]]
 `quarkus.resteasy.gzip.enabled`📦:: If gzip is enabled
 +
 Type: `boolean` +
@@ -6,6 +21,7 @@ Defaults to: `false` +
 
 
 
+[[quarkus.resteasy.gzip.max-input]]
 `quarkus.resteasy.gzip.max-input`📦:: Maximum deflated file bytes size 
  If the limit is exceeded, Resteasy will return Response with status 413("Request Entity Too Large")
 +

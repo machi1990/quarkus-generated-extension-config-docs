@@ -1,28 +1,327 @@
+|===
+|key|type|default|build time/runtime icon
 
+|<<quarkus.keycloak.realm, quarkus.keycloak.realm>>
+|String 
+|
+| 📦
+
+|<<quarkus.keycloak.realm-public-key, quarkus.keycloak.realm-public-key>>
+|String 
+|
+| 📦
+
+|<<quarkus.keycloak.resource, quarkus.keycloak.resource>>
+|String 
+|
+| 📦
+
+|<<quarkus.keycloak.auth-server-url, quarkus.keycloak.auth-server-url>>
+|String 
+|
+| 📦
+
+|<<quarkus.keycloak.ssl-required, quarkus.keycloak.ssl-required>>
+|String 
+|external
+| 📦
+
+|<<quarkus.keycloak.confidential-port, quarkus.keycloak.confidential-port>>
+|int 
+|8443
+| 📦
+
+|<<quarkus.keycloak.use-resource-role-mappings, quarkus.keycloak.use-resource-role-mappings>>
+|boolean 
+|false
+| 📦
+
+|<<quarkus.keycloak.enable-cors, quarkus.keycloak.enable-cors>>
+|boolean 
+|false
+| 📦
+
+|<<quarkus.keycloak.cors-max-age, quarkus.keycloak.cors-max-age>>
+|int 
+|-1
+| 📦
+
+|<<quarkus.keycloak.cors-allowed-headers, quarkus.keycloak.cors-allowed-headers>>
+|String 
+|
+| 📦
+
+|<<quarkus.keycloak.cors-allowed-methods, quarkus.keycloak.cors-allowed-methods>>
+|String 
+|
+| 📦
+
+|<<quarkus.keycloak.cors-exposed-headers, quarkus.keycloak.cors-exposed-headers>>
+|String 
+|
+| 📦
+
+|<<quarkus.keycloak.bearer-only, quarkus.keycloak.bearer-only>>
+|boolean 
+|true
+| 📦
+
+|<<quarkus.keycloak.autodetect-bearer-only, quarkus.keycloak.autodetect-bearer-only>>
+|boolean 
+|false
+| 📦
+
+|<<quarkus.keycloak.public-client, quarkus.keycloak.public-client>>
+|boolean 
+|false
+| 📦
+
+|<<quarkus.keycloak.credentials.secret, quarkus.keycloak.credentials.secret>>
+|String 
+|
+| 📦
+
+|<<quarkus.keycloak.allow-any-hostname, quarkus.keycloak.allow-any-hostname>>
+|boolean 
+|false
+| 📦
+
+|<<quarkus.keycloak.disable-trust-manager, quarkus.keycloak.disable-trust-manager>>
+|boolean 
+|false
+| 📦
+
+|<<quarkus.keycloak.always-refresh-token, quarkus.keycloak.always-refresh-token>>
+|boolean 
+|false
+| 📦
+
+|<<quarkus.keycloak.truststore, quarkus.keycloak.truststore>>
+|String 
+|
+| 📦
+
+|<<quarkus.keycloak.truststore-password, quarkus.keycloak.truststore-password>>
+|String 
+|
+| 📦
+
+|<<quarkus.keycloak.client-keystore, quarkus.keycloak.client-keystore>>
+|String 
+|
+| 📦
+
+|<<quarkus.keycloak.client-keystore-password, quarkus.keycloak.client-keystore-password>>
+|String 
+|
+| 📦
+
+|<<quarkus.keycloak.client-key-password, quarkus.keycloak.client-key-password>>
+|String 
+|
+| 📦
+
+|<<quarkus.keycloak.connection-pool-size, quarkus.keycloak.connection-pool-size>>
+|int 
+|20
+| 📦
+
+|<<quarkus.keycloak.register-node-at-startup, quarkus.keycloak.register-node-at-startup>>
+|boolean 
+|false
+| 📦
+
+|<<quarkus.keycloak.register-node-period, quarkus.keycloak.register-node-period>>
+|int 
+|-1
+| 📦
+
+|<<quarkus.keycloak.token-store, quarkus.keycloak.token-store>>
+|String 
+|
+| 📦
+
+|<<quarkus.keycloak.adapter-state-cookie-path, quarkus.keycloak.adapter-state-cookie-path>>
+|String 
+|
+| 📦
+
+|<<quarkus.keycloak.principal-attribute, quarkus.keycloak.principal-attribute>>
+|String 
+|sub
+| 📦
+
+|<<quarkus.keycloak.turn-off-change-session-id-on-login, quarkus.keycloak.turn-off-change-session-id-on-login>>
+|boolean 
+|false
+| 📦
+
+|<<quarkus.keycloak.token-minimum-time-to-live, quarkus.keycloak.token-minimum-time-to-live>>
+|int 
+|0
+| 📦
+
+|<<quarkus.keycloak.min-time-between-jwks-requests, quarkus.keycloak.min-time-between-jwks-requests>>
+|int 
+|10
+| 📦
+
+|<<quarkus.keycloak.public-key-cache-ttl, quarkus.keycloak.public-key-cache-ttl>>
+|int 
+|86400
+| 📦
+
+|<<quarkus.keycloak.verify-token-audience, quarkus.keycloak.verify-token-audience>>
+|boolean 
+|false
+| 📦
+
+|<<quarkus.keycloak.ignore-oauth-query-parameter, quarkus.keycloak.ignore-oauth-query-parameter>>
+|boolean 
+|false
+| 📦
+
+|<<quarkus.keycloak.proxy-url, quarkus.keycloak.proxy-url>>
+|String 
+|
+| 📦
+
+|<<quarkus.keycloak.policy-enforcer.enable, quarkus.keycloak.policy-enforcer.enable>>
+|boolean 
+|false
+| 📦
+
+|<<quarkus.keycloak.policy-enforcer.enforcement-mode, quarkus.keycloak.policy-enforcer.enforcement-mode>>
+|String 
+|ENFORCING
+| 📦
+
+|<<quarkus.keycloak.policy-enforcer.path-cache.max-entries, quarkus.keycloak.policy-enforcer.path-cache.max-entries>>
+|int 
+|1000
+| 📦
+
+|<<quarkus.keycloak.policy-enforcer.path-cache.lifespan, quarkus.keycloak.policy-enforcer.path-cache.lifespan>>
+|long 
+|30000
+| 📦
+
+|<<quarkus.keycloak.policy-enforcer.lazy-load-paths, quarkus.keycloak.policy-enforcer.lazy-load-paths>>
+|boolean 
+|true
+| 📦
+
+|<<quarkus.keycloak.policy-enforcer.on-deny-redirect-to, quarkus.keycloak.policy-enforcer.on-deny-redirect-to>>
+|String 
+|
+| 📦
+
+|<<quarkus.keycloak.policy-enforcer.user-managed-access, quarkus.keycloak.policy-enforcer.user-managed-access>>
+|boolean 
+|false
+| 📦
+
+|<<quarkus.keycloak.policy-enforcer.http-method-as-scope, quarkus.keycloak.policy-enforcer.http-method-as-scope>>
+|boolean 
+|false
+| 📦
+
+|<<quarkus.keycloak.credentials.jwt.jwt, quarkus.keycloak.credentials.jwt."<jwt>">>
+|String 
+|
+| 📦
+
+|<<quarkus.keycloak.credentials.secret-jwt.secret-jwt, quarkus.keycloak.credentials.secret-jwt."<secret-jwt>">>
+|String 
+|
+| 📦
+
+|<<quarkus.keycloak.redirect-rewrite-rules.redirect-rewrite-rules, quarkus.keycloak.redirect-rewrite-rules."<redirect-rewrite-rules>">>
+|String 
+|
+| 📦
+
+|<<quarkus.keycloak.policy-enforcer.paths.paths.name, quarkus.keycloak.policy-enforcer.paths."<paths>".name>>
+|String 
+|
+| 📦
+
+|<<quarkus.keycloak.policy-enforcer.paths.paths.path, quarkus.keycloak.policy-enforcer.paths."<paths>".path>>
+|String 
+|
+| 📦
+
+|<<quarkus.keycloak.policy-enforcer.paths.paths.methods.methods.method, quarkus.keycloak.policy-enforcer.paths."<paths>".methods."<methods>".method>>
+|String 
+|
+| 📦
+
+|<<quarkus.keycloak.policy-enforcer.paths.paths.methods.methods.scopes, quarkus.keycloak.policy-enforcer.paths."<paths>".methods."<methods>".scopes>>
+|String 
+|
+| 📦
+
+|<<quarkus.keycloak.policy-enforcer.paths.paths.methods.methods.scopes-enforcement-mode, quarkus.keycloak.policy-enforcer.paths."<paths>".methods."<methods>".scopes-enforcement-mode>>
+|ScopeEnforcementMode 
+|ALL
+| 📦
+
+|<<quarkus.keycloak.policy-enforcer.paths.paths.enforcement-mode, quarkus.keycloak.policy-enforcer.paths."<paths>".enforcement-mode>>
+|EnforcementMode 
+|ENFORCING
+| 📦
+
+|<<quarkus.keycloak.policy-enforcer.paths.paths.claim-information-point.complex-config, quarkus.keycloak.policy-enforcer.paths."<paths>".claim-information-point."<complex-config>">>
+|java.util.Map<java.lang.String,java.util.Map<java.lang.String,java.lang.String>> 
+|
+| 📦
+
+|<<quarkus.keycloak.policy-enforcer.paths.paths.claim-information-point.simple-config, quarkus.keycloak.policy-enforcer.paths."<paths>".claim-information-point."<simple-config>">>
+|java.util.Map<java.lang.String,java.lang.String> 
+|
+| 📦
+
+|<<quarkus.keycloak.policy-enforcer.claim-information-point.complex-config, quarkus.keycloak.policy-enforcer.claim-information-point."<complex-config>">>
+|java.util.Map<java.lang.String,java.util.Map<java.lang.String,java.lang.String>> 
+|
+| 📦
+
+|<<quarkus.keycloak.policy-enforcer.claim-information-point.simple-config, quarkus.keycloak.policy-enforcer.claim-information-point."<simple-config>">>
+|java.util.Map<java.lang.String,java.lang.String> 
+|
+| 📦
+|===
+
+
+[[quarkus.keycloak.realm]]
 `quarkus.keycloak.realm`📦:: Name of the realm.
 +
 Type: `java.lang.String` +
 
 
 
+[[quarkus.keycloak.realm-public-key]]
 `quarkus.keycloak.realm-public-key`📦:: Name of the realm key.
 +
 Type: `java.lang.String` +
 
 
 
+[[quarkus.keycloak.resource]]
 `quarkus.keycloak.resource`📦:: The client-id of the application. Each application has a client-id that is used to identify the application
 +
 Type: `java.lang.String` +
 
 
 
+[[quarkus.keycloak.auth-server-url]]
 `quarkus.keycloak.auth-server-url`📦:: The base URL of the Keycloak server. All other Keycloak pages and REST service endpoints are derived from this. It is usually of the form https://host:port/auth
 +
 Type: `java.lang.String` +
 
 
 
+[[quarkus.keycloak.ssl-required]]
 `quarkus.keycloak.ssl-required`📦:: Ensures that all communication to and from the Keycloak server is over HTTPS. In production this should be set to all. This is OPTIONAL. The default value is external meaning that HTTPS is required by default for external requests. Valid values are 'all', 'external' and 'none'
 +
 Type: `java.lang.String` +
@@ -30,6 +329,7 @@ Defaults to: `external` +
 
 
 
+[[quarkus.keycloak.confidential-port]]
 `quarkus.keycloak.confidential-port`📦:: The confidential port used by the Keycloak server for secure connections over SSL/TLS
 +
 Type: `int` +
@@ -37,6 +337,7 @@ Defaults to: `8443` +
 
 
 
+[[quarkus.keycloak.use-resource-role-mappings]]
 `quarkus.keycloak.use-resource-role-mappings`📦:: If set to true, the adapter will look inside the token for application level role mappings for the user. If false, it will look at the realm level for user role mappings
 +
 Type: `boolean` +
@@ -44,6 +345,7 @@ Defaults to: `false` +
 
 
 
+[[quarkus.keycloak.enable-cors]]
 `quarkus.keycloak.enable-cors`📦:: This enables CORS support. It will handle CORS preflight requests. It will also look into the access token to determine valid origins
 +
 Type: `boolean` +
@@ -51,6 +353,7 @@ Defaults to: `false` +
 
 
 
+[[quarkus.keycloak.cors-max-age]]
 `quarkus.keycloak.cors-max-age`📦:: If CORS is enabled, this sets the value of the Access-Control-Max-Age header. This is OPTIONAL. If not set, this header is not returned in CORS responses
 +
 Type: `int` +
@@ -58,24 +361,28 @@ Defaults to: `-1` +
 
 
 
+[[quarkus.keycloak.cors-allowed-headers]]
 `quarkus.keycloak.cors-allowed-headers`📦:: If CORS is enabled, this sets the value of the Access-Control-Allow-Headers header. This should be a comma-separated string
 +
 Type: `java.lang.String` +
 
 
 
+[[quarkus.keycloak.cors-allowed-methods]]
 `quarkus.keycloak.cors-allowed-methods`📦:: If CORS is enabled, this sets the value of the Access-Control-Allow-Methods header. This should be a comma-separated string
 +
 Type: `java.lang.String` +
 
 
 
+[[quarkus.keycloak.cors-exposed-headers]]
 `quarkus.keycloak.cors-exposed-headers`📦:: If CORS is enabled, this sets the value of the Access-Control-Expose-Headers header. This should be a comma-separated string
 +
 Type: `java.lang.String` +
 
 
 
+[[quarkus.keycloak.bearer-only]]
 `quarkus.keycloak.bearer-only`📦:: This should be set to true for services. If enabled the adapter will not attempt to authenticate users, but only verify bearer tokens
 +
 Type: `boolean` +
@@ -83,6 +390,7 @@ Defaults to: `true` +
 
 
 
+[[quarkus.keycloak.autodetect-bearer-only]]
 `quarkus.keycloak.autodetect-bearer-only`📦:: This should be set to true if your application serves both a web application and web services (e.g. SOAP or REST). It allows you to redirect unauthenticated users of the web application to the Keycloak login page, but send an HTTP 401 status code to unauthenticated SOAP or REST clients instead as they would not understand a redirect to the login page. Keycloak auto-detects SOAP or REST clients based on typical headers like X-Requested-With, SOAPAction or Accept
 +
 Type: `boolean` +
@@ -90,6 +398,7 @@ Defaults to: `false` +
 
 
 
+[[quarkus.keycloak.public-client]]
 `quarkus.keycloak.public-client`📦:: If this application is a public client
 +
 Type: `boolean` +
@@ -97,12 +406,14 @@ Defaults to: `false` +
 
 
 
+[[quarkus.keycloak.credentials.secret]]
 `quarkus.keycloak.credentials.secret`📦:: The client secret
 +
 Type: `java.lang.String` +
 
 
 
+[[quarkus.keycloak.allow-any-hostname]]
 `quarkus.keycloak.allow-any-hostname`📦:: If the Keycloak server requires HTTPS and this config option is set to true the Keycloak server’s certificate is validated via the truststore, but host name validation is not done. This setting should only be used during development and never in production as it will disable verification of SSL certificates. This setting may be useful in test environments
 +
 Type: `boolean` +
@@ -110,6 +421,7 @@ Defaults to: `false` +
 
 
 
+[[quarkus.keycloak.disable-trust-manager]]
 `quarkus.keycloak.disable-trust-manager`📦:: If the Keycloak server requires HTTPS and this config option is set to true you do not have to specify a truststore. This setting should only be used during development and never in production as it will disable verification of SSL certificates
 +
 Type: `boolean` +
@@ -117,6 +429,7 @@ Defaults to: `false` +
 
 
 
+[[quarkus.keycloak.always-refresh-token]]
 `quarkus.keycloak.always-refresh-token`📦:: If the adapter should refresh the access token for each request
 +
 Type: `boolean` +
@@ -124,36 +437,42 @@ Defaults to: `false` +
 
 
 
+[[quarkus.keycloak.truststore]]
 `quarkus.keycloak.truststore`📦:: The value is the file path to a keystore file. If you prefix the path with classpath:, then the truststore will be obtained from the deployment’s classpath instead. Used for outgoing HTTPS communications to the Keycloak server
 +
 Type: `java.lang.String` +
 
 
 
+[[quarkus.keycloak.truststore-password]]
 `quarkus.keycloak.truststore-password`📦:: Password for the truststore keystore
 +
 Type: `java.lang.String` +
 
 
 
+[[quarkus.keycloak.client-keystore]]
 `quarkus.keycloak.client-keystore`📦:: This is the file path to a keystore file. This keystore contains client certificate for two-way SSL when the adapter makes HTTPS requests to the Keycloak server
 +
 Type: `java.lang.String` +
 
 
 
+[[quarkus.keycloak.client-keystore-password]]
 `quarkus.keycloak.client-keystore-password`📦:: Password for the client keystore
 +
 Type: `java.lang.String` +
 
 
 
+[[quarkus.keycloak.client-key-password]]
 `quarkus.keycloak.client-key-password`📦:: Password for the client’s key
 +
 Type: `java.lang.String` +
 
 
 
+[[quarkus.keycloak.connection-pool-size]]
 `quarkus.keycloak.connection-pool-size`📦:: Adapters will make separate HTTP invocations to the Keycloak server to turn an access code into an access token. This config option defines how many connections to the Keycloak server should be pooled
 +
 Type: `int` +
@@ -161,6 +480,7 @@ Defaults to: `20` +
 
 
 
+[[quarkus.keycloak.register-node-at-startup]]
 `quarkus.keycloak.register-node-at-startup`📦:: If true, then adapter will send registration request to Keycloak. It’s false by default and useful only when application is clustered
 +
 Type: `boolean` +
@@ -168,6 +488,7 @@ Defaults to: `false` +
 
 
 
+[[quarkus.keycloak.register-node-period]]
 `quarkus.keycloak.register-node-period`📦:: Period for re-registration adapter to Keycloak. Useful when application is clustered
 +
 Type: `int` +
@@ -175,18 +496,21 @@ Defaults to: `-1` +
 
 
 
+[[quarkus.keycloak.token-store]]
 `quarkus.keycloak.token-store`📦:: Possible values are session and cookie. Default is session, which means that adapter stores account info in HTTP Session. Alternative cookie means storage of info in cookie
 +
 Type: `java.lang.String` +
 
 
 
+[[quarkus.keycloak.adapter-state-cookie-path]]
 `quarkus.keycloak.adapter-state-cookie-path`📦:: When using a cookie store, this option sets the path of the cookie used to store account info. If it’s a relative path, then it is assumed that the application is running in a context root, and is interpreted relative to that context root. If it’s an absolute path, then the absolute path is used to set the cookie path. Defaults to use paths relative to the context root
 +
 Type: `java.lang.String` +
 
 
 
+[[quarkus.keycloak.principal-attribute]]
 `quarkus.keycloak.principal-attribute`📦:: OpenID Connect ID Token attribute to populate the UserPrincipal name with. If token attribute is null. Possible values are sub, preferred_username, email, name, nickname, given_name, family_name
 +
 Type: `java.lang.String` +
@@ -194,6 +518,7 @@ Defaults to: `sub` +
 
 
 
+[[quarkus.keycloak.turn-off-change-session-id-on-login]]
 `quarkus.keycloak.turn-off-change-session-id-on-login`📦:: The session id is changed by default on a successful login on some platforms to plug a security attack vector. Change this to true if you want to turn this off
 +
 Type: `boolean` +
@@ -201,6 +526,7 @@ Defaults to: `false` +
 
 
 
+[[quarkus.keycloak.token-minimum-time-to-live]]
 `quarkus.keycloak.token-minimum-time-to-live`📦:: Amount of time, in seconds, to preemptively refresh an active access token with the Keycloak server before it expires. This is especially useful when the access token is sent to another REST client where it could expire before being evaluated. This value should never exceed the realm’s access token lifespan
 +
 Type: `int` +
@@ -208,6 +534,7 @@ Defaults to: `0` +
 
 
 
+[[quarkus.keycloak.min-time-between-jwks-requests]]
 `quarkus.keycloak.min-time-between-jwks-requests`📦:: Amount of time, in seconds, specifying minimum interval between two requests to Keycloak to retrieve new public keys. It is 10 seconds by default. Adapter will always try to download new public key when it recognize token with unknown kid. However it won’t try it more than once per 10 seconds (by default). This is to avoid DoS when attacker sends lots of tokens with bad kid forcing adapter to send lots of requests to Keycloak
 +
 Type: `int` +
@@ -215,6 +542,7 @@ Defaults to: `10` +
 
 
 
+[[quarkus.keycloak.public-key-cache-ttl]]
 `quarkus.keycloak.public-key-cache-ttl`📦:: Amount of time, in seconds, specifying maximum interval between two requests to Keycloak to retrieve new public keys. It is 86400 seconds (1 day) by default. Adapter will always try to download new public key when it recognize token with unknown kid . If it recognize token with known kid, it will just use the public key downloaded previously. However at least once per this configured interval (1 day by default) will be new public key always downloaded even if the kid of token is already known
 +
 Type: `int` +
@@ -222,6 +550,7 @@ Defaults to: `86400` +
 
 
 
+[[quarkus.keycloak.verify-token-audience]]
 `quarkus.keycloak.verify-token-audience`📦:: If set to true, then during authentication with the bearer token, the adapter will verify whether the token contains this client name (resource) as an audience. The option is especially useful for services, which primarily serve requests authenticated by the bearer token. This is set to false by default, however for improved security, it is recommended to enable this. See Audience Support for more details about audience support
 +
 Type: `boolean` +
@@ -229,6 +558,7 @@ Defaults to: `false` +
 
 
 
+[[quarkus.keycloak.ignore-oauth-query-parameter]]
 `quarkus.keycloak.ignore-oauth-query-parameter`📦:: If set to true will turn off processing of the access_token query parameter for bearer token processing. Users will not be able to authenticate if they only pass in an access_token
 +
 Type: `boolean` +
@@ -236,12 +566,14 @@ Defaults to: `false` +
 
 
 
+[[quarkus.keycloak.proxy-url]]
 `quarkus.keycloak.proxy-url`📦:: The proxy url to use for requests to the auth-server.
 +
 Type: `java.lang.String` +
 
 
 
+[[quarkus.keycloak.policy-enforcer.enable]]
 `quarkus.keycloak.policy-enforcer.enable`📦:: Specifies how policies are enforced.
 +
 Type: `boolean` +
@@ -249,6 +581,7 @@ Defaults to: `false` +
 
 
 
+[[quarkus.keycloak.policy-enforcer.enforcement-mode]]
 `quarkus.keycloak.policy-enforcer.enforcement-mode`📦:: Specifies how policies are enforced.
 +
 Type: `java.lang.String` +
@@ -256,6 +589,7 @@ Defaults to: `ENFORCING` +
 
 
 
+[[quarkus.keycloak.policy-enforcer.path-cache.max-entries]]
 `quarkus.keycloak.policy-enforcer.path-cache.max-entries`📦:: Defines the time in milliseconds when the entry should be expired
 +
 Type: `int` +
@@ -263,6 +597,7 @@ Defaults to: `1000` +
 
 
 
+[[quarkus.keycloak.policy-enforcer.path-cache.lifespan]]
 `quarkus.keycloak.policy-enforcer.path-cache.lifespan`📦:: Defines the limit of entries that should be kept in the cache
 +
 Type: `long` +
@@ -270,6 +605,7 @@ Defaults to: `30000` +
 
 
 
+[[quarkus.keycloak.policy-enforcer.lazy-load-paths]]
 `quarkus.keycloak.policy-enforcer.lazy-load-paths`📦:: Specifies how the adapter should fetch the server for resources associated with paths in your application. If true, the policy enforcer is going to fetch resources on-demand accordingly with the path being requested
 +
 Type: `boolean` +
@@ -277,12 +613,14 @@ Defaults to: `true` +
 
 
 
+[[quarkus.keycloak.policy-enforcer.on-deny-redirect-to]]
 `quarkus.keycloak.policy-enforcer.on-deny-redirect-to`📦:: Defines a URL where a client request is redirected when an "access denied" message is obtained from the server. By default, the adapter responds with a 403 HTTP status code
 +
 Type: `java.lang.String` +
 
 
 
+[[quarkus.keycloak.policy-enforcer.user-managed-access]]
 `quarkus.keycloak.policy-enforcer.user-managed-access`📦:: Specifies that the adapter uses the UMA protocol.
 +
 Type: `boolean` +
@@ -290,6 +628,7 @@ Defaults to: `false` +
 
 
 
+[[quarkus.keycloak.policy-enforcer.http-method-as-scope]]
 `quarkus.keycloak.policy-enforcer.http-method-as-scope`📦:: Specifies how scopes should be mapped to HTTP methods. If set to true, the policy enforcer will use the HTTP method from the current request to check whether or not access should be granted
 +
 Type: `boolean` +
@@ -297,48 +636,56 @@ Defaults to: `false` +
 
 
 
+[[quarkus.keycloak.credentials.jwt.jwt]]
 `quarkus.keycloak.credentials.jwt."<jwt>"`📦:: The settings for client authentication with signed JWT
 +
 Type: `java.lang.String` +
 
 
 
+[[quarkus.keycloak.credentials.secret-jwt.secret-jwt]]
 `quarkus.keycloak.credentials.secret-jwt."<secret-jwt>"`📦:: The settings for client authentication with JWT using client secret
 +
 Type: `java.lang.String` +
 
 
 
+[[quarkus.keycloak.redirect-rewrite-rules.redirect-rewrite-rules]]
 `quarkus.keycloak.redirect-rewrite-rules."<redirect-rewrite-rules>"`📦:: If needed, specify the Redirect URI rewrite rule. This is an object notation where the key is the regular expression to which the Redirect URI is to be matched and the value is the replacement String. $ character can be used for backreferences in the replacement String
 +
 Type: `java.lang.String` +
 
 
 
+[[quarkus.keycloak.policy-enforcer.paths.paths.name]]
 `quarkus.keycloak.policy-enforcer.paths."<paths>".name`📦:: The name of a resource on the server that is to be associated with a given path
 +
 Type: `java.lang.String` +
 
 
 
+[[quarkus.keycloak.policy-enforcer.paths.paths.path]]
 `quarkus.keycloak.policy-enforcer.paths."<paths>".path`📦:: A URI relative to the application’s context path that should be protected by the policy enforcer
 +
 Type: `java.lang.String` +
 
 
 
+[[quarkus.keycloak.policy-enforcer.paths.paths.methods.methods.method]]
 `quarkus.keycloak.policy-enforcer.paths."<paths>".methods."<methods>".method`📦:: The name of the HTTP method
 +
 Type: `java.lang.String` +
 
 
 
+[[quarkus.keycloak.policy-enforcer.paths.paths.methods.methods.scopes]]
 `quarkus.keycloak.policy-enforcer.paths."<paths>".methods."<methods>".scopes`📦:: An array of strings with the scopes associated with the method
 +
 Type: `java.lang.String` +
 
 
 
+[[quarkus.keycloak.policy-enforcer.paths.paths.methods.methods.scopes-enforcement-mode]]
 `quarkus.keycloak.policy-enforcer.paths."<paths>".methods."<methods>".scopes-enforcement-mode`📦:: A string referencing the enforcement mode for the scopes associated with a method
 +
 Type: `org.keycloak.representations.adapters.config.PolicyEnforcerConfig.ScopeEnforcementMode` +
@@ -346,6 +693,7 @@ Defaults to: `ALL` +
 
 
 
+[[quarkus.keycloak.policy-enforcer.paths.paths.enforcement-mode]]
 `quarkus.keycloak.policy-enforcer.paths."<paths>".enforcement-mode`📦:: Specifies how policies are enforced
 +
 Type: `org.keycloak.representations.adapters.config.PolicyEnforcerConfig.EnforcementMode` +
@@ -353,24 +701,28 @@ Defaults to: `ENFORCING` +
 
 
 
+[[quarkus.keycloak.policy-enforcer.paths.paths.claim-information-point.complex-config]]
 `quarkus.keycloak.policy-enforcer.paths."<paths>".claim-information-point."<complex-config>"`📦:: 
 +
 Type: `java.util.Map<java.lang.String,java.util.Map<java.lang.String,java.lang.String>>` +
 
 
 
+[[quarkus.keycloak.policy-enforcer.paths.paths.claim-information-point.simple-config]]
 `quarkus.keycloak.policy-enforcer.paths."<paths>".claim-information-point."<simple-config>"`📦:: 
 +
 Type: `java.util.Map<java.lang.String,java.lang.String>` +
 
 
 
+[[quarkus.keycloak.policy-enforcer.claim-information-point.complex-config]]
 `quarkus.keycloak.policy-enforcer.claim-information-point."<complex-config>"`📦:: 
 +
 Type: `java.util.Map<java.lang.String,java.util.Map<java.lang.String,java.lang.String>>` +
 
 
 
+[[quarkus.keycloak.policy-enforcer.claim-information-point.simple-config]]
 `quarkus.keycloak.policy-enforcer.claim-information-point."<simple-config>"`📦:: 
 +
 Type: `java.util.Map<java.lang.String,java.lang.String>` +

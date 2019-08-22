@@ -1,4 +1,24 @@
+|===
+|key|type|default|build time/runtime icon
 
+|<<quarkus.transaction-manager.node-name, quarkus.transaction-manager.node-name>>
+|String 
+|quarkus
+| ⚙️
+
+|<<quarkus.transaction-manager.xa-node-name, quarkus.transaction-manager.xa-node-name>>
+|String 
+|
+| ⚙️
+
+|<<quarkus.transaction-manager.default-transaction-timeout, quarkus.transaction-manager.default-transaction-timeout>>
+|Duration  - _see note below_
+|60
+| ⚙️
+|===
+
+
+[[quarkus.transaction-manager.node-name]]
 `quarkus.transaction-manager.node-name`⚙️:: The node name used by the transaction manager
 +
 Type: `java.lang.String` +
@@ -6,12 +26,14 @@ Defaults to: `quarkus` +
 
 
 
+[[quarkus.transaction-manager.xa-node-name]]
 `quarkus.transaction-manager.xa-node-name`⚙️:: The XA node name used by the transaction manager
 +
 Type: `java.lang.String` +
 
 
 
+[[quarkus.transaction-manager.default-transaction-timeout]]
 `quarkus.transaction-manager.default-transaction-timeout`⚙️:: The default transaction timeout
 +
 Type: `java.time.Duration` - _see note below_ +

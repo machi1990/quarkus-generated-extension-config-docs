@@ -1,4 +1,14 @@
+|===
+|key|type|default|build time/runtime icon
 
+|<<quarkus.ssl.native, quarkus.ssl.native>>
+|Boolean 
+|
+| 📦
+|===
+
+
+[[quarkus.ssl.native]]
 `quarkus.ssl.native`📦:: Enable native SSL support.
 +
 Type: `java.lang.Boolean` +

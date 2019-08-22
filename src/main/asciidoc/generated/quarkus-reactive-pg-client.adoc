@@ -1,34 +1,74 @@
+|===
+|key|type|default|build time/runtime icon
 
+|<<quarkus.reactive-pg-client.cache-prepared-statements, quarkus.reactive-pg-client.cache-prepared-statements>>
+|Boolean 
+|
+| ⚙️
+
+|<<quarkus.reactive-pg-client.pipelining-limit, quarkus.reactive-pg-client.pipelining-limit>>
+|Integer 
+|
+| ⚙️
+
+|<<quarkus.datasource.url, quarkus.datasource.url>>
+|String 
+|
+| ⚙️
+
+|<<quarkus.datasource.username, quarkus.datasource.username>>
+|String 
+|
+| ⚙️
+
+|<<quarkus.datasource.password, quarkus.datasource.password>>
+|String 
+|
+| ⚙️
+
+|<<quarkus.datasource.max-size, quarkus.datasource.max-size>>
+|Integer 
+|
+| ⚙️
+|===
+
+
+[[quarkus.reactive-pg-client.cache-prepared-statements]]
 `quarkus.reactive-pg-client.cache-prepared-statements`⚙️:: Whether prepared statements should be cached on the client side.
 +
 Type: `java.lang.Boolean` +
 
 
 
+[[quarkus.reactive-pg-client.pipelining-limit]]
 `quarkus.reactive-pg-client.pipelining-limit`⚙️:: The maximum number of inflight database commands that can be pipelined.
 +
 Type: `java.lang.Integer` +
 
 
 
+[[quarkus.datasource.url]]
 `quarkus.datasource.url`⚙️:: The datasource URL.
 +
 Type: `java.lang.String` +
 
 
 
+[[quarkus.datasource.username]]
 `quarkus.datasource.username`⚙️:: The datasource username.
 +
 Type: `java.lang.String` +
 
 
 
+[[quarkus.datasource.password]]
 `quarkus.datasource.password`⚙️:: The datasource password.
 +
 Type: `java.lang.String` +
 
 
 
+[[quarkus.datasource.max-size]]
 `quarkus.datasource.max-size`⚙️:: The datasource pool maximum size.
 +
 Type: `java.lang.Integer` +

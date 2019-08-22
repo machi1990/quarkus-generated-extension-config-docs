@@ -1,4 +1,109 @@
+|===
+|key|type|default|build time/runtime icon
 
+|<<quarkus.http.cors, quarkus.http.cors>>
+|boolean 
+|false
+| ⚙️
+
+|<<quarkus.http.port, quarkus.http.port>>
+|int 
+|8080
+| ⚙️
+
+|<<quarkus.http.test-port, quarkus.http.test-port>>
+|int 
+|8081
+| ⚙️
+
+|<<quarkus.http.host, quarkus.http.host>>
+|String 
+|0.0.0.0
+| ⚙️
+
+|<<quarkus.http.ssl-port, quarkus.http.ssl-port>>
+|int 
+|8443
+| ⚙️
+
+|<<quarkus.http.test-ssl-port, quarkus.http.test-ssl-port>>
+|int 
+|8444
+| ⚙️
+
+|<<quarkus.http.cors.origins, quarkus.http.cors.origins>>
+|String 
+|
+| ⚙️
+
+|<<quarkus.http.cors.methods, quarkus.http.cors.methods>>
+|HttpMethod 
+|
+| ⚙️
+
+|<<quarkus.http.cors.headers, quarkus.http.cors.headers>>
+|String 
+|
+| ⚙️
+
+|<<quarkus.http.cors.exposed-headers, quarkus.http.cors.exposed-headers>>
+|String 
+|
+| ⚙️
+
+|<<quarkus.http.cors.access-control-max-age, quarkus.http.cors.access-control-max-age>>
+|Duration  - _see note below_
+|
+| ⚙️
+
+|<<quarkus.http.ssl.certificate.file, quarkus.http.ssl.certificate.file>>
+|Path 
+|
+| ⚙️
+
+|<<quarkus.http.ssl.certificate.key-file, quarkus.http.ssl.certificate.key-file>>
+|Path 
+|
+| ⚙️
+
+|<<quarkus.http.ssl.certificate.key-store-file, quarkus.http.ssl.certificate.key-store-file>>
+|Path 
+|
+| ⚙️
+
+|<<quarkus.http.ssl.certificate.key-store-file-type, quarkus.http.ssl.certificate.key-store-file-type>>
+|String 
+|
+| ⚙️
+
+|<<quarkus.http.ssl.certificate.key-store-password, quarkus.http.ssl.certificate.key-store-password>>
+|String 
+|password
+| ⚙️
+
+|<<quarkus.http.ssl.cipher-suites, quarkus.http.ssl.cipher-suites>>
+|String 
+|
+| ⚙️
+
+|<<quarkus.http.ssl.protocols, quarkus.http.ssl.protocols>>
+|String 
+|TLSv1.3,TLSv1.2
+| ⚙️
+
+|<<quarkus.http.io-threads, quarkus.http.io-threads>>
+|Integer 
+|
+| ⚙️
+
+|<<quarkus.http.virtual, quarkus.http.virtual>>
+|boolean 
+|false
+| ⚙️
+|===
+
+
+[[quarkus.http.cors]]
 `quarkus.http.cors`⚙️:: Enable the CORS filter.
 +
 Type: `boolean` +
@@ -6,6 +111,7 @@ Defaults to: `false` +
 
 
 
+[[quarkus.http.port]]
 `quarkus.http.port`⚙️:: The HTTP port
 +
 Type: `int` +
@@ -13,6 +119,7 @@ Defaults to: `8080` +
 
 
 
+[[quarkus.http.test-port]]
 `quarkus.http.test-port`⚙️:: The HTTP port used to run tests
 +
 Type: `int` +
@@ -20,6 +127,7 @@ Defaults to: `8081` +
 
 
 
+[[quarkus.http.host]]
 `quarkus.http.host`⚙️:: The HTTP host
 +
 Type: `java.lang.String` +
@@ -27,6 +135,7 @@ Defaults to: `0.0.0.0` +
 
 
 
+[[quarkus.http.ssl-port]]
 `quarkus.http.ssl-port`⚙️:: The HTTPS port
 +
 Type: `int` +
@@ -34,6 +143,7 @@ Defaults to: `8443` +
 
 
 
+[[quarkus.http.test-ssl-port]]
 `quarkus.http.test-ssl-port`⚙️:: The HTTPS port used to run tests
 +
 Type: `int` +
@@ -41,60 +151,70 @@ Defaults to: `8444` +
 
 
 
+[[quarkus.http.cors.origins]]
 `quarkus.http.cors.origins`⚙️:: Origins allowed for CORS Comma separated list of valid URLs. ex: http://www.quarkus.io,http://localhost:3000 The filter allows any origin if this is not set. default: returns any requested origin as valid
 +
 Type: `java.lang.String` +
 
 
 
+[[quarkus.http.cors.methods]]
 `quarkus.http.cors.methods`⚙️:: HTTP methods allowed for CORS Comma separated list of valid methods. ex: GET,PUT,POST The filter allows any method if this is not set. default: returns any requested method as valid
 +
 Type: `io.vertx.core.http.HttpMethod` +
 
 
 
+[[quarkus.http.cors.headers]]
 `quarkus.http.cors.headers`⚙️:: HTTP headers allowed for CORS Comma separated list of valid headers. ex: X-Custom,Content-Disposition The filter allows any header if this is not set. default: returns any requested header as valid
 +
 Type: `java.lang.String` +
 
 
 
+[[quarkus.http.cors.exposed-headers]]
 `quarkus.http.cors.exposed-headers`⚙️:: HTTP headers exposed in CORS Comma separated list of valid headers. ex: X-Custom,Content-Disposition default: empty
 +
 Type: `java.lang.String` +
 
 
 
+[[quarkus.http.cors.access-control-max-age]]
 `quarkus.http.cors.access-control-max-age`⚙️:: The `Access-Control-Max-Age` response header value indicating how long the results of a pre-flight request can be cached.
 +
 Type: `java.time.Duration` - _see note below_ +
 
 
 
+[[quarkus.http.ssl.certificate.file]]
 `quarkus.http.ssl.certificate.file`⚙️:: The file path to a server certificate or certificate chain in PEM format.
 +
 Type: `java.nio.file.Path` +
 
 
 
+[[quarkus.http.ssl.certificate.key-file]]
 `quarkus.http.ssl.certificate.key-file`⚙️:: The file path to the corresponding certificate private key file in PEM format.
 +
 Type: `java.nio.file.Path` +
 
 
 
+[[quarkus.http.ssl.certificate.key-store-file]]
 `quarkus.http.ssl.certificate.key-store-file`⚙️:: An optional key store which holds the certificate information instead of specifying separate files.
 +
 Type: `java.nio.file.Path` +
 
 
 
+[[quarkus.http.ssl.certificate.key-store-file-type]]
 `quarkus.http.ssl.certificate.key-store-file-type`⚙️:: An optional parameter to specify type of the key store file. If not given, the type is automatically detected based on the file name.
 +
 Type: `java.lang.String` +
 
 
 
+[[quarkus.http.ssl.certificate.key-store-password]]
 `quarkus.http.ssl.certificate.key-store-password`⚙️:: A parameter to specify the password of the key store file. If not given, the default ("password") is used.
 +
 Type: `java.lang.String` +
@@ -102,12 +222,14 @@ Defaults to: `password` +
 
 
 
+[[quarkus.http.ssl.cipher-suites]]
 `quarkus.http.ssl.cipher-suites`⚙️:: The cipher suites to use. If none is given, a reasonable default is selected.
 +
 Type: `java.lang.String` +
 
 
 
+[[quarkus.http.ssl.protocols]]
 `quarkus.http.ssl.protocols`⚙️:: The list of protocols to explicitly enable.
 +
 Type: `java.lang.String` +
@@ -115,12 +237,14 @@ Defaults to: `TLSv1.3,TLSv1.2` +
 
 
 
+[[quarkus.http.io-threads]]
 `quarkus.http.io-threads`⚙️:: The number if IO threads used to perform IO. This will be automatically set to a reasonable value based on the number of CPU cores if it is not provided
 +
 Type: `java.lang.Integer` +
 
 
 
+[[quarkus.http.virtual]]
 `quarkus.http.virtual`⚙️:: If this is true then only a virtual channel will be set up for vertx web. We have this switch for testing purposes.
 +
 Type: `boolean` +

@@ -1,4 +1,19 @@
+|===
+|key|type|default|build time/runtime icon
 
+|<<quarkus.arc.remove-unused-beans, quarkus.arc.remove-unused-beans>>
+|String 
+|all
+| 📦
+
+|<<quarkus.arc.auto-inject-fields, quarkus.arc.auto-inject-fields>>
+|boolean 
+|true
+| 📦
+|===
+
+
+[[quarkus.arc.remove-unused-beans]]
 `quarkus.arc.remove-unused-beans`📦::  
  - If set to `all` (or `true`) the container will attempt to remove all unused beans. 
  - If set to none (or `false`) no beans will ever be removed even if they are unused (according to the criteria set out below) 
@@ -19,6 +34,7 @@ Defaults to: `all` +
 
 
 
+[[quarkus.arc.auto-inject-fields]]
 `quarkus.arc.auto-inject-fields`📦:: If set to true `@Inject` is automatically added to all non-static fields that are annotated with one of the annotations defined by `AutoInjectAnnotationBuildItem`.
 +
 Type: `boolean` +

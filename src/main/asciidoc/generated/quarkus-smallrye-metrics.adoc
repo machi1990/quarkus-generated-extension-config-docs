@@ -1,4 +1,14 @@
+|===
+|key|type|default|build time/runtime icon
 
+|<<quarkus.smallrye-metrics.path, quarkus.smallrye-metrics.path>>
+|String 
+|/metrics
+| 📦
+|===
+
+
+[[quarkus.smallrye-metrics.path]]
 `quarkus.smallrye-metrics.path`📦:: The path to the metrics Servlet.
 +
 Type: `java.lang.String` +

@@ -1,10 +1,211 @@
+|===
+|key|type|default|build time/runtime icon
 
+|<<quarkus.log.level, quarkus.log.level>>
+|Level 
+|
+| ⚙️
+
+|<<quarkus.log.min-level, quarkus.log.min-level>>
+|Level 
+|INFO
+| ⚙️
+
+|<<quarkus.log.console.enable, quarkus.log.console.enable>>
+|boolean 
+|true
+| ⚙️
+
+|<<quarkus.log.console.format, quarkus.log.console.format>>
+|String 
+|%d{yyyy-MM-dd HH:mm:ss,SSS} %-5p [%c{3.}] (%t) %s%e%n
+| ⚙️
+
+|<<quarkus.log.console.level, quarkus.log.console.level>>
+|Level 
+|ALL
+| ⚙️
+
+|<<quarkus.log.console.color, quarkus.log.console.color>>
+|boolean 
+|true
+| ⚙️
+
+|<<quarkus.log.console.darken, quarkus.log.console.darken>>
+|int 
+|0
+| ⚙️
+
+|<<quarkus.log.console.async, quarkus.log.console.async>>
+|boolean 
+|false
+| ⚙️
+
+|<<quarkus.log.console.async.queue-length, quarkus.log.console.async.queue-length>>
+|int 
+|512
+| ⚙️
+
+|<<quarkus.log.console.async.overflow, quarkus.log.console.async.overflow>>
+|OverflowAction 
+|block
+| ⚙️
+
+|<<quarkus.log.file.enable, quarkus.log.file.enable>>
+|boolean 
+|false
+| ⚙️
+
+|<<quarkus.log.file.format, quarkus.log.file.format>>
+|String 
+|%d{yyyy-MM-dd HH:mm:ss,SSS} %h %N[%i] %-5p [%c{3.}] (%t) %s%e%n
+| ⚙️
+
+|<<quarkus.log.file.level, quarkus.log.file.level>>
+|Level 
+|ALL
+| ⚙️
+
+|<<quarkus.log.file.path, quarkus.log.file.path>>
+|File 
+|quarkus.log
+| ⚙️
+
+|<<quarkus.log.file.async, quarkus.log.file.async>>
+|boolean 
+|false
+| ⚙️
+
+|<<quarkus.log.file.async.queue-length, quarkus.log.file.async.queue-length>>
+|int 
+|512
+| ⚙️
+
+|<<quarkus.log.file.async.overflow, quarkus.log.file.async.overflow>>
+|OverflowAction 
+|block
+| ⚙️
+
+|<<quarkus.log.file.rotation.max-file-size, quarkus.log.file.rotation.max-file-size>>
+|MemorySize  - _see note below_
+|
+| ⚙️
+
+|<<quarkus.log.file.rotation.max-backup-index, quarkus.log.file.rotation.max-backup-index>>
+|int 
+|1
+| ⚙️
+
+|<<quarkus.log.file.rotation.file-suffix, quarkus.log.file.rotation.file-suffix>>
+|String 
+|
+| ⚙️
+
+|<<quarkus.log.file.rotation.rotate-on-boot, quarkus.log.file.rotation.rotate-on-boot>>
+|boolean 
+|true
+| ⚙️
+
+|<<quarkus.log.syslog.enable, quarkus.log.syslog.enable>>
+|boolean 
+|false
+| ⚙️
+
+|<<quarkus.log.syslog.endpoint, quarkus.log.syslog.endpoint>>
+|InetSocketAddress 
+|localhost:514
+| ⚙️
+
+|<<quarkus.log.syslog.app-name, quarkus.log.syslog.app-name>>
+|String 
+|
+| ⚙️
+
+|<<quarkus.log.syslog.hostname, quarkus.log.syslog.hostname>>
+|String 
+|
+| ⚙️
+
+|<<quarkus.log.syslog.facility, quarkus.log.syslog.facility>>
+|Facility 
+|USER_LEVEL
+| ⚙️
+
+|<<quarkus.log.syslog.syslog-type, quarkus.log.syslog.syslog-type>>
+|SyslogType 
+|RFC5424
+| ⚙️
+
+|<<quarkus.log.syslog.protocol, quarkus.log.syslog.protocol>>
+|Protocol 
+|TCP
+| ⚙️
+
+|<<quarkus.log.syslog.use-counting-framing, quarkus.log.syslog.use-counting-framing>>
+|boolean 
+|false
+| ⚙️
+
+|<<quarkus.log.syslog.truncate, quarkus.log.syslog.truncate>>
+|boolean 
+|true
+| ⚙️
+
+|<<quarkus.log.syslog.block-on-reconnect, quarkus.log.syslog.block-on-reconnect>>
+|boolean 
+|false
+| ⚙️
+
+|<<quarkus.log.syslog.format, quarkus.log.syslog.format>>
+|String 
+|%d{yyyy-MM-dd HH:mm:ss,SSS} %-5p [%c{3.}] (%t) %s%e%n
+| ⚙️
+
+|<<quarkus.log.syslog.level, quarkus.log.syslog.level>>
+|Level 
+|ALL
+| ⚙️
+
+|<<quarkus.log.syslog.async, quarkus.log.syslog.async>>
+|boolean 
+|false
+| ⚙️
+
+|<<quarkus.log.syslog.async.queue-length, quarkus.log.syslog.async.queue-length>>
+|int 
+|512
+| ⚙️
+
+|<<quarkus.log.syslog.async.overflow, quarkus.log.syslog.async.overflow>>
+|OverflowAction 
+|block
+| ⚙️
+
+|<<quarkus.log.category.categories.min-level, quarkus.log.category."<categories>".min-level>>
+|String 
+|inherit
+| ⚙️
+
+|<<quarkus.log.category.categories.level, quarkus.log.category."<categories>".level>>
+|String 
+|inherit
+| ⚙️
+
+|<<quarkus.log.filter.filters.if-starts-with, quarkus.log.filter."<filters>".if-starts-with>>
+|String 
+|inherit
+| ⚙️
+|===
+
+
+[[quarkus.log.level]]
 `quarkus.log.level`⚙️:: The default log level
 +
 Type: `java.util.logging.Level` +
 
 
 
+[[quarkus.log.min-level]]
 `quarkus.log.min-level`⚙️:: The default minimum log level
 +
 Type: `java.util.logging.Level` +
@@ -12,6 +213,7 @@ Defaults to: `INFO` +
 
 
 
+[[quarkus.log.console.enable]]
 `quarkus.log.console.enable`⚙️:: If console logging should be enabled
 +
 Type: `boolean` +
@@ -19,6 +221,7 @@ Defaults to: `true` +
 
 
 
+[[quarkus.log.console.format]]
 `quarkus.log.console.format`⚙️:: The log format
 +
 Type: `java.lang.String` +
@@ -26,6 +229,7 @@ Defaults to: `%d{yyyy-MM-dd HH:mm:ss,SSS} %-5p [%c{3.}] (%t) %s%e%n` +
 
 
 
+[[quarkus.log.console.level]]
 `quarkus.log.console.level`⚙️:: The console log level
 +
 Type: `java.util.logging.Level` +
@@ -33,6 +237,7 @@ Defaults to: `ALL` +
 
 
 
+[[quarkus.log.console.color]]
 `quarkus.log.console.color`⚙️:: If the console logging should be in color
 +
 Type: `boolean` +
@@ -40,6 +245,7 @@ Defaults to: `true` +
 
 
 
+[[quarkus.log.console.darken]]
 `quarkus.log.console.darken`⚙️:: Specify how much the colors should be darkened
 +
 Type: `int` +
@@ -47,6 +253,7 @@ Defaults to: `0` +
 
 
 
+[[quarkus.log.console.async]]
 `quarkus.log.console.async`⚙️:: Indicates whether to log asynchronously
 +
 Type: `boolean` +
@@ -54,6 +261,7 @@ Defaults to: `false` +
 
 
 
+[[quarkus.log.console.async.queue-length]]
 `quarkus.log.console.async.queue-length`⚙️:: The queue length to use before flushing writing
 +
 Type: `int` +
@@ -61,6 +269,7 @@ Defaults to: `512` +
 
 
 
+[[quarkus.log.console.async.overflow]]
 `quarkus.log.console.async.overflow`⚙️:: Determine whether to block the publisher (rather than drop the message) when the queue is full
 +
 Type: `org.jboss.logmanager.handlers.AsyncHandler.OverflowAction` +
@@ -68,6 +277,7 @@ Defaults to: `block` +
 
 
 
+[[quarkus.log.file.enable]]
 `quarkus.log.file.enable`⚙️:: If file logging should be enabled
 +
 Type: `boolean` +
@@ -75,6 +285,7 @@ Defaults to: `false` +
 
 
 
+[[quarkus.log.file.format]]
 `quarkus.log.file.format`⚙️:: The log format
 +
 Type: `java.lang.String` +
@@ -82,6 +293,7 @@ Defaults to: `%d{yyyy-MM-dd HH:mm:ss,SSS} %h %N[%i] %-5p [%c{3.}] (%t) %s%e%n` +
 
 
 
+[[quarkus.log.file.level]]
 `quarkus.log.file.level`⚙️:: The level of logs to be written into the file.
 +
 Type: `java.util.logging.Level` +
@@ -89,6 +301,7 @@ Defaults to: `ALL` +
 
 
 
+[[quarkus.log.file.path]]
 `quarkus.log.file.path`⚙️:: The name of the file in which logs will be written.
 +
 Type: `java.io.File` +
@@ -96,6 +309,7 @@ Defaults to: `quarkus.log` +
 
 
 
+[[quarkus.log.file.async]]
 `quarkus.log.file.async`⚙️:: Indicates whether to log asynchronously
 +
 Type: `boolean` +
@@ -103,6 +317,7 @@ Defaults to: `false` +
 
 
 
+[[quarkus.log.file.async.queue-length]]
 `quarkus.log.file.async.queue-length`⚙️:: The queue length to use before flushing writing
 +
 Type: `int` +
@@ -110,6 +325,7 @@ Defaults to: `512` +
 
 
 
+[[quarkus.log.file.async.overflow]]
 `quarkus.log.file.async.overflow`⚙️:: Determine whether to block the publisher (rather than drop the message) when the queue is full
 +
 Type: `org.jboss.logmanager.handlers.AsyncHandler.OverflowAction` +
@@ -117,12 +333,14 @@ Defaults to: `block` +
 
 
 
+[[quarkus.log.file.rotation.max-file-size]]
 `quarkus.log.file.rotation.max-file-size`⚙️:: The maximum file size of the log file after which a rotation is executed.
 +
 Type: `io.quarkus.runtime.configuration.MemorySize` - _see note below_ +
 
 
 
+[[quarkus.log.file.rotation.max-backup-index]]
 `quarkus.log.file.rotation.max-backup-index`⚙️:: The maximum number of backups to keep.
 +
 Type: `int` +
@@ -130,12 +348,14 @@ Defaults to: `1` +
 
 
 
+[[quarkus.log.file.rotation.file-suffix]]
 `quarkus.log.file.rotation.file-suffix`⚙️:: File handler rotation file suffix. Example fileSuffix: .yyyy-MM-dd
 +
 Type: `java.lang.String` +
 
 
 
+[[quarkus.log.file.rotation.rotate-on-boot]]
 `quarkus.log.file.rotation.rotate-on-boot`⚙️:: Indicates whether to rotate log files on server initialization.
 +
 Type: `boolean` +
@@ -143,6 +363,7 @@ Defaults to: `true` +
 
 
 
+[[quarkus.log.syslog.enable]]
 `quarkus.log.syslog.enable`⚙️:: If syslog logging should be enabled
 +
 Type: `boolean` +
@@ -150,6 +371,7 @@ Defaults to: `false` +
 
 
 
+[[quarkus.log.syslog.endpoint]]
 `quarkus.log.syslog.endpoint`⚙️:: The IP address and port of the syslog server
 +
 Type: `java.net.InetSocketAddress` +
@@ -157,18 +379,21 @@ Defaults to: `localhost:514` +
 
 
 
+[[quarkus.log.syslog.app-name]]
 `quarkus.log.syslog.app-name`⚙️:: The app name used when formatting the message in RFC5424 format
 +
 Type: `java.lang.String` +
 
 
 
+[[quarkus.log.syslog.hostname]]
 `quarkus.log.syslog.hostname`⚙️:: The name of the host the messages are being sent from
 +
 Type: `java.lang.String` +
 
 
 
+[[quarkus.log.syslog.facility]]
 `quarkus.log.syslog.facility`⚙️:: Sets the facility used when calculating the priority of the message as defined by RFC-5424 and RFC-3164
 +
 Type: `org.jboss.logmanager.handlers.SyslogHandler.Facility` +
@@ -176,6 +401,7 @@ Defaults to: `USER_LEVEL` +
 
 
 
+[[quarkus.log.syslog.syslog-type]]
 `quarkus.log.syslog.syslog-type`⚙️:: Set the `SyslogType syslog type` this handler should use to format the message sent
 +
 Type: `org.jboss.logmanager.handlers.SyslogHandler.SyslogType` +
@@ -183,6 +409,7 @@ Defaults to: `RFC5424` +
 
 
 
+[[quarkus.log.syslog.protocol]]
 `quarkus.log.syslog.protocol`⚙️:: Sets the protocol used to connect to the syslog server
 +
 Type: `org.jboss.logmanager.handlers.SyslogHandler.Protocol` +
@@ -190,6 +417,7 @@ Defaults to: `TCP` +
 
 
 
+[[quarkus.log.syslog.use-counting-framing]]
 `quarkus.log.syslog.use-counting-framing`⚙️:: Set to `true` if the message being sent should be prefixed with the size of the message
 +
 Type: `boolean` +
@@ -197,6 +425,7 @@ Defaults to: `false` +
 
 
 
+[[quarkus.log.syslog.truncate]]
 `quarkus.log.syslog.truncate`⚙️:: Set to `true` if the message should be truncated
 +
 Type: `boolean` +
@@ -204,6 +433,7 @@ Defaults to: `true` +
 
 
 
+[[quarkus.log.syslog.block-on-reconnect]]
 `quarkus.log.syslog.block-on-reconnect`⚙️:: Enables or disables blocking when attempting to reconnect a `org.jboss.logmanager.handlers.SyslogHandler.Protocol#TCP TCP` or `org.jboss.logmanager.handlers.SyslogHandler.Protocol#SSL_TCP SSL TCP` protocol
 +
 Type: `boolean` +
@@ -211,6 +441,7 @@ Defaults to: `false` +
 
 
 
+[[quarkus.log.syslog.format]]
 `quarkus.log.syslog.format`⚙️:: The log message format
 +
 Type: `java.lang.String` +
@@ -218,6 +449,7 @@ Defaults to: `%d{yyyy-MM-dd HH:mm:ss,SSS} %-5p [%c{3.}] (%t) %s%e%n` +
 
 
 
+[[quarkus.log.syslog.level]]
 `quarkus.log.syslog.level`⚙️:: The log level specifying, which message levels will be logged by syslog logger
 +
 Type: `java.util.logging.Level` +
@@ -225,6 +457,7 @@ Defaults to: `ALL` +
 
 
 
+[[quarkus.log.syslog.async]]
 `quarkus.log.syslog.async`⚙️:: Indicates whether to log asynchronously
 +
 Type: `boolean` +
@@ -232,6 +465,7 @@ Defaults to: `false` +
 
 
 
+[[quarkus.log.syslog.async.queue-length]]
 `quarkus.log.syslog.async.queue-length`⚙️:: The queue length to use before flushing writing
 +
 Type: `int` +
@@ -239,6 +473,7 @@ Defaults to: `512` +
 
 
 
+[[quarkus.log.syslog.async.overflow]]
 `quarkus.log.syslog.async.overflow`⚙️:: Determine whether to block the publisher (rather than drop the message) when the queue is full
 +
 Type: `org.jboss.logmanager.handlers.AsyncHandler.OverflowAction` +
@@ -246,6 +481,7 @@ Defaults to: `block` +
 
 
 
+[[quarkus.log.category.categories.min-level]]
 `quarkus.log.category."<categories>".min-level`⚙️:: The minimum level that this category can be set to
 +
 Type: `java.lang.String` +
@@ -253,6 +489,7 @@ Defaults to: `inherit` +
 
 
 
+[[quarkus.log.category.categories.level]]
 `quarkus.log.category."<categories>".level`⚙️:: The log level level for this category
 +
 Type: `java.lang.String` +
@@ -260,6 +497,7 @@ Defaults to: `inherit` +
 
 
 
+[[quarkus.log.filter.filters.if-starts-with]]
 `quarkus.log.filter."<filters>".if-starts-with`⚙️:: The message starts to match
 +
 Type: `java.lang.String` +

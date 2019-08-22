@@ -1,4 +1,19 @@
+|===
+|key|type|default|build time/runtime icon
 
+|<<quarkus.resteasy.singleton-resources, quarkus.resteasy.singleton-resources>>
+|boolean 
+|true
+| 📦
+
+|<<quarkus.resteasy.path, quarkus.resteasy.path>>
+|String 
+|/
+| 📦
+|===
+
+
+[[quarkus.resteasy.singleton-resources]]
 `quarkus.resteasy.singleton-resources`📦:: If this is true then JAX-RS will use only a single instance of a resource class to service all requests. 
  If this is false then it will create a new instance of the resource per request. 
  If the resource class has an explicit CDI scope annotation then the value of this annotation will always be used to control the lifecycle of the resource class. 
@@ -9,6 +24,7 @@ Defaults to: `true` +
 
 
 
+[[quarkus.resteasy.path]]
 `quarkus.resteasy.path`📦:: Set this to override the default path for JAX-RS resources if there are no annotated application classes.
 +
 Type: `java.lang.String` +

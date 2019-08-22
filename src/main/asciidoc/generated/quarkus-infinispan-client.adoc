@@ -1,14 +1,30 @@
+|===
+|key|type|default|build time/runtime icon
 
-`quarkus.infinispan-client.server-list`⚙️:: Sets the host name/port to connect to. Each one is separated by a semicolon (eg. host1:11222;host2:11222).
-+
-Type: `java.lang.String` +
+|<<quarkus.infinispan-client.near-cache-max-entries, quarkus.infinispan-client.near-cache-max-entries>>
+|int 
+|0
+| 📦
+
+|<<quarkus.infinispan-client.server-list, quarkus.infinispan-client.server-list>>
+|String 
+|
+| ⚙️
+|===
 
 
-
+[[quarkus.infinispan-client.near-cache-max-entries]]
 `quarkus.infinispan-client.near-cache-max-entries`📦:: Sets the bounded entry count for near cache. If this value is 0 or less near cache is disabled.
 +
 Type: `int` +
 Defaults to: `0` +
+
+
+
+[[quarkus.infinispan-client.server-list]]
+`quarkus.infinispan-client.server-list`⚙️:: Sets the host name/port to connect to. Each one is separated by a semicolon (eg. host1:11222;host2:11222).
++
+Type: `java.lang.String` +
 
 
 

@@ -1,10 +1,26 @@
+|===
+|key|type|default|build time/runtime icon
 
+|<<quarkus.application.name, quarkus.application.name>>
+|String 
+|
+| 📦
+
+|<<quarkus.application.version, quarkus.application.version>>
+|String 
+|
+| 📦
+|===
+
+
+[[quarkus.application.name]]
 `quarkus.application.name`📦:: The name of the application. If not set, defaults to the name of the project.
 +
 Type: `java.lang.String` +
 
 
 
+[[quarkus.application.version]]
 `quarkus.application.version`📦:: The version of the application. If not set, defaults to the version of the project
 +
 Type: `java.lang.String` +

@@ -1,10 +1,111 @@
+|===
+|key|type|default|build time/runtime icon
 
+|<<quarkus.hibernate-orm.dialect, quarkus.hibernate-orm.dialect>>
+|String 
+|
+| 📦
+
+|<<quarkus.hibernate-orm.dialect.storage-engine, quarkus.hibernate-orm.dialect.storage-engine>>
+|String 
+|
+| 📦
+
+|<<quarkus.hibernate-orm.sql-load-script, quarkus.hibernate-orm.sql-load-script>>
+|String 
+|
+| 📦
+
+|<<quarkus.hibernate-orm.batch-fetch-size, quarkus.hibernate-orm.batch-fetch-size>>
+|int 
+|-1
+| 📦
+
+|<<quarkus.hibernate-orm.query.query-plan-cache-max-size, quarkus.hibernate-orm.query.query-plan-cache-max-size>>
+|String 
+|
+| 📦
+
+|<<quarkus.hibernate-orm.query.default-null-ordering, quarkus.hibernate-orm.query.default-null-ordering>>
+|String 
+|
+| 📦
+
+|<<quarkus.hibernate-orm.database.generation, quarkus.hibernate-orm.database.generation>>
+|String 
+|
+| 📦
+
+|<<quarkus.hibernate-orm.database.generation.halt-on-error, quarkus.hibernate-orm.database.generation.halt-on-error>>
+|boolean 
+|false
+| 📦
+
+|<<quarkus.hibernate-orm.database.default-catalog, quarkus.hibernate-orm.database.default-catalog>>
+|String 
+|
+| 📦
+
+|<<quarkus.hibernate-orm.database.default-schema, quarkus.hibernate-orm.database.default-schema>>
+|String 
+|
+| 📦
+
+|<<quarkus.hibernate-orm.database.charset, quarkus.hibernate-orm.database.charset>>
+|String 
+|
+| 📦
+
+|<<quarkus.hibernate-orm.jdbc.timezone, quarkus.hibernate-orm.jdbc.timezone>>
+|String 
+|
+| 📦
+
+|<<quarkus.hibernate-orm.jdbc.statement-fetch-size, quarkus.hibernate-orm.jdbc.statement-fetch-size>>
+|Integer 
+|
+| 📦
+
+|<<quarkus.hibernate-orm.jdbc.statement-batch-size, quarkus.hibernate-orm.jdbc.statement-batch-size>>
+|Integer 
+|
+| 📦
+
+|<<quarkus.hibernate-orm.log.sql, quarkus.hibernate-orm.log.sql>>
+|boolean 
+|false
+| 📦
+
+|<<quarkus.hibernate-orm.log.jdbc-warnings, quarkus.hibernate-orm.log.jdbc-warnings>>
+|Boolean 
+|
+| 📦
+
+|<<quarkus.hibernate-orm.statistics, quarkus.hibernate-orm.statistics>>
+|boolean 
+|false
+| 📦
+
+|<<quarkus.hibernate-orm.cache.cache.expiration.max-idle, quarkus.hibernate-orm.cache."<cache>".expiration.max-idle>>
+|Duration  - _see note below_
+|
+| 📦
+
+|<<quarkus.hibernate-orm.cache.cache.memory.object-count, quarkus.hibernate-orm.cache."<cache>".memory.object-count>>
+|Long 
+|
+| 📦
+|===
+
+
+[[quarkus.hibernate-orm.dialect]]
 `quarkus.hibernate-orm.dialect`📦:: The hibernate ORM dialect class name
 +
 Type: `java.lang.String` +
 
 
 
+[[quarkus.hibernate-orm.dialect.storage-engine]]
 `quarkus.hibernate-orm.dialect.storage-engine`📦:: The storage engine used by the dialect if it supports several storage engines. 
  This is the case of MariaDB.
 +
@@ -12,12 +113,14 @@ Type: `java.lang.String` +
 
 
 
+[[quarkus.hibernate-orm.sql-load-script]]
 `quarkus.hibernate-orm.sql-load-script`📦:: To populate the database tables with data before the application loads, specify the location of a load script. The location specified in this property is relative to the root of the persistence unit.
 +
 Type: `java.lang.String` +
 
 
 
+[[quarkus.hibernate-orm.batch-fetch-size]]
 `quarkus.hibernate-orm.batch-fetch-size`📦:: The size of a batch when using batch loading to load entities and collections. 
  -1 means batch loading is disabled.
 +
@@ -26,12 +129,14 @@ Defaults to: `-1` +
 
 
 
+[[quarkus.hibernate-orm.query.query-plan-cache-max-size]]
 `quarkus.hibernate-orm.query.query-plan-cache-max-size`📦:: The max size of the query plan cache.
 +
 Type: `java.lang.String` +
 
 
 
+[[quarkus.hibernate-orm.query.default-null-ordering]]
 `quarkus.hibernate-orm.query.default-null-ordering`📦:: The default ordering of nulls specific in the ORDER BY clause. 
  Valid values are: none, first, last.
 +
@@ -39,6 +144,7 @@ Type: `java.lang.String` +
 
 
 
+[[quarkus.hibernate-orm.database.generation]]
 `quarkus.hibernate-orm.database.generation`📦:: Control how schema generation is happening in Hibernate ORM. 
  Same as JPA's javax.persistence.schema-generation.database.action.
 +
@@ -46,6 +152,7 @@ Type: `java.lang.String` +
 
 
 
+[[quarkus.hibernate-orm.database.generation.halt-on-error]]
 `quarkus.hibernate-orm.database.generation.halt-on-error`📦:: Whether we should stop schema application at the first error or continue.
 +
 Type: `boolean` +
@@ -53,42 +160,49 @@ Defaults to: `false` +
 
 
 
+[[quarkus.hibernate-orm.database.default-catalog]]
 `quarkus.hibernate-orm.database.default-catalog`📦:: The default database catalog.
 +
 Type: `java.lang.String` +
 
 
 
+[[quarkus.hibernate-orm.database.default-schema]]
 `quarkus.hibernate-orm.database.default-schema`📦:: The default database schema.
 +
 Type: `java.lang.String` +
 
 
 
+[[quarkus.hibernate-orm.database.charset]]
 `quarkus.hibernate-orm.database.charset`📦:: The charset of the database.
 +
 Type: `java.lang.String` +
 
 
 
+[[quarkus.hibernate-orm.jdbc.timezone]]
 `quarkus.hibernate-orm.jdbc.timezone`📦:: The timezone pushed to the JDBC driver.
 +
 Type: `java.lang.String` +
 
 
 
+[[quarkus.hibernate-orm.jdbc.statement-fetch-size]]
 `quarkus.hibernate-orm.jdbc.statement-fetch-size`📦:: How many rows are fetched at a time by the JDBC driver.
 +
 Type: `java.lang.Integer` +
 
 
 
+[[quarkus.hibernate-orm.jdbc.statement-batch-size]]
 `quarkus.hibernate-orm.jdbc.statement-batch-size`📦:: The number of updates (inserts, updates and deletes) that are sent to the database at one time for execution.
 +
 Type: `java.lang.Integer` +
 
 
 
+[[quarkus.hibernate-orm.log.sql]]
 `quarkus.hibernate-orm.log.sql`📦:: Whether we log all the SQL queries executed. 
  Setting it to true is obviously not recommended in production.
 +
@@ -97,6 +211,7 @@ Defaults to: `false` +
 
 
 
+[[quarkus.hibernate-orm.log.jdbc-warnings]]
 `quarkus.hibernate-orm.log.jdbc-warnings`📦:: Whether JDBC warnings should be collected and logged. 
  Default value depends on the dialect.
 +
@@ -104,6 +219,7 @@ Type: `java.lang.Boolean` +
 
 
 
+[[quarkus.hibernate-orm.statistics]]
 `quarkus.hibernate-orm.statistics`📦:: Statistics configuration.
 +
 Type: `boolean` +
@@ -111,12 +227,14 @@ Defaults to: `false` +
 
 
 
+[[quarkus.hibernate-orm.cache.cache.expiration.max-idle]]
 `quarkus.hibernate-orm.cache."<cache>".expiration.max-idle`📦:: The maximum time before an object is considered expired.
 +
 Type: `java.time.Duration` - _see note below_ +
 
 
 
+[[quarkus.hibernate-orm.cache.cache.memory.object-count]]
 `quarkus.hibernate-orm.cache."<cache>".memory.object-count`📦:: The maximum number of objects kept in memory.
 +
 Type: `java.lang.Long` +

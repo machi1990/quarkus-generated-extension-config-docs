@@ -1,10 +1,36 @@
+|===
+|key|type|default|build time/runtime icon
 
+|<<quarkus.kafka-streams.application-id, quarkus.kafka-streams.application-id>>
+|String 
+|
+| ⚙️
+
+|<<quarkus.kafka-streams.bootstrap-servers, quarkus.kafka-streams.bootstrap-servers>>
+|InetSocketAddress 
+|localhost:9012
+| ⚙️
+
+|<<quarkus.kafka-streams.application-server, quarkus.kafka-streams.application-server>>
+|String 
+|
+| ⚙️
+
+|<<quarkus.kafka-streams.topics, quarkus.kafka-streams.topics>>
+|String 
+|
+| ⚙️
+|===
+
+
+[[quarkus.kafka-streams.application-id]]
 `quarkus.kafka-streams.application-id`⚙️:: A unique identifier for this Kafka Streams application.
 +
 Type: `java.lang.String` +
 
 
 
+[[quarkus.kafka-streams.bootstrap-servers]]
 `quarkus.kafka-streams.bootstrap-servers`⚙️:: A comma-separated list of host:port pairs identifying the Kafka bootstrap server(s)
 +
 Type: `java.net.InetSocketAddress` +
@@ -12,12 +38,14 @@ Defaults to: `localhost:9012` +
 
 
 
+[[quarkus.kafka-streams.application-server]]
 `quarkus.kafka-streams.application-server`⚙️:: A unique identifier of this application instance, typically in the form host:port.
 +
 Type: `java.lang.String` +
 
 
 
+[[quarkus.kafka-streams.topics]]
 `quarkus.kafka-streams.topics`⚙️:: A comma-separated list of topic names processed by this stream processing application. The pipeline will only be started once all these topics are present in the Kafka cluster.
 +
 Type: `java.lang.String` +

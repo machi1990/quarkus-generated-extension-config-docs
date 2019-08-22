@@ -1,10 +1,26 @@
+|===
+|key|type|default|build time/runtime icon
 
+|<<quarkus.hot-reload.password, quarkus.hot-reload.password>>
+|String 
+|
+| 📦
+
+|<<quarkus.hot-reload.url, quarkus.hot-reload.url>>
+|String 
+|
+| 📦
+|===
+
+
+[[quarkus.hot-reload.password]]
 `quarkus.hot-reload.password`📦:: 
 +
 Type: `java.lang.String` +
 
 
 
+[[quarkus.hot-reload.url]]
 `quarkus.hot-reload.url`📦:: 
 +
 Type: `java.lang.String` +

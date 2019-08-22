@@ -1,4 +1,64 @@
+|===
+|key|type|default|build time/runtime icon
 
+|<<quarkus.security.file.auth-mechanism, quarkus.security.file.auth-mechanism>>
+|String 
+|BASIC
+| 📦
+
+|<<quarkus.security.file.realm-name, quarkus.security.file.realm-name>>
+|String 
+|Quarkus
+| 📦
+
+|<<quarkus.security.file.enabled, quarkus.security.file.enabled>>
+|boolean 
+|false
+| 📦
+
+|<<quarkus.security.file.users, quarkus.security.file.users>>
+|String 
+|users.properties
+| 📦
+
+|<<quarkus.security.file.roles, quarkus.security.file.roles>>
+|String 
+|roles.properties
+| 📦
+
+|<<quarkus.security.embedded.auth-mechanism, quarkus.security.embedded.auth-mechanism>>
+|String 
+|BASIC
+| 📦
+
+|<<quarkus.security.embedded.realm-name, quarkus.security.embedded.realm-name>>
+|String 
+|Quarkus
+| 📦
+
+|<<quarkus.security.embedded.enabled, quarkus.security.embedded.enabled>>
+|boolean 
+|false
+| 📦
+
+|<<quarkus.security.security-providers, quarkus.security.security-providers>>
+|String 
+|
+| 📦
+
+|<<quarkus.security.embedded.users.users, quarkus.security.embedded.users."<users>">>
+|String 
+|
+| 📦
+
+|<<quarkus.security.embedded.roles.roles, quarkus.security.embedded.roles."<roles>">>
+|String 
+|
+| 📦
+|===
+
+
+[[quarkus.security.file.auth-mechanism]]
 `quarkus.security.file.auth-mechanism`📦:: The authentication mechanism
 +
 Type: `java.lang.String` +
@@ -6,6 +66,7 @@ Defaults to: `BASIC` +
 
 
 
+[[quarkus.security.file.realm-name]]
 `quarkus.security.file.realm-name`📦:: The authentication mechanism
 +
 Type: `java.lang.String` +
@@ -13,6 +74,7 @@ Defaults to: `Quarkus` +
 
 
 
+[[quarkus.security.file.enabled]]
 `quarkus.security.file.enabled`📦:: If the properties store is enabled.
 +
 Type: `boolean` +
@@ -20,6 +82,7 @@ Defaults to: `false` +
 
 
 
+[[quarkus.security.file.users]]
 `quarkus.security.file.users`📦:: The location of the users property resource
 +
 Type: `java.lang.String` +
@@ -27,6 +90,7 @@ Defaults to: `users.properties` +
 
 
 
+[[quarkus.security.file.roles]]
 `quarkus.security.file.roles`📦:: The location of the roles property file
 +
 Type: `java.lang.String` +
@@ -34,6 +98,7 @@ Defaults to: `roles.properties` +
 
 
 
+[[quarkus.security.embedded.auth-mechanism]]
 `quarkus.security.embedded.auth-mechanism`📦:: The authentication mechanism
 +
 Type: `java.lang.String` +
@@ -41,6 +106,7 @@ Defaults to: `BASIC` +
 
 
 
+[[quarkus.security.embedded.realm-name]]
 `quarkus.security.embedded.realm-name`📦:: The authentication mechanism
 +
 Type: `java.lang.String` +
@@ -48,6 +114,7 @@ Defaults to: `Quarkus` +
 
 
 
+[[quarkus.security.embedded.enabled]]
 `quarkus.security.embedded.enabled`📦:: If the embedded store is enabled.
 +
 Type: `boolean` +
@@ -55,18 +122,21 @@ Defaults to: `false` +
 
 
 
+[[quarkus.security.security-providers]]
 `quarkus.security.security-providers`📦:: List of security providers to enable for reflection
 +
 Type: `java.lang.String` +
 
 
 
+[[quarkus.security.embedded.users.users]]
 `quarkus.security.embedded.users."<users>"`📦:: The realm users user1=password\nuser2=password2... mapping
 +
 Type: `java.lang.String` +
 
 
 
+[[quarkus.security.embedded.roles.roles]]
 `quarkus.security.embedded.roles."<roles>"`📦:: The realm roles user1=role1,role2,...\nuser2=role1,role2,... mapping
 +
 Type: `java.lang.String` +

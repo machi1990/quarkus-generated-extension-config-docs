@@ -1,4 +1,19 @@
+|===
+|key|type|default|build time/runtime icon
 
+|<<quarkus.swagger-ui.path, quarkus.swagger-ui.path>>
+|String 
+|/swagger-ui
+| 📦
+
+|<<quarkus.swagger-ui.always-include, quarkus.swagger-ui.always-include>>
+|boolean 
+|false
+| 📦
+|===
+
+
+[[quarkus.swagger-ui.path]]
 `quarkus.swagger-ui.path`📦:: The path of the swagger-ui servlet.
 +
 Type: `java.lang.String` +
@@ -6,6 +21,7 @@ Defaults to: `/swagger-ui` +
 
 
 
+[[quarkus.swagger-ui.always-include]]
 `quarkus.swagger-ui.always-include`📦:: If this should be included every time. By default this is only included when the application is running in dev mode.
 +
 Type: `boolean` +

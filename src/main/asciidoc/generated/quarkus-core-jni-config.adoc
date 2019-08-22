@@ -1,10 +1,26 @@
+|===
+|key|type|default|build time/runtime icon
 
+|<<quarkus.jni.library-paths, quarkus.jni.library-paths>>
+|String 
+|
+| 📦
+
+|<<quarkus.jni.enable, quarkus.jni.enable>>
+|boolean 
+|false
+| 📦
+|===
+
+
+[[quarkus.jni.library-paths]]
 `quarkus.jni.library-paths`📦:: Paths of library to load.
 +
 Type: `java.lang.String` +
 
 
 
+[[quarkus.jni.enable]]
 `quarkus.jni.enable`📦:: Enable JNI support.
 +
 Type: `boolean` +

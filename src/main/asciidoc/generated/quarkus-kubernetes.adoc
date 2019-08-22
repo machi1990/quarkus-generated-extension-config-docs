@@ -1,10 +1,26 @@
+|===
+|key|type|default|build time/runtime icon
 
+|<<quarkus.kubernetes.group, quarkus.kubernetes.group>>
+|String 
+|
+| 📦
+
+|<<quarkus.kubernetes.docker.registry, quarkus.kubernetes.docker.registry>>
+|String 
+|docker.io
+| 📦
+|===
+
+
+[[quarkus.kubernetes.group]]
 `quarkus.kubernetes.group`📦:: The group of the application. This value will be use as: - docker image repo - labeling resources
 +
 Type: `java.lang.String` +
 
 
 
+[[quarkus.kubernetes.docker.registry]]
 `quarkus.kubernetes.docker.registry`📦:: The docker registry to which the images will be pushed
 +
 Type: `java.lang.String` +

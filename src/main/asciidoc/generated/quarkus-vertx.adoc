@@ -1,4 +1,224 @@
+|===
+|key|type|default|build time/runtime icon
 
+|<<quarkus.vertx.caching, quarkus.vertx.caching>>
+|boolean 
+|true
+| ⚙️
+
+|<<quarkus.vertx.classpath-resolving, quarkus.vertx.classpath-resolving>>
+|boolean 
+|true
+| ⚙️
+
+|<<quarkus.vertx.event-loops-pool-size, quarkus.vertx.event-loops-pool-size>>
+|Integer 
+|
+| ⚙️
+
+|<<quarkus.vertx.max-event-loop-execute-time, quarkus.vertx.max-event-loop-execute-time>>
+|Duration  - _see note below_
+|2
+| ⚙️
+
+|<<quarkus.vertx.warning-exception-time, quarkus.vertx.warning-exception-time>>
+|Duration  - _see note below_
+|2
+| ⚙️
+
+|<<quarkus.vertx.worker-pool-size, quarkus.vertx.worker-pool-size>>
+|int 
+|20
+| ⚙️
+
+|<<quarkus.vertx.max-worker-execute-time, quarkus.vertx.max-worker-execute-time>>
+|Duration  - _see note below_
+|60
+| ⚙️
+
+|<<quarkus.vertx.internal-blocking-pool-size, quarkus.vertx.internal-blocking-pool-size>>
+|int 
+|20
+| ⚙️
+
+|<<quarkus.vertx.use-async-dns, quarkus.vertx.use-async-dns>>
+|boolean 
+|false
+| ⚙️
+
+|<<quarkus.vertx.eventbus.key-certificate-pem.keys, quarkus.vertx.eventbus.key-certificate-pem.keys>>
+|String 
+|
+| ⚙️
+
+|<<quarkus.vertx.eventbus.key-certificate-pem.certs, quarkus.vertx.eventbus.key-certificate-pem.certs>>
+|String 
+|
+| ⚙️
+
+|<<quarkus.vertx.eventbus.key-certificate-jks.path, quarkus.vertx.eventbus.key-certificate-jks.path>>
+|String 
+|
+| ⚙️
+
+|<<quarkus.vertx.eventbus.key-certificate-jks.password, quarkus.vertx.eventbus.key-certificate-jks.password>>
+|String 
+|
+| ⚙️
+
+|<<quarkus.vertx.eventbus.key-certificate-pfx.path, quarkus.vertx.eventbus.key-certificate-pfx.path>>
+|String 
+|
+| ⚙️
+
+|<<quarkus.vertx.eventbus.key-certificate-pfx.password, quarkus.vertx.eventbus.key-certificate-pfx.password>>
+|String 
+|
+| ⚙️
+
+|<<quarkus.vertx.eventbus.trust-certificate-pem.certs, quarkus.vertx.eventbus.trust-certificate-pem.certs>>
+|String 
+|
+| ⚙️
+
+|<<quarkus.vertx.eventbus.trust-certificate-jks.path, quarkus.vertx.eventbus.trust-certificate-jks.path>>
+|String 
+|
+| ⚙️
+
+|<<quarkus.vertx.eventbus.trust-certificate-jks.password, quarkus.vertx.eventbus.trust-certificate-jks.password>>
+|String 
+|
+| ⚙️
+
+|<<quarkus.vertx.eventbus.trust-certificate-pfx.path, quarkus.vertx.eventbus.trust-certificate-pfx.path>>
+|String 
+|
+| ⚙️
+
+|<<quarkus.vertx.eventbus.trust-certificate-pfx.password, quarkus.vertx.eventbus.trust-certificate-pfx.password>>
+|String 
+|
+| ⚙️
+
+|<<quarkus.vertx.eventbus.accept-backlog, quarkus.vertx.eventbus.accept-backlog>>
+|Integer 
+|
+| ⚙️
+
+|<<quarkus.vertx.eventbus.client-auth, quarkus.vertx.eventbus.client-auth>>
+|String 
+|NONE
+| ⚙️
+
+|<<quarkus.vertx.eventbus.connect-timeout, quarkus.vertx.eventbus.connect-timeout>>
+|Duration  - _see note below_
+|60
+| ⚙️
+
+|<<quarkus.vertx.eventbus.idle-timeout, quarkus.vertx.eventbus.idle-timeout>>
+|Duration  - _see note below_
+|
+| ⚙️
+
+|<<quarkus.vertx.eventbus.receive-buffer-size, quarkus.vertx.eventbus.receive-buffer-size>>
+|Integer 
+|
+| ⚙️
+
+|<<quarkus.vertx.eventbus.reconnect-attempts, quarkus.vertx.eventbus.reconnect-attempts>>
+|int 
+|0
+| ⚙️
+
+|<<quarkus.vertx.eventbus.reconnect-interval, quarkus.vertx.eventbus.reconnect-interval>>
+|Duration  - _see note below_
+|1
+| ⚙️
+
+|<<quarkus.vertx.eventbus.reuse-address, quarkus.vertx.eventbus.reuse-address>>
+|boolean 
+|true
+| ⚙️
+
+|<<quarkus.vertx.eventbus.reuse-port, quarkus.vertx.eventbus.reuse-port>>
+|boolean 
+|false
+| ⚙️
+
+|<<quarkus.vertx.eventbus.send-buffer-size, quarkus.vertx.eventbus.send-buffer-size>>
+|Integer 
+|
+| ⚙️
+
+|<<quarkus.vertx.eventbus.soLinger, quarkus.vertx.eventbus.soLinger>>
+|Integer 
+|
+| ⚙️
+
+|<<quarkus.vertx.eventbus.ssl, quarkus.vertx.eventbus.ssl>>
+|boolean 
+|false
+| ⚙️
+
+|<<quarkus.vertx.eventbus.tcp-keep-alive, quarkus.vertx.eventbus.tcp-keep-alive>>
+|boolean 
+|false
+| ⚙️
+
+|<<quarkus.vertx.eventbus.tcp-no-delay, quarkus.vertx.eventbus.tcp-no-delay>>
+|boolean 
+|true
+| ⚙️
+
+|<<quarkus.vertx.eventbus.traffic-class, quarkus.vertx.eventbus.traffic-class>>
+|Integer 
+|
+| ⚙️
+
+|<<quarkus.vertx.eventbus.trust-all, quarkus.vertx.eventbus.trust-all>>
+|boolean 
+|false
+| ⚙️
+
+|<<quarkus.vertx.cluster.host, quarkus.vertx.cluster.host>>
+|String 
+|localhost
+| ⚙️
+
+|<<quarkus.vertx.cluster.port, quarkus.vertx.cluster.port>>
+|Integer 
+|
+| ⚙️
+
+|<<quarkus.vertx.cluster.public-host, quarkus.vertx.cluster.public-host>>
+|String 
+|
+| ⚙️
+
+|<<quarkus.vertx.cluster.public-port, quarkus.vertx.cluster.public-port>>
+|Integer 
+|
+| ⚙️
+
+|<<quarkus.vertx.cluster.clustered, quarkus.vertx.cluster.clustered>>
+|boolean 
+|false
+| ⚙️
+
+|<<quarkus.vertx.cluster.ping-interval, quarkus.vertx.cluster.ping-interval>>
+|Duration  - _see note below_
+|20
+| ⚙️
+
+|<<quarkus.vertx.cluster.ping-reply-interval, quarkus.vertx.cluster.ping-reply-interval>>
+|Duration  - _see note below_
+|20
+| ⚙️
+|===
+
+
+[[quarkus.vertx.caching]]
 `quarkus.vertx.caching`⚙️:: Enables or disables the Vert.x cache.
 +
 Type: `boolean` +
@@ -6,6 +226,7 @@ Defaults to: `true` +
 
 
 
+[[quarkus.vertx.classpath-resolving]]
 `quarkus.vertx.classpath-resolving`⚙️:: Enables or disabled the Vert.x classpath resource resolver.
 +
 Type: `boolean` +
@@ -13,12 +234,14 @@ Defaults to: `true` +
 
 
 
+[[quarkus.vertx.event-loops-pool-size]]
 `quarkus.vertx.event-loops-pool-size`⚙️:: The number of event loops. 2 x the number of core by default.
 +
 Type: `java.lang.Integer` +
 
 
 
+[[quarkus.vertx.max-event-loop-execute-time]]
 `quarkus.vertx.max-event-loop-execute-time`⚙️:: The maximum amount of time the event loop can be blocked.
 +
 Type: `java.time.Duration` - _see note below_ +
@@ -26,6 +249,7 @@ Defaults to: `2` +
 
 
 
+[[quarkus.vertx.warning-exception-time]]
 `quarkus.vertx.warning-exception-time`⚙️:: The amount of time before a warning is displayed if the event loop is blocked.
 +
 Type: `java.time.Duration` - _see note below_ +
@@ -33,6 +257,7 @@ Defaults to: `2` +
 
 
 
+[[quarkus.vertx.worker-pool-size]]
 `quarkus.vertx.worker-pool-size`⚙️:: The size of the worker thread pool.
 +
 Type: `int` +
@@ -40,6 +265,7 @@ Defaults to: `20` +
 
 
 
+[[quarkus.vertx.max-worker-execute-time]]
 `quarkus.vertx.max-worker-execute-time`⚙️:: The maximum amount of time the worker thread can be blocked.
 +
 Type: `java.time.Duration` - _see note below_ +
@@ -47,6 +273,7 @@ Defaults to: `60` +
 
 
 
+[[quarkus.vertx.internal-blocking-pool-size]]
 `quarkus.vertx.internal-blocking-pool-size`⚙️:: The size of the internal thread pool (used for the file system).
 +
 Type: `int` +
@@ -54,6 +281,7 @@ Defaults to: `20` +
 
 
 
+[[quarkus.vertx.use-async-dns]]
 `quarkus.vertx.use-async-dns`⚙️:: Enables the async DNS resolver.
 +
 Type: `boolean` +
@@ -61,78 +289,91 @@ Defaults to: `false` +
 
 
 
+[[quarkus.vertx.eventbus.key-certificate-pem.keys]]
 `quarkus.vertx.eventbus.key-certificate-pem.keys`⚙️:: Comma-separated list of the path to the key files (Pem format).
 +
 Type: `java.lang.String` +
 
 
 
+[[quarkus.vertx.eventbus.key-certificate-pem.certs]]
 `quarkus.vertx.eventbus.key-certificate-pem.certs`⚙️:: Comma-separated list of the path to the certificate files (Pem format).
 +
 Type: `java.lang.String` +
 
 
 
+[[quarkus.vertx.eventbus.key-certificate-jks.path]]
 `quarkus.vertx.eventbus.key-certificate-jks.path`⚙️:: Path of the key file (JKS format).
 +
 Type: `java.lang.String` +
 
 
 
+[[quarkus.vertx.eventbus.key-certificate-jks.password]]
 `quarkus.vertx.eventbus.key-certificate-jks.password`⚙️:: Password of the key file.
 +
 Type: `java.lang.String` +
 
 
 
+[[quarkus.vertx.eventbus.key-certificate-pfx.path]]
 `quarkus.vertx.eventbus.key-certificate-pfx.path`⚙️:: Path to the key file (PFX format)
 +
 Type: `java.lang.String` +
 
 
 
+[[quarkus.vertx.eventbus.key-certificate-pfx.password]]
 `quarkus.vertx.eventbus.key-certificate-pfx.password`⚙️:: Password of the key.
 +
 Type: `java.lang.String` +
 
 
 
+[[quarkus.vertx.eventbus.trust-certificate-pem.certs]]
 `quarkus.vertx.eventbus.trust-certificate-pem.certs`⚙️:: Comma-separated list of the trust certificate files (Pem format).
 +
 Type: `java.lang.String` +
 
 
 
+[[quarkus.vertx.eventbus.trust-certificate-jks.path]]
 `quarkus.vertx.eventbus.trust-certificate-jks.path`⚙️:: Path of the key file (JKS format).
 +
 Type: `java.lang.String` +
 
 
 
+[[quarkus.vertx.eventbus.trust-certificate-jks.password]]
 `quarkus.vertx.eventbus.trust-certificate-jks.password`⚙️:: Password of the key file.
 +
 Type: `java.lang.String` +
 
 
 
+[[quarkus.vertx.eventbus.trust-certificate-pfx.path]]
 `quarkus.vertx.eventbus.trust-certificate-pfx.path`⚙️:: Path to the key file (PFX format)
 +
 Type: `java.lang.String` +
 
 
 
+[[quarkus.vertx.eventbus.trust-certificate-pfx.password]]
 `quarkus.vertx.eventbus.trust-certificate-pfx.password`⚙️:: Password of the key.
 +
 Type: `java.lang.String` +
 
 
 
+[[quarkus.vertx.eventbus.accept-backlog]]
 `quarkus.vertx.eventbus.accept-backlog`⚙️:: The accept backlog.
 +
 Type: `java.lang.Integer` +
 
 
 
+[[quarkus.vertx.eventbus.client-auth]]
 `quarkus.vertx.eventbus.client-auth`⚙️:: The client authentication.
 +
 Type: `java.lang.String` +
@@ -140,6 +381,7 @@ Defaults to: `NONE` +
 
 
 
+[[quarkus.vertx.eventbus.connect-timeout]]
 `quarkus.vertx.eventbus.connect-timeout`⚙️:: The connect timeout.
 +
 Type: `java.time.Duration` - _see note below_ +
@@ -147,18 +389,21 @@ Defaults to: `60` +
 
 
 
+[[quarkus.vertx.eventbus.idle-timeout]]
 `quarkus.vertx.eventbus.idle-timeout`⚙️:: The idle timeout in milliseconds.
 +
 Type: `java.time.Duration` - _see note below_ +
 
 
 
+[[quarkus.vertx.eventbus.receive-buffer-size]]
 `quarkus.vertx.eventbus.receive-buffer-size`⚙️:: The receive buffer size.
 +
 Type: `java.lang.Integer` +
 
 
 
+[[quarkus.vertx.eventbus.reconnect-attempts]]
 `quarkus.vertx.eventbus.reconnect-attempts`⚙️:: The number of reconnection attempts.
 +
 Type: `int` +
@@ -166,6 +411,7 @@ Defaults to: `0` +
 
 
 
+[[quarkus.vertx.eventbus.reconnect-interval]]
 `quarkus.vertx.eventbus.reconnect-interval`⚙️:: The reconnection interval in milliseconds.
 +
 Type: `java.time.Duration` - _see note below_ +
@@ -173,6 +419,7 @@ Defaults to: `1` +
 
 
 
+[[quarkus.vertx.eventbus.reuse-address]]
 `quarkus.vertx.eventbus.reuse-address`⚙️:: Whether or not to reuse the address.
 +
 Type: `boolean` +
@@ -180,6 +427,7 @@ Defaults to: `true` +
 
 
 
+[[quarkus.vertx.eventbus.reuse-port]]
 `quarkus.vertx.eventbus.reuse-port`⚙️:: Whether or not to reuse the port.
 +
 Type: `boolean` +
@@ -187,18 +435,21 @@ Defaults to: `false` +
 
 
 
+[[quarkus.vertx.eventbus.send-buffer-size]]
 `quarkus.vertx.eventbus.send-buffer-size`⚙️:: The send buffer size.
 +
 Type: `java.lang.Integer` +
 
 
 
+[[quarkus.vertx.eventbus.soLinger]]
 `quarkus.vertx.eventbus.soLinger`⚙️:: The so linger.
 +
 Type: `java.lang.Integer` +
 
 
 
+[[quarkus.vertx.eventbus.ssl]]
 `quarkus.vertx.eventbus.ssl`⚙️:: Enables or Disabled SSL.
 +
 Type: `boolean` +
@@ -206,6 +457,7 @@ Defaults to: `false` +
 
 
 
+[[quarkus.vertx.eventbus.tcp-keep-alive]]
 `quarkus.vertx.eventbus.tcp-keep-alive`⚙️:: Whether or not to keep the TCP connection opened (keep-alive).
 +
 Type: `boolean` +
@@ -213,6 +465,7 @@ Defaults to: `false` +
 
 
 
+[[quarkus.vertx.eventbus.tcp-no-delay]]
 `quarkus.vertx.eventbus.tcp-no-delay`⚙️:: Configure the TCP no delay.
 +
 Type: `boolean` +
@@ -220,12 +473,14 @@ Defaults to: `true` +
 
 
 
+[[quarkus.vertx.eventbus.traffic-class]]
 `quarkus.vertx.eventbus.traffic-class`⚙️:: Configure the traffic class.
 +
 Type: `java.lang.Integer` +
 
 
 
+[[quarkus.vertx.eventbus.trust-all]]
 `quarkus.vertx.eventbus.trust-all`⚙️:: Enables or disables the trust all parameter.
 +
 Type: `boolean` +
@@ -233,6 +488,7 @@ Defaults to: `false` +
 
 
 
+[[quarkus.vertx.cluster.host]]
 `quarkus.vertx.cluster.host`⚙️:: The host name.
 +
 Type: `java.lang.String` +
@@ -240,24 +496,28 @@ Defaults to: `localhost` +
 
 
 
+[[quarkus.vertx.cluster.port]]
 `quarkus.vertx.cluster.port`⚙️:: The port.
 +
 Type: `java.lang.Integer` +
 
 
 
+[[quarkus.vertx.cluster.public-host]]
 `quarkus.vertx.cluster.public-host`⚙️:: The public host name.
 +
 Type: `java.lang.String` +
 
 
 
+[[quarkus.vertx.cluster.public-port]]
 `quarkus.vertx.cluster.public-port`⚙️:: The public port.
 +
 Type: `java.lang.Integer` +
 
 
 
+[[quarkus.vertx.cluster.clustered]]
 `quarkus.vertx.cluster.clustered`⚙️:: Enables or disables the clustering.
 +
 Type: `boolean` +
@@ -265,6 +525,7 @@ Defaults to: `false` +
 
 
 
+[[quarkus.vertx.cluster.ping-interval]]
 `quarkus.vertx.cluster.ping-interval`⚙️:: The ping interval.
 +
 Type: `java.time.Duration` - _see note below_ +
@@ -272,6 +533,7 @@ Defaults to: `20` +
 
 
 
+[[quarkus.vertx.cluster.ping-reply-interval]]
 `quarkus.vertx.cluster.ping-reply-interval`⚙️:: The ping reply interval.
 +
 Type: `java.time.Duration` - _see note below_ +
