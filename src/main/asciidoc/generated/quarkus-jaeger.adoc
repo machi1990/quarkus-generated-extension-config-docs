@@ -5,77 +5,94 @@
 |Configuration property|Type|Default|Lifecycle
 
 |<<quarkus.jaeger.endpoint, quarkus.jaeger.endpoint>>
-|URI 
+|link:https://docs.oracle.com/javase/8/docs/api/java/net/URI.html[URI]
+ 
 |
 | ⚙️
 
 |<<quarkus.jaeger.auth-token, quarkus.jaeger.auth-token>>
-|String 
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
+ 
 |
 | ⚙️
 
 |<<quarkus.jaeger.user, quarkus.jaeger.user>>
-|String 
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
+ 
 |
 | ⚙️
 
 |<<quarkus.jaeger.password, quarkus.jaeger.password>>
-|String 
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
+ 
 |
 | ⚙️
 
 |<<quarkus.jaeger.agent-host-port, quarkus.jaeger.agent-host-port>>
-|InetSocketAddress 
+|link:https://docs.oracle.com/javase/8/docs/api/java/net/InetSocketAddress.html[InetSocketAddress]
+ 
 |
 | ⚙️
 
 |<<quarkus.jaeger.reporter-log-spans, quarkus.jaeger.reporter-log-spans>>
-|Boolean 
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html[Boolean]
+ 
 |
 | ⚙️
 
 |<<quarkus.jaeger.reporter-max-queue-size, quarkus.jaeger.reporter-max-queue-size>>
-|Integer 
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html[Integer]
+ 
 |
 | ⚙️
 
 |<<quarkus.jaeger.reporter-flush-interval, quarkus.jaeger.reporter-flush-interval>>
-|Duration <<duration-note-anchor, _see note below_>>
+|link:https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html[Duration]
+ +++
+<a href="#duration-note-anchor" title="More information about the Duration format">ℹ️</a>
++++
 |
 | ⚙️
 
 |<<quarkus.jaeger.sampler-type, quarkus.jaeger.sampler-type>>
-|String 
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
+ 
 |
 | ⚙️
 
 |<<quarkus.jaeger.sampler-param, quarkus.jaeger.sampler-param>>
-|BigDecimal 
+|link:https://docs.oracle.com/javase/8/docs/api/java/math/BigDecimal.html[BigDecimal]
+ 
 |
 | ⚙️
 
 |<<quarkus.jaeger.sampler-manager-host-port, quarkus.jaeger.sampler-manager-host-port>>
-|InetSocketAddress 
+|link:https://docs.oracle.com/javase/8/docs/api/java/net/InetSocketAddress.html[InetSocketAddress]
+ 
 |
 | ⚙️
 
 |<<quarkus.jaeger.service-name, quarkus.jaeger.service-name>>
-|String 
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
+ 
 |
 | ⚙️
 
 |<<quarkus.jaeger.tags, quarkus.jaeger.tags>>
-|String 
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
+ 
 |
 | ⚙️
 
 |<<quarkus.jaeger.propagation, quarkus.jaeger.propagation>>
-|String 
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
+ 
 |
 | ⚙️
 
 |<<quarkus.jaeger.sender-factory, quarkus.jaeger.sender-factory>>
-|String 
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
+ 
 |
 | ⚙️
 |===
@@ -84,105 +101,105 @@
 == Details
 
 [[quarkus.jaeger.endpoint]]
-`quarkus.jaeger.endpoint`⚙️:: The traces endpoint, in case the client should connect directly to the Collector, like http://jaeger-collector:14268/api/traces
+`quarkus.jaeger.endpoint`⚙️:: The traces endpoint, in case the client should connect directly to the Collector, like http://jaeger-collector:14268/api/traces 
 +
 Type: `java.net.URI` +
 
 
 
 [[quarkus.jaeger.auth-token]]
-`quarkus.jaeger.auth-token`⚙️:: Authentication Token to send as "Bearer" to the endpoint
+`quarkus.jaeger.auth-token`⚙️:: Authentication Token to send as "Bearer" to the endpoint 
 +
 Type: `java.lang.String` +
 
 
 
 [[quarkus.jaeger.user]]
-`quarkus.jaeger.user`⚙️:: Username to send as part of "Basic" authentication to the endpoint
+`quarkus.jaeger.user`⚙️:: Username to send as part of "Basic" authentication to the endpoint 
 +
 Type: `java.lang.String` +
 
 
 
 [[quarkus.jaeger.password]]
-`quarkus.jaeger.password`⚙️:: Password to send as part of "Basic" authentication to the endpoint
+`quarkus.jaeger.password`⚙️:: Password to send as part of "Basic" authentication to the endpoint 
 +
 Type: `java.lang.String` +
 
 
 
 [[quarkus.jaeger.agent-host-port]]
-`quarkus.jaeger.agent-host-port`⚙️:: The hostname and port for communicating with agent via UDP
+`quarkus.jaeger.agent-host-port`⚙️:: The hostname and port for communicating with agent via UDP 
 +
 Type: `java.net.InetSocketAddress` +
 
 
 
 [[quarkus.jaeger.reporter-log-spans]]
-`quarkus.jaeger.reporter-log-spans`⚙️:: Whether the reporter should also log the spans
+`quarkus.jaeger.reporter-log-spans`⚙️:: Whether the reporter should also log the spans 
 +
 Type: `java.lang.Boolean` +
 
 
 
 [[quarkus.jaeger.reporter-max-queue-size]]
-`quarkus.jaeger.reporter-max-queue-size`⚙️:: The reporter's maximum queue size
+`quarkus.jaeger.reporter-max-queue-size`⚙️:: The reporter's maximum queue size 
 +
 Type: `java.lang.Integer` +
 
 
 
 [[quarkus.jaeger.reporter-flush-interval]]
-`quarkus.jaeger.reporter-flush-interval`⚙️:: The reporter's flush interval
+`quarkus.jaeger.reporter-flush-interval`⚙️:: The reporter's flush interval 
 +
 Type: `java.time.Duration` +
 
 
 
 [[quarkus.jaeger.sampler-type]]
-`quarkus.jaeger.sampler-type`⚙️:: The sampler type (const, probabilistic, ratelimiting or remote)
+`quarkus.jaeger.sampler-type`⚙️:: The sampler type (const, probabilistic, ratelimiting or remote) 
 +
 Type: `java.lang.String` +
 
 
 
 [[quarkus.jaeger.sampler-param]]
-`quarkus.jaeger.sampler-param`⚙️:: The sampler parameter (number)
+`quarkus.jaeger.sampler-param`⚙️:: The sampler parameter (number) 
 +
 Type: `java.math.BigDecimal` +
 
 
 
 [[quarkus.jaeger.sampler-manager-host-port]]
-`quarkus.jaeger.sampler-manager-host-port`⚙️:: The host name and port when using the remote controlled sampler
+`quarkus.jaeger.sampler-manager-host-port`⚙️:: The host name and port when using the remote controlled sampler 
 +
 Type: `java.net.InetSocketAddress` +
 
 
 
 [[quarkus.jaeger.service-name]]
-`quarkus.jaeger.service-name`⚙️:: The service name
+`quarkus.jaeger.service-name`⚙️:: The service name 
 +
 Type: `java.lang.String` +
 
 
 
 [[quarkus.jaeger.tags]]
-`quarkus.jaeger.tags`⚙️:: A comma separated list of name = value tracer level tags, which get added to all reported spans. The value can also refer to an environment variable using the format ${envVarName:default}, where the :default is optional, and identifies a value to be used if the environment variable cannot be found
+`quarkus.jaeger.tags`⚙️:: A comma separated list of name = value tracer level tags, which get added to all reported spans. The value can also refer to an environment variable using the format ${envVarName:default}, where the :default is optional, and identifies a value to be used if the environment variable cannot be found 
 +
 Type: `java.lang.String` +
 
 
 
 [[quarkus.jaeger.propagation]]
-`quarkus.jaeger.propagation`⚙️:: Comma separated list of formats to use for propagating the trace context. Defaults to the standard Jaeger format. Valid values are jaeger and b3
+`quarkus.jaeger.propagation`⚙️:: Comma separated list of formats to use for propagating the trace context. Defaults to the standard Jaeger format. Valid values are jaeger and b3 
 +
 Type: `java.lang.String` +
 
 
 
 [[quarkus.jaeger.sender-factory]]
-`quarkus.jaeger.sender-factory`⚙️:: The sender factory class name
+`quarkus.jaeger.sender-factory`⚙️:: The sender factory class name 
 +
 Type: `java.lang.String` +
 

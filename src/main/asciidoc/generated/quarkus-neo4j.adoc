@@ -5,53 +5,65 @@
 |Configuration property|Type|Default|Lifecycle
 
 |<<quarkus.neo4j.uri, quarkus.neo4j.uri>>
-|String 
-|bolt://localhost:7687
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
+ 
+|`bolt://localhost:7687`
 | ⚙️
 
 |<<quarkus.neo4j.authentication.username, quarkus.neo4j.authentication.username>>
-|String 
-|neo4j
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
+ 
+|`neo4j`
 | ⚙️
 
 |<<quarkus.neo4j.authentication.password, quarkus.neo4j.authentication.password>>
-|String 
-|neo4j
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
+ 
+|`neo4j`
 | ⚙️
 
 |<<quarkus.neo4j.authentication.disabled, quarkus.neo4j.authentication.disabled>>
 |boolean 
-|false
+|`false`
 | ⚙️
 
 |<<quarkus.neo4j.pool.metrics-enabled, quarkus.neo4j.pool.metrics-enabled>>
 |boolean 
-|false
+|`false`
 | ⚙️
 
 |<<quarkus.neo4j.pool.log-leaked-sessions, quarkus.neo4j.pool.log-leaked-sessions>>
 |boolean 
-|false
+|`false`
 | ⚙️
 
 |<<quarkus.neo4j.pool.max-connection-pool-size, quarkus.neo4j.pool.max-connection-pool-size>>
 |int 
-|100
+|`100`
 | ⚙️
 
 |<<quarkus.neo4j.pool.idle-time-before-connection-test, quarkus.neo4j.pool.idle-time-before-connection-test>>
-|Duration <<duration-note-anchor, _see note below_>>
-|-0.001S
+|link:https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html[Duration]
+ +++
+<a href="#duration-note-anchor" title="More information about the Duration format">ℹ️</a>
++++
+|`-0.001S`
 | ⚙️
 
 |<<quarkus.neo4j.pool.max-connection-lifetime, quarkus.neo4j.pool.max-connection-lifetime>>
-|Duration <<duration-note-anchor, _see note below_>>
-|1H
+|link:https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html[Duration]
+ +++
+<a href="#duration-note-anchor" title="More information about the Duration format">ℹ️</a>
++++
+|`1H`
 | ⚙️
 
 |<<quarkus.neo4j.pool.connection-acquisition-timeout, quarkus.neo4j.pool.connection-acquisition-timeout>>
-|Duration <<duration-note-anchor, _see note below_>>
-|1M
+|link:https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html[Duration]
+ +++
+<a href="#duration-note-anchor" title="More information about the Duration format">ℹ️</a>
++++
+|`1M`
 | ⚙️
 |===
 
@@ -59,7 +71,7 @@
 == Details
 
 [[quarkus.neo4j.uri]]
-`quarkus.neo4j.uri`⚙️:: The uri this driver should connect to. The driver supports bolt, bolt+routing or neo4j as schemes.
+`quarkus.neo4j.uri`⚙️:: The uri this driver should connect to. The driver supports bolt, bolt+routing or neo4j as schemes. 
 +
 Type: `java.lang.String` +
 Defaults to: `bolt://localhost:7687` +
@@ -67,7 +79,7 @@ Defaults to: `bolt://localhost:7687` +
 
 
 [[quarkus.neo4j.authentication.username]]
-`quarkus.neo4j.authentication.username`⚙️:: The login of the user connecting to the database.
+`quarkus.neo4j.authentication.username`⚙️:: The login of the user connecting to the database. 
 +
 Type: `java.lang.String` +
 Defaults to: `neo4j` +
@@ -75,7 +87,7 @@ Defaults to: `neo4j` +
 
 
 [[quarkus.neo4j.authentication.password]]
-`quarkus.neo4j.authentication.password`⚙️:: The password of the user connecting to the database.
+`quarkus.neo4j.authentication.password`⚙️:: The password of the user connecting to the database. 
 +
 Type: `java.lang.String` +
 Defaults to: `neo4j` +
@@ -83,7 +95,7 @@ Defaults to: `neo4j` +
 
 
 [[quarkus.neo4j.authentication.disabled]]
-`quarkus.neo4j.authentication.disabled`⚙️:: Set this to true to disable authentication.
+`quarkus.neo4j.authentication.disabled`⚙️:: Set this to true to disable authentication. 
 +
 Type: `boolean` +
 Defaults to: `false` +
@@ -91,7 +103,7 @@ Defaults to: `false` +
 
 
 [[quarkus.neo4j.pool.metrics-enabled]]
-`quarkus.neo4j.pool.metrics-enabled`⚙️:: Flag, if metrics are enabled.
+`quarkus.neo4j.pool.metrics-enabled`⚙️:: Flag, if metrics are enabled. 
 +
 Type: `boolean` +
 Defaults to: `false` +
@@ -99,7 +111,7 @@ Defaults to: `false` +
 
 
 [[quarkus.neo4j.pool.log-leaked-sessions]]
-`quarkus.neo4j.pool.log-leaked-sessions`⚙️:: Flag, if leaked sessions logging is enabled.
+`quarkus.neo4j.pool.log-leaked-sessions`⚙️:: Flag, if leaked sessions logging is enabled. 
 +
 Type: `boolean` +
 Defaults to: `false` +
@@ -107,7 +119,7 @@ Defaults to: `false` +
 
 
 [[quarkus.neo4j.pool.max-connection-pool-size]]
-`quarkus.neo4j.pool.max-connection-pool-size`⚙️:: The maximum amount of connections in the connection pool towards a single database.
+`quarkus.neo4j.pool.max-connection-pool-size`⚙️:: The maximum amount of connections in the connection pool towards a single database. 
 +
 Type: `int` +
 Defaults to: `100` +
@@ -115,7 +127,7 @@ Defaults to: `100` +
 
 
 [[quarkus.neo4j.pool.idle-time-before-connection-test]]
-`quarkus.neo4j.pool.idle-time-before-connection-test`⚙️:: Pooled connections that have been idle in the pool for longer than this timeout will be tested before they are used again. The value `0` means connections will always be tested for validity and negative values mean connections will never be tested.
+`quarkus.neo4j.pool.idle-time-before-connection-test`⚙️:: Pooled connections that have been idle in the pool for longer than this timeout will be tested before they are used again. The value `0` means connections will always be tested for validity and negative values mean connections will never be tested. 
 +
 Type: `java.time.Duration` +
 Defaults to: `-0.001S` +
@@ -123,7 +135,7 @@ Defaults to: `-0.001S` +
 
 
 [[quarkus.neo4j.pool.max-connection-lifetime]]
-`quarkus.neo4j.pool.max-connection-lifetime`⚙️:: Pooled connections older than this threshold will be closed and removed from the pool.
+`quarkus.neo4j.pool.max-connection-lifetime`⚙️:: Pooled connections older than this threshold will be closed and removed from the pool. 
 +
 Type: `java.time.Duration` +
 Defaults to: `1H` +
@@ -131,7 +143,7 @@ Defaults to: `1H` +
 
 
 [[quarkus.neo4j.pool.connection-acquisition-timeout]]
-`quarkus.neo4j.pool.connection-acquisition-timeout`⚙️:: Acquisition of new connections will be attempted for at most configured timeout.
+`quarkus.neo4j.pool.connection-acquisition-timeout`⚙️:: Acquisition of new connections will be attempted for at most configured timeout. 
 +
 Type: `java.time.Duration` +
 Defaults to: `1M` +

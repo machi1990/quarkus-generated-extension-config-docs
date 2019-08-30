@@ -5,13 +5,14 @@
 |Configuration property|Type|Default|Lifecycle
 
 |<<quarkus.swagger-ui.path, quarkus.swagger-ui.path>>
-|String 
-|/swagger-ui
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
+ 
+|`/swagger-ui`
 | 📦
 
 |<<quarkus.swagger-ui.always-include, quarkus.swagger-ui.always-include>>
 |boolean 
-|false
+|`false`
 | 📦
 |===
 
@@ -19,7 +20,7 @@
 == Details
 
 [[quarkus.swagger-ui.path]]
-`quarkus.swagger-ui.path`📦:: The path of the swagger-ui servlet.
+`quarkus.swagger-ui.path`📦:: The path of the swagger-ui servlet. 
 +
 Type: `java.lang.String` +
 Defaults to: `/swagger-ui` +
@@ -27,7 +28,7 @@ Defaults to: `/swagger-ui` +
 
 
 [[quarkus.swagger-ui.always-include]]
-`quarkus.swagger-ui.always-include`📦:: If this should be included every time. By default this is only included when the application is running in dev mode.
+`quarkus.swagger-ui.always-include`📦:: If this should be included every time. By default this is only included when the application is running in dev mode. 
 +
 Type: `boolean` +
 Defaults to: `false` +

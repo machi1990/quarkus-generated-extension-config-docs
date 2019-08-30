@@ -5,7 +5,8 @@
 |Configuration property|Type|Default|Lifecycle
 
 |<<quarkus.servlet.context-path, quarkus.servlet.context-path>>
-|String 
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
+ 
 |
 | 📦
 |===
@@ -14,7 +15,7 @@
 == Details
 
 [[quarkus.servlet.context-path]]
-`quarkus.servlet.context-path`📦:: The context path to serve all Servlet context from. This will also affect any resources that run as a Servlet, e.g. JAX-RS
+`quarkus.servlet.context-path`📦:: The context path to serve all Servlet context from. This will also affect any resources that run as a Servlet, e.g. JAX-RS 
 +
 Type: `java.lang.String` +
 

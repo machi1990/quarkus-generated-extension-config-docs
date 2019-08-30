@@ -5,18 +5,23 @@
 |Configuration property|Type|Default|Lifecycle
 
 |<<quarkus.transaction-manager.node-name, quarkus.transaction-manager.node-name>>
-|String 
-|quarkus
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
+ 
+|`quarkus`
 | ⚙️
 
 |<<quarkus.transaction-manager.xa-node-name, quarkus.transaction-manager.xa-node-name>>
-|String 
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
+ 
 |
 | ⚙️
 
 |<<quarkus.transaction-manager.default-transaction-timeout, quarkus.transaction-manager.default-transaction-timeout>>
-|Duration <<duration-note-anchor, _see note below_>>
-|60
+|link:https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html[Duration]
+ +++
+<a href="#duration-note-anchor" title="More information about the Duration format">ℹ️</a>
++++
+|`60`
 | ⚙️
 |===
 
@@ -24,7 +29,7 @@
 == Details
 
 [[quarkus.transaction-manager.node-name]]
-`quarkus.transaction-manager.node-name`⚙️:: The node name used by the transaction manager
+`quarkus.transaction-manager.node-name`⚙️:: The node name used by the transaction manager 
 +
 Type: `java.lang.String` +
 Defaults to: `quarkus` +
@@ -32,14 +37,14 @@ Defaults to: `quarkus` +
 
 
 [[quarkus.transaction-manager.xa-node-name]]
-`quarkus.transaction-manager.xa-node-name`⚙️:: The XA node name used by the transaction manager
+`quarkus.transaction-manager.xa-node-name`⚙️:: The XA node name used by the transaction manager 
 +
 Type: `java.lang.String` +
 
 
 
 [[quarkus.transaction-manager.default-transaction-timeout]]
-`quarkus.transaction-manager.default-transaction-timeout`⚙️:: The default transaction timeout
+`quarkus.transaction-manager.default-transaction-timeout`⚙️:: The default transaction timeout 
 +
 Type: `java.time.Duration` +
 Defaults to: `60` +

@@ -5,52 +5,60 @@
 |Configuration property|Type|Default|Lifecycle
 
 |<<quarkus.flyway.locations, quarkus.flyway.locations>>
-|String 
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
+ 
 |
 | 📦
 
 |<<quarkus.flyway.connect-retries, quarkus.flyway.connect-retries>>
-|Integer 
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html[Integer]
+ 
 |
 | ⚙️
 
 |<<quarkus.flyway.schemas, quarkus.flyway.schemas>>
-|String 
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
+ 
 |
 | ⚙️
 
 |<<quarkus.flyway.table, quarkus.flyway.table>>
-|String 
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
+ 
 |
 | ⚙️
 
 |<<quarkus.flyway.sql-migration-prefix, quarkus.flyway.sql-migration-prefix>>
-|String 
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
+ 
 |
 | ⚙️
 
 |<<quarkus.flyway.repeatable-sql-migration-prefix, quarkus.flyway.repeatable-sql-migration-prefix>>
-|String 
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
+ 
 |
 | ⚙️
 
 |<<quarkus.flyway.migrate-at-start, quarkus.flyway.migrate-at-start>>
 |boolean 
-|false
+|`false`
 | ⚙️
 
 |<<quarkus.flyway.baseline-on-migrate, quarkus.flyway.baseline-on-migrate>>
 |boolean 
-|false
+|`false`
 | ⚙️
 
 |<<quarkus.flyway.baseline-version, quarkus.flyway.baseline-version>>
-|String 
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
+ 
 |
 | ⚙️
 
 |<<quarkus.flyway.baseline-description, quarkus.flyway.baseline-description>>
-|String 
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
+ 
 |
 | ⚙️
 |===
@@ -59,49 +67,49 @@
 == Details
 
 [[quarkus.flyway.locations]]
-`quarkus.flyway.locations`📦:: Comma-separated list of locations to scan recursively for migrations. The location type is determined by its prefix. Unprefixed locations or locations starting with classpath: point to a package on the classpath and may contain both SQL and Java-based migrations. Locations starting with filesystem: point to a directory on the filesystem, may only contain SQL migrations and are only scanned recursively down non-hidden directories.
+`quarkus.flyway.locations`📦:: Comma-separated list of locations to scan recursively for migrations. The location type is determined by its prefix. Unprefixed locations or locations starting with classpath: point to a package on the classpath and may contain both SQL and Java-based migrations. Locations starting with filesystem: point to a directory on the filesystem, may only contain SQL migrations and are only scanned recursively down non-hidden directories. 
 +
 Type: `java.lang.String` +
 
 
 
 [[quarkus.flyway.connect-retries]]
-`quarkus.flyway.connect-retries`⚙️:: The maximum number of retries when attempting to connect to the database. After each failed attempt, Flyway will wait 1 second before attempting to connect again, up to the maximum number of times specified by connectRetries.
+`quarkus.flyway.connect-retries`⚙️:: The maximum number of retries when attempting to connect to the database. After each failed attempt, Flyway will wait 1 second before attempting to connect again, up to the maximum number of times specified by connectRetries. 
 +
 Type: `java.lang.Integer` +
 
 
 
 [[quarkus.flyway.schemas]]
-`quarkus.flyway.schemas`⚙️:: Comma-separated case-sensitive list of schemas managed by Flyway. The first schema in the list will be automatically set as the default one during the migration. It will also be the one containing the schema history table.
+`quarkus.flyway.schemas`⚙️:: Comma-separated case-sensitive list of schemas managed by Flyway. The first schema in the list will be automatically set as the default one during the migration. It will also be the one containing the schema history table. 
 +
 Type: `java.lang.String` +
 
 
 
 [[quarkus.flyway.table]]
-`quarkus.flyway.table`⚙️:: The name of Flyway's schema history table. By default (single-schema mode) the schema history table is placed in the default schema for the connection provided by the datasource. When the flyway.schemas property is set (multi-schema mode), the schema history table is placed in the first schema of the list.
+`quarkus.flyway.table`⚙️:: The name of Flyway's schema history table. By default (single-schema mode) the schema history table is placed in the default schema for the connection provided by the datasource. When the flyway.schemas property is set (multi-schema mode), the schema history table is placed in the first schema of the list. 
 +
 Type: `java.lang.String` +
 
 
 
 [[quarkus.flyway.sql-migration-prefix]]
-`quarkus.flyway.sql-migration-prefix`⚙️:: The file name prefix for versioned SQL migrations. Versioned SQL migrations have the following file name structure: prefixVERSIONseparatorDESCRIPTIONsuffix , which using the defaults translates to V1.1__My_description.sql
+`quarkus.flyway.sql-migration-prefix`⚙️:: The file name prefix for versioned SQL migrations. Versioned SQL migrations have the following file name structure: prefixVERSIONseparatorDESCRIPTIONsuffix , which using the defaults translates to V1.1__My_description.sql 
 +
 Type: `java.lang.String` +
 
 
 
 [[quarkus.flyway.repeatable-sql-migration-prefix]]
-`quarkus.flyway.repeatable-sql-migration-prefix`⚙️:: The file name prefix for repeatable SQL migrations. Repeatable SQL migrations have the following file name structure: prefixSeparatorDESCRIPTIONsuffix , which using the defaults translates to R__My_description.sql
+`quarkus.flyway.repeatable-sql-migration-prefix`⚙️:: The file name prefix for repeatable SQL migrations. Repeatable SQL migrations have the following file name structure: prefixSeparatorDESCRIPTIONsuffix , which using the defaults translates to R__My_description.sql 
 +
 Type: `java.lang.String` +
 
 
 
 [[quarkus.flyway.migrate-at-start]]
-`quarkus.flyway.migrate-at-start`⚙️:: true to execute Flyway automatically when the application starts, false otherwise.
+`quarkus.flyway.migrate-at-start`⚙️:: true to execute Flyway automatically when the application starts, false otherwise. 
 +
 Type: `boolean` +
 Defaults to: `false` +
@@ -109,7 +117,7 @@ Defaults to: `false` +
 
 
 [[quarkus.flyway.baseline-on-migrate]]
-`quarkus.flyway.baseline-on-migrate`⚙️:: Enable the creation of the history table if it does not exist already.
+`quarkus.flyway.baseline-on-migrate`⚙️:: Enable the creation of the history table if it does not exist already. 
 +
 Type: `boolean` +
 Defaults to: `false` +
@@ -117,14 +125,14 @@ Defaults to: `false` +
 
 
 [[quarkus.flyway.baseline-version]]
-`quarkus.flyway.baseline-version`⚙️:: The initial baseline version.
+`quarkus.flyway.baseline-version`⚙️:: The initial baseline version. 
 +
 Type: `java.lang.String` +
 
 
 
 [[quarkus.flyway.baseline-description]]
-`quarkus.flyway.baseline-description`⚙️:: The description to tag an existing schema with when executing baseline.
+`quarkus.flyway.baseline-description`⚙️:: The description to tag an existing schema with when executing baseline. 
 +
 Type: `java.lang.String` +
 

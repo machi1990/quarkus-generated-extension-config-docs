@@ -5,13 +5,15 @@
 |Configuration property|Type|Default|Lifecycle
 
 |<<quarkus.bt.bt-string-opt, quarkus.bt.bt-string-opt>>
-|String 
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
+ 
 |
 | 📦
 
 |<<quarkus.bt.bt-string-opt-with-default, quarkus.bt.bt-string-opt-with-default>>
-|String 
-|btStringOptWithDefaultValue
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
+ 
+|`btStringOptWithDefaultValue`
 | 📦
 
 |<<quarkus.bt.bt-sbv, quarkus.bt.bt-sbv>>
@@ -21,36 +23,40 @@
 
 |<<quarkus.bt.bt-sbv-with-default, quarkus.bt.bt-sbv-with-default>>
 |StringBasedValue 
-|btSBVWithDefaultValue
+|`btSBVWithDefaultValue`
 | 📦
 
 |<<quarkus.bt.all-values.long-primitive, quarkus.bt.all-values.long-primitive>>
 |long 
-|0l
+|`0l`
 | 📦
 
 |<<quarkus.bt.all-values.double-primitive, quarkus.bt.all-values.double-primitive>>
 |double 
-|0d
+|`0d`
 | 📦
 
 |<<quarkus.bt.all-values.long-value, quarkus.bt.all-values.long-value>>
-|Long 
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html[Long]
+ 
 |
 | 📦
 
 |<<quarkus.bt.all-values.opt-long-value, quarkus.bt.all-values.opt-long-value>>
-|Long 
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html[Long]
+ 
 |
 | 📦
 
 |<<quarkus.bt.all-values.opt-double-value, quarkus.bt.all-values.opt-double-value>>
-|Double 
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html[Double]
+ 
 |
 | 📦
 
 |<<quarkus.bt.all-values.optional-long-value, quarkus.bt.all-values.optional-long-value>>
-|Long 
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html[Long]
+ 
 |
 | 📦
 
@@ -61,7 +67,7 @@
 
 |<<quarkus.bt.all-values.oov-with-default, quarkus.bt.all-values.oov-with-default>>
 |ObjectOfValue 
-|defaultPart1+defaultPart2
+|`defaultPart1+defaultPart2`
 | 📦
 
 |<<quarkus.bt.all-values.ovo, quarkus.bt.all-values.ovo>>
@@ -71,42 +77,48 @@
 
 |<<quarkus.bt.all-values.ovo-with-default, quarkus.bt.all-values.ovo-with-default>>
 |ObjectValueOf 
-|defaultPart1+defaultPart2
+|`defaultPart1+defaultPart2`
 | 📦
 
 |<<quarkus.bt.all-values.string-list, quarkus.bt.all-values.string-list>>
-|String 
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
+ 
 |
 | 📦
 
 |<<quarkus.bt.all-values.long-list, quarkus.bt.all-values.long-list>>
-|Long 
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html[Long]
+ 
 |
 | 📦
 
 |<<quarkus.bt.all-values.expanded-default, quarkus.bt.all-values.expanded-default>>
-|String 
-|${java.vm.version}
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
+ 
+|`${java.vm.version}`
 | 📦
 
 |<<quarkus.root.dsa-key-location, quarkus.root.dsa-key-location>>
-|String 
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
+ 
 |
 | 📦
 
 |<<quarkus.root.validate-build-config, quarkus.root.validate-build-config>>
 |boolean 
-|false
+|`false`
 | 📦
 
 |<<quarkus.btrt.bt-string-opt, quarkus.btrt.bt-string-opt>>
-|String 
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
+ 
 |
 | 📦
 
 |<<quarkus.btrt.bt-string-opt-with-default, quarkus.btrt.bt-string-opt-with-default>>
-|String 
-|btStringOptWithDefaultValue
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
+ 
+|`btStringOptWithDefaultValue`
 | 📦
 
 |<<quarkus.btrt.bt-sbv, quarkus.btrt.bt-sbv>>
@@ -116,36 +128,40 @@
 
 |<<quarkus.btrt.bt-sbv-with-default, quarkus.btrt.bt-sbv-with-default>>
 |StringBasedValue 
-|btSBVWithDefaultValue
+|`btSBVWithDefaultValue`
 | 📦
 
 |<<quarkus.btrt.all-values.long-primitive, quarkus.btrt.all-values.long-primitive>>
 |long 
-|0l
+|`0l`
 | 📦
 
 |<<quarkus.btrt.all-values.double-primitive, quarkus.btrt.all-values.double-primitive>>
 |double 
-|0d
+|`0d`
 | 📦
 
 |<<quarkus.btrt.all-values.long-value, quarkus.btrt.all-values.long-value>>
-|Long 
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html[Long]
+ 
 |
 | 📦
 
 |<<quarkus.btrt.all-values.opt-long-value, quarkus.btrt.all-values.opt-long-value>>
-|Long 
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html[Long]
+ 
 |
 | 📦
 
 |<<quarkus.btrt.all-values.opt-double-value, quarkus.btrt.all-values.opt-double-value>>
-|Double 
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html[Double]
+ 
 |
 | 📦
 
 |<<quarkus.btrt.all-values.optional-long-value, quarkus.btrt.all-values.optional-long-value>>
-|Long 
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html[Long]
+ 
 |
 | 📦
 
@@ -156,7 +172,7 @@
 
 |<<quarkus.btrt.all-values.oov-with-default, quarkus.btrt.all-values.oov-with-default>>
 |ObjectOfValue 
-|defaultPart1+defaultPart2
+|`defaultPart1+defaultPart2`
 | 📦
 
 |<<quarkus.btrt.all-values.ovo, quarkus.btrt.all-values.ovo>>
@@ -166,22 +182,25 @@
 
 |<<quarkus.btrt.all-values.ovo-with-default, quarkus.btrt.all-values.ovo-with-default>>
 |ObjectValueOf 
-|defaultPart1+defaultPart2
+|`defaultPart1+defaultPart2`
 | 📦
 
 |<<quarkus.btrt.all-values.string-list, quarkus.btrt.all-values.string-list>>
-|String 
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
+ 
 |
 | 📦
 
 |<<quarkus.btrt.all-values.long-list, quarkus.btrt.all-values.long-list>>
-|Long 
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html[Long]
+ 
 |
 | 📦
 
 |<<quarkus.btrt.all-values.expanded-default, quarkus.btrt.all-values.expanded-default>>
-|String 
-|${java.vm.version}
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
+ 
+|`${java.vm.version}`
 | 📦
 
 |<<quarkus.btrt.my-enum, quarkus.btrt.my-enum>>
@@ -195,42 +214,48 @@
 | 📦
 
 |<<quarkus.rt.rt-string-opt, quarkus.rt.rt-string-opt>>
-|String 
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
+ 
 |
 | ⚙️
 
 |<<quarkus.rt.rt-string-opt-with-default, quarkus.rt.rt-string-opt-with-default>>
-|String 
-|rtStringOptWithDefaultValue
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
+ 
+|`rtStringOptWithDefaultValue`
 | ⚙️
 
 |<<quarkus.rt.all-values.long-primitive, quarkus.rt.all-values.long-primitive>>
 |long 
-|0l
+|`0l`
 | ⚙️
 
 |<<quarkus.rt.all-values.double-primitive, quarkus.rt.all-values.double-primitive>>
 |double 
-|0d
+|`0d`
 | ⚙️
 
 |<<quarkus.rt.all-values.long-value, quarkus.rt.all-values.long-value>>
-|Long 
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html[Long]
+ 
 |
 | ⚙️
 
 |<<quarkus.rt.all-values.opt-long-value, quarkus.rt.all-values.opt-long-value>>
-|Long 
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html[Long]
+ 
 |
 | ⚙️
 
 |<<quarkus.rt.all-values.opt-double-value, quarkus.rt.all-values.opt-double-value>>
-|Double 
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html[Double]
+ 
 |
 | ⚙️
 
 |<<quarkus.rt.all-values.optional-long-value, quarkus.rt.all-values.optional-long-value>>
-|Long 
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html[Long]
+ 
 |
 | ⚙️
 
@@ -241,7 +266,7 @@
 
 |<<quarkus.rt.all-values.oov-with-default, quarkus.rt.all-values.oov-with-default>>
 |ObjectOfValue 
-|defaultPart1+defaultPart2
+|`defaultPart1+defaultPart2`
 | ⚙️
 
 |<<quarkus.rt.all-values.ovo, quarkus.rt.all-values.ovo>>
@@ -251,22 +276,25 @@
 
 |<<quarkus.rt.all-values.ovo-with-default, quarkus.rt.all-values.ovo-with-default>>
 |ObjectValueOf 
-|defaultPart1+defaultPart2
+|`defaultPart1+defaultPart2`
 | ⚙️
 
 |<<quarkus.rt.all-values.string-list, quarkus.rt.all-values.string-list>>
-|String 
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
+ 
 |
 | ⚙️
 
 |<<quarkus.rt.all-values.long-list, quarkus.rt.all-values.long-list>>
-|Long 
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html[Long]
+ 
 |
 | ⚙️
 
 |<<quarkus.rt.all-values.expanded-default, quarkus.rt.all-values.expanded-default>>
-|String 
-|${java.vm.version}
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
+ 
+|`${java.vm.version}`
 | ⚙️
 
 |<<quarkus.rt.my-enum, quarkus.rt.my-enum>>
@@ -296,41 +324,47 @@
 
 |<<quarkus.rt.primitive-boolean, quarkus.rt.primitive-boolean>>
 |boolean 
-|NO
+|`NO`
 | ⚙️
 
 |<<quarkus.rt.object-boolean, quarkus.rt.object-boolean>>
-|Boolean 
-|NO
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html[Boolean]
+ 
+|`NO`
 | ⚙️
 
 |<<quarkus.rt.primitive-integer, quarkus.rt.primitive-integer>>
 |int 
-|zero
+|`zero`
 | ⚙️
 
 |<<quarkus.rt.object-integer, quarkus.rt.object-integer>>
-|Integer 
-|zero
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html[Integer]
+ 
+|`zero`
 | ⚙️
 
 |<<quarkus.rt.one-to-nine, quarkus.rt.one-to-nine>>
-|Integer 
-|one
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html[Integer]
+ 
+|`one`
 | ⚙️
 
 |<<quarkus.rt.string-map.string-map, quarkus.rt.string-map."<string-map>">>
-|String 
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
+ 
 |
 | ⚙️
 
 |<<quarkus.rt.string-list-map.string-list-map, quarkus.rt.string-list-map."<string-list-map>">>
-|java.util.List<java.lang.String> 
+|link:https://docs.oracle.com/javase/8/docs/api/java/util/List<java.lang.String>.html[java.util.List<java.lang.String>]
+ 
 |
 | ⚙️
 
 |<<quarkus.rt.all-values.nested-config-map.nested-config-map.nested-value, quarkus.rt.all-values.nested-config-map."<nested-config-map>".nested-value>>
-|String 
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
+ 
 |
 | ⚙️
 
@@ -340,22 +374,26 @@
 | ⚙️
 
 |<<quarkus.rt.all-values.string-map.string-map, quarkus.rt.all-values.string-map."<string-map>">>
-|String 
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
+ 
 |
 | ⚙️
 
 |<<quarkus.rt.all-values.string-list-map.string-list-map, quarkus.rt.all-values.string-list-map."<string-list-map>">>
-|java.util.List<java.lang.String> 
+|link:https://docs.oracle.com/javase/8/docs/api/java/util/List<java.lang.String>.html[java.util.List<java.lang.String>]
+ 
 |
 | ⚙️
 
 |<<quarkus.rt.map-of-numbers.map-of-numbers, quarkus.rt.map-of-numbers."<map-of-numbers>">>
-|Integer 
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html[Integer]
+ 
 |
 | ⚙️
 
 |<<quarkus.btrt.all-values.nested-config-map.nested-config-map.nested-value, quarkus.btrt.all-values.nested-config-map."<nested-config-map>".nested-value>>
-|String 
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
+ 
 |
 | 📦
 
@@ -365,22 +403,26 @@
 | 📦
 
 |<<quarkus.btrt.all-values.string-map.string-map, quarkus.btrt.all-values.string-map."<string-map>">>
-|String 
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
+ 
 |
 | 📦
 
 |<<quarkus.btrt.all-values.string-list-map.string-list-map, quarkus.btrt.all-values.string-list-map."<string-list-map>">>
-|java.util.List<java.lang.String> 
+|link:https://docs.oracle.com/javase/8/docs/api/java/util/List<java.lang.String>.html[java.util.List<java.lang.String>]
+ 
 |
 | 📦
 
 |<<quarkus.btrt.map-of-numbers.map-of-numbers, quarkus.btrt.map-of-numbers."<map-of-numbers>">>
-|Integer 
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html[Integer]
+ 
 |
 | 📦
 
 |<<quarkus.bt.all-values.nested-config-map.nested-config-map.nested-value, quarkus.bt.all-values.nested-config-map."<nested-config-map>".nested-value>>
-|String 
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
+ 
 |
 | 📦
 
@@ -390,12 +432,14 @@
 | 📦
 
 |<<quarkus.bt.all-values.string-map.string-map, quarkus.bt.all-values.string-map."<string-map>">>
-|String 
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
+ 
 |
 | 📦
 
 |<<quarkus.bt.all-values.string-list-map.string-list-map, quarkus.bt.all-values.string-list-map."<string-list-map>">>
-|java.util.List<java.lang.String> 
+|link:https://docs.oracle.com/javase/8/docs/api/java/util/List<java.lang.String>.html[java.util.List<java.lang.String>]
+ 
 |
 | 📦
 |===
@@ -404,14 +448,14 @@
 == Details
 
 [[quarkus.bt.bt-string-opt]]
-`quarkus.bt.bt-string-opt`📦:: A config string
+`quarkus.bt.bt-string-opt`📦:: A config string 
 +
 Type: `java.lang.String` +
 
 
 
 [[quarkus.bt.bt-string-opt-with-default]]
-`quarkus.bt.bt-string-opt-with-default`📦:: A config string with default value
+`quarkus.bt.bt-string-opt-with-default`📦:: A config string with default value 
 +
 Type: `java.lang.String` +
 Defaults to: `btStringOptWithDefaultValue` +
@@ -419,14 +463,14 @@ Defaults to: `btStringOptWithDefaultValue` +
 
 
 [[quarkus.bt.bt-sbv]]
-`quarkus.bt.bt-sbv`📦:: A config object with ctor(String)
+`quarkus.bt.bt-sbv`📦:: A config object with ctor(String) 
 +
 Type: `io.quarkus.extest.runtime.config.StringBasedValue` +
 
 
 
 [[quarkus.bt.bt-sbv-with-default]]
-`quarkus.bt.bt-sbv-with-default`📦:: A config object with ctor(String) and default value
+`quarkus.bt.bt-sbv-with-default`📦:: A config object with ctor(String) and default value 
 +
 Type: `io.quarkus.extest.runtime.config.StringBasedValue` +
 Defaults to: `btSBVWithDefaultValue` +
@@ -434,7 +478,7 @@ Defaults to: `btSBVWithDefaultValue` +
 
 
 [[quarkus.bt.all-values.long-primitive]]
-`quarkus.bt.all-values.long-primitive`📦:: a long primitive
+`quarkus.bt.all-values.long-primitive`📦:: a long primitive 
 +
 Type: `long` +
 Defaults to: `0l` +
@@ -442,7 +486,7 @@ Defaults to: `0l` +
 
 
 [[quarkus.bt.all-values.double-primitive]]
-`quarkus.bt.all-values.double-primitive`📦:: a double primitive
+`quarkus.bt.all-values.double-primitive`📦:: a double primitive 
 +
 Type: `double` +
 Defaults to: `0d` +
@@ -450,42 +494,42 @@ Defaults to: `0d` +
 
 
 [[quarkus.bt.all-values.long-value]]
-`quarkus.bt.all-values.long-value`📦:: a long value
+`quarkus.bt.all-values.long-value`📦:: a long value 
 +
 Type: `java.lang.Long` +
 
 
 
 [[quarkus.bt.all-values.opt-long-value]]
-`quarkus.bt.all-values.opt-long-value`📦:: an optional long value
+`quarkus.bt.all-values.opt-long-value`📦:: an optional long value 
 +
 Type: `java.lang.Long` +
 
 
 
 [[quarkus.bt.all-values.opt-double-value]]
-`quarkus.bt.all-values.opt-double-value`📦:: an optional double value
+`quarkus.bt.all-values.opt-double-value`📦:: an optional double value 
 +
 Type: `java.lang.Double` +
 
 
 
 [[quarkus.bt.all-values.optional-long-value]]
-`quarkus.bt.all-values.optional-long-value`📦:: an optional long value
+`quarkus.bt.all-values.optional-long-value`📦:: an optional long value 
 +
 Type: `java.lang.Long` +
 
 
 
 [[quarkus.bt.all-values.oov]]
-`quarkus.bt.all-values.oov`📦:: A config object with a static of(String) method
+`quarkus.bt.all-values.oov`📦:: A config object with a static of(String) method 
 +
 Type: `io.quarkus.extest.runtime.config.ObjectOfValue` +
 
 
 
 [[quarkus.bt.all-values.oov-with-default]]
-`quarkus.bt.all-values.oov-with-default`📦:: A config object with a static of(String) method and default value
+`quarkus.bt.all-values.oov-with-default`📦:: A config object with a static of(String) method and default value 
 +
 Type: `io.quarkus.extest.runtime.config.ObjectOfValue` +
 Defaults to: `defaultPart1+defaultPart2` +
@@ -493,14 +537,14 @@ Defaults to: `defaultPart1+defaultPart2` +
 
 
 [[quarkus.bt.all-values.ovo]]
-`quarkus.bt.all-values.ovo`📦:: A config object with a static valueOf(String) method
+`quarkus.bt.all-values.ovo`📦:: A config object with a static valueOf(String) method 
 +
 Type: `io.quarkus.extest.runtime.config.ObjectValueOf` +
 
 
 
 [[quarkus.bt.all-values.ovo-with-default]]
-`quarkus.bt.all-values.ovo-with-default`📦:: A config object with a static of(String) method and default value
+`quarkus.bt.all-values.ovo-with-default`📦:: A config object with a static of(String) method and default value 
 +
 Type: `io.quarkus.extest.runtime.config.ObjectValueOf` +
 Defaults to: `defaultPart1+defaultPart2` +
@@ -508,21 +552,21 @@ Defaults to: `defaultPart1+defaultPart2` +
 
 
 [[quarkus.bt.all-values.string-list]]
-`quarkus.bt.all-values.string-list`📦:: A List of string values
+`quarkus.bt.all-values.string-list`📦:: A List of string values 
 +
 Type: `java.lang.String` +
 
 
 
 [[quarkus.bt.all-values.long-list]]
-`quarkus.bt.all-values.long-list`📦:: A List of long values
+`quarkus.bt.all-values.long-list`📦:: A List of long values 
 +
 Type: `java.lang.Long` +
 
 
 
 [[quarkus.bt.all-values.expanded-default]]
-`quarkus.bt.all-values.expanded-default`📦:: A configuration item that has a default value that is an expression
+`quarkus.bt.all-values.expanded-default`📦:: A configuration item that has a default value that is an expression 
 +
 Type: `java.lang.String` +
 Defaults to: `${java.vm.version}` +
@@ -530,14 +574,14 @@ Defaults to: `${java.vm.version}` +
 
 
 [[quarkus.root.dsa-key-location]]
-`quarkus.root.dsa-key-location`📦:: 
+`quarkus.root.dsa-key-location`📦::  
 +
 Type: `java.lang.String` +
 
 
 
 [[quarkus.root.validate-build-config]]
-`quarkus.root.validate-build-config`📦:: 
+`quarkus.root.validate-build-config`📦::  
 +
 Type: `boolean` +
 Defaults to: `false` +
@@ -545,14 +589,14 @@ Defaults to: `false` +
 
 
 [[quarkus.btrt.bt-string-opt]]
-`quarkus.btrt.bt-string-opt`📦:: A config string
+`quarkus.btrt.bt-string-opt`📦:: A config string 
 +
 Type: `java.lang.String` +
 
 
 
 [[quarkus.btrt.bt-string-opt-with-default]]
-`quarkus.btrt.bt-string-opt-with-default`📦:: A config string with default value
+`quarkus.btrt.bt-string-opt-with-default`📦:: A config string with default value 
 +
 Type: `java.lang.String` +
 Defaults to: `btStringOptWithDefaultValue` +
@@ -560,14 +604,14 @@ Defaults to: `btStringOptWithDefaultValue` +
 
 
 [[quarkus.btrt.bt-sbv]]
-`quarkus.btrt.bt-sbv`📦:: A config object with ctor(String)
+`quarkus.btrt.bt-sbv`📦:: A config object with ctor(String) 
 +
 Type: `io.quarkus.extest.runtime.config.StringBasedValue` +
 
 
 
 [[quarkus.btrt.bt-sbv-with-default]]
-`quarkus.btrt.bt-sbv-with-default`📦:: A config object with ctor(String) and default value
+`quarkus.btrt.bt-sbv-with-default`📦:: A config object with ctor(String) and default value 
 +
 Type: `io.quarkus.extest.runtime.config.StringBasedValue` +
 Defaults to: `btSBVWithDefaultValue` +
@@ -575,7 +619,7 @@ Defaults to: `btSBVWithDefaultValue` +
 
 
 [[quarkus.btrt.all-values.long-primitive]]
-`quarkus.btrt.all-values.long-primitive`📦:: a long primitive
+`quarkus.btrt.all-values.long-primitive`📦:: a long primitive 
 +
 Type: `long` +
 Defaults to: `0l` +
@@ -583,7 +627,7 @@ Defaults to: `0l` +
 
 
 [[quarkus.btrt.all-values.double-primitive]]
-`quarkus.btrt.all-values.double-primitive`📦:: a double primitive
+`quarkus.btrt.all-values.double-primitive`📦:: a double primitive 
 +
 Type: `double` +
 Defaults to: `0d` +
@@ -591,42 +635,42 @@ Defaults to: `0d` +
 
 
 [[quarkus.btrt.all-values.long-value]]
-`quarkus.btrt.all-values.long-value`📦:: a long value
+`quarkus.btrt.all-values.long-value`📦:: a long value 
 +
 Type: `java.lang.Long` +
 
 
 
 [[quarkus.btrt.all-values.opt-long-value]]
-`quarkus.btrt.all-values.opt-long-value`📦:: an optional long value
+`quarkus.btrt.all-values.opt-long-value`📦:: an optional long value 
 +
 Type: `java.lang.Long` +
 
 
 
 [[quarkus.btrt.all-values.opt-double-value]]
-`quarkus.btrt.all-values.opt-double-value`📦:: an optional double value
+`quarkus.btrt.all-values.opt-double-value`📦:: an optional double value 
 +
 Type: `java.lang.Double` +
 
 
 
 [[quarkus.btrt.all-values.optional-long-value]]
-`quarkus.btrt.all-values.optional-long-value`📦:: an optional long value
+`quarkus.btrt.all-values.optional-long-value`📦:: an optional long value 
 +
 Type: `java.lang.Long` +
 
 
 
 [[quarkus.btrt.all-values.oov]]
-`quarkus.btrt.all-values.oov`📦:: A config object with a static of(String) method
+`quarkus.btrt.all-values.oov`📦:: A config object with a static of(String) method 
 +
 Type: `io.quarkus.extest.runtime.config.ObjectOfValue` +
 
 
 
 [[quarkus.btrt.all-values.oov-with-default]]
-`quarkus.btrt.all-values.oov-with-default`📦:: A config object with a static of(String) method and default value
+`quarkus.btrt.all-values.oov-with-default`📦:: A config object with a static of(String) method and default value 
 +
 Type: `io.quarkus.extest.runtime.config.ObjectOfValue` +
 Defaults to: `defaultPart1+defaultPart2` +
@@ -634,14 +678,14 @@ Defaults to: `defaultPart1+defaultPart2` +
 
 
 [[quarkus.btrt.all-values.ovo]]
-`quarkus.btrt.all-values.ovo`📦:: A config object with a static valueOf(String) method
+`quarkus.btrt.all-values.ovo`📦:: A config object with a static valueOf(String) method 
 +
 Type: `io.quarkus.extest.runtime.config.ObjectValueOf` +
 
 
 
 [[quarkus.btrt.all-values.ovo-with-default]]
-`quarkus.btrt.all-values.ovo-with-default`📦:: A config object with a static of(String) method and default value
+`quarkus.btrt.all-values.ovo-with-default`📦:: A config object with a static of(String) method and default value 
 +
 Type: `io.quarkus.extest.runtime.config.ObjectValueOf` +
 Defaults to: `defaultPart1+defaultPart2` +
@@ -649,21 +693,21 @@ Defaults to: `defaultPart1+defaultPart2` +
 
 
 [[quarkus.btrt.all-values.string-list]]
-`quarkus.btrt.all-values.string-list`📦:: A List of string values
+`quarkus.btrt.all-values.string-list`📦:: A List of string values 
 +
 Type: `java.lang.String` +
 
 
 
 [[quarkus.btrt.all-values.long-list]]
-`quarkus.btrt.all-values.long-list`📦:: A List of long values
+`quarkus.btrt.all-values.long-list`📦:: A List of long values 
 +
 Type: `java.lang.Long` +
 
 
 
 [[quarkus.btrt.all-values.expanded-default]]
-`quarkus.btrt.all-values.expanded-default`📦:: A configuration item that has a default value that is an expression
+`quarkus.btrt.all-values.expanded-default`📦:: A configuration item that has a default value that is an expression 
 +
 Type: `java.lang.String` +
 Defaults to: `${java.vm.version}` +
@@ -671,28 +715,28 @@ Defaults to: `${java.vm.version}` +
 
 
 [[quarkus.btrt.my-enum]]
-`quarkus.btrt.my-enum`📦:: Enum object
+`quarkus.btrt.my-enum`📦:: Enum object 
 +
 Type: `io.quarkus.extest.runtime.config.MyEnum` +
 
 
 
 [[quarkus.btrt.my-enums]]
-`quarkus.btrt.my-enums`📦:: Enum list of objects
+`quarkus.btrt.my-enums`📦:: Enum list of objects 
 +
 Type: `io.quarkus.extest.runtime.config.MyEnum` +
 
 
 
 [[quarkus.rt.rt-string-opt]]
-`quarkus.rt.rt-string-opt`⚙️:: A run time object
+`quarkus.rt.rt-string-opt`⚙️:: A run time object 
 +
 Type: `java.lang.String` +
 
 
 
 [[quarkus.rt.rt-string-opt-with-default]]
-`quarkus.rt.rt-string-opt-with-default`⚙️:: A run time object with default value
+`quarkus.rt.rt-string-opt-with-default`⚙️:: A run time object with default value 
 +
 Type: `java.lang.String` +
 Defaults to: `rtStringOptWithDefaultValue` +
@@ -700,7 +744,7 @@ Defaults to: `rtStringOptWithDefaultValue` +
 
 
 [[quarkus.rt.all-values.long-primitive]]
-`quarkus.rt.all-values.long-primitive`⚙️:: a long primitive
+`quarkus.rt.all-values.long-primitive`⚙️:: a long primitive 
 +
 Type: `long` +
 Defaults to: `0l` +
@@ -708,7 +752,7 @@ Defaults to: `0l` +
 
 
 [[quarkus.rt.all-values.double-primitive]]
-`quarkus.rt.all-values.double-primitive`⚙️:: a double primitive
+`quarkus.rt.all-values.double-primitive`⚙️:: a double primitive 
 +
 Type: `double` +
 Defaults to: `0d` +
@@ -716,42 +760,42 @@ Defaults to: `0d` +
 
 
 [[quarkus.rt.all-values.long-value]]
-`quarkus.rt.all-values.long-value`⚙️:: a long value
+`quarkus.rt.all-values.long-value`⚙️:: a long value 
 +
 Type: `java.lang.Long` +
 
 
 
 [[quarkus.rt.all-values.opt-long-value]]
-`quarkus.rt.all-values.opt-long-value`⚙️:: an optional long value
+`quarkus.rt.all-values.opt-long-value`⚙️:: an optional long value 
 +
 Type: `java.lang.Long` +
 
 
 
 [[quarkus.rt.all-values.opt-double-value]]
-`quarkus.rt.all-values.opt-double-value`⚙️:: an optional double value
+`quarkus.rt.all-values.opt-double-value`⚙️:: an optional double value 
 +
 Type: `java.lang.Double` +
 
 
 
 [[quarkus.rt.all-values.optional-long-value]]
-`quarkus.rt.all-values.optional-long-value`⚙️:: an optional long value
+`quarkus.rt.all-values.optional-long-value`⚙️:: an optional long value 
 +
 Type: `java.lang.Long` +
 
 
 
 [[quarkus.rt.all-values.oov]]
-`quarkus.rt.all-values.oov`⚙️:: A config object with a static of(String) method
+`quarkus.rt.all-values.oov`⚙️:: A config object with a static of(String) method 
 +
 Type: `io.quarkus.extest.runtime.config.ObjectOfValue` +
 
 
 
 [[quarkus.rt.all-values.oov-with-default]]
-`quarkus.rt.all-values.oov-with-default`⚙️:: A config object with a static of(String) method and default value
+`quarkus.rt.all-values.oov-with-default`⚙️:: A config object with a static of(String) method and default value 
 +
 Type: `io.quarkus.extest.runtime.config.ObjectOfValue` +
 Defaults to: `defaultPart1+defaultPart2` +
@@ -759,14 +803,14 @@ Defaults to: `defaultPart1+defaultPart2` +
 
 
 [[quarkus.rt.all-values.ovo]]
-`quarkus.rt.all-values.ovo`⚙️:: A config object with a static valueOf(String) method
+`quarkus.rt.all-values.ovo`⚙️:: A config object with a static valueOf(String) method 
 +
 Type: `io.quarkus.extest.runtime.config.ObjectValueOf` +
 
 
 
 [[quarkus.rt.all-values.ovo-with-default]]
-`quarkus.rt.all-values.ovo-with-default`⚙️:: A config object with a static of(String) method and default value
+`quarkus.rt.all-values.ovo-with-default`⚙️:: A config object with a static of(String) method and default value 
 +
 Type: `io.quarkus.extest.runtime.config.ObjectValueOf` +
 Defaults to: `defaultPart1+defaultPart2` +
@@ -774,21 +818,21 @@ Defaults to: `defaultPart1+defaultPart2` +
 
 
 [[quarkus.rt.all-values.string-list]]
-`quarkus.rt.all-values.string-list`⚙️:: A List of string values
+`quarkus.rt.all-values.string-list`⚙️:: A List of string values 
 +
 Type: `java.lang.String` +
 
 
 
 [[quarkus.rt.all-values.long-list]]
-`quarkus.rt.all-values.long-list`⚙️:: A List of long values
+`quarkus.rt.all-values.long-list`⚙️:: A List of long values 
 +
 Type: `java.lang.Long` +
 
 
 
 [[quarkus.rt.all-values.expanded-default]]
-`quarkus.rt.all-values.expanded-default`⚙️:: A configuration item that has a default value that is an expression
+`quarkus.rt.all-values.expanded-default`⚙️:: A configuration item that has a default value that is an expression 
 +
 Type: `java.lang.String` +
 Defaults to: `${java.vm.version}` +
@@ -796,42 +840,42 @@ Defaults to: `${java.vm.version}` +
 
 
 [[quarkus.rt.my-enum]]
-`quarkus.rt.my-enum`⚙️:: Enum object
+`quarkus.rt.my-enum`⚙️:: Enum object 
 +
 Type: `io.quarkus.extest.runtime.config.MyEnum` +
 
 
 
 [[quarkus.rt.my-enums]]
-`quarkus.rt.my-enums`⚙️:: Enum list of objects
+`quarkus.rt.my-enums`⚙️:: Enum list of objects 
 +
 Type: `io.quarkus.extest.runtime.config.MyEnum` +
 
 
 
 [[quarkus.rt.my-optional-enums]]
-`quarkus.rt.my-optional-enums`⚙️:: Enum optional value
+`quarkus.rt.my-optional-enums`⚙️:: Enum optional value 
 +
 Type: `io.quarkus.extest.runtime.config.MyEnum` +
 
 
 
 [[quarkus.rt.no-hyphenate-first-enum]]
-`quarkus.rt.no-hyphenate-first-enum`⚙️:: No hyphenation
+`quarkus.rt.no-hyphenate-first-enum`⚙️:: No hyphenation 
 +
 Type: `io.quarkus.extest.runtime.config.MyEnum` +
 
 
 
 [[quarkus.rt.no-hyphenate-second-enum]]
-`quarkus.rt.no-hyphenate-second-enum`⚙️:: No hyphenation
+`quarkus.rt.no-hyphenate-second-enum`⚙️:: No hyphenation 
 +
 Type: `io.quarkus.extest.runtime.config.MyEnum` +
 
 
 
 [[quarkus.rt.primitive-boolean]]
-`quarkus.rt.primitive-boolean`⚙️:: Primitive boolean conversion with `ConvertWith`
+`quarkus.rt.primitive-boolean`⚙️:: Primitive boolean conversion with `ConvertWith` 
 +
 Type: `boolean` +
 Defaults to: `NO` +
@@ -839,7 +883,7 @@ Defaults to: `NO` +
 
 
 [[quarkus.rt.object-boolean]]
-`quarkus.rt.object-boolean`⚙️:: Boolean conversion with `ConvertWith`
+`quarkus.rt.object-boolean`⚙️:: Boolean conversion with `ConvertWith` 
 +
 Type: `java.lang.Boolean` +
 Defaults to: `NO` +
@@ -847,7 +891,7 @@ Defaults to: `NO` +
 
 
 [[quarkus.rt.primitive-integer]]
-`quarkus.rt.primitive-integer`⚙️:: Primitive int conversion with `ConvertWith`
+`quarkus.rt.primitive-integer`⚙️:: Primitive int conversion with `ConvertWith` 
 +
 Type: `int` +
 Defaults to: `zero` +
@@ -855,7 +899,7 @@ Defaults to: `zero` +
 
 
 [[quarkus.rt.object-integer]]
-`quarkus.rt.object-integer`⚙️:: Integer conversion with `ConvertWith`
+`quarkus.rt.object-integer`⚙️:: Integer conversion with `ConvertWith` 
 +
 Type: `java.lang.Integer` +
 Defaults to: `zero` +
@@ -863,7 +907,7 @@ Defaults to: `zero` +
 
 
 [[quarkus.rt.one-to-nine]]
-`quarkus.rt.one-to-nine`⚙️:: List of Integer conversion with `ConvertWith`
+`quarkus.rt.one-to-nine`⚙️:: List of Integer conversion with `ConvertWith` 
 +
 Type: `java.lang.Integer` +
 Defaults to: `one` +
@@ -871,112 +915,112 @@ Defaults to: `one` +
 
 
 [[quarkus.rt.string-map.string-map]]
-`quarkus.rt.string-map."<string-map>"`⚙️:: A map of properties
+`quarkus.rt.string-map."<string-map>"`⚙️:: A map of properties 
 +
 Type: `java.lang.String` +
 
 
 
 [[quarkus.rt.string-list-map.string-list-map]]
-`quarkus.rt.string-list-map."<string-list-map>"`⚙️:: A map of property lists
+`quarkus.rt.string-list-map."<string-list-map>"`⚙️:: A map of property lists 
 +
 Type: `java.util.List<java.lang.String>` +
 
 
 
 [[quarkus.rt.all-values.nested-config-map.nested-config-map.nested-value]]
-`quarkus.rt.all-values.nested-config-map."<nested-config-map>".nested-value`⚙️:: A nested string value
+`quarkus.rt.all-values.nested-config-map."<nested-config-map>".nested-value`⚙️:: A nested string value 
 +
 Type: `java.lang.String` +
 
 
 
 [[quarkus.rt.all-values.nested-config-map.nested-config-map.oov]]
-`quarkus.rt.all-values.nested-config-map."<nested-config-map>".oov`⚙️:: A nested ObjectOfValue value
+`quarkus.rt.all-values.nested-config-map."<nested-config-map>".oov`⚙️:: A nested ObjectOfValue value 
 +
 Type: `io.quarkus.extest.runtime.config.ObjectOfValue` +
 
 
 
 [[quarkus.rt.all-values.string-map.string-map]]
-`quarkus.rt.all-values.string-map."<string-map>"`⚙️:: A map of properties
+`quarkus.rt.all-values.string-map."<string-map>"`⚙️:: A map of properties 
 +
 Type: `java.lang.String` +
 
 
 
 [[quarkus.rt.all-values.string-list-map.string-list-map]]
-`quarkus.rt.all-values.string-list-map."<string-list-map>"`⚙️:: A map of property lists
+`quarkus.rt.all-values.string-list-map."<string-list-map>"`⚙️:: A map of property lists 
 +
 Type: `java.util.List<java.lang.String>` +
 
 
 
 [[quarkus.rt.map-of-numbers.map-of-numbers]]
-`quarkus.rt.map-of-numbers."<map-of-numbers>"`⚙️:: Map of Integer conversion with `ConvertWith`
+`quarkus.rt.map-of-numbers."<map-of-numbers>"`⚙️:: Map of Integer conversion with `ConvertWith` 
 +
 Type: `java.lang.Integer` +
 
 
 
 [[quarkus.btrt.all-values.nested-config-map.nested-config-map.nested-value]]
-`quarkus.btrt.all-values.nested-config-map."<nested-config-map>".nested-value`📦:: A nested string value
+`quarkus.btrt.all-values.nested-config-map."<nested-config-map>".nested-value`📦:: A nested string value 
 +
 Type: `java.lang.String` +
 
 
 
 [[quarkus.btrt.all-values.nested-config-map.nested-config-map.oov]]
-`quarkus.btrt.all-values.nested-config-map."<nested-config-map>".oov`📦:: A nested ObjectOfValue value
+`quarkus.btrt.all-values.nested-config-map."<nested-config-map>".oov`📦:: A nested ObjectOfValue value 
 +
 Type: `io.quarkus.extest.runtime.config.ObjectOfValue` +
 
 
 
 [[quarkus.btrt.all-values.string-map.string-map]]
-`quarkus.btrt.all-values.string-map."<string-map>"`📦:: A map of properties
+`quarkus.btrt.all-values.string-map."<string-map>"`📦:: A map of properties 
 +
 Type: `java.lang.String` +
 
 
 
 [[quarkus.btrt.all-values.string-list-map.string-list-map]]
-`quarkus.btrt.all-values.string-list-map."<string-list-map>"`📦:: A map of property lists
+`quarkus.btrt.all-values.string-list-map."<string-list-map>"`📦:: A map of property lists 
 +
 Type: `java.util.List<java.lang.String>` +
 
 
 
 [[quarkus.btrt.map-of-numbers.map-of-numbers]]
-`quarkus.btrt.map-of-numbers."<map-of-numbers>"`📦:: Map of Integer conversion with `ConvertWith`
+`quarkus.btrt.map-of-numbers."<map-of-numbers>"`📦:: Map of Integer conversion with `ConvertWith` 
 +
 Type: `java.lang.Integer` +
 
 
 
 [[quarkus.bt.all-values.nested-config-map.nested-config-map.nested-value]]
-`quarkus.bt.all-values.nested-config-map."<nested-config-map>".nested-value`📦:: A nested string value
+`quarkus.bt.all-values.nested-config-map."<nested-config-map>".nested-value`📦:: A nested string value 
 +
 Type: `java.lang.String` +
 
 
 
 [[quarkus.bt.all-values.nested-config-map.nested-config-map.oov]]
-`quarkus.bt.all-values.nested-config-map."<nested-config-map>".oov`📦:: A nested ObjectOfValue value
+`quarkus.bt.all-values.nested-config-map."<nested-config-map>".oov`📦:: A nested ObjectOfValue value 
 +
 Type: `io.quarkus.extest.runtime.config.ObjectOfValue` +
 
 
 
 [[quarkus.bt.all-values.string-map.string-map]]
-`quarkus.bt.all-values.string-map."<string-map>"`📦:: A map of properties
+`quarkus.bt.all-values.string-map."<string-map>"`📦:: A map of properties 
 +
 Type: `java.lang.String` +
 
 
 
 [[quarkus.bt.all-values.string-list-map.string-list-map]]
-`quarkus.bt.all-values.string-list-map."<string-list-map>"`📦:: A map of property lists
+`quarkus.bt.all-values.string-list-map."<string-list-map>"`📦:: A map of property lists 
 +
 Type: `java.util.List<java.lang.String>` +
 

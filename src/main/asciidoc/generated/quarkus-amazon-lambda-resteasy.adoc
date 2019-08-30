@@ -6,7 +6,7 @@
 
 |<<quarkus.amazon-lambda-resteasy.debug, quarkus.amazon-lambda-resteasy.debug>>
 |boolean 
-|false
+|`false`
 | 📦
 |===
 
@@ -14,7 +14,7 @@
 == Details
 
 [[quarkus.amazon-lambda-resteasy.debug]]
-`quarkus.amazon-lambda-resteasy.debug`📦:: Indicates if we are in debug mode.
+`quarkus.amazon-lambda-resteasy.debug`📦:: Indicates if we are in debug mode. 
 +
 Type: `boolean` +
 Defaults to: `false` +

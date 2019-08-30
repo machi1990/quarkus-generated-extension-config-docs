@@ -5,12 +5,14 @@
 |Configuration property|Type|Default|Lifecycle
 
 |<<quarkus.hot-reload.password, quarkus.hot-reload.password>>
-|String 
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
+ 
 |
 | 📦
 
 |<<quarkus.hot-reload.url, quarkus.hot-reload.url>>
-|String 
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
+ 
 |
 | 📦
 |===
@@ -19,14 +21,14 @@
 == Details
 
 [[quarkus.hot-reload.password]]
-`quarkus.hot-reload.password`📦:: 
+`quarkus.hot-reload.password`📦::  
 +
 Type: `java.lang.String` +
 
 
 
 [[quarkus.hot-reload.url]]
-`quarkus.hot-reload.url`📦:: 
+`quarkus.hot-reload.url`📦::  
 +
 Type: `java.lang.String` +
 

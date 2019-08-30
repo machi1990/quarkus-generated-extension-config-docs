@@ -5,18 +5,21 @@
 |Configuration property|Type|Default|Lifecycle
 
 |<<quarkus.smallrye-health.root-path, quarkus.smallrye-health.root-path>>
-|String 
-|/health
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
+ 
+|`/health`
 | 📦
 
 |<<quarkus.smallrye-health.liveness-path, quarkus.smallrye-health.liveness-path>>
-|String 
-|/live
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
+ 
+|`/live`
 | 📦
 
 |<<quarkus.smallrye-health.readiness-path, quarkus.smallrye-health.readiness-path>>
-|String 
-|/ready
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
+ 
+|`/ready`
 | 📦
 |===
 
@@ -24,7 +27,7 @@
 == Details
 
 [[quarkus.smallrye-health.root-path]]
-`quarkus.smallrye-health.root-path`📦:: Root path for health-checking servlets.
+`quarkus.smallrye-health.root-path`📦:: Root path for health-checking servlets. 
 +
 Type: `java.lang.String` +
 Defaults to: `/health` +
@@ -32,7 +35,7 @@ Defaults to: `/health` +
 
 
 [[quarkus.smallrye-health.liveness-path]]
-`quarkus.smallrye-health.liveness-path`📦:: The relative path of the liveness health-checking servlet.
+`quarkus.smallrye-health.liveness-path`📦:: The relative path of the liveness health-checking servlet. 
 +
 Type: `java.lang.String` +
 Defaults to: `/live` +
@@ -40,7 +43,7 @@ Defaults to: `/live` +
 
 
 [[quarkus.smallrye-health.readiness-path]]
-`quarkus.smallrye-health.readiness-path`📦:: The relative path of the readiness health-checking servlet.
+`quarkus.smallrye-health.readiness-path`📦:: The relative path of the readiness health-checking servlet. 
 +
 Type: `java.lang.String` +
 Defaults to: `/ready` +

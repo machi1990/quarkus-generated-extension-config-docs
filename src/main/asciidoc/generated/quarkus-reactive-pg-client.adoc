@@ -5,32 +5,38 @@
 |Configuration property|Type|Default|Lifecycle
 
 |<<quarkus.reactive-pg-client.cache-prepared-statements, quarkus.reactive-pg-client.cache-prepared-statements>>
-|Boolean 
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html[Boolean]
+ 
 |
 | ⚙️
 
 |<<quarkus.reactive-pg-client.pipelining-limit, quarkus.reactive-pg-client.pipelining-limit>>
-|Integer 
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html[Integer]
+ 
 |
 | ⚙️
 
 |<<quarkus.datasource.url, quarkus.datasource.url>>
-|String 
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
+ 
 |
 | ⚙️
 
 |<<quarkus.datasource.username, quarkus.datasource.username>>
-|String 
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
+ 
 |
 | ⚙️
 
 |<<quarkus.datasource.password, quarkus.datasource.password>>
-|String 
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
+ 
 |
 | ⚙️
 
 |<<quarkus.datasource.max-size, quarkus.datasource.max-size>>
-|Integer 
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html[Integer]
+ 
 |
 | ⚙️
 |===
@@ -39,42 +45,42 @@
 == Details
 
 [[quarkus.reactive-pg-client.cache-prepared-statements]]
-`quarkus.reactive-pg-client.cache-prepared-statements`⚙️:: Whether prepared statements should be cached on the client side.
+`quarkus.reactive-pg-client.cache-prepared-statements`⚙️:: Whether prepared statements should be cached on the client side. 
 +
 Type: `java.lang.Boolean` +
 
 
 
 [[quarkus.reactive-pg-client.pipelining-limit]]
-`quarkus.reactive-pg-client.pipelining-limit`⚙️:: The maximum number of inflight database commands that can be pipelined.
+`quarkus.reactive-pg-client.pipelining-limit`⚙️:: The maximum number of inflight database commands that can be pipelined. 
 +
 Type: `java.lang.Integer` +
 
 
 
 [[quarkus.datasource.url]]
-`quarkus.datasource.url`⚙️:: The datasource URL.
+`quarkus.datasource.url`⚙️:: The datasource URL. 
 +
 Type: `java.lang.String` +
 
 
 
 [[quarkus.datasource.username]]
-`quarkus.datasource.username`⚙️:: The datasource username.
+`quarkus.datasource.username`⚙️:: The datasource username. 
 +
 Type: `java.lang.String` +
 
 
 
 [[quarkus.datasource.password]]
-`quarkus.datasource.password`⚙️:: The datasource password.
+`quarkus.datasource.password`⚙️:: The datasource password. 
 +
 Type: `java.lang.String` +
 
 
 
 [[quarkus.datasource.max-size]]
-`quarkus.datasource.max-size`⚙️:: The datasource pool maximum size.
+`quarkus.datasource.max-size`⚙️:: The datasource pool maximum size. 
 +
 Type: `java.lang.Integer` +
 

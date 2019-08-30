@@ -5,13 +5,14 @@
 |Configuration property|Type|Default|Lifecycle
 
 |<<quarkus.jni.library-paths, quarkus.jni.library-paths>>
-|String 
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
+ 
 |
 | 📦
 
 |<<quarkus.jni.enable, quarkus.jni.enable>>
 |boolean 
-|false
+|`false`
 | 📦
 |===
 
@@ -19,14 +20,14 @@
 == Details
 
 [[quarkus.jni.library-paths]]
-`quarkus.jni.library-paths`📦:: Paths of library to load.
+`quarkus.jni.library-paths`📦:: Paths of library to load. 
 +
 Type: `java.lang.String` +
 
 
 
 [[quarkus.jni.enable]]
-`quarkus.jni.enable`📦:: Enable JNI support.
+`quarkus.jni.enable`📦:: Enable JNI support. 
 +
 Type: `boolean` +
 Defaults to: `false` +

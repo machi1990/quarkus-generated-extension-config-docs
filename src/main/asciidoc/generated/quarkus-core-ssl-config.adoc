@@ -5,7 +5,8 @@
 |Configuration property|Type|Default|Lifecycle
 
 |<<quarkus.ssl.native, quarkus.ssl.native>>
-|Boolean 
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html[Boolean]
+ 
 |
 | 📦
 |===
@@ -14,7 +15,7 @@
 == Details
 
 [[quarkus.ssl.native]]
-`quarkus.ssl.native`📦:: Enable native SSL support.
+`quarkus.ssl.native`📦:: Enable native SSL support. 
 +
 Type: `java.lang.Boolean` +
 

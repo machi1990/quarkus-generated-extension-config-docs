@@ -6,32 +6,37 @@
 
 |<<quarkus.oauth2.enabled, quarkus.oauth2.enabled>>
 |boolean 
-|true
+|`true`
 | 📦
 
 |<<quarkus.oauth2.client-id, quarkus.oauth2.client-id>>
-|String 
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
+ 
 |
 | 📦
 
 |<<quarkus.oauth2.client-secret, quarkus.oauth2.client-secret>>
-|String 
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
+ 
 |
 | 📦
 
 |<<quarkus.oauth2.introspection-url, quarkus.oauth2.introspection-url>>
-|String 
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
+ 
 |
 | 📦
 
 |<<quarkus.oauth2.ca-cert-file, quarkus.oauth2.ca-cert-file>>
-|String 
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
+ 
 |
 | 📦
 
 |<<quarkus.oauth2.role-claim, quarkus.oauth2.role-claim>>
-|String 
-|scope
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
+ 
+|`scope`
 | 📦
 |===
 
@@ -39,7 +44,7 @@
 == Details
 
 [[quarkus.oauth2.enabled]]
-`quarkus.oauth2.enabled`📦:: If the OAuth2 extension is enabled.
+`quarkus.oauth2.enabled`📦:: If the OAuth2 extension is enabled. 
 +
 Type: `boolean` +
 Defaults to: `true` +
@@ -47,35 +52,35 @@ Defaults to: `true` +
 
 
 [[quarkus.oauth2.client-id]]
-`quarkus.oauth2.client-id`📦:: The identifier of the client on the OAuth2 Authorization Server
+`quarkus.oauth2.client-id`📦:: The identifier of the client on the OAuth2 Authorization Server 
 +
 Type: `java.lang.String` +
 
 
 
 [[quarkus.oauth2.client-secret]]
-`quarkus.oauth2.client-secret`📦:: The secret of the client
+`quarkus.oauth2.client-secret`📦:: The secret of the client 
 +
 Type: `java.lang.String` +
 
 
 
 [[quarkus.oauth2.introspection-url]]
-`quarkus.oauth2.introspection-url`📦:: The URL of token introspection endpoint
+`quarkus.oauth2.introspection-url`📦:: The URL of token introspection endpoint 
 +
 Type: `java.lang.String` +
 
 
 
 [[quarkus.oauth2.ca-cert-file]]
-`quarkus.oauth2.ca-cert-file`📦:: The path to a custom cert file This is not supported in native mode
+`quarkus.oauth2.ca-cert-file`📦:: The path to a custom cert file This is not supported in native mode 
 +
 Type: `java.lang.String` +
 
 
 
 [[quarkus.oauth2.role-claim]]
-`quarkus.oauth2.role-claim`📦:: The claim that provides the roles
+`quarkus.oauth2.role-claim`📦:: The claim that provides the roles 
 +
 Type: `java.lang.String` +
 Defaults to: `scope` +

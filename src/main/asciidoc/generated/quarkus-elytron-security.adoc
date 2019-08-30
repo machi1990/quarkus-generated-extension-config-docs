@@ -5,57 +5,66 @@
 |Configuration property|Type|Default|Lifecycle
 
 |<<quarkus.security.file.auth-mechanism, quarkus.security.file.auth-mechanism>>
-|String 
-|BASIC
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
+ 
+|`BASIC`
 | 📦
 
 |<<quarkus.security.file.realm-name, quarkus.security.file.realm-name>>
-|String 
-|Quarkus
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
+ 
+|`Quarkus`
 | 📦
 
 |<<quarkus.security.file.enabled, quarkus.security.file.enabled>>
 |boolean 
-|false
+|`false`
 | 📦
 
 |<<quarkus.security.file.users, quarkus.security.file.users>>
-|String 
-|users.properties
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
+ 
+|`users.properties`
 | 📦
 
 |<<quarkus.security.file.roles, quarkus.security.file.roles>>
-|String 
-|roles.properties
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
+ 
+|`roles.properties`
 | 📦
 
 |<<quarkus.security.embedded.auth-mechanism, quarkus.security.embedded.auth-mechanism>>
-|String 
-|BASIC
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
+ 
+|`BASIC`
 | 📦
 
 |<<quarkus.security.embedded.realm-name, quarkus.security.embedded.realm-name>>
-|String 
-|Quarkus
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
+ 
+|`Quarkus`
 | 📦
 
 |<<quarkus.security.embedded.enabled, quarkus.security.embedded.enabled>>
 |boolean 
-|false
+|`false`
 | 📦
 
 |<<quarkus.security.security-providers, quarkus.security.security-providers>>
-|String 
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
+ 
 |
 | 📦
 
 |<<quarkus.security.embedded.users.users, quarkus.security.embedded.users."<users>">>
-|String 
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
+ 
 |
 | 📦
 
 |<<quarkus.security.embedded.roles.roles, quarkus.security.embedded.roles."<roles>">>
-|String 
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
+ 
 |
 | 📦
 |===
@@ -64,7 +73,7 @@
 == Details
 
 [[quarkus.security.file.auth-mechanism]]
-`quarkus.security.file.auth-mechanism`📦:: The authentication mechanism
+`quarkus.security.file.auth-mechanism`📦:: The authentication mechanism 
 +
 Type: `java.lang.String` +
 Defaults to: `BASIC` +
@@ -72,7 +81,7 @@ Defaults to: `BASIC` +
 
 
 [[quarkus.security.file.realm-name]]
-`quarkus.security.file.realm-name`📦:: The authentication mechanism
+`quarkus.security.file.realm-name`📦:: The authentication mechanism 
 +
 Type: `java.lang.String` +
 Defaults to: `Quarkus` +
@@ -80,7 +89,7 @@ Defaults to: `Quarkus` +
 
 
 [[quarkus.security.file.enabled]]
-`quarkus.security.file.enabled`📦:: If the properties store is enabled.
+`quarkus.security.file.enabled`📦:: If the properties store is enabled. 
 +
 Type: `boolean` +
 Defaults to: `false` +
@@ -88,7 +97,7 @@ Defaults to: `false` +
 
 
 [[quarkus.security.file.users]]
-`quarkus.security.file.users`📦:: The location of the users property resource
+`quarkus.security.file.users`📦:: The location of the users property resource 
 +
 Type: `java.lang.String` +
 Defaults to: `users.properties` +
@@ -96,7 +105,7 @@ Defaults to: `users.properties` +
 
 
 [[quarkus.security.file.roles]]
-`quarkus.security.file.roles`📦:: The location of the roles property file
+`quarkus.security.file.roles`📦:: The location of the roles property file 
 +
 Type: `java.lang.String` +
 Defaults to: `roles.properties` +
@@ -104,7 +113,7 @@ Defaults to: `roles.properties` +
 
 
 [[quarkus.security.embedded.auth-mechanism]]
-`quarkus.security.embedded.auth-mechanism`📦:: The authentication mechanism
+`quarkus.security.embedded.auth-mechanism`📦:: The authentication mechanism 
 +
 Type: `java.lang.String` +
 Defaults to: `BASIC` +
@@ -112,7 +121,7 @@ Defaults to: `BASIC` +
 
 
 [[quarkus.security.embedded.realm-name]]
-`quarkus.security.embedded.realm-name`📦:: The authentication mechanism
+`quarkus.security.embedded.realm-name`📦:: The authentication mechanism 
 +
 Type: `java.lang.String` +
 Defaults to: `Quarkus` +
@@ -120,7 +129,7 @@ Defaults to: `Quarkus` +
 
 
 [[quarkus.security.embedded.enabled]]
-`quarkus.security.embedded.enabled`📦:: If the embedded store is enabled.
+`quarkus.security.embedded.enabled`📦:: If the embedded store is enabled. 
 +
 Type: `boolean` +
 Defaults to: `false` +
@@ -128,21 +137,21 @@ Defaults to: `false` +
 
 
 [[quarkus.security.security-providers]]
-`quarkus.security.security-providers`📦:: List of security providers to enable for reflection
+`quarkus.security.security-providers`📦:: List of security providers to enable for reflection 
 +
 Type: `java.lang.String` +
 
 
 
 [[quarkus.security.embedded.users.users]]
-`quarkus.security.embedded.users."<users>"`📦:: The realm users user1=password\nuser2=password2... mapping
+`quarkus.security.embedded.users."<users>"`📦:: The realm users user1=password\nuser2=password2... mapping 
 +
 Type: `java.lang.String` +
 
 
 
 [[quarkus.security.embedded.roles.roles]]
-`quarkus.security.embedded.roles."<roles>"`📦:: The realm roles user1=role1,role2,...\nuser2=role1,role2,... mapping
+`quarkus.security.embedded.roles."<roles>"`📦:: The realm roles user1=role1,role2,...\nuser2=role1,role2,... mapping 
 +
 Type: `java.lang.String` +
 

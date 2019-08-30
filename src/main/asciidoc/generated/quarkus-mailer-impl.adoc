@@ -5,92 +5,106 @@
 |Configuration property|Type|Default|Lifecycle
 
 |<<quarkus.mailer.from, quarkus.mailer.from>>
-|String 
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
+ 
 |
 | ⚙️
 
 |<<quarkus.mailer.mock, quarkus.mailer.mock>>
-|Boolean 
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html[Boolean]
+ 
 |
 | ⚙️
 
 |<<quarkus.mailer.bounce-address, quarkus.mailer.bounce-address>>
-|String 
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
+ 
 |
 | ⚙️
 
 |<<quarkus.mailer.host, quarkus.mailer.host>>
-|String 
-|localhost
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
+ 
+|`localhost`
 | ⚙️
 
 |<<quarkus.mailer.port, quarkus.mailer.port>>
-|Integer 
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html[Integer]
+ 
 |
 | ⚙️
 
 |<<quarkus.mailer.username, quarkus.mailer.username>>
-|String 
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
+ 
 |
 | ⚙️
 
 |<<quarkus.mailer.password, quarkus.mailer.password>>
-|String 
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
+ 
 |
 | ⚙️
 
 |<<quarkus.mailer.ssl, quarkus.mailer.ssl>>
 |boolean 
-|false
+|`false`
 | ⚙️
 
 |<<quarkus.mailer.trust-all, quarkus.mailer.trust-all>>
 |boolean 
-|false
+|`false`
 | ⚙️
 
 |<<quarkus.mailer.max-pool-size, quarkus.mailer.max-pool-size>>
-|Integer 
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html[Integer]
+ 
 |
 | ⚙️
 
 |<<quarkus.mailer.own-host-name, quarkus.mailer.own-host-name>>
-|String 
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
+ 
 |
 | ⚙️
 
 |<<quarkus.mailer.keep-alive, quarkus.mailer.keep-alive>>
 |boolean 
-|true
+|`true`
 | ⚙️
 
 |<<quarkus.mailer.disable-esmtp, quarkus.mailer.disable-esmtp>>
 |boolean 
-|false
+|`false`
 | ⚙️
 
 |<<quarkus.mailer.start-tls, quarkus.mailer.start-tls>>
-|String 
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
+ 
 |
 | ⚙️
 
 |<<quarkus.mailer.login, quarkus.mailer.login>>
-|String 
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
+ 
 |
 | ⚙️
 
 |<<quarkus.mailer.auth-methods, quarkus.mailer.auth-methods>>
-|String 
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
+ 
 |
 | ⚙️
 
 |<<quarkus.mailer.key-store, quarkus.mailer.key-store>>
-|String 
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
+ 
 |
 | ⚙️
 
 |<<quarkus.mailer.key-store-password, quarkus.mailer.key-store-password>>
-|String 
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
+ 
 |
 | ⚙️
 |===
@@ -99,7 +113,7 @@
 == Details
 
 [[quarkus.mailer.from]]
-`quarkus.mailer.from`⚙️:: Configure the default `from` attribute. It's the sender email address.
+`quarkus.mailer.from`⚙️:: Configure the default `from` attribute. It's the sender email address. 
 +
 Type: `java.lang.String` +
 
@@ -107,21 +121,21 @@ Type: `java.lang.String` +
 
 [[quarkus.mailer.mock]]
 `quarkus.mailer.mock`⚙️:: Enables the mock mode, not sending emails. The content of the emails is printed on the console. 
- Disabled by default on PROD, enabled by default on DEV and TEST modes.
+ Disabled by default on PROD, enabled by default on DEV and TEST modes. 
 +
 Type: `java.lang.Boolean` +
 
 
 
 [[quarkus.mailer.bounce-address]]
-`quarkus.mailer.bounce-address`⚙️:: Configures the default bounce email address.
+`quarkus.mailer.bounce-address`⚙️:: Configures the default bounce email address. 
 +
 Type: `java.lang.String` +
 
 
 
 [[quarkus.mailer.host]]
-`quarkus.mailer.host`⚙️:: The SMTP host name.
+`quarkus.mailer.host`⚙️:: The SMTP host name. 
 +
 Type: `java.lang.String` +
 Defaults to: `localhost` +
@@ -129,28 +143,28 @@ Defaults to: `localhost` +
 
 
 [[quarkus.mailer.port]]
-`quarkus.mailer.port`⚙️:: The SMTP port.
+`quarkus.mailer.port`⚙️:: The SMTP port. 
 +
 Type: `java.lang.Integer` +
 
 
 
 [[quarkus.mailer.username]]
-`quarkus.mailer.username`⚙️:: The username.
+`quarkus.mailer.username`⚙️:: The username. 
 +
 Type: `java.lang.String` +
 
 
 
 [[quarkus.mailer.password]]
-`quarkus.mailer.password`⚙️:: The password.
+`quarkus.mailer.password`⚙️:: The password. 
 +
 Type: `java.lang.String` +
 
 
 
 [[quarkus.mailer.ssl]]
-`quarkus.mailer.ssl`⚙️:: Enables or disables the SSL on connect. `false` by default.
+`quarkus.mailer.ssl`⚙️:: Enables or disables the SSL on connect. `false` by default. 
 +
 Type: `boolean` +
 Defaults to: `false` +
@@ -158,7 +172,7 @@ Defaults to: `false` +
 
 
 [[quarkus.mailer.trust-all]]
-`quarkus.mailer.trust-all`⚙️:: Set whether to trust all certificates on ssl connect the option is also applied to `STARTTLS` operation. `false` by default.
+`quarkus.mailer.trust-all`⚙️:: Set whether to trust all certificates on ssl connect the option is also applied to `STARTTLS` operation. `false` by default. 
 +
 Type: `boolean` +
 Defaults to: `false` +
@@ -166,14 +180,14 @@ Defaults to: `false` +
 
 
 [[quarkus.mailer.max-pool-size]]
-`quarkus.mailer.max-pool-size`⚙️:: Configures the maximum allowed number of open connections to the mail server If not set the default is `10`.
+`quarkus.mailer.max-pool-size`⚙️:: Configures the maximum allowed number of open connections to the mail server If not set the default is `10`. 
 +
 Type: `java.lang.Integer` +
 
 
 
 [[quarkus.mailer.own-host-name]]
-`quarkus.mailer.own-host-name`⚙️:: The hostname to be used for HELO/EHLO and the Message-ID
+`quarkus.mailer.own-host-name`⚙️:: The hostname to be used for HELO/EHLO and the Message-ID 
 +
 Type: `java.lang.String` +
 
@@ -182,7 +196,7 @@ Type: `java.lang.String` +
 [[quarkus.mailer.keep-alive]]
 `quarkus.mailer.keep-alive`⚙️:: Set if connection pool is enabled, `true` by default. 
  If the connection pooling is disabled, the max number of sockets is enforced nevertheless. 
-
+ 
 +
 Type: `boolean` +
 Defaults to: `true` +
@@ -190,7 +204,7 @@ Defaults to: `true` +
 
 
 [[quarkus.mailer.disable-esmtp]]
-`quarkus.mailer.disable-esmtp`⚙️:: Disable ESMTP. `false` by default. The RFC-1869 states that clients should always attempt `EHLO` as first command to determine if ESMTP is supported, if this returns an error code, `HELO` is tried to use the *regular* SMTP command.
+`quarkus.mailer.disable-esmtp`⚙️:: Disable ESMTP. `false` by default. The RFC-1869 states that clients should always attempt `EHLO` as first command to determine if ESMTP is supported, if this returns an error code, `HELO` is tried to use the *regular* SMTP command. 
 +
 Type: `boolean` +
 Defaults to: `false` +
@@ -198,35 +212,35 @@ Defaults to: `false` +
 
 
 [[quarkus.mailer.start-tls]]
-`quarkus.mailer.start-tls`⚙️:: Set the TLS security mode for the connection. Either `NONE`, `OPTIONAL` or `REQUIRED`.
+`quarkus.mailer.start-tls`⚙️:: Set the TLS security mode for the connection. Either `DISABLED`, `OPTIONAL` or `REQUIRED`. 
 +
 Type: `java.lang.String` +
 
 
 
 [[quarkus.mailer.login]]
-`quarkus.mailer.login`⚙️:: Set the login mode for the connection. Either `DISABLED`, `OPTIONAL` or `REQUIRED`
+`quarkus.mailer.login`⚙️:: Set the login mode for the connection. Either `DISABLED`, `OPTIONAL` or `REQUIRED` 
 +
 Type: `java.lang.String` +
 
 
 
 [[quarkus.mailer.auth-methods]]
-`quarkus.mailer.auth-methods`⚙️:: Set the allowed auth methods. If defined, only these methods will be used, if the server supports them.
+`quarkus.mailer.auth-methods`⚙️:: Set the allowed auth methods. If defined, only these methods will be used, if the server supports them. 
 +
 Type: `java.lang.String` +
 
 
 
 [[quarkus.mailer.key-store]]
-`quarkus.mailer.key-store`⚙️:: Set the key store.
+`quarkus.mailer.key-store`⚙️:: Set the key store. 
 +
 Type: `java.lang.String` +
 
 
 
 [[quarkus.mailer.key-store-password]]
-`quarkus.mailer.key-store-password`⚙️:: Set the key store password.
+`quarkus.mailer.key-store-password`⚙️:: Set the key store password. 
 +
 Type: `java.lang.String` +
 

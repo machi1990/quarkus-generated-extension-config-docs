@@ -5,8 +5,9 @@
 |Configuration property|Type|Default|Lifecycle
 
 |<<quarkus.smallrye-openapi.path, quarkus.smallrye-openapi.path>>
-|String 
-|/openapi
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
+ 
+|`/openapi`
 | 📦
 |===
 
@@ -14,7 +15,7 @@
 == Details
 
 [[quarkus.smallrye-openapi.path]]
-`quarkus.smallrye-openapi.path`📦:: The path at which to register the OpenAPI Servlet.
+`quarkus.smallrye-openapi.path`📦:: The path at which to register the OpenAPI Servlet. 
 +
 Type: `java.lang.String` +
 Defaults to: `/openapi` +

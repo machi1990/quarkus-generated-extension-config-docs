@@ -5,23 +5,26 @@
 |Configuration property|Type|Default|Lifecycle
 
 |<<quarkus.smallrye-jwt.auth-mechanism, quarkus.smallrye-jwt.auth-mechanism>>
-|String 
-|MP-JWT
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
+ 
+|`MP-JWT`
 | 📦
 
 |<<quarkus.smallrye-jwt.realm-name, quarkus.smallrye-jwt.realm-name>>
-|String 
-|Quarkus-JWT
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
+ 
+|`Quarkus-JWT`
 | 📦
 
 |<<quarkus.smallrye-jwt.enabled, quarkus.smallrye-jwt.enabled>>
 |boolean 
-|true
+|`true`
 | 📦
 
 |<<quarkus.smallrye-jwt.rsa-sig-provider, quarkus.smallrye-jwt.rsa-sig-provider>>
-|String 
-|SunRsaSign
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
+ 
+|`SunRsaSign`
 | 📦
 |===
 
@@ -29,7 +32,7 @@
 == Details
 
 [[quarkus.smallrye-jwt.auth-mechanism]]
-`quarkus.smallrye-jwt.auth-mechanism`📦:: The authentication mechanism
+`quarkus.smallrye-jwt.auth-mechanism`📦:: The authentication mechanism 
 +
 Type: `java.lang.String` +
 Defaults to: `MP-JWT` +
@@ -37,7 +40,7 @@ Defaults to: `MP-JWT` +
 
 
 [[quarkus.smallrye-jwt.realm-name]]
-`quarkus.smallrye-jwt.realm-name`📦:: The authentication mechanism
+`quarkus.smallrye-jwt.realm-name`📦:: The authentication mechanism 
 +
 Type: `java.lang.String` +
 Defaults to: `Quarkus-JWT` +
@@ -45,7 +48,7 @@ Defaults to: `Quarkus-JWT` +
 
 
 [[quarkus.smallrye-jwt.enabled]]
-`quarkus.smallrye-jwt.enabled`📦:: The MP-JWT configuration object
+`quarkus.smallrye-jwt.enabled`📦:: The MP-JWT configuration object 
 +
 Type: `boolean` +
 Defaults to: `true` +
@@ -53,7 +56,7 @@ Defaults to: `true` +
 
 
 [[quarkus.smallrye-jwt.rsa-sig-provider]]
-`quarkus.smallrye-jwt.rsa-sig-provider`📦:: The name of the `java.security.Provider` that supports SHA256withRSA signatures
+`quarkus.smallrye-jwt.rsa-sig-provider`📦:: The name of the `java.security.Provider` that supports SHA256withRSA signatures 
 +
 Type: `java.lang.String` +
 Defaults to: `SunRsaSign` +

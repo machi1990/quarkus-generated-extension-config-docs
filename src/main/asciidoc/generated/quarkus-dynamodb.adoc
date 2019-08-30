@@ -1,0 +1,622 @@
+== Summary
+
+📦 Configuration property fixed at build time - ⚙️️ Configuration property overridable at runtime 
+|===
+|Configuration property|Type|Default|Lifecycle
+
+|<<quarkus.dynamodb.region, quarkus.dynamodb.region>>
+|Region 
+|
+| ⚙️
+
+|<<quarkus.dynamodb.enable-endpoint-discovery, quarkus.dynamodb.enable-endpoint-discovery>>
+|boolean 
+|`false`
+| ⚙️
+
+|<<quarkus.dynamodb.endpoint-override, quarkus.dynamodb.endpoint-override>>
+|link:https://docs.oracle.com/javase/8/docs/api/java/net/URI.html[URI]
+ 
+|
+| ⚙️
+
+|<<quarkus.dynamodb.credentials.type, quarkus.dynamodb.credentials.type>>
+|AwsCredentialsProviderType 
+|`DEFAULT`
+| ⚙️
+
+|<<quarkus.dynamodb.credentials.default-provider.async-credential-update-enabled, quarkus.dynamodb.credentials.default-provider.async-credential-update-enabled>>
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html[Boolean]
+ 
+|`false`
+| ⚙️
+
+|<<quarkus.dynamodb.credentials.default-provider.reuse-last-provider-enabled, quarkus.dynamodb.credentials.default-provider.reuse-last-provider-enabled>>
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html[Boolean]
+ 
+|`true`
+| ⚙️
+
+|<<quarkus.dynamodb.credentials.static-provider.access-key-id, quarkus.dynamodb.credentials.static-provider.access-key-id>>
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
+ 
+|
+| ⚙️
+
+|<<quarkus.dynamodb.credentials.static-provider.secret-access-key, quarkus.dynamodb.credentials.static-provider.secret-access-key>>
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
+ 
+|
+| ⚙️
+
+|<<quarkus.dynamodb.credentials.profile-provider.profile-name, quarkus.dynamodb.credentials.profile-provider.profile-name>>
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
+ 
+|
+| ⚙️
+
+|<<quarkus.dynamodb.credentials.process-provider.async-credential-update-enabled, quarkus.dynamodb.credentials.process-provider.async-credential-update-enabled>>
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html[Boolean]
+ 
+|
+| ⚙️
+
+|<<quarkus.dynamodb.credentials.process-provider.credential-refresh-threshold, quarkus.dynamodb.credentials.process-provider.credential-refresh-threshold>>
+|link:https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html[Duration]
+ +++
+<a href="#duration-note-anchor" title="More information about the Duration format">ℹ️</a>
++++
+|
+| ⚙️
+
+|<<quarkus.dynamodb.credentials.process-provider.process-output-limit, quarkus.dynamodb.credentials.process-provider.process-output-limit>>
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html[Integer]
+ 
+|
+| ⚙️
+
+|<<quarkus.dynamodb.credentials.process-provider.command, quarkus.dynamodb.credentials.process-provider.command>>
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
+ 
+|
+| ⚙️
+
+|<<quarkus.dynamodb.sync-client.connection-acquisition-timeout, quarkus.dynamodb.sync-client.connection-acquisition-timeout>>
+|link:https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html[Duration]
+ +++
+<a href="#duration-note-anchor" title="More information about the Duration format">ℹ️</a>
++++
+|
+| ⚙️
+
+|<<quarkus.dynamodb.sync-client.connection-max-idle-time, quarkus.dynamodb.sync-client.connection-max-idle-time>>
+|link:https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html[Duration]
+ +++
+<a href="#duration-note-anchor" title="More information about the Duration format">ℹ️</a>
++++
+|
+| ⚙️
+
+|<<quarkus.dynamodb.sync-client.connection-timeout, quarkus.dynamodb.sync-client.connection-timeout>>
+|link:https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html[Duration]
+ +++
+<a href="#duration-note-anchor" title="More information about the Duration format">ℹ️</a>
++++
+|
+| ⚙️
+
+|<<quarkus.dynamodb.sync-client.connection-time-to-live, quarkus.dynamodb.sync-client.connection-time-to-live>>
+|link:https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html[Duration]
+ +++
+<a href="#duration-note-anchor" title="More information about the Duration format">ℹ️</a>
++++
+|
+| ⚙️
+
+|<<quarkus.dynamodb.sync-client.socket-timeout, quarkus.dynamodb.sync-client.socket-timeout>>
+|link:https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html[Duration]
+ +++
+<a href="#duration-note-anchor" title="More information about the Duration format">ℹ️</a>
++++
+|
+| ⚙️
+
+|<<quarkus.dynamodb.sync-client.max-connections, quarkus.dynamodb.sync-client.max-connections>>
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html[Integer]
+ 
+|
+| ⚙️
+
+|<<quarkus.dynamodb.sync-client.expect-continue-enabled, quarkus.dynamodb.sync-client.expect-continue-enabled>>
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html[Boolean]
+ 
+|
+| ⚙️
+
+|<<quarkus.dynamodb.sync-client.use-idle-connection-reaper, quarkus.dynamodb.sync-client.use-idle-connection-reaper>>
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html[Boolean]
+ 
+|
+| ⚙️
+
+|<<quarkus.dynamodb.sync-client.proxy.enabled, quarkus.dynamodb.sync-client.proxy.enabled>>
+|boolean 
+|`false`
+| ⚙️
+
+|<<quarkus.dynamodb.sync-client.proxy.endpoint, quarkus.dynamodb.sync-client.proxy.endpoint>>
+|link:https://docs.oracle.com/javase/8/docs/api/java/net/URI.html[URI]
+ 
+|
+| ⚙️
+
+|<<quarkus.dynamodb.sync-client.proxy.username, quarkus.dynamodb.sync-client.proxy.username>>
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
+ 
+|
+| ⚙️
+
+|<<quarkus.dynamodb.sync-client.proxy.password, quarkus.dynamodb.sync-client.proxy.password>>
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
+ 
+|
+| ⚙️
+
+|<<quarkus.dynamodb.sync-client.proxy.ntlm-domain, quarkus.dynamodb.sync-client.proxy.ntlm-domain>>
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
+ 
+|
+| ⚙️
+
+|<<quarkus.dynamodb.sync-client.proxy.ntlm-workstation, quarkus.dynamodb.sync-client.proxy.ntlm-workstation>>
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
+ 
+|
+| ⚙️
+
+|<<quarkus.dynamodb.sync-client.proxy.preemptive-basic-authentication-enabled, quarkus.dynamodb.sync-client.proxy.preemptive-basic-authentication-enabled>>
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html[Boolean]
+ 
+|
+| ⚙️
+
+|<<quarkus.dynamodb.sync-client.proxy.non-proxy-hosts, quarkus.dynamodb.sync-client.proxy.non-proxy-hosts>>
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
+ 
+|
+| ⚙️
+
+|<<quarkus.dynamodb.async-client.max-concurrency, quarkus.dynamodb.async-client.max-concurrency>>
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html[Integer]
+ 
+|
+| ⚙️
+
+|<<quarkus.dynamodb.async-client.max-pending-connection-acquires, quarkus.dynamodb.async-client.max-pending-connection-acquires>>
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html[Integer]
+ 
+|
+| ⚙️
+
+|<<quarkus.dynamodb.async-client.read-timeout, quarkus.dynamodb.async-client.read-timeout>>
+|link:https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html[Duration]
+ +++
+<a href="#duration-note-anchor" title="More information about the Duration format">ℹ️</a>
++++
+|
+| ⚙️
+
+|<<quarkus.dynamodb.async-client.write-timeout, quarkus.dynamodb.async-client.write-timeout>>
+|link:https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html[Duration]
+ +++
+<a href="#duration-note-anchor" title="More information about the Duration format">ℹ️</a>
++++
+|
+| ⚙️
+
+|<<quarkus.dynamodb.async-client.connection-timeout, quarkus.dynamodb.async-client.connection-timeout>>
+|link:https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html[Duration]
+ +++
+<a href="#duration-note-anchor" title="More information about the Duration format">ℹ️</a>
++++
+|
+| ⚙️
+
+|<<quarkus.dynamodb.async-client.connection-acquisition-timeout, quarkus.dynamodb.async-client.connection-acquisition-timeout>>
+|link:https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html[Duration]
+ +++
+<a href="#duration-note-anchor" title="More information about the Duration format">ℹ️</a>
++++
+|
+| ⚙️
+
+|<<quarkus.dynamodb.async-client.connection-time-to-live, quarkus.dynamodb.async-client.connection-time-to-live>>
+|link:https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html[Duration]
+ +++
+<a href="#duration-note-anchor" title="More information about the Duration format">ℹ️</a>
++++
+|
+| ⚙️
+
+|<<quarkus.dynamodb.async-client.connection-max-idle-time, quarkus.dynamodb.async-client.connection-max-idle-time>>
+|link:https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html[Duration]
+ +++
+<a href="#duration-note-anchor" title="More information about the Duration format">ℹ️</a>
++++
+|
+| ⚙️
+
+|<<quarkus.dynamodb.async-client.use-idle-connection-reaper, quarkus.dynamodb.async-client.use-idle-connection-reaper>>
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html[Boolean]
+ 
+|
+| ⚙️
+
+|<<quarkus.dynamodb.async-client.protocol, quarkus.dynamodb.async-client.protocol>>
+|Protocol 
+|
+| ⚙️
+
+|<<quarkus.dynamodb.async-client.max-http2-streams, quarkus.dynamodb.async-client.max-http2-streams>>
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html[Integer]
+ 
+|
+| ⚙️
+
+|<<quarkus.dynamodb.async-client.ssl-provider, quarkus.dynamodb.async-client.ssl-provider>>
+|SslProvider 
+|
+| ⚙️
+
+|<<quarkus.dynamodb.async-client.event-loop.override, quarkus.dynamodb.async-client.event-loop.override>>
+|boolean 
+|`false`
+| ⚙️
+
+|<<quarkus.dynamodb.async-client.event-loop.number-of-threads, quarkus.dynamodb.async-client.event-loop.number-of-threads>>
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html[Integer]
+ 
+|
+| ⚙️
+
+|<<quarkus.dynamodb.async-client.event-loop.thread-name-prefix, quarkus.dynamodb.async-client.event-loop.thread-name-prefix>>
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
+ 
+|
+| ⚙️
+|===
+
+
+== Details
+
+[[quarkus.dynamodb.region]]
+`quarkus.dynamodb.region`⚙️:: Overrides region provider chain with static value of region with which the DynamoDB client should communicate (e.g. eu-west-1, eu-central-1, us-east-1, etc.) 
++
+Type: `software.amazon.awssdk.regions.Region` +
+
+
+
+[[quarkus.dynamodb.enable-endpoint-discovery]]
+`quarkus.dynamodb.enable-endpoint-discovery`⚙️:: Enable endpoint discovery 
++
+Type: `boolean` +
+Defaults to: `false` +
+
+
+
+[[quarkus.dynamodb.endpoint-override]]
+`quarkus.dynamodb.endpoint-override`⚙️:: Overrides endpoint URI 
++
+Type: `java.net.URI` +
+
+
+
+[[quarkus.dynamodb.credentials.type]]
+`quarkus.dynamodb.credentials.type`⚙️:: Credentials provider 
++
+Type: `io.quarkus.dynamodb.runtime.AwsCredentialsProviderType` +
+Defaults to: `DEFAULT` +
+
+
+
+[[quarkus.dynamodb.credentials.default-provider.async-credential-update-enabled]]
+`quarkus.dynamodb.credentials.default-provider.async-credential-update-enabled`⚙️:: Fetch credentials asynchronously in the background. 
+ By default, this is disabled. 
++
+Type: `java.lang.Boolean` +
+Defaults to: `false` +
+
+
+
+[[quarkus.dynamodb.credentials.default-provider.reuse-last-provider-enabled]]
+`quarkus.dynamodb.credentials.default-provider.reuse-last-provider-enabled`⚙️:: Reuse the last successful credentials provider in the chain. It will typically return credentials faster than searching through the chain. 
+ By default, this is enabled. 
++
+Type: `java.lang.Boolean` +
+Defaults to: `true` +
+
+
+
+[[quarkus.dynamodb.credentials.static-provider.access-key-id]]
+`quarkus.dynamodb.credentials.static-provider.access-key-id`⚙️:: Access key id 
++
+Type: `java.lang.String` +
+
+
+
+[[quarkus.dynamodb.credentials.static-provider.secret-access-key]]
+`quarkus.dynamodb.credentials.static-provider.secret-access-key`⚙️:: Secret access key 
++
+Type: `java.lang.String` +
+
+
+
+[[quarkus.dynamodb.credentials.profile-provider.profile-name]]
+`quarkus.dynamodb.credentials.profile-provider.profile-name`⚙️:: Profile name 
+ By default, the profile name is 'default'. 
++
+Type: `java.lang.String` +
+
+
+
+[[quarkus.dynamodb.credentials.process-provider.async-credential-update-enabled]]
+`quarkus.dynamodb.credentials.process-provider.async-credential-update-enabled`⚙️:: Configure whether the provider should fetch credentials asynchronously in the background. If this is true, threads are less likely to block when credentials are loaded, but additional resources are used to maintain the provider. 
+ By default, this is disabled. 
++
+Type: `java.lang.Boolean` +
+
+
+
+[[quarkus.dynamodb.credentials.process-provider.credential-refresh-threshold]]
+`quarkus.dynamodb.credentials.process-provider.credential-refresh-threshold`⚙️:: Configure the amount of time between when the credentials expire and when the credentials should start to be refreshed. This allows the credentials to be refreshed *before* they are reported to expire. 
+ Default: 15 seconds. 
++
+Type: `java.time.Duration` +
+
+
+
+[[quarkus.dynamodb.credentials.process-provider.process-output-limit]]
+`quarkus.dynamodb.credentials.process-provider.process-output-limit`⚙️:: Configure the maximum amount of data that can be returned by the external process before an exception is raised. 
+ Default: 1024 bytes. 
++
+Type: `java.lang.Integer` +
+
+
+
+[[quarkus.dynamodb.credentials.process-provider.command]]
+`quarkus.dynamodb.credentials.process-provider.command`⚙️:: Command that should be executed to retrieve credentials. 
++
+Type: `java.lang.String` +
+
+
+
+[[quarkus.dynamodb.sync-client.connection-acquisition-timeout]]
+`quarkus.dynamodb.sync-client.connection-acquisition-timeout`⚙️:: Connection acquisition timeout 
++
+Type: `java.time.Duration` +
+
+
+
+[[quarkus.dynamodb.sync-client.connection-max-idle-time]]
+`quarkus.dynamodb.sync-client.connection-max-idle-time`⚙️:: Connection max idle time 
++
+Type: `java.time.Duration` +
+
+
+
+[[quarkus.dynamodb.sync-client.connection-timeout]]
+`quarkus.dynamodb.sync-client.connection-timeout`⚙️:: Connection timeout 
++
+Type: `java.time.Duration` +
+
+
+
+[[quarkus.dynamodb.sync-client.connection-time-to-live]]
+`quarkus.dynamodb.sync-client.connection-time-to-live`⚙️:: Connection time to live 
++
+Type: `java.time.Duration` +
+
+
+
+[[quarkus.dynamodb.sync-client.socket-timeout]]
+`quarkus.dynamodb.sync-client.socket-timeout`⚙️:: Socket timeout 
++
+Type: `java.time.Duration` +
+
+
+
+[[quarkus.dynamodb.sync-client.max-connections]]
+`quarkus.dynamodb.sync-client.max-connections`⚙️:: Max connections 
++
+Type: `java.lang.Integer` +
+
+
+
+[[quarkus.dynamodb.sync-client.expect-continue-enabled]]
+`quarkus.dynamodb.sync-client.expect-continue-enabled`⚙️:: Expect continue enabled 
++
+Type: `java.lang.Boolean` +
+
+
+
+[[quarkus.dynamodb.sync-client.use-idle-connection-reaper]]
+`quarkus.dynamodb.sync-client.use-idle-connection-reaper`⚙️:: Use idle connection reaper 
++
+Type: `java.lang.Boolean` +
+
+
+
+[[quarkus.dynamodb.sync-client.proxy.enabled]]
+`quarkus.dynamodb.sync-client.proxy.enabled`⚙️:: Enable HTTP proxy 
++
+Type: `boolean` +
+Defaults to: `false` +
+
+
+
+[[quarkus.dynamodb.sync-client.proxy.endpoint]]
+`quarkus.dynamodb.sync-client.proxy.endpoint`⚙️:: Proxy endpoint 
++
+Type: `java.net.URI` +
+
+
+
+[[quarkus.dynamodb.sync-client.proxy.username]]
+`quarkus.dynamodb.sync-client.proxy.username`⚙️:: Proxy username 
++
+Type: `java.lang.String` +
+
+
+
+[[quarkus.dynamodb.sync-client.proxy.password]]
+`quarkus.dynamodb.sync-client.proxy.password`⚙️:: Proxy password 
++
+Type: `java.lang.String` +
+
+
+
+[[quarkus.dynamodb.sync-client.proxy.ntlm-domain]]
+`quarkus.dynamodb.sync-client.proxy.ntlm-domain`⚙️:: NTLM domain 
++
+Type: `java.lang.String` +
+
+
+
+[[quarkus.dynamodb.sync-client.proxy.ntlm-workstation]]
+`quarkus.dynamodb.sync-client.proxy.ntlm-workstation`⚙️:: NTLM workstation 
++
+Type: `java.lang.String` +
+
+
+
+[[quarkus.dynamodb.sync-client.proxy.preemptive-basic-authentication-enabled]]
+`quarkus.dynamodb.sync-client.proxy.preemptive-basic-authentication-enabled`⚙️:: Enable preemptive basic authentication 
++
+Type: `java.lang.Boolean` +
+
+
+
+[[quarkus.dynamodb.sync-client.proxy.non-proxy-hosts]]
+`quarkus.dynamodb.sync-client.proxy.non-proxy-hosts`⚙️:: Configure the hosts that the client is allowed to access without going through the proxy. 
++
+Type: `java.lang.String` +
+
+
+
+[[quarkus.dynamodb.async-client.max-concurrency]]
+`quarkus.dynamodb.async-client.max-concurrency`⚙️:: Max concurrency 
++
+Type: `java.lang.Integer` +
+
+
+
+[[quarkus.dynamodb.async-client.max-pending-connection-acquires]]
+`quarkus.dynamodb.async-client.max-pending-connection-acquires`⚙️:: Max pending connection acquires 
++
+Type: `java.lang.Integer` +
+
+
+
+[[quarkus.dynamodb.async-client.read-timeout]]
+`quarkus.dynamodb.async-client.read-timeout`⚙️:: Read timeout 
++
+Type: `java.time.Duration` +
+
+
+
+[[quarkus.dynamodb.async-client.write-timeout]]
+`quarkus.dynamodb.async-client.write-timeout`⚙️:: Write timeout 
++
+Type: `java.time.Duration` +
+
+
+
+[[quarkus.dynamodb.async-client.connection-timeout]]
+`quarkus.dynamodb.async-client.connection-timeout`⚙️:: Connection timeout 
++
+Type: `java.time.Duration` +
+
+
+
+[[quarkus.dynamodb.async-client.connection-acquisition-timeout]]
+`quarkus.dynamodb.async-client.connection-acquisition-timeout`⚙️:: Connection acquisition timeout 
++
+Type: `java.time.Duration` +
+
+
+
+[[quarkus.dynamodb.async-client.connection-time-to-live]]
+`quarkus.dynamodb.async-client.connection-time-to-live`⚙️:: Connection time to live 
++
+Type: `java.time.Duration` +
+
+
+
+[[quarkus.dynamodb.async-client.connection-max-idle-time]]
+`quarkus.dynamodb.async-client.connection-max-idle-time`⚙️:: Connection max idle time 
++
+Type: `java.time.Duration` +
+
+
+
+[[quarkus.dynamodb.async-client.use-idle-connection-reaper]]
+`quarkus.dynamodb.async-client.use-idle-connection-reaper`⚙️:: Use idle connection reaper 
++
+Type: `java.lang.Boolean` +
+
+
+
+[[quarkus.dynamodb.async-client.protocol]]
+`quarkus.dynamodb.async-client.protocol`⚙️:: HTTP protocol 
++
+Type: `software.amazon.awssdk.http.Protocol` +
+
+
+
+[[quarkus.dynamodb.async-client.max-http2-streams]]
+`quarkus.dynamodb.async-client.max-http2-streams`⚙️:: Max Http2 streams 
++
+Type: `java.lang.Integer` +
+
+
+
+[[quarkus.dynamodb.async-client.ssl-provider]]
+`quarkus.dynamodb.async-client.ssl-provider`⚙️:: SSL provider 
++
+Type: `io.netty.handler.ssl.SslProvider` +
+
+
+
+[[quarkus.dynamodb.async-client.event-loop.override]]
+`quarkus.dynamodb.async-client.event-loop.override`⚙️:: Enables overrides for event loop 
++
+Type: `boolean` +
+Defaults to: `false` +
+
+
+
+[[quarkus.dynamodb.async-client.event-loop.number-of-threads]]
+`quarkus.dynamodb.async-client.event-loop.number-of-threads`⚙️:: Defines amount of threads for event loop 
++
+Type: `java.lang.Integer` +
+
+
+
+[[quarkus.dynamodb.async-client.event-loop.thread-name-prefix]]
+`quarkus.dynamodb.async-client.event-loop.thread-name-prefix`⚙️:: Defines event loop thread name prefix 
++
+Type: `java.lang.String` +
+
+
+
+[NOTE]
+[[duration-note-anchor]]
+.About the Duration format
+====
+The format for durations uses the standard `java.time.Duration` format.
+You can learn more about it in the link:https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html#parse-java.lang.CharSequence-[Duration#parse() javadoc].
+
+You can also provide duration values starting with a number.
+In this case, if the value consists only of a number, the converter treats the value as seconds.
+Otherwise, `PT` is implicitly appended to the value to obtain a standard `java.time.Duration` format.
+====

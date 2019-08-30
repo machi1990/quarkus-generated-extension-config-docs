@@ -5,13 +5,15 @@
 |Configuration property|Type|Default|Lifecycle
 
 |<<quarkus.kubernetes.group, quarkus.kubernetes.group>>
-|String 
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
+ 
 |
 | 📦
 
 |<<quarkus.kubernetes.docker.registry, quarkus.kubernetes.docker.registry>>
-|String 
-|docker.io
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
+ 
+|`docker.io`
 | 📦
 |===
 
@@ -19,14 +21,14 @@
 == Details
 
 [[quarkus.kubernetes.group]]
-`quarkus.kubernetes.group`📦:: The group of the application. This value will be use as: - docker image repo - labeling resources
+`quarkus.kubernetes.group`📦:: The group of the application. This value will be use as: - docker image repo - labeling resources 
 +
 Type: `java.lang.String` +
 
 
 
 [[quarkus.kubernetes.docker.registry]]
-`quarkus.kubernetes.docker.registry`📦:: The docker registry to which the images will be pushed
+`quarkus.kubernetes.docker.registry`📦:: The docker registry to which the images will be pushed 
 +
 Type: `java.lang.String` +
 Defaults to: `docker.io` +

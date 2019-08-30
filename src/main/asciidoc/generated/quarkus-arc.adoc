@@ -5,13 +5,14 @@
 |Configuration property|Type|Default|Lifecycle
 
 |<<quarkus.arc.remove-unused-beans, quarkus.arc.remove-unused-beans>>
-|String 
-|all
+|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
+ 
+|`all`
 | 📦
 
 |<<quarkus.arc.auto-inject-fields, quarkus.arc.auto-inject-fields>>
 |boolean 
-|true
+|`true`
 | 📦
 |===
 
@@ -32,7 +33,7 @@
  - does not declare an observer, 
  - does not declare any producer which is eligible for injection to any injection point, 
  - is not directly eligible for injection into any `javax.enterprise.inject.Instance` injection point  
- @see UnremovableBeanBuildItem
+ @see UnremovableBeanBuildItem 
 +
 Type: `java.lang.String` +
 Defaults to: `all` +
@@ -40,7 +41,7 @@ Defaults to: `all` +
 
 
 [[quarkus.arc.auto-inject-fields]]
-`quarkus.arc.auto-inject-fields`📦:: If set to true `@Inject` is automatically added to all non-static fields that are annotated with one of the annotations defined by `AutoInjectAnnotationBuildItem`.
+`quarkus.arc.auto-inject-fields`📦:: If set to true `@Inject` is automatically added to all non-static fields that are annotated with one of the annotations defined by `AutoInjectAnnotationBuildItem`. 
 +
 Type: `boolean` +
 Defaults to: `true` +

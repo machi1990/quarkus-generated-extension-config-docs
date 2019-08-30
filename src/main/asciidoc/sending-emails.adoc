@@ -65,7 +65,6 @@ The following table lists the properties that can be configured:
 
 include::generated/quarkus-mailer-impl.adoc[]
 
-
 == Sending simple emails
 
 In a JAX-RS resource, or in a bean, you can inject the mailer as follows:
