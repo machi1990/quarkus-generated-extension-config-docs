@@ -1,1072 +1,1072 @@
 == Summary
 
-📦 Configuration property fixed at build time - ⚙️️ Configuration property overridable at runtime 
+icon:archive[title=Fixed at build time] Configuration property fixed at build time - icon:gears[title=Overridable at runtime]️ Configuration property overridable at runtime 
 
-[cols="50,10,10,5"]
+[cols="50,.^10,.^10,^.^5"]
 |===
 |Configuration property|Type|Default|Lifecycle
 
 |<<quarkus.bt.bt-string-opt, quarkus.bt.bt-string-opt>>
 
-A config string|string 
+A config string.|string 
 |
-| 📦
+| icon:archive[title=Fixed at build time]
 
 |<<quarkus.bt.bt-string-opt-with-default, quarkus.bt.bt-string-opt-with-default>>
 
-A config string with default value|string 
+A config string with default value.|string 
 |`btStringOptWithDefaultValue`
-| 📦
+| icon:archive[title=Fixed at build time]
 
 |<<quarkus.bt.bt-sbv, quarkus.bt.bt-sbv>>
 
-A config object with ctor(String)|StringBasedValue 
+A config object with ctor(String).|StringBasedValue 
 |
-| 📦
+| icon:archive[title=Fixed at build time]
 
 |<<quarkus.bt.bt-sbv-with-default, quarkus.bt.bt-sbv-with-default>>
 
-A config object with ctor(String) and default value|StringBasedValue 
+A config object with ctor(String) and default value.|StringBasedValue 
 |`btSBVWithDefaultValue`
-| 📦
+| icon:archive[title=Fixed at build time]
 
 |<<quarkus.bt.all-values.long-primitive, quarkus.bt.all-values.long-primitive>>
 
-a long primitive|long 
+a long primitive.|long 
 |`0l`
-| 📦
+| icon:archive[title=Fixed at build time]
 
 |<<quarkus.bt.all-values.double-primitive, quarkus.bt.all-values.double-primitive>>
 
-a double primitive|double 
+a double primitive.|double 
 |`0d`
-| 📦
+| icon:archive[title=Fixed at build time]
 
 |<<quarkus.bt.all-values.long-value, quarkus.bt.all-values.long-value>>
 
-a long value|long 
+a long value.|long 
 |
-| 📦
+| icon:archive[title=Fixed at build time]
 
 |<<quarkus.bt.all-values.opt-long-value, quarkus.bt.all-values.opt-long-value>>
 
-an optional long value|long 
+an optional long value.|long 
 |
-| 📦
+| icon:archive[title=Fixed at build time]
 
 |<<quarkus.bt.all-values.opt-double-value, quarkus.bt.all-values.opt-double-value>>
 
-an optional double value|double 
+an optional double value.|double 
 |
-| 📦
+| icon:archive[title=Fixed at build time]
 
 |<<quarkus.bt.all-values.optional-long-value, quarkus.bt.all-values.optional-long-value>>
 
-an optional long value|long 
+an optional long value.|long 
 |
-| 📦
+| icon:archive[title=Fixed at build time]
 
 |<<quarkus.bt.all-values.oov, quarkus.bt.all-values.oov>>
 
-A config object with a static of(String) method|ObjectOfValue 
+A config object with a static of(String) method.|ObjectOfValue 
 |
-| 📦
+| icon:archive[title=Fixed at build time]
 
 |<<quarkus.bt.all-values.oov-with-default, quarkus.bt.all-values.oov-with-default>>
 
-A config object with a static of(String) method and default value|ObjectOfValue 
+A config object with a static of(String) method and default value.|ObjectOfValue 
 |`defaultPart1+defaultPart2`
-| 📦
+| icon:archive[title=Fixed at build time]
 
 |<<quarkus.bt.all-values.ovo, quarkus.bt.all-values.ovo>>
 
-A config object with a static valueOf(String) method|ObjectValueOf 
+A config object with a static valueOf(String) method.|ObjectValueOf 
 |
-| 📦
+| icon:archive[title=Fixed at build time]
 
 |<<quarkus.bt.all-values.ovo-with-default, quarkus.bt.all-values.ovo-with-default>>
 
-A config object with a static of(String) method and default value|ObjectValueOf 
+A config object with a static of(String) method and default value.|ObjectValueOf 
 |`defaultPart1+defaultPart2`
-| 📦
+| icon:archive[title=Fixed at build time]
 
 |<<quarkus.bt.all-values.string-list, quarkus.bt.all-values.string-list>>
 
-A List of string values|string 
+A List of string values.|string 
 |
-| 📦
+| icon:archive[title=Fixed at build time]
 
 |<<quarkus.bt.all-values.long-list, quarkus.bt.all-values.long-list>>
 
-A List of long values|long 
+A List of long values.|long 
 |
-| 📦
+| icon:archive[title=Fixed at build time]
 
 |<<quarkus.bt.all-values.expanded-default, quarkus.bt.all-values.expanded-default>>
 
-A configuration item that has a default value that is an expression|string 
+A configuration item that has a default value that is an expression.|string 
 |`${java.vm.version}`
-| 📦
+| icon:archive[title=Fixed at build time]
 
 |<<quarkus.root.dsa-key-location, quarkus.root.dsa-key-location>>
 
 |string 
 |
-| 📦
+| icon:archive[title=Fixed at build time]
 
 |<<quarkus.root.validate-build-config, quarkus.root.validate-build-config>>
 
 |boolean 
 |`false`
-| 📦
+| icon:archive[title=Fixed at build time]
 
 |<<quarkus.btrt.bt-string-opt, quarkus.btrt.bt-string-opt>>
 
-A config string|string 
+A config string.|string 
 |
-| 📦
+| icon:archive[title=Fixed at build time]
 
 |<<quarkus.btrt.bt-string-opt-with-default, quarkus.btrt.bt-string-opt-with-default>>
 
-A config string with default value|string 
+A config string with default value.|string 
 |`btStringOptWithDefaultValue`
-| 📦
+| icon:archive[title=Fixed at build time]
 
 |<<quarkus.btrt.bt-sbv, quarkus.btrt.bt-sbv>>
 
-A config object with ctor(String)|StringBasedValue 
+A config object with ctor(String).|StringBasedValue 
 |
-| 📦
+| icon:archive[title=Fixed at build time]
 
 |<<quarkus.btrt.bt-sbv-with-default, quarkus.btrt.bt-sbv-with-default>>
 
-A config object with ctor(String) and default value|StringBasedValue 
+A config object with ctor(String) and default value.|StringBasedValue 
 |`btSBVWithDefaultValue`
-| 📦
+| icon:archive[title=Fixed at build time]
 
 |<<quarkus.btrt.all-values.long-primitive, quarkus.btrt.all-values.long-primitive>>
 
-a long primitive|long 
+a long primitive.|long 
 |`0l`
-| 📦
+| icon:archive[title=Fixed at build time]
 
 |<<quarkus.btrt.all-values.double-primitive, quarkus.btrt.all-values.double-primitive>>
 
-a double primitive|double 
+a double primitive.|double 
 |`0d`
-| 📦
+| icon:archive[title=Fixed at build time]
 
 |<<quarkus.btrt.all-values.long-value, quarkus.btrt.all-values.long-value>>
 
-a long value|long 
+a long value.|long 
 |
-| 📦
+| icon:archive[title=Fixed at build time]
 
 |<<quarkus.btrt.all-values.opt-long-value, quarkus.btrt.all-values.opt-long-value>>
 
-an optional long value|long 
+an optional long value.|long 
 |
-| 📦
+| icon:archive[title=Fixed at build time]
 
 |<<quarkus.btrt.all-values.opt-double-value, quarkus.btrt.all-values.opt-double-value>>
 
-an optional double value|double 
+an optional double value.|double 
 |
-| 📦
+| icon:archive[title=Fixed at build time]
 
 |<<quarkus.btrt.all-values.optional-long-value, quarkus.btrt.all-values.optional-long-value>>
 
-an optional long value|long 
+an optional long value.|long 
 |
-| 📦
+| icon:archive[title=Fixed at build time]
 
 |<<quarkus.btrt.all-values.oov, quarkus.btrt.all-values.oov>>
 
-A config object with a static of(String) method|ObjectOfValue 
+A config object with a static of(String) method.|ObjectOfValue 
 |
-| 📦
+| icon:archive[title=Fixed at build time]
 
 |<<quarkus.btrt.all-values.oov-with-default, quarkus.btrt.all-values.oov-with-default>>
 
-A config object with a static of(String) method and default value|ObjectOfValue 
+A config object with a static of(String) method and default value.|ObjectOfValue 
 |`defaultPart1+defaultPart2`
-| 📦
+| icon:archive[title=Fixed at build time]
 
 |<<quarkus.btrt.all-values.ovo, quarkus.btrt.all-values.ovo>>
 
-A config object with a static valueOf(String) method|ObjectValueOf 
+A config object with a static valueOf(String) method.|ObjectValueOf 
 |
-| 📦
+| icon:archive[title=Fixed at build time]
 
 |<<quarkus.btrt.all-values.ovo-with-default, quarkus.btrt.all-values.ovo-with-default>>
 
-A config object with a static of(String) method and default value|ObjectValueOf 
+A config object with a static of(String) method and default value.|ObjectValueOf 
 |`defaultPart1+defaultPart2`
-| 📦
+| icon:archive[title=Fixed at build time]
 
 |<<quarkus.btrt.all-values.string-list, quarkus.btrt.all-values.string-list>>
 
-A List of string values|string 
+A List of string values.|string 
 |
-| 📦
+| icon:archive[title=Fixed at build time]
 
 |<<quarkus.btrt.all-values.long-list, quarkus.btrt.all-values.long-list>>
 
-A List of long values|long 
+A List of long values.|long 
 |
-| 📦
+| icon:archive[title=Fixed at build time]
 
 |<<quarkus.btrt.all-values.expanded-default, quarkus.btrt.all-values.expanded-default>>
 
-A configuration item that has a default value that is an expression|string 
+A configuration item that has a default value that is an expression.|string 
 |`${java.vm.version}`
-| 📦
+| icon:archive[title=Fixed at build time]
 
 |<<quarkus.btrt.my-enum, quarkus.btrt.my-enum>>
 
-Enum object|`optional`, `enum-one`, `enum-two` 
+Enum object.|`optional`, `enum-one`, `enum-two` 
 |
-| 📦
+| icon:archive[title=Fixed at build time]
 
 |<<quarkus.btrt.my-enums, quarkus.btrt.my-enums>>
 
-Enum list of objects|`optional`, `enum-one`, `enum-two` 
+Enum list of objects.|`optional`, `enum-one`, `enum-two` 
 |
-| 📦
+| icon:archive[title=Fixed at build time]
 
 |<<quarkus.rt.rt-string-opt, quarkus.rt.rt-string-opt>>
 
-A run time object|string 
+A run time object.|string 
 |
-| ⚙️
+| icon:gears[title=Overridable at runtime]
 
 |<<quarkus.rt.rt-string-opt-with-default, quarkus.rt.rt-string-opt-with-default>>
 
-A run time object with default value|string 
+A run time object with default value.|string 
 |`rtStringOptWithDefaultValue`
-| ⚙️
+| icon:gears[title=Overridable at runtime]
 
 |<<quarkus.rt.all-values.long-primitive, quarkus.rt.all-values.long-primitive>>
 
-a long primitive|long 
+a long primitive.|long 
 |`0l`
-| ⚙️
+| icon:gears[title=Overridable at runtime]
 
 |<<quarkus.rt.all-values.double-primitive, quarkus.rt.all-values.double-primitive>>
 
-a double primitive|double 
+a double primitive.|double 
 |`0d`
-| ⚙️
+| icon:gears[title=Overridable at runtime]
 
 |<<quarkus.rt.all-values.long-value, quarkus.rt.all-values.long-value>>
 
-a long value|long 
+a long value.|long 
 |
-| ⚙️
+| icon:gears[title=Overridable at runtime]
 
 |<<quarkus.rt.all-values.opt-long-value, quarkus.rt.all-values.opt-long-value>>
 
-an optional long value|long 
+an optional long value.|long 
 |
-| ⚙️
+| icon:gears[title=Overridable at runtime]
 
 |<<quarkus.rt.all-values.opt-double-value, quarkus.rt.all-values.opt-double-value>>
 
-an optional double value|double 
+an optional double value.|double 
 |
-| ⚙️
+| icon:gears[title=Overridable at runtime]
 
 |<<quarkus.rt.all-values.optional-long-value, quarkus.rt.all-values.optional-long-value>>
 
-an optional long value|long 
+an optional long value.|long 
 |
-| ⚙️
+| icon:gears[title=Overridable at runtime]
 
 |<<quarkus.rt.all-values.oov, quarkus.rt.all-values.oov>>
 
-A config object with a static of(String) method|ObjectOfValue 
+A config object with a static of(String) method.|ObjectOfValue 
 |
-| ⚙️
+| icon:gears[title=Overridable at runtime]
 
 |<<quarkus.rt.all-values.oov-with-default, quarkus.rt.all-values.oov-with-default>>
 
-A config object with a static of(String) method and default value|ObjectOfValue 
+A config object with a static of(String) method and default value.|ObjectOfValue 
 |`defaultPart1+defaultPart2`
-| ⚙️
+| icon:gears[title=Overridable at runtime]
 
 |<<quarkus.rt.all-values.ovo, quarkus.rt.all-values.ovo>>
 
-A config object with a static valueOf(String) method|ObjectValueOf 
+A config object with a static valueOf(String) method.|ObjectValueOf 
 |
-| ⚙️
+| icon:gears[title=Overridable at runtime]
 
 |<<quarkus.rt.all-values.ovo-with-default, quarkus.rt.all-values.ovo-with-default>>
 
-A config object with a static of(String) method and default value|ObjectValueOf 
+A config object with a static of(String) method and default value.|ObjectValueOf 
 |`defaultPart1+defaultPart2`
-| ⚙️
+| icon:gears[title=Overridable at runtime]
 
 |<<quarkus.rt.all-values.string-list, quarkus.rt.all-values.string-list>>
 
-A List of string values|string 
+A List of string values.|string 
 |
-| ⚙️
+| icon:gears[title=Overridable at runtime]
 
 |<<quarkus.rt.all-values.long-list, quarkus.rt.all-values.long-list>>
 
-A List of long values|long 
+A List of long values.|long 
 |
-| ⚙️
+| icon:gears[title=Overridable at runtime]
 
 |<<quarkus.rt.all-values.expanded-default, quarkus.rt.all-values.expanded-default>>
 
-A configuration item that has a default value that is an expression|string 
+A configuration item that has a default value that is an expression.|string 
 |`${java.vm.version}`
-| ⚙️
+| icon:gears[title=Overridable at runtime]
 
 |<<quarkus.rt.my-enum, quarkus.rt.my-enum>>
 
-Enum object|`optional`, `enum-one`, `enum-two` 
+Enum object.|`optional`, `enum-one`, `enum-two` 
 |
-| ⚙️
+| icon:gears[title=Overridable at runtime]
 
 |<<quarkus.rt.my-enums, quarkus.rt.my-enums>>
 
-Enum list of objects|`optional`, `enum-one`, `enum-two` 
+Enum list of objects.|`optional`, `enum-one`, `enum-two` 
 |
-| ⚙️
+| icon:gears[title=Overridable at runtime]
 
 |<<quarkus.rt.my-optional-enums, quarkus.rt.my-optional-enums>>
 
-Enum optional value|`optional`, `enum-one`, `enum-two` 
+Enum optional value.|`optional`, `enum-one`, `enum-two` 
 |
-| ⚙️
+| icon:gears[title=Overridable at runtime]
 
 |<<quarkus.rt.no-hyphenate-first-enum, quarkus.rt.no-hyphenate-first-enum>>
 
-No hyphenation|`optional`, `enum-one`, `enum-two` 
+No hyphenation.|`optional`, `enum-one`, `enum-two` 
 |
-| ⚙️
+| icon:gears[title=Overridable at runtime]
 
 |<<quarkus.rt.no-hyphenate-second-enum, quarkus.rt.no-hyphenate-second-enum>>
 
-No hyphenation|`optional`, `enum-one`, `enum-two` 
+No hyphenation.|`optional`, `enum-one`, `enum-two` 
 |
-| ⚙️
+| icon:gears[title=Overridable at runtime]
 
 |<<quarkus.rt.primitive-boolean, quarkus.rt.primitive-boolean>>
 
-Primitive boolean conversion with `ConvertWith`|boolean 
+Primitive boolean conversion with `ConvertWith`.|boolean 
 |`NO`
-| ⚙️
+| icon:gears[title=Overridable at runtime]
 
 |<<quarkus.rt.object-boolean, quarkus.rt.object-boolean>>
 
-Boolean conversion with `ConvertWith`|boolean 
+Boolean conversion with `ConvertWith`.|boolean 
 |`NO`
-| ⚙️
+| icon:gears[title=Overridable at runtime]
 
 |<<quarkus.rt.primitive-integer, quarkus.rt.primitive-integer>>
 
-Primitive int conversion with `ConvertWith`|int 
+Primitive int conversion with `ConvertWith`.|int 
 |`zero`
-| ⚙️
+| icon:gears[title=Overridable at runtime]
 
 |<<quarkus.rt.object-integer, quarkus.rt.object-integer>>
 
-Integer conversion with `ConvertWith`|int 
+Integer conversion with `ConvertWith`.|int 
 |`zero`
-| ⚙️
+| icon:gears[title=Overridable at runtime]
 
 |<<quarkus.rt.one-to-nine, quarkus.rt.one-to-nine>>
 
-List of Integer conversion with `ConvertWith`|int 
+List of Integer conversion with `ConvertWith`.|int 
 |`one`
-| ⚙️
+| icon:gears[title=Overridable at runtime]
 
 |<<quarkus.rt.string-map.string-map, quarkus.rt.string-map."<string-map>">>
 
-A map of properties|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
+A map of properties.|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
  
 |
-| ⚙️
+| icon:gears[title=Overridable at runtime]
 
 |<<quarkus.rt.string-list-map.string-list-map, quarkus.rt.string-list-map."<string-list-map>">>
 
-A map of property lists|link:https://docs.oracle.com/javase/8/docs/api/java/util/List<java.lang.String>.html[java.util.List<java.lang.String>]
+A map of property lists.|link:https://docs.oracle.com/javase/8/docs/api/java/util/List<java.lang.String>.html[java.util.List<java.lang.String>]
  
 |
-| ⚙️
+| icon:gears[title=Overridable at runtime]
 
 |<<quarkus.rt.all-values.nested-config-map.nested-config-map.nested-value, quarkus.rt.all-values.nested-config-map."<nested-config-map>".nested-value>>
 
-A nested string value|string 
+A nested string value.|string 
 |
-| ⚙️
+| icon:gears[title=Overridable at runtime]
 
 |<<quarkus.rt.all-values.nested-config-map.nested-config-map.oov, quarkus.rt.all-values.nested-config-map."<nested-config-map>".oov>>
 
-A nested ObjectOfValue value|ObjectOfValue 
+A nested ObjectOfValue value.|ObjectOfValue 
 |
-| ⚙️
+| icon:gears[title=Overridable at runtime]
 
 |<<quarkus.rt.all-values.string-map.string-map, quarkus.rt.all-values.string-map."<string-map>">>
 
-A map of properties|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
+A map of properties.|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
  
 |
-| ⚙️
+| icon:gears[title=Overridable at runtime]
 
 |<<quarkus.rt.all-values.string-list-map.string-list-map, quarkus.rt.all-values.string-list-map."<string-list-map>">>
 
-A map of property lists|link:https://docs.oracle.com/javase/8/docs/api/java/util/List<java.lang.String>.html[java.util.List<java.lang.String>]
+A map of property lists.|link:https://docs.oracle.com/javase/8/docs/api/java/util/List<java.lang.String>.html[java.util.List<java.lang.String>]
  
 |
-| ⚙️
+| icon:gears[title=Overridable at runtime]
 
 |<<quarkus.rt.map-of-numbers.map-of-numbers, quarkus.rt.map-of-numbers."<map-of-numbers>">>
 
-Map of Integer conversion with `ConvertWith`|int 
+Map of Integer conversion with `ConvertWith`.|int 
 |
-| ⚙️
+| icon:gears[title=Overridable at runtime]
 
 |<<quarkus.btrt.all-values.nested-config-map.nested-config-map.nested-value, quarkus.btrt.all-values.nested-config-map."<nested-config-map>".nested-value>>
 
-A nested string value|string 
+A nested string value.|string 
 |
-| 📦
+| icon:archive[title=Fixed at build time]
 
 |<<quarkus.btrt.all-values.nested-config-map.nested-config-map.oov, quarkus.btrt.all-values.nested-config-map."<nested-config-map>".oov>>
 
-A nested ObjectOfValue value|ObjectOfValue 
+A nested ObjectOfValue value.|ObjectOfValue 
 |
-| 📦
+| icon:archive[title=Fixed at build time]
 
 |<<quarkus.btrt.all-values.string-map.string-map, quarkus.btrt.all-values.string-map."<string-map>">>
 
-A map of properties|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
+A map of properties.|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
  
 |
-| 📦
+| icon:archive[title=Fixed at build time]
 
 |<<quarkus.btrt.all-values.string-list-map.string-list-map, quarkus.btrt.all-values.string-list-map."<string-list-map>">>
 
-A map of property lists|link:https://docs.oracle.com/javase/8/docs/api/java/util/List<java.lang.String>.html[java.util.List<java.lang.String>]
+A map of property lists.|link:https://docs.oracle.com/javase/8/docs/api/java/util/List<java.lang.String>.html[java.util.List<java.lang.String>]
  
 |
-| 📦
+| icon:archive[title=Fixed at build time]
 
 |<<quarkus.btrt.map-of-numbers.map-of-numbers, quarkus.btrt.map-of-numbers."<map-of-numbers>">>
 
-Map of Integer conversion with `ConvertWith`|int 
+Map of Integer conversion with `ConvertWith`.|int 
 |
-| 📦
+| icon:archive[title=Fixed at build time]
 
 |<<quarkus.bt.all-values.nested-config-map.nested-config-map.nested-value, quarkus.bt.all-values.nested-config-map."<nested-config-map>".nested-value>>
 
-A nested string value|string 
+A nested string value.|string 
 |
-| 📦
+| icon:archive[title=Fixed at build time]
 
 |<<quarkus.bt.all-values.nested-config-map.nested-config-map.oov, quarkus.bt.all-values.nested-config-map."<nested-config-map>".oov>>
 
-A nested ObjectOfValue value|ObjectOfValue 
+A nested ObjectOfValue value.|ObjectOfValue 
 |
-| 📦
+| icon:archive[title=Fixed at build time]
 
 |<<quarkus.bt.all-values.string-map.string-map, quarkus.bt.all-values.string-map."<string-map>">>
 
-A map of properties|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
+A map of properties.|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
  
 |
-| 📦
+| icon:archive[title=Fixed at build time]
 
 |<<quarkus.bt.all-values.string-list-map.string-list-map, quarkus.bt.all-values.string-list-map."<string-list-map>">>
 
-A map of property lists|link:https://docs.oracle.com/javase/8/docs/api/java/util/List<java.lang.String>.html[java.util.List<java.lang.String>]
+A map of property lists.|link:https://docs.oracle.com/javase/8/docs/api/java/util/List<java.lang.String>.html[java.util.List<java.lang.String>]
  
 |
-| 📦
+| icon:archive[title=Fixed at build time]
 |===
 
 
 == Details
 
 [[quarkus.bt.bt-string-opt]]
-`quarkus.bt.bt-string-opt`📦:: A config string 
+`quarkus.bt.bt-string-opt` icon:archive[title=Fixed at build time]:: A config string 
 +
-Type: `string` +
+Type: `string`  +
 
 
 
 [[quarkus.bt.bt-string-opt-with-default]]
-`quarkus.bt.bt-string-opt-with-default`📦:: A config string with default value 
+`quarkus.bt.bt-string-opt-with-default` icon:archive[title=Fixed at build time]:: A config string with default value 
 +
-Type: `string` +
+Type: `string`  +
 Defaults to: `btStringOptWithDefaultValue` +
 
 
 
 [[quarkus.bt.bt-sbv]]
-`quarkus.bt.bt-sbv`📦:: A config object with ctor(String) 
+`quarkus.bt.bt-sbv` icon:archive[title=Fixed at build time]:: A config object with ctor(String) 
 +
-Type: `StringBasedValue` +
+Type: `StringBasedValue`  +
 
 
 
 [[quarkus.bt.bt-sbv-with-default]]
-`quarkus.bt.bt-sbv-with-default`📦:: A config object with ctor(String) and default value 
+`quarkus.bt.bt-sbv-with-default` icon:archive[title=Fixed at build time]:: A config object with ctor(String) and default value 
 +
-Type: `StringBasedValue` +
+Type: `StringBasedValue`  +
 Defaults to: `btSBVWithDefaultValue` +
 
 
 
 [[quarkus.bt.all-values.long-primitive]]
-`quarkus.bt.all-values.long-primitive`📦:: a long primitive 
+`quarkus.bt.all-values.long-primitive` icon:archive[title=Fixed at build time]:: a long primitive 
 +
-Type: `long` +
+Type: `long`  +
 Defaults to: `0l` +
 
 
 
 [[quarkus.bt.all-values.double-primitive]]
-`quarkus.bt.all-values.double-primitive`📦:: a double primitive 
+`quarkus.bt.all-values.double-primitive` icon:archive[title=Fixed at build time]:: a double primitive 
 +
-Type: `double` +
+Type: `double`  +
 Defaults to: `0d` +
 
 
 
 [[quarkus.bt.all-values.long-value]]
-`quarkus.bt.all-values.long-value`📦:: a long value 
+`quarkus.bt.all-values.long-value` icon:archive[title=Fixed at build time]:: a long value 
 +
-Type: `long` +
+Type: `long`  +
 
 
 
 [[quarkus.bt.all-values.opt-long-value]]
-`quarkus.bt.all-values.opt-long-value`📦:: an optional long value 
+`quarkus.bt.all-values.opt-long-value` icon:archive[title=Fixed at build time]:: an optional long value 
 +
-Type: `long` +
+Type: `long`  +
 
 
 
 [[quarkus.bt.all-values.opt-double-value]]
-`quarkus.bt.all-values.opt-double-value`📦:: an optional double value 
+`quarkus.bt.all-values.opt-double-value` icon:archive[title=Fixed at build time]:: an optional double value 
 +
-Type: `double` +
+Type: `double`  +
 
 
 
 [[quarkus.bt.all-values.optional-long-value]]
-`quarkus.bt.all-values.optional-long-value`📦:: an optional long value 
+`quarkus.bt.all-values.optional-long-value` icon:archive[title=Fixed at build time]:: an optional long value 
 +
-Type: `long` +
+Type: `long`  +
 
 
 
 [[quarkus.bt.all-values.oov]]
-`quarkus.bt.all-values.oov`📦:: A config object with a static of(String) method 
+`quarkus.bt.all-values.oov` icon:archive[title=Fixed at build time]:: A config object with a static of(String) method 
 +
-Type: `ObjectOfValue` +
+Type: `ObjectOfValue`  +
 
 
 
 [[quarkus.bt.all-values.oov-with-default]]
-`quarkus.bt.all-values.oov-with-default`📦:: A config object with a static of(String) method and default value 
+`quarkus.bt.all-values.oov-with-default` icon:archive[title=Fixed at build time]:: A config object with a static of(String) method and default value 
 +
-Type: `ObjectOfValue` +
+Type: `ObjectOfValue`  +
 Defaults to: `defaultPart1+defaultPart2` +
 
 
 
 [[quarkus.bt.all-values.ovo]]
-`quarkus.bt.all-values.ovo`📦:: A config object with a static valueOf(String) method 
+`quarkus.bt.all-values.ovo` icon:archive[title=Fixed at build time]:: A config object with a static valueOf(String) method 
 +
-Type: `ObjectValueOf` +
+Type: `ObjectValueOf`  +
 
 
 
 [[quarkus.bt.all-values.ovo-with-default]]
-`quarkus.bt.all-values.ovo-with-default`📦:: A config object with a static of(String) method and default value 
+`quarkus.bt.all-values.ovo-with-default` icon:archive[title=Fixed at build time]:: A config object with a static of(String) method and default value 
 +
-Type: `ObjectValueOf` +
+Type: `ObjectValueOf`  +
 Defaults to: `defaultPart1+defaultPart2` +
 
 
 
 [[quarkus.bt.all-values.string-list]]
-`quarkus.bt.all-values.string-list`📦:: A List of string values 
+`quarkus.bt.all-values.string-list` icon:archive[title=Fixed at build time]:: A List of string values 
 +
-Type: `string` +
+Type: `string`  +
 
 
 
 [[quarkus.bt.all-values.long-list]]
-`quarkus.bt.all-values.long-list`📦:: A List of long values 
+`quarkus.bt.all-values.long-list` icon:archive[title=Fixed at build time]:: A List of long values 
 +
-Type: `long` +
+Type: `long`  +
 
 
 
 [[quarkus.bt.all-values.expanded-default]]
-`quarkus.bt.all-values.expanded-default`📦:: A configuration item that has a default value that is an expression 
+`quarkus.bt.all-values.expanded-default` icon:archive[title=Fixed at build time]:: A configuration item that has a default value that is an expression 
 +
-Type: `string` +
+Type: `string`  +
 Defaults to: `${java.vm.version}` +
 
 
 
 [[quarkus.root.dsa-key-location]]
-`quarkus.root.dsa-key-location`📦::  
+`quarkus.root.dsa-key-location` icon:archive[title=Fixed at build time]::  
 +
-Type: `string` +
+Type: `string`  +
 
 
 
 [[quarkus.root.validate-build-config]]
-`quarkus.root.validate-build-config`📦::  
+`quarkus.root.validate-build-config` icon:archive[title=Fixed at build time]::  
 +
-Type: `boolean` +
+Type: `boolean`  +
 Defaults to: `false` +
 
 
 
 [[quarkus.btrt.bt-string-opt]]
-`quarkus.btrt.bt-string-opt`📦:: A config string 
+`quarkus.btrt.bt-string-opt` icon:archive[title=Fixed at build time]:: A config string 
 +
-Type: `string` +
+Type: `string`  +
 
 
 
 [[quarkus.btrt.bt-string-opt-with-default]]
-`quarkus.btrt.bt-string-opt-with-default`📦:: A config string with default value 
+`quarkus.btrt.bt-string-opt-with-default` icon:archive[title=Fixed at build time]:: A config string with default value 
 +
-Type: `string` +
+Type: `string`  +
 Defaults to: `btStringOptWithDefaultValue` +
 
 
 
 [[quarkus.btrt.bt-sbv]]
-`quarkus.btrt.bt-sbv`📦:: A config object with ctor(String) 
+`quarkus.btrt.bt-sbv` icon:archive[title=Fixed at build time]:: A config object with ctor(String) 
 +
-Type: `StringBasedValue` +
+Type: `StringBasedValue`  +
 
 
 
 [[quarkus.btrt.bt-sbv-with-default]]
-`quarkus.btrt.bt-sbv-with-default`📦:: A config object with ctor(String) and default value 
+`quarkus.btrt.bt-sbv-with-default` icon:archive[title=Fixed at build time]:: A config object with ctor(String) and default value 
 +
-Type: `StringBasedValue` +
+Type: `StringBasedValue`  +
 Defaults to: `btSBVWithDefaultValue` +
 
 
 
 [[quarkus.btrt.all-values.long-primitive]]
-`quarkus.btrt.all-values.long-primitive`📦:: a long primitive 
+`quarkus.btrt.all-values.long-primitive` icon:archive[title=Fixed at build time]:: a long primitive 
 +
-Type: `long` +
+Type: `long`  +
 Defaults to: `0l` +
 
 
 
 [[quarkus.btrt.all-values.double-primitive]]
-`quarkus.btrt.all-values.double-primitive`📦:: a double primitive 
+`quarkus.btrt.all-values.double-primitive` icon:archive[title=Fixed at build time]:: a double primitive 
 +
-Type: `double` +
+Type: `double`  +
 Defaults to: `0d` +
 
 
 
 [[quarkus.btrt.all-values.long-value]]
-`quarkus.btrt.all-values.long-value`📦:: a long value 
+`quarkus.btrt.all-values.long-value` icon:archive[title=Fixed at build time]:: a long value 
 +
-Type: `long` +
+Type: `long`  +
 
 
 
 [[quarkus.btrt.all-values.opt-long-value]]
-`quarkus.btrt.all-values.opt-long-value`📦:: an optional long value 
+`quarkus.btrt.all-values.opt-long-value` icon:archive[title=Fixed at build time]:: an optional long value 
 +
-Type: `long` +
+Type: `long`  +
 
 
 
 [[quarkus.btrt.all-values.opt-double-value]]
-`quarkus.btrt.all-values.opt-double-value`📦:: an optional double value 
+`quarkus.btrt.all-values.opt-double-value` icon:archive[title=Fixed at build time]:: an optional double value 
 +
-Type: `double` +
+Type: `double`  +
 
 
 
 [[quarkus.btrt.all-values.optional-long-value]]
-`quarkus.btrt.all-values.optional-long-value`📦:: an optional long value 
+`quarkus.btrt.all-values.optional-long-value` icon:archive[title=Fixed at build time]:: an optional long value 
 +
-Type: `long` +
+Type: `long`  +
 
 
 
 [[quarkus.btrt.all-values.oov]]
-`quarkus.btrt.all-values.oov`📦:: A config object with a static of(String) method 
+`quarkus.btrt.all-values.oov` icon:archive[title=Fixed at build time]:: A config object with a static of(String) method 
 +
-Type: `ObjectOfValue` +
+Type: `ObjectOfValue`  +
 
 
 
 [[quarkus.btrt.all-values.oov-with-default]]
-`quarkus.btrt.all-values.oov-with-default`📦:: A config object with a static of(String) method and default value 
+`quarkus.btrt.all-values.oov-with-default` icon:archive[title=Fixed at build time]:: A config object with a static of(String) method and default value 
 +
-Type: `ObjectOfValue` +
+Type: `ObjectOfValue`  +
 Defaults to: `defaultPart1+defaultPart2` +
 
 
 
 [[quarkus.btrt.all-values.ovo]]
-`quarkus.btrt.all-values.ovo`📦:: A config object with a static valueOf(String) method 
+`quarkus.btrt.all-values.ovo` icon:archive[title=Fixed at build time]:: A config object with a static valueOf(String) method 
 +
-Type: `ObjectValueOf` +
+Type: `ObjectValueOf`  +
 
 
 
 [[quarkus.btrt.all-values.ovo-with-default]]
-`quarkus.btrt.all-values.ovo-with-default`📦:: A config object with a static of(String) method and default value 
+`quarkus.btrt.all-values.ovo-with-default` icon:archive[title=Fixed at build time]:: A config object with a static of(String) method and default value 
 +
-Type: `ObjectValueOf` +
+Type: `ObjectValueOf`  +
 Defaults to: `defaultPart1+defaultPart2` +
 
 
 
 [[quarkus.btrt.all-values.string-list]]
-`quarkus.btrt.all-values.string-list`📦:: A List of string values 
+`quarkus.btrt.all-values.string-list` icon:archive[title=Fixed at build time]:: A List of string values 
 +
-Type: `string` +
+Type: `string`  +
 
 
 
 [[quarkus.btrt.all-values.long-list]]
-`quarkus.btrt.all-values.long-list`📦:: A List of long values 
+`quarkus.btrt.all-values.long-list` icon:archive[title=Fixed at build time]:: A List of long values 
 +
-Type: `long` +
+Type: `long`  +
 
 
 
 [[quarkus.btrt.all-values.expanded-default]]
-`quarkus.btrt.all-values.expanded-default`📦:: A configuration item that has a default value that is an expression 
+`quarkus.btrt.all-values.expanded-default` icon:archive[title=Fixed at build time]:: A configuration item that has a default value that is an expression 
 +
-Type: `string` +
+Type: `string`  +
 Defaults to: `${java.vm.version}` +
 
 
 
 [[quarkus.btrt.my-enum]]
-`quarkus.btrt.my-enum`📦:: Enum object 
+`quarkus.btrt.my-enum` icon:archive[title=Fixed at build time]:: Enum object 
 +
-Type: ``optional`, `enum-one`, `enum-two`` +
+Accepted values: `optional`, `enum-one`, `enum-two` +
 
 
 
 [[quarkus.btrt.my-enums]]
-`quarkus.btrt.my-enums`📦:: Enum list of objects 
+`quarkus.btrt.my-enums` icon:archive[title=Fixed at build time]:: Enum list of objects 
 +
-Type: ``optional`, `enum-one`, `enum-two`` +
+Accepted values: `optional`, `enum-one`, `enum-two` +
 
 
 
 [[quarkus.rt.rt-string-opt]]
-`quarkus.rt.rt-string-opt`⚙️:: A run time object 
+`quarkus.rt.rt-string-opt` icon:gears[title=Overridable at runtime]:: A run time object 
 +
-Type: `string` +
+Type: `string`  +
 
 
 
 [[quarkus.rt.rt-string-opt-with-default]]
-`quarkus.rt.rt-string-opt-with-default`⚙️:: A run time object with default value 
+`quarkus.rt.rt-string-opt-with-default` icon:gears[title=Overridable at runtime]:: A run time object with default value 
 +
-Type: `string` +
+Type: `string`  +
 Defaults to: `rtStringOptWithDefaultValue` +
 
 
 
 [[quarkus.rt.all-values.long-primitive]]
-`quarkus.rt.all-values.long-primitive`⚙️:: a long primitive 
+`quarkus.rt.all-values.long-primitive` icon:gears[title=Overridable at runtime]:: a long primitive 
 +
-Type: `long` +
+Type: `long`  +
 Defaults to: `0l` +
 
 
 
 [[quarkus.rt.all-values.double-primitive]]
-`quarkus.rt.all-values.double-primitive`⚙️:: a double primitive 
+`quarkus.rt.all-values.double-primitive` icon:gears[title=Overridable at runtime]:: a double primitive 
 +
-Type: `double` +
+Type: `double`  +
 Defaults to: `0d` +
 
 
 
 [[quarkus.rt.all-values.long-value]]
-`quarkus.rt.all-values.long-value`⚙️:: a long value 
+`quarkus.rt.all-values.long-value` icon:gears[title=Overridable at runtime]:: a long value 
 +
-Type: `long` +
+Type: `long`  +
 
 
 
 [[quarkus.rt.all-values.opt-long-value]]
-`quarkus.rt.all-values.opt-long-value`⚙️:: an optional long value 
+`quarkus.rt.all-values.opt-long-value` icon:gears[title=Overridable at runtime]:: an optional long value 
 +
-Type: `long` +
+Type: `long`  +
 
 
 
 [[quarkus.rt.all-values.opt-double-value]]
-`quarkus.rt.all-values.opt-double-value`⚙️:: an optional double value 
+`quarkus.rt.all-values.opt-double-value` icon:gears[title=Overridable at runtime]:: an optional double value 
 +
-Type: `double` +
+Type: `double`  +
 
 
 
 [[quarkus.rt.all-values.optional-long-value]]
-`quarkus.rt.all-values.optional-long-value`⚙️:: an optional long value 
+`quarkus.rt.all-values.optional-long-value` icon:gears[title=Overridable at runtime]:: an optional long value 
 +
-Type: `long` +
+Type: `long`  +
 
 
 
 [[quarkus.rt.all-values.oov]]
-`quarkus.rt.all-values.oov`⚙️:: A config object with a static of(String) method 
+`quarkus.rt.all-values.oov` icon:gears[title=Overridable at runtime]:: A config object with a static of(String) method 
 +
-Type: `ObjectOfValue` +
+Type: `ObjectOfValue`  +
 
 
 
 [[quarkus.rt.all-values.oov-with-default]]
-`quarkus.rt.all-values.oov-with-default`⚙️:: A config object with a static of(String) method and default value 
+`quarkus.rt.all-values.oov-with-default` icon:gears[title=Overridable at runtime]:: A config object with a static of(String) method and default value 
 +
-Type: `ObjectOfValue` +
+Type: `ObjectOfValue`  +
 Defaults to: `defaultPart1+defaultPart2` +
 
 
 
 [[quarkus.rt.all-values.ovo]]
-`quarkus.rt.all-values.ovo`⚙️:: A config object with a static valueOf(String) method 
+`quarkus.rt.all-values.ovo` icon:gears[title=Overridable at runtime]:: A config object with a static valueOf(String) method 
 +
-Type: `ObjectValueOf` +
+Type: `ObjectValueOf`  +
 
 
 
 [[quarkus.rt.all-values.ovo-with-default]]
-`quarkus.rt.all-values.ovo-with-default`⚙️:: A config object with a static of(String) method and default value 
+`quarkus.rt.all-values.ovo-with-default` icon:gears[title=Overridable at runtime]:: A config object with a static of(String) method and default value 
 +
-Type: `ObjectValueOf` +
+Type: `ObjectValueOf`  +
 Defaults to: `defaultPart1+defaultPart2` +
 
 
 
 [[quarkus.rt.all-values.string-list]]
-`quarkus.rt.all-values.string-list`⚙️:: A List of string values 
+`quarkus.rt.all-values.string-list` icon:gears[title=Overridable at runtime]:: A List of string values 
 +
-Type: `string` +
+Type: `string`  +
 
 
 
 [[quarkus.rt.all-values.long-list]]
-`quarkus.rt.all-values.long-list`⚙️:: A List of long values 
+`quarkus.rt.all-values.long-list` icon:gears[title=Overridable at runtime]:: A List of long values 
 +
-Type: `long` +
+Type: `long`  +
 
 
 
 [[quarkus.rt.all-values.expanded-default]]
-`quarkus.rt.all-values.expanded-default`⚙️:: A configuration item that has a default value that is an expression 
+`quarkus.rt.all-values.expanded-default` icon:gears[title=Overridable at runtime]:: A configuration item that has a default value that is an expression 
 +
-Type: `string` +
+Type: `string`  +
 Defaults to: `${java.vm.version}` +
 
 
 
 [[quarkus.rt.my-enum]]
-`quarkus.rt.my-enum`⚙️:: Enum object 
+`quarkus.rt.my-enum` icon:gears[title=Overridable at runtime]:: Enum object 
 +
-Type: ``optional`, `enum-one`, `enum-two`` +
+Accepted values: `optional`, `enum-one`, `enum-two` +
 
 
 
 [[quarkus.rt.my-enums]]
-`quarkus.rt.my-enums`⚙️:: Enum list of objects 
+`quarkus.rt.my-enums` icon:gears[title=Overridable at runtime]:: Enum list of objects 
 +
-Type: ``optional`, `enum-one`, `enum-two`` +
+Accepted values: `optional`, `enum-one`, `enum-two` +
 
 
 
 [[quarkus.rt.my-optional-enums]]
-`quarkus.rt.my-optional-enums`⚙️:: Enum optional value 
+`quarkus.rt.my-optional-enums` icon:gears[title=Overridable at runtime]:: Enum optional value 
 +
-Type: ``optional`, `enum-one`, `enum-two`` +
+Accepted values: `optional`, `enum-one`, `enum-two` +
 
 
 
 [[quarkus.rt.no-hyphenate-first-enum]]
-`quarkus.rt.no-hyphenate-first-enum`⚙️:: No hyphenation 
+`quarkus.rt.no-hyphenate-first-enum` icon:gears[title=Overridable at runtime]:: No hyphenation 
 +
-Type: ``optional`, `enum-one`, `enum-two`` +
+Accepted values: `optional`, `enum-one`, `enum-two` +
 
 
 
 [[quarkus.rt.no-hyphenate-second-enum]]
-`quarkus.rt.no-hyphenate-second-enum`⚙️:: No hyphenation 
+`quarkus.rt.no-hyphenate-second-enum` icon:gears[title=Overridable at runtime]:: No hyphenation 
 +
-Type: ``optional`, `enum-one`, `enum-two`` +
+Accepted values: `optional`, `enum-one`, `enum-two` +
 
 
 
 [[quarkus.rt.primitive-boolean]]
-`quarkus.rt.primitive-boolean`⚙️:: Primitive boolean conversion with `ConvertWith` 
+`quarkus.rt.primitive-boolean` icon:gears[title=Overridable at runtime]:: Primitive boolean conversion with `ConvertWith` 
 +
-Type: `boolean` +
+Type: `boolean`  +
 Defaults to: `NO` +
 
 
 
 [[quarkus.rt.object-boolean]]
-`quarkus.rt.object-boolean`⚙️:: Boolean conversion with `ConvertWith` 
+`quarkus.rt.object-boolean` icon:gears[title=Overridable at runtime]:: Boolean conversion with `ConvertWith` 
 +
-Type: `boolean` +
+Type: `boolean`  +
 Defaults to: `NO` +
 
 
 
 [[quarkus.rt.primitive-integer]]
-`quarkus.rt.primitive-integer`⚙️:: Primitive int conversion with `ConvertWith` 
+`quarkus.rt.primitive-integer` icon:gears[title=Overridable at runtime]:: Primitive int conversion with `ConvertWith` 
 +
-Type: `int` +
+Type: `int`  +
 Defaults to: `zero` +
 
 
 
 [[quarkus.rt.object-integer]]
-`quarkus.rt.object-integer`⚙️:: Integer conversion with `ConvertWith` 
+`quarkus.rt.object-integer` icon:gears[title=Overridable at runtime]:: Integer conversion with `ConvertWith` 
 +
-Type: `int` +
+Type: `int`  +
 Defaults to: `zero` +
 
 
 
 [[quarkus.rt.one-to-nine]]
-`quarkus.rt.one-to-nine`⚙️:: List of Integer conversion with `ConvertWith` 
+`quarkus.rt.one-to-nine` icon:gears[title=Overridable at runtime]:: List of Integer conversion with `ConvertWith` 
 +
-Type: `int` +
+Type: `int`  +
 Defaults to: `one` +
 
 
 
 [[quarkus.rt.string-map.string-map]]
-`quarkus.rt.string-map."<string-map>"`⚙️:: A map of properties 
+`quarkus.rt.string-map."<string-map>"` icon:gears[title=Overridable at runtime]:: A map of properties 
 +
-Type: `String` +
+Type: `String`  +
 
 
 
 [[quarkus.rt.string-list-map.string-list-map]]
-`quarkus.rt.string-list-map."<string-list-map>"`⚙️:: A map of property lists 
+`quarkus.rt.string-list-map."<string-list-map>"` icon:gears[title=Overridable at runtime]:: A map of property lists 
 +
-Type: `java.util.List<java.lang.String>` +
+Type: `java.util.List<java.lang.String>`  +
 
 
 
 [[quarkus.rt.all-values.nested-config-map.nested-config-map.nested-value]]
-`quarkus.rt.all-values.nested-config-map."<nested-config-map>".nested-value`⚙️:: A nested string value 
+`quarkus.rt.all-values.nested-config-map."<nested-config-map>".nested-value` icon:gears[title=Overridable at runtime]:: A nested string value 
 +
-Type: `string` +
+Type: `string`  +
 
 
 
 [[quarkus.rt.all-values.nested-config-map.nested-config-map.oov]]
-`quarkus.rt.all-values.nested-config-map."<nested-config-map>".oov`⚙️:: A nested ObjectOfValue value 
+`quarkus.rt.all-values.nested-config-map."<nested-config-map>".oov` icon:gears[title=Overridable at runtime]:: A nested ObjectOfValue value 
 +
-Type: `ObjectOfValue` +
+Type: `ObjectOfValue`  +
 
 
 
 [[quarkus.rt.all-values.string-map.string-map]]
-`quarkus.rt.all-values.string-map."<string-map>"`⚙️:: A map of properties 
+`quarkus.rt.all-values.string-map."<string-map>"` icon:gears[title=Overridable at runtime]:: A map of properties 
 +
-Type: `String` +
+Type: `String`  +
 
 
 
 [[quarkus.rt.all-values.string-list-map.string-list-map]]
-`quarkus.rt.all-values.string-list-map."<string-list-map>"`⚙️:: A map of property lists 
+`quarkus.rt.all-values.string-list-map."<string-list-map>"` icon:gears[title=Overridable at runtime]:: A map of property lists 
 +
-Type: `java.util.List<java.lang.String>` +
+Type: `java.util.List<java.lang.String>`  +
 
 
 
 [[quarkus.rt.map-of-numbers.map-of-numbers]]
-`quarkus.rt.map-of-numbers."<map-of-numbers>"`⚙️:: Map of Integer conversion with `ConvertWith` 
+`quarkus.rt.map-of-numbers."<map-of-numbers>"` icon:gears[title=Overridable at runtime]:: Map of Integer conversion with `ConvertWith` 
 +
-Type: `int` +
+Type: `int`  +
 
 
 
 [[quarkus.btrt.all-values.nested-config-map.nested-config-map.nested-value]]
-`quarkus.btrt.all-values.nested-config-map."<nested-config-map>".nested-value`📦:: A nested string value 
+`quarkus.btrt.all-values.nested-config-map."<nested-config-map>".nested-value` icon:archive[title=Fixed at build time]:: A nested string value 
 +
-Type: `string` +
+Type: `string`  +
 
 
 
 [[quarkus.btrt.all-values.nested-config-map.nested-config-map.oov]]
-`quarkus.btrt.all-values.nested-config-map."<nested-config-map>".oov`📦:: A nested ObjectOfValue value 
+`quarkus.btrt.all-values.nested-config-map."<nested-config-map>".oov` icon:archive[title=Fixed at build time]:: A nested ObjectOfValue value 
 +
-Type: `ObjectOfValue` +
+Type: `ObjectOfValue`  +
 
 
 
 [[quarkus.btrt.all-values.string-map.string-map]]
-`quarkus.btrt.all-values.string-map."<string-map>"`📦:: A map of properties 
+`quarkus.btrt.all-values.string-map."<string-map>"` icon:archive[title=Fixed at build time]:: A map of properties 
 +
-Type: `String` +
+Type: `String`  +
 
 
 
 [[quarkus.btrt.all-values.string-list-map.string-list-map]]
-`quarkus.btrt.all-values.string-list-map."<string-list-map>"`📦:: A map of property lists 
+`quarkus.btrt.all-values.string-list-map."<string-list-map>"` icon:archive[title=Fixed at build time]:: A map of property lists 
 +
-Type: `java.util.List<java.lang.String>` +
+Type: `java.util.List<java.lang.String>`  +
 
 
 
 [[quarkus.btrt.map-of-numbers.map-of-numbers]]
-`quarkus.btrt.map-of-numbers."<map-of-numbers>"`📦:: Map of Integer conversion with `ConvertWith` 
+`quarkus.btrt.map-of-numbers."<map-of-numbers>"` icon:archive[title=Fixed at build time]:: Map of Integer conversion with `ConvertWith` 
 +
-Type: `int` +
+Type: `int`  +
 
 
 
 [[quarkus.bt.all-values.nested-config-map.nested-config-map.nested-value]]
-`quarkus.bt.all-values.nested-config-map."<nested-config-map>".nested-value`📦:: A nested string value 
+`quarkus.bt.all-values.nested-config-map."<nested-config-map>".nested-value` icon:archive[title=Fixed at build time]:: A nested string value 
 +
-Type: `string` +
+Type: `string`  +
 
 
 
 [[quarkus.bt.all-values.nested-config-map.nested-config-map.oov]]
-`quarkus.bt.all-values.nested-config-map."<nested-config-map>".oov`📦:: A nested ObjectOfValue value 
+`quarkus.bt.all-values.nested-config-map."<nested-config-map>".oov` icon:archive[title=Fixed at build time]:: A nested ObjectOfValue value 
 +
-Type: `ObjectOfValue` +
+Type: `ObjectOfValue`  +
 
 
 
 [[quarkus.bt.all-values.string-map.string-map]]
-`quarkus.bt.all-values.string-map."<string-map>"`📦:: A map of properties 
+`quarkus.bt.all-values.string-map."<string-map>"` icon:archive[title=Fixed at build time]:: A map of properties 
 +
-Type: `String` +
+Type: `String`  +
 
 
 
 [[quarkus.bt.all-values.string-list-map.string-list-map]]
-`quarkus.bt.all-values.string-list-map."<string-list-map>"`📦:: A map of property lists 
+`quarkus.bt.all-values.string-list-map."<string-list-map>"` icon:archive[title=Fixed at build time]:: A map of property lists 
 +
-Type: `java.util.List<java.lang.String>` +
+Type: `java.util.List<java.lang.String>`  +
 
 
