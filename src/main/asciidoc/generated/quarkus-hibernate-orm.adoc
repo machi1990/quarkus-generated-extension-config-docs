@@ -45,7 +45,7 @@ Default precedence of null values in `ORDER BY` clauses.|string
 |<<quarkus.hibernate-orm.database.generation, quarkus.hibernate-orm.database.generation>>
 
 Select whether the database schema is generated or not.|string 
-|
+|`none`
 | icon:archive[title=Fixed at build time]
 
 |<<quarkus.hibernate-orm.database.generation.halt-on-error, quarkus.hibernate-orm.database.generation.halt-on-error>>
@@ -217,9 +217,11 @@ Type: `string`
 `quarkus.hibernate-orm.database.generation` icon:archive[title=Fixed at build time]::
 +
 --
-Select whether the database schema is generated or not. `drop-and-create` is awesome in development mode. Accepted values: `none`, `create`, `drop-and-create`, `drop`, `update`. The default is `none`.
+Select whether the database schema is generated or not. `drop-and-create` is awesome in development mode. Accepted values: `none`, `create`, `drop-and-create`, `drop`, `update`.
 
 Type: `string` 
+
+Defaults to: `none`
 --
 
 [[quarkus.hibernate-orm.database.generation.halt-on-error]]
