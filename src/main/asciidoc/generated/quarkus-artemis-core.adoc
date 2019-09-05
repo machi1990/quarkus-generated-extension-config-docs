@@ -1,24 +1,26 @@
 == Summary
 
 📦 Configuration property fixed at build time - ⚙️️ Configuration property overridable at runtime 
+
+[cols="50,10,10,5"]
 |===
 |Configuration property|Type|Default|Lifecycle
 
 |<<quarkus.artemis.url, quarkus.artemis.url>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
- 
+
+Artemis connection url|string 
 |
 | ⚙️
 
 |<<quarkus.artemis.username, quarkus.artemis.username>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
- 
+
+Username for authentication, only used with JMS|string 
 |
 | ⚙️
 
 |<<quarkus.artemis.password, quarkus.artemis.password>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
- 
+
+Password for authentication, only used with JMS|string 
 |
 | ⚙️
 |===
@@ -29,20 +31,20 @@
 [[quarkus.artemis.url]]
 `quarkus.artemis.url`⚙️:: Artemis connection url 
 +
-Type: `java.lang.String` +
+Type: `string` +
 
 
 
 [[quarkus.artemis.username]]
 `quarkus.artemis.username`⚙️:: Username for authentication, only used with JMS 
 +
-Type: `java.lang.String` +
+Type: `string` +
 
 
 
 [[quarkus.artemis.password]]
 `quarkus.artemis.password`⚙️:: Password for authentication, only used with JMS 
 +
-Type: `java.lang.String` +
+Type: `string` +
 
 

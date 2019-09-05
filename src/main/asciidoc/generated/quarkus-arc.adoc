@@ -1,17 +1,21 @@
 == Summary
 
 📦 Configuration property fixed at build time - ⚙️️ Configuration property overridable at runtime 
+
+[cols="50,10,10,5"]
 |===
 |Configuration property|Type|Default|Lifecycle
 
 |<<quarkus.arc.remove-unused-beans, quarkus.arc.remove-unused-beans>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
+
  
+ - If set to `all` (or `true`) the container will attempt to remove all unused beans.|string 
 |`all`
 | 📦
 
 |<<quarkus.arc.auto-inject-fields, quarkus.arc.auto-inject-fields>>
-|boolean 
+
+If set to true `@Inject` is automatically added to all non-static fields that are annotated with one of the annotations defined by `AutoInjectAnnotationBuildItem`.|boolean 
 |`true`
 | 📦
 |===
@@ -35,7 +39,7 @@
  - is not directly eligible for injection into any `javax.enterprise.inject.Instance` injection point  
  @see UnremovableBeanBuildItem 
 +
-Type: `java.lang.String` +
+Type: `string` +
 Defaults to: `all` +
 
 

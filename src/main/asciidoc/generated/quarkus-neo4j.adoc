@@ -1,49 +1,56 @@
 == Summary
 
 📦 Configuration property fixed at build time - ⚙️️ Configuration property overridable at runtime 
+
+[cols="50,10,10,5"]
 |===
 |Configuration property|Type|Default|Lifecycle
 
 |<<quarkus.neo4j.uri, quarkus.neo4j.uri>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
- 
+
+The uri this driver should connect to.|string 
 |`bolt://localhost:7687`
 | ⚙️
 
 |<<quarkus.neo4j.authentication.username, quarkus.neo4j.authentication.username>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
- 
+
+The login of the user connecting to the database.|string 
 |`neo4j`
 | ⚙️
 
 |<<quarkus.neo4j.authentication.password, quarkus.neo4j.authentication.password>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
- 
+
+The password of the user connecting to the database.|string 
 |`neo4j`
 | ⚙️
 
 |<<quarkus.neo4j.authentication.disabled, quarkus.neo4j.authentication.disabled>>
-|boolean 
+
+Set this to true to disable authentication.|boolean 
 |`false`
 | ⚙️
 
 |<<quarkus.neo4j.pool.metrics-enabled, quarkus.neo4j.pool.metrics-enabled>>
-|boolean 
+
+Flag, if metrics are enabled.|boolean 
 |`false`
 | ⚙️
 
 |<<quarkus.neo4j.pool.log-leaked-sessions, quarkus.neo4j.pool.log-leaked-sessions>>
-|boolean 
+
+Flag, if leaked sessions logging is enabled.|boolean 
 |`false`
 | ⚙️
 
 |<<quarkus.neo4j.pool.max-connection-pool-size, quarkus.neo4j.pool.max-connection-pool-size>>
-|int 
+
+The maximum amount of connections in the connection pool towards a single database.|int 
 |`100`
 | ⚙️
 
 |<<quarkus.neo4j.pool.idle-time-before-connection-test, quarkus.neo4j.pool.idle-time-before-connection-test>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html[Duration]
+
+Pooled connections that have been idle in the pool for longer than this timeout will be tested before they are used again.|link:https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html[Duration]
  +++
 <a href="#duration-note-anchor" title="More information about the Duration format">ℹ️</a>
 +++
@@ -51,7 +58,8 @@
 | ⚙️
 
 |<<quarkus.neo4j.pool.max-connection-lifetime, quarkus.neo4j.pool.max-connection-lifetime>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html[Duration]
+
+Pooled connections older than this threshold will be closed and removed from the pool.|link:https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html[Duration]
  +++
 <a href="#duration-note-anchor" title="More information about the Duration format">ℹ️</a>
 +++
@@ -59,7 +67,8 @@
 | ⚙️
 
 |<<quarkus.neo4j.pool.connection-acquisition-timeout, quarkus.neo4j.pool.connection-acquisition-timeout>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html[Duration]
+
+Acquisition of new connections will be attempted for at most configured timeout.|link:https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html[Duration]
  +++
 <a href="#duration-note-anchor" title="More information about the Duration format">ℹ️</a>
 +++
@@ -73,7 +82,7 @@
 [[quarkus.neo4j.uri]]
 `quarkus.neo4j.uri`⚙️:: The uri this driver should connect to. The driver supports bolt, bolt+routing or neo4j as schemes. 
 +
-Type: `java.lang.String` +
+Type: `string` +
 Defaults to: `bolt://localhost:7687` +
 
 
@@ -81,7 +90,7 @@ Defaults to: `bolt://localhost:7687` +
 [[quarkus.neo4j.authentication.username]]
 `quarkus.neo4j.authentication.username`⚙️:: The login of the user connecting to the database. 
 +
-Type: `java.lang.String` +
+Type: `string` +
 Defaults to: `neo4j` +
 
 
@@ -89,7 +98,7 @@ Defaults to: `neo4j` +
 [[quarkus.neo4j.authentication.password]]
 `quarkus.neo4j.authentication.password`⚙️:: The password of the user connecting to the database. 
 +
-Type: `java.lang.String` +
+Type: `string` +
 Defaults to: `neo4j` +
 
 
@@ -129,7 +138,7 @@ Defaults to: `100` +
 [[quarkus.neo4j.pool.idle-time-before-connection-test]]
 `quarkus.neo4j.pool.idle-time-before-connection-test`⚙️:: Pooled connections that have been idle in the pool for longer than this timeout will be tested before they are used again. The value `0` means connections will always be tested for validity and negative values mean connections will never be tested. 
 +
-Type: `java.time.Duration` +
+Type: `Duration` +
 Defaults to: `-0.001S` +
 
 
@@ -137,7 +146,7 @@ Defaults to: `-0.001S` +
 [[quarkus.neo4j.pool.max-connection-lifetime]]
 `quarkus.neo4j.pool.max-connection-lifetime`⚙️:: Pooled connections older than this threshold will be closed and removed from the pool. 
 +
-Type: `java.time.Duration` +
+Type: `Duration` +
 Defaults to: `1H` +
 
 
@@ -145,7 +154,7 @@ Defaults to: `1H` +
 [[quarkus.neo4j.pool.connection-acquisition-timeout]]
 `quarkus.neo4j.pool.connection-acquisition-timeout`⚙️:: Acquisition of new connections will be attempted for at most configured timeout. 
 +
-Type: `java.time.Duration` +
+Type: `Duration` +
 Defaults to: `1M` +
 
 

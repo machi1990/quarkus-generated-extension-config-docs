@@ -1,17 +1,20 @@
 == Summary
 
 📦 Configuration property fixed at build time - ⚙️️ Configuration property overridable at runtime 
+
+[cols="50,10,10,5"]
 |===
 |Configuration property|Type|Default|Lifecycle
 
 |<<quarkus.swagger-ui.path, quarkus.swagger-ui.path>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
- 
+
+The path of the swagger-ui servlet.|string 
 |`/swagger-ui`
 | 📦
 
 |<<quarkus.swagger-ui.always-include, quarkus.swagger-ui.always-include>>
-|boolean 
+
+If this should be included every time.|boolean 
 |`false`
 | 📦
 |===
@@ -22,7 +25,7 @@
 [[quarkus.swagger-ui.path]]
 `quarkus.swagger-ui.path`📦:: The path of the swagger-ui servlet. 
 +
-Type: `java.lang.String` +
+Type: `string` +
 Defaults to: `/swagger-ui` +
 
 

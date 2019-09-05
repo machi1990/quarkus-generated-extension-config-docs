@@ -1,18 +1,20 @@
 == Summary
 
 📦 Configuration property fixed at build time - ⚙️️ Configuration property overridable at runtime 
+
+[cols="50,10,10,5"]
 |===
 |Configuration property|Type|Default|Lifecycle
 
 |<<quarkus.application.name, quarkus.application.name>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
- 
+
+The name of the application.|string 
 |
 | 📦
 
 |<<quarkus.application.version, quarkus.application.version>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
- 
+
+The version of the application.|string 
 |
 | 📦
 |===
@@ -23,13 +25,13 @@
 [[quarkus.application.name]]
 `quarkus.application.name`📦:: The name of the application. If not set, defaults to the name of the project. 
 +
-Type: `java.lang.String` +
+Type: `string` +
 
 
 
 [[quarkus.application.version]]
 `quarkus.application.version`📦:: The version of the application. If not set, defaults to the version of the project 
 +
-Type: `java.lang.String` +
+Type: `string` +
 
 

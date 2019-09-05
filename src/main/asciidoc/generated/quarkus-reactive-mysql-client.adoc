@@ -1,48 +1,50 @@
 == Summary
 
 📦 Configuration property fixed at build time - ⚙️️ Configuration property overridable at runtime 
+
+[cols="50,10,10,5"]
 |===
 |Configuration property|Type|Default|Lifecycle
 
 |<<quarkus.datasource.url, quarkus.datasource.url>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
- 
+
+The datasource URL.|string 
 |
 | ⚙️
 
 |<<quarkus.datasource.username, quarkus.datasource.username>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
- 
+
+The datasource username.|string 
 |
 | ⚙️
 
 |<<quarkus.datasource.password, quarkus.datasource.password>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
- 
+
+The datasource password.|string 
 |
 | ⚙️
 
 |<<quarkus.datasource.max-size, quarkus.datasource.max-size>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html[Integer]
- 
+
+The datasource pool maximum size.|int 
 |
 | ⚙️
 
 |<<quarkus.reactive-mysql-client.cache-prepared-statements, quarkus.reactive-mysql-client.cache-prepared-statements>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html[Boolean]
- 
+
+Whether prepared statements should be cached on the client side.|boolean 
 |
 | ⚙️
 
 |<<quarkus.reactive-mysql-client.charset, quarkus.reactive-mysql-client.charset>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
- 
+
+Charset for connections.|string 
 |
 | ⚙️
 
 |<<quarkus.reactive-mysql-client.collation, quarkus.reactive-mysql-client.collation>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
- 
+
+Collation for connections.|string 
 |
 | ⚙️
 |===
@@ -53,48 +55,48 @@
 [[quarkus.datasource.url]]
 `quarkus.datasource.url`⚙️:: The datasource URL. 
 +
-Type: `java.lang.String` +
+Type: `string` +
 
 
 
 [[quarkus.datasource.username]]
 `quarkus.datasource.username`⚙️:: The datasource username. 
 +
-Type: `java.lang.String` +
+Type: `string` +
 
 
 
 [[quarkus.datasource.password]]
 `quarkus.datasource.password`⚙️:: The datasource password. 
 +
-Type: `java.lang.String` +
+Type: `string` +
 
 
 
 [[quarkus.datasource.max-size]]
 `quarkus.datasource.max-size`⚙️:: The datasource pool maximum size. 
 +
-Type: `java.lang.Integer` +
+Type: `int` +
 
 
 
 [[quarkus.reactive-mysql-client.cache-prepared-statements]]
 `quarkus.reactive-mysql-client.cache-prepared-statements`⚙️:: Whether prepared statements should be cached on the client side. 
 +
-Type: `java.lang.Boolean` +
+Type: `boolean` +
 
 
 
 [[quarkus.reactive-mysql-client.charset]]
 `quarkus.reactive-mysql-client.charset`⚙️:: Charset for connections. 
 +
-Type: `java.lang.String` +
+Type: `string` +
 
 
 
 [[quarkus.reactive-mysql-client.collation]]
 `quarkus.reactive-mysql-client.collation`⚙️:: Collation for connections. 
 +
-Type: `java.lang.String` +
+Type: `string` +
 
 

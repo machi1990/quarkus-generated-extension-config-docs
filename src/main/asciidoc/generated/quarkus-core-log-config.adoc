@@ -1,219 +1,251 @@
 == Summary
 
 📦 Configuration property fixed at build time - ⚙️️ Configuration property overridable at runtime 
+
+[cols="50,10,10,5"]
 |===
 |Configuration property|Type|Default|Lifecycle
 
 |<<quarkus.log.level, quarkus.log.level>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/util/logging/Level.html[Level]
+
+The default log level|link:https://docs.oracle.com/javase/8/docs/api/java/util/logging/Level.html[Level]
  
 |
 | ⚙️
 
 |<<quarkus.log.min-level, quarkus.log.min-level>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/util/logging/Level.html[Level]
+
+The default minimum log level|link:https://docs.oracle.com/javase/8/docs/api/java/util/logging/Level.html[Level]
  
 |`INFO`
 | ⚙️
 
 |<<quarkus.log.console.enable, quarkus.log.console.enable>>
-|boolean 
+
+If console logging should be enabled|boolean 
 |`true`
 | ⚙️
 
 |<<quarkus.log.console.format, quarkus.log.console.format>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
- 
+
+The log format|string 
 |`%d{yyyy-MM-dd HH:mm:ss,SSS} %-5p [%c{3.}] (%t) %s%e%n`
 | ⚙️
 
 |<<quarkus.log.console.level, quarkus.log.console.level>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/util/logging/Level.html[Level]
+
+The console log level|link:https://docs.oracle.com/javase/8/docs/api/java/util/logging/Level.html[Level]
  
 |`ALL`
 | ⚙️
 
 |<<quarkus.log.console.color, quarkus.log.console.color>>
-|boolean 
+
+If the console logging should be in color|boolean 
 |`true`
 | ⚙️
 
 |<<quarkus.log.console.darken, quarkus.log.console.darken>>
-|int 
+
+Specify how much the colors should be darkened|int 
 |`0`
 | ⚙️
 
 |<<quarkus.log.console.async, quarkus.log.console.async>>
-|boolean 
+
+Indicates whether to log asynchronously|boolean 
 |`false`
 | ⚙️
 
 |<<quarkus.log.console.async.queue-length, quarkus.log.console.async.queue-length>>
-|int 
+
+The queue length to use before flushing writing|int 
 |`512`
 | ⚙️
 
 |<<quarkus.log.console.async.overflow, quarkus.log.console.async.overflow>>
-|OverflowAction 
+
+Determine whether to block the publisher (rather than drop the message) when the queue is full|`block`, `discard` 
 |`block`
 | ⚙️
 
 |<<quarkus.log.file.enable, quarkus.log.file.enable>>
-|boolean 
+
+If file logging should be enabled|boolean 
 |`false`
 | ⚙️
 
 |<<quarkus.log.file.format, quarkus.log.file.format>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
- 
+
+The log format|string 
 |`%d{yyyy-MM-dd HH:mm:ss,SSS} %h %N[%i] %-5p [%c{3.}] (%t) %s%e%n`
 | ⚙️
 
 |<<quarkus.log.file.level, quarkus.log.file.level>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/util/logging/Level.html[Level]
+
+The level of logs to be written into the file.|link:https://docs.oracle.com/javase/8/docs/api/java/util/logging/Level.html[Level]
  
 |`ALL`
 | ⚙️
 
 |<<quarkus.log.file.path, quarkus.log.file.path>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/io/File.html[File]
+
+The name of the file in which logs will be written.|link:https://docs.oracle.com/javase/8/docs/api/java/io/File.html[File]
  
 |`quarkus.log`
 | ⚙️
 
 |<<quarkus.log.file.async, quarkus.log.file.async>>
-|boolean 
+
+Indicates whether to log asynchronously|boolean 
 |`false`
 | ⚙️
 
 |<<quarkus.log.file.async.queue-length, quarkus.log.file.async.queue-length>>
-|int 
+
+The queue length to use before flushing writing|int 
 |`512`
 | ⚙️
 
 |<<quarkus.log.file.async.overflow, quarkus.log.file.async.overflow>>
-|OverflowAction 
+
+Determine whether to block the publisher (rather than drop the message) when the queue is full|`block`, `discard` 
 |`block`
 | ⚙️
 
 |<<quarkus.log.file.rotation.max-file-size, quarkus.log.file.rotation.max-file-size>>
-|MemorySize +++
+
+The maximum file size of the log file after which a rotation is executed.|MemorySize +++
 <a href="#memory-size-note-anchor" title="More information about the MemorySize format">ℹ️</a>
 +++
 |
 | ⚙️
 
 |<<quarkus.log.file.rotation.max-backup-index, quarkus.log.file.rotation.max-backup-index>>
-|int 
+
+The maximum number of backups to keep.|int 
 |`1`
 | ⚙️
 
 |<<quarkus.log.file.rotation.file-suffix, quarkus.log.file.rotation.file-suffix>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
- 
+
+File handler rotation file suffix.|string 
 |
 | ⚙️
 
 |<<quarkus.log.file.rotation.rotate-on-boot, quarkus.log.file.rotation.rotate-on-boot>>
-|boolean 
+
+Indicates whether to rotate log files on server initialization.|boolean 
 |`true`
 | ⚙️
 
 |<<quarkus.log.syslog.enable, quarkus.log.syslog.enable>>
-|boolean 
+
+If syslog logging should be enabled|boolean 
 |`false`
 | ⚙️
 
 |<<quarkus.log.syslog.endpoint, quarkus.log.syslog.endpoint>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/net/InetSocketAddress.html[InetSocketAddress]
+
+The IP address and port of the syslog server|link:https://docs.oracle.com/javase/8/docs/api/java/net/InetSocketAddress.html[InetSocketAddress]
  
 |`localhost:514`
 | ⚙️
 
 |<<quarkus.log.syslog.app-name, quarkus.log.syslog.app-name>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
- 
+
+The app name used when formatting the message in RFC5424 format|string 
 |
 | ⚙️
 
 |<<quarkus.log.syslog.hostname, quarkus.log.syslog.hostname>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
- 
+
+The name of the host the messages are being sent from|string 
 |
 | ⚙️
 
 |<<quarkus.log.syslog.facility, quarkus.log.syslog.facility>>
-|Facility 
+
+Sets the facility used when calculating the priority of the message as defined by RFC-5424 and RFC-3164|`kernel`, `user-level`, `mail-system`, `system-daemons`, `security`, `syslogd`, `line-printer`, `network-news`, `uucp`, `clock-daemon`, `security2`, `ftp-daemon`, `ntp`, `log-audit`, `log-alert`, `clock-daemon2`, `local-use-0`, `local-use-1`, `local-use-2`, `local-use-3`, `local-use-4`, `local-use-5`, `local-use-6`, `local-use-7` 
 |`USER_LEVEL`
 | ⚙️
 
 |<<quarkus.log.syslog.syslog-type, quarkus.log.syslog.syslog-type>>
-|SyslogType 
+
+Set the `SyslogType syslog type` this handler should use to format the message sent|`rfc5424`, `rfc3164` 
 |`RFC5424`
 | ⚙️
 
 |<<quarkus.log.syslog.protocol, quarkus.log.syslog.protocol>>
-|Protocol 
+
+Sets the protocol used to connect to the syslog server|`tcp`, `udp`, `ssl-tcp` 
 |`TCP`
 | ⚙️
 
 |<<quarkus.log.syslog.use-counting-framing, quarkus.log.syslog.use-counting-framing>>
-|boolean 
+
+Set to `true` if the message being sent should be prefixed with the size of the message|boolean 
 |`false`
 | ⚙️
 
 |<<quarkus.log.syslog.truncate, quarkus.log.syslog.truncate>>
-|boolean 
+
+Set to `true` if the message should be truncated|boolean 
 |`true`
 | ⚙️
 
 |<<quarkus.log.syslog.block-on-reconnect, quarkus.log.syslog.block-on-reconnect>>
-|boolean 
+
+Enables or disables blocking when attempting to reconnect a `org.|boolean 
 |`false`
 | ⚙️
 
 |<<quarkus.log.syslog.format, quarkus.log.syslog.format>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
- 
+
+The log message format|string 
 |`%d{yyyy-MM-dd HH:mm:ss,SSS} %-5p [%c{3.}] (%t) %s%e%n`
 | ⚙️
 
 |<<quarkus.log.syslog.level, quarkus.log.syslog.level>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/util/logging/Level.html[Level]
+
+The log level specifying, which message levels will be logged by syslog logger|link:https://docs.oracle.com/javase/8/docs/api/java/util/logging/Level.html[Level]
  
 |`ALL`
 | ⚙️
 
 |<<quarkus.log.syslog.async, quarkus.log.syslog.async>>
-|boolean 
+
+Indicates whether to log asynchronously|boolean 
 |`false`
 | ⚙️
 
 |<<quarkus.log.syslog.async.queue-length, quarkus.log.syslog.async.queue-length>>
-|int 
+
+The queue length to use before flushing writing|int 
 |`512`
 | ⚙️
 
 |<<quarkus.log.syslog.async.overflow, quarkus.log.syslog.async.overflow>>
-|OverflowAction 
+
+Determine whether to block the publisher (rather than drop the message) when the queue is full|`block`, `discard` 
 |`block`
 | ⚙️
 
 |<<quarkus.log.category.categories.min-level, quarkus.log.category."<categories>".min-level>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
- 
+
+The minimum level that this category can be set to|string 
 |`inherit`
 | ⚙️
 
 |<<quarkus.log.category.categories.level, quarkus.log.category."<categories>".level>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
- 
+
+The log level level for this category|string 
 |`inherit`
 | ⚙️
 
 |<<quarkus.log.filter.filters.if-starts-with, quarkus.log.filter."<filters>".if-starts-with>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
- 
+
+The message starts to match|string 
 |`inherit`
 | ⚙️
 |===
@@ -224,14 +256,14 @@
 [[quarkus.log.level]]
 `quarkus.log.level`⚙️:: The default log level 
 +
-Type: `java.util.logging.Level` +
+Type: `Level` +
 
 
 
 [[quarkus.log.min-level]]
 `quarkus.log.min-level`⚙️:: The default minimum log level 
 +
-Type: `java.util.logging.Level` +
+Type: `Level` +
 Defaults to: `INFO` +
 
 
@@ -247,7 +279,7 @@ Defaults to: `true` +
 [[quarkus.log.console.format]]
 `quarkus.log.console.format`⚙️:: The log format 
 +
-Type: `java.lang.String` +
+Type: `string` +
 Defaults to: `%d{yyyy-MM-dd HH:mm:ss,SSS} %-5p [%c{3.}] (%t) %s%e%n` +
 
 
@@ -255,7 +287,7 @@ Defaults to: `%d{yyyy-MM-dd HH:mm:ss,SSS} %-5p [%c{3.}] (%t) %s%e%n` +
 [[quarkus.log.console.level]]
 `quarkus.log.console.level`⚙️:: The console log level 
 +
-Type: `java.util.logging.Level` +
+Type: `Level` +
 Defaults to: `ALL` +
 
 
@@ -295,7 +327,7 @@ Defaults to: `512` +
 [[quarkus.log.console.async.overflow]]
 `quarkus.log.console.async.overflow`⚙️:: Determine whether to block the publisher (rather than drop the message) when the queue is full 
 +
-Type: `org.jboss.logmanager.handlers.AsyncHandler.OverflowAction` +
+Type: ``block`, `discard`` +
 Defaults to: `block` +
 
 
@@ -311,7 +343,7 @@ Defaults to: `false` +
 [[quarkus.log.file.format]]
 `quarkus.log.file.format`⚙️:: The log format 
 +
-Type: `java.lang.String` +
+Type: `string` +
 Defaults to: `%d{yyyy-MM-dd HH:mm:ss,SSS} %h %N[%i] %-5p [%c{3.}] (%t) %s%e%n` +
 
 
@@ -319,7 +351,7 @@ Defaults to: `%d{yyyy-MM-dd HH:mm:ss,SSS} %h %N[%i] %-5p [%c{3.}] (%t) %s%e%n` +
 [[quarkus.log.file.level]]
 `quarkus.log.file.level`⚙️:: The level of logs to be written into the file. 
 +
-Type: `java.util.logging.Level` +
+Type: `Level` +
 Defaults to: `ALL` +
 
 
@@ -327,7 +359,7 @@ Defaults to: `ALL` +
 [[quarkus.log.file.path]]
 `quarkus.log.file.path`⚙️:: The name of the file in which logs will be written. 
 +
-Type: `java.io.File` +
+Type: `File` +
 Defaults to: `quarkus.log` +
 
 
@@ -351,7 +383,7 @@ Defaults to: `512` +
 [[quarkus.log.file.async.overflow]]
 `quarkus.log.file.async.overflow`⚙️:: Determine whether to block the publisher (rather than drop the message) when the queue is full 
 +
-Type: `org.jboss.logmanager.handlers.AsyncHandler.OverflowAction` +
+Type: ``block`, `discard`` +
 Defaults to: `block` +
 
 
@@ -359,7 +391,7 @@ Defaults to: `block` +
 [[quarkus.log.file.rotation.max-file-size]]
 `quarkus.log.file.rotation.max-file-size`⚙️:: The maximum file size of the log file after which a rotation is executed. 
 +
-Type: `io.quarkus.runtime.configuration.MemorySize` +
+Type: `MemorySize` +
 
 
 
@@ -374,7 +406,7 @@ Defaults to: `1` +
 [[quarkus.log.file.rotation.file-suffix]]
 `quarkus.log.file.rotation.file-suffix`⚙️:: File handler rotation file suffix. Example fileSuffix: .yyyy-MM-dd 
 +
-Type: `java.lang.String` +
+Type: `string` +
 
 
 
@@ -397,7 +429,7 @@ Defaults to: `false` +
 [[quarkus.log.syslog.endpoint]]
 `quarkus.log.syslog.endpoint`⚙️:: The IP address and port of the syslog server 
 +
-Type: `java.net.InetSocketAddress` +
+Type: `InetSocketAddress` +
 Defaults to: `localhost:514` +
 
 
@@ -405,21 +437,21 @@ Defaults to: `localhost:514` +
 [[quarkus.log.syslog.app-name]]
 `quarkus.log.syslog.app-name`⚙️:: The app name used when formatting the message in RFC5424 format 
 +
-Type: `java.lang.String` +
+Type: `string` +
 
 
 
 [[quarkus.log.syslog.hostname]]
 `quarkus.log.syslog.hostname`⚙️:: The name of the host the messages are being sent from 
 +
-Type: `java.lang.String` +
+Type: `string` +
 
 
 
 [[quarkus.log.syslog.facility]]
 `quarkus.log.syslog.facility`⚙️:: Sets the facility used when calculating the priority of the message as defined by RFC-5424 and RFC-3164 
 +
-Type: `org.jboss.logmanager.handlers.SyslogHandler.Facility` +
+Type: ``kernel`, `user-level`, `mail-system`, `system-daemons`, `security`, `syslogd`, `line-printer`, `network-news`, `uucp`, `clock-daemon`, `security2`, `ftp-daemon`, `ntp`, `log-audit`, `log-alert`, `clock-daemon2`, `local-use-0`, `local-use-1`, `local-use-2`, `local-use-3`, `local-use-4`, `local-use-5`, `local-use-6`, `local-use-7`` +
 Defaults to: `USER_LEVEL` +
 
 
@@ -427,7 +459,7 @@ Defaults to: `USER_LEVEL` +
 [[quarkus.log.syslog.syslog-type]]
 `quarkus.log.syslog.syslog-type`⚙️:: Set the `SyslogType syslog type` this handler should use to format the message sent 
 +
-Type: `org.jboss.logmanager.handlers.SyslogHandler.SyslogType` +
+Type: ``rfc5424`, `rfc3164`` +
 Defaults to: `RFC5424` +
 
 
@@ -435,7 +467,7 @@ Defaults to: `RFC5424` +
 [[quarkus.log.syslog.protocol]]
 `quarkus.log.syslog.protocol`⚙️:: Sets the protocol used to connect to the syslog server 
 +
-Type: `org.jboss.logmanager.handlers.SyslogHandler.Protocol` +
+Type: ``tcp`, `udp`, `ssl-tcp`` +
 Defaults to: `TCP` +
 
 
@@ -467,7 +499,7 @@ Defaults to: `false` +
 [[quarkus.log.syslog.format]]
 `quarkus.log.syslog.format`⚙️:: The log message format 
 +
-Type: `java.lang.String` +
+Type: `string` +
 Defaults to: `%d{yyyy-MM-dd HH:mm:ss,SSS} %-5p [%c{3.}] (%t) %s%e%n` +
 
 
@@ -475,7 +507,7 @@ Defaults to: `%d{yyyy-MM-dd HH:mm:ss,SSS} %-5p [%c{3.}] (%t) %s%e%n` +
 [[quarkus.log.syslog.level]]
 `quarkus.log.syslog.level`⚙️:: The log level specifying, which message levels will be logged by syslog logger 
 +
-Type: `java.util.logging.Level` +
+Type: `Level` +
 Defaults to: `ALL` +
 
 
@@ -499,7 +531,7 @@ Defaults to: `512` +
 [[quarkus.log.syslog.async.overflow]]
 `quarkus.log.syslog.async.overflow`⚙️:: Determine whether to block the publisher (rather than drop the message) when the queue is full 
 +
-Type: `org.jboss.logmanager.handlers.AsyncHandler.OverflowAction` +
+Type: ``block`, `discard`` +
 Defaults to: `block` +
 
 
@@ -507,7 +539,7 @@ Defaults to: `block` +
 [[quarkus.log.category.categories.min-level]]
 `quarkus.log.category."<categories>".min-level`⚙️:: The minimum level that this category can be set to 
 +
-Type: `java.lang.String` +
+Type: `string` +
 Defaults to: `inherit` +
 
 
@@ -515,7 +547,7 @@ Defaults to: `inherit` +
 [[quarkus.log.category.categories.level]]
 `quarkus.log.category."<categories>".level`⚙️:: The log level level for this category 
 +
-Type: `java.lang.String` +
+Type: `string` +
 Defaults to: `inherit` +
 
 
@@ -523,7 +555,7 @@ Defaults to: `inherit` +
 [[quarkus.log.filter.filters.if-starts-with]]
 `quarkus.log.filter."<filters>".if-starts-with`⚙️:: The message starts to match 
 +
-Type: `java.lang.String` +
+Type: `string` +
 Defaults to: `inherit` +
 
 

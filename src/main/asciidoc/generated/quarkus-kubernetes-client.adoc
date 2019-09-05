@@ -1,88 +1,92 @@
 == Summary
 
 📦 Configuration property fixed at build time - ⚙️️ Configuration property overridable at runtime 
+
+[cols="50,10,10,5"]
 |===
 |Configuration property|Type|Default|Lifecycle
 
 |<<quarkus.kubernetes-client.trust-certs, quarkus.kubernetes-client.trust-certs>>
-|boolean 
+
+Whether or not the client should trust a self signed certificate if so presented by the API server|boolean 
 |`false`
 | 📦
 
 |<<quarkus.kubernetes-client.master-url, quarkus.kubernetes-client.master-url>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
- 
+
+URL of the Kubernetes API server|string 
 |
 | 📦
 
 |<<quarkus.kubernetes-client.namespace, quarkus.kubernetes-client.namespace>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
- 
+
+Default namespace to use|string 
 |
 | 📦
 
 |<<quarkus.kubernetes-client.ca-cert-file, quarkus.kubernetes-client.ca-cert-file>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
- 
+
+CA certificate file|string 
 |
 | 📦
 
 |<<quarkus.kubernetes-client.ca-cert-data, quarkus.kubernetes-client.ca-cert-data>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
- 
+
+CA certificate data|string 
 |
 | 📦
 
 |<<quarkus.kubernetes-client.client-cert-file, quarkus.kubernetes-client.client-cert-file>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
- 
+
+Client certificate file|string 
 |
 | 📦
 
 |<<quarkus.kubernetes-client.client-cert-data, quarkus.kubernetes-client.client-cert-data>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
- 
+
+Client certificate data|string 
 |
 | 📦
 
 |<<quarkus.kubernetes-client.client-key-file, quarkus.kubernetes-client.client-key-file>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
- 
+
+Client key file|string 
 |
 | 📦
 
 |<<quarkus.kubernetes-client.client-key-data, quarkus.kubernetes-client.client-key-data>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
- 
+
+Client key data|string 
 |
 | 📦
 
 |<<quarkus.kubernetes-client.client-key-algo, quarkus.kubernetes-client.client-key-algo>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
- 
+
+Client key algorithm|string 
 |
 | 📦
 
 |<<quarkus.kubernetes-client.client-key-passphrase, quarkus.kubernetes-client.client-key-passphrase>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
- 
+
+Client key passphrase|string 
 |
 | 📦
 
 |<<quarkus.kubernetes-client.username, quarkus.kubernetes-client.username>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
- 
+
+Kubernetes auth username|string 
 |
 | 📦
 
 |<<quarkus.kubernetes-client.password, quarkus.kubernetes-client.password>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
- 
+
+Kubernetes auth password|string 
 |
 | 📦
 
 |<<quarkus.kubernetes-client.watch-reconnect-interval, quarkus.kubernetes-client.watch-reconnect-interval>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html[Duration]
+
+Watch reconnect interval|link:https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html[Duration]
  +++
 <a href="#duration-note-anchor" title="More information about the Duration format">ℹ️</a>
 +++
@@ -90,13 +94,14 @@
 | 📦
 
 |<<quarkus.kubernetes-client.watch-reconnect-limit, quarkus.kubernetes-client.watch-reconnect-limit>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html[Integer]
- 
+
+Maximum reconnect attempts in case of watch failure By default there is no limit to the number of reconnect attempts|int 
 |`-1`
 | 📦
 
 |<<quarkus.kubernetes-client.connection-timeout, quarkus.kubernetes-client.connection-timeout>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html[Duration]
+
+Maximum amount of time to wait for a connection with the API server to be established|link:https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html[Duration]
  +++
 <a href="#duration-note-anchor" title="More information about the Duration format">ℹ️</a>
 +++
@@ -104,7 +109,8 @@
 | 📦
 
 |<<quarkus.kubernetes-client.request-timeout, quarkus.kubernetes-client.request-timeout>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html[Duration]
+
+Maximum amount of time to wait for a request to the API server to be completed|link:https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html[Duration]
  +++
 <a href="#duration-note-anchor" title="More information about the Duration format">ℹ️</a>
 +++
@@ -112,7 +118,8 @@
 | 📦
 
 |<<quarkus.kubernetes-client.rolling-timeout, quarkus.kubernetes-client.rolling-timeout>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html[Duration]
+
+Maximum amount of time in milliseconds to wait for a rollout to be completed|link:https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html[Duration]
  +++
 <a href="#duration-note-anchor" title="More information about the Duration format">ℹ️</a>
 +++
@@ -120,32 +127,32 @@
 | 📦
 
 |<<quarkus.kubernetes-client.http-proxy, quarkus.kubernetes-client.http-proxy>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
- 
+
+HTTP proxy used to access the Kubernetes API server|string 
 |
 | 📦
 
 |<<quarkus.kubernetes-client.https-proxy, quarkus.kubernetes-client.https-proxy>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
- 
+
+HTTPS proxy used to access the Kubernetes API server|string 
 |
 | 📦
 
 |<<quarkus.kubernetes-client.proxy-username, quarkus.kubernetes-client.proxy-username>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
- 
+
+Proxy username|string 
 |
 | 📦
 
 |<<quarkus.kubernetes-client.proxy-password, quarkus.kubernetes-client.proxy-password>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
- 
+
+Proxy password|string 
 |
 | 📦
 
 |<<quarkus.kubernetes-client.no-proxy, quarkus.kubernetes-client.no-proxy>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
- 
+
+IP addresses or hosts to exclude from proxying|string 
 |
 | 📦
 |===
@@ -164,91 +171,91 @@ Defaults to: `false` +
 [[quarkus.kubernetes-client.master-url]]
 `quarkus.kubernetes-client.master-url`📦:: URL of the Kubernetes API server 
 +
-Type: `java.lang.String` +
+Type: `string` +
 
 
 
 [[quarkus.kubernetes-client.namespace]]
 `quarkus.kubernetes-client.namespace`📦:: Default namespace to use 
 +
-Type: `java.lang.String` +
+Type: `string` +
 
 
 
 [[quarkus.kubernetes-client.ca-cert-file]]
 `quarkus.kubernetes-client.ca-cert-file`📦:: CA certificate file 
 +
-Type: `java.lang.String` +
+Type: `string` +
 
 
 
 [[quarkus.kubernetes-client.ca-cert-data]]
 `quarkus.kubernetes-client.ca-cert-data`📦:: CA certificate data 
 +
-Type: `java.lang.String` +
+Type: `string` +
 
 
 
 [[quarkus.kubernetes-client.client-cert-file]]
 `quarkus.kubernetes-client.client-cert-file`📦:: Client certificate file 
 +
-Type: `java.lang.String` +
+Type: `string` +
 
 
 
 [[quarkus.kubernetes-client.client-cert-data]]
 `quarkus.kubernetes-client.client-cert-data`📦:: Client certificate data 
 +
-Type: `java.lang.String` +
+Type: `string` +
 
 
 
 [[quarkus.kubernetes-client.client-key-file]]
 `quarkus.kubernetes-client.client-key-file`📦:: Client key file 
 +
-Type: `java.lang.String` +
+Type: `string` +
 
 
 
 [[quarkus.kubernetes-client.client-key-data]]
 `quarkus.kubernetes-client.client-key-data`📦:: Client key data 
 +
-Type: `java.lang.String` +
+Type: `string` +
 
 
 
 [[quarkus.kubernetes-client.client-key-algo]]
 `quarkus.kubernetes-client.client-key-algo`📦:: Client key algorithm 
 +
-Type: `java.lang.String` +
+Type: `string` +
 
 
 
 [[quarkus.kubernetes-client.client-key-passphrase]]
 `quarkus.kubernetes-client.client-key-passphrase`📦:: Client key passphrase 
 +
-Type: `java.lang.String` +
+Type: `string` +
 
 
 
 [[quarkus.kubernetes-client.username]]
 `quarkus.kubernetes-client.username`📦:: Kubernetes auth username 
 +
-Type: `java.lang.String` +
+Type: `string` +
 
 
 
 [[quarkus.kubernetes-client.password]]
 `quarkus.kubernetes-client.password`📦:: Kubernetes auth password 
 +
-Type: `java.lang.String` +
+Type: `string` +
 
 
 
 [[quarkus.kubernetes-client.watch-reconnect-interval]]
 `quarkus.kubernetes-client.watch-reconnect-interval`📦:: Watch reconnect interval 
 +
-Type: `java.time.Duration` +
+Type: `Duration` +
 Defaults to: `PT1S` +
 
 
@@ -256,7 +263,7 @@ Defaults to: `PT1S` +
 [[quarkus.kubernetes-client.watch-reconnect-limit]]
 `quarkus.kubernetes-client.watch-reconnect-limit`📦:: Maximum reconnect attempts in case of watch failure By default there is no limit to the number of reconnect attempts 
 +
-Type: `java.lang.Integer` +
+Type: `int` +
 Defaults to: `-1` +
 
 
@@ -264,7 +271,7 @@ Defaults to: `-1` +
 [[quarkus.kubernetes-client.connection-timeout]]
 `quarkus.kubernetes-client.connection-timeout`📦:: Maximum amount of time to wait for a connection with the API server to be established 
 +
-Type: `java.time.Duration` +
+Type: `Duration` +
 Defaults to: `PT10S` +
 
 
@@ -272,7 +279,7 @@ Defaults to: `PT10S` +
 [[quarkus.kubernetes-client.request-timeout]]
 `quarkus.kubernetes-client.request-timeout`📦:: Maximum amount of time to wait for a request to the API server to be completed 
 +
-Type: `java.time.Duration` +
+Type: `Duration` +
 Defaults to: `PT10S` +
 
 
@@ -280,7 +287,7 @@ Defaults to: `PT10S` +
 [[quarkus.kubernetes-client.rolling-timeout]]
 `quarkus.kubernetes-client.rolling-timeout`📦:: Maximum amount of time in milliseconds to wait for a rollout to be completed 
 +
-Type: `java.time.Duration` +
+Type: `Duration` +
 Defaults to: `PT15M` +
 
 
@@ -288,35 +295,35 @@ Defaults to: `PT15M` +
 [[quarkus.kubernetes-client.http-proxy]]
 `quarkus.kubernetes-client.http-proxy`📦:: HTTP proxy used to access the Kubernetes API server 
 +
-Type: `java.lang.String` +
+Type: `string` +
 
 
 
 [[quarkus.kubernetes-client.https-proxy]]
 `quarkus.kubernetes-client.https-proxy`📦:: HTTPS proxy used to access the Kubernetes API server 
 +
-Type: `java.lang.String` +
+Type: `string` +
 
 
 
 [[quarkus.kubernetes-client.proxy-username]]
 `quarkus.kubernetes-client.proxy-username`📦:: Proxy username 
 +
-Type: `java.lang.String` +
+Type: `string` +
 
 
 
 [[quarkus.kubernetes-client.proxy-password]]
 `quarkus.kubernetes-client.proxy-password`📦:: Proxy password 
 +
-Type: `java.lang.String` +
+Type: `string` +
 
 
 
 [[quarkus.kubernetes-client.no-proxy]]
 `quarkus.kubernetes-client.no-proxy`📦:: IP addresses or hosts to exclude from proxying 
 +
-Type: `java.lang.String` +
+Type: `string` +
 
 
 

@@ -1,17 +1,20 @@
 == Summary
 
 📦 Configuration property fixed at build time - ⚙️️ Configuration property overridable at runtime 
+
+[cols="50,10,10,5"]
 |===
 |Configuration property|Type|Default|Lifecycle
 
 |<<quarkus.resteasy.singleton-resources, quarkus.resteasy.singleton-resources>>
-|boolean 
+
+If this is true then JAX-RS will use only a single instance of a resource class to service all requests.|boolean 
 |`true`
 | 📦
 
 |<<quarkus.resteasy.path, quarkus.resteasy.path>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
- 
+
+Set this to override the default path for JAX-RS resources if there are no annotated application classes.|string 
 |`/`
 | 📦
 |===
@@ -33,7 +36,7 @@ Defaults to: `true` +
 [[quarkus.resteasy.path]]
 `quarkus.resteasy.path`📦:: Set this to override the default path for JAX-RS resources if there are no annotated application classes. 
 +
-Type: `java.lang.String` +
+Type: `string` +
 Defaults to: `/` +
 
 

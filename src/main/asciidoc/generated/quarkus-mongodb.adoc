@@ -1,47 +1,50 @@
 == Summary
 
 📦 Configuration property fixed at build time - ⚙️️ Configuration property overridable at runtime 
+
+[cols="50,10,10,5"]
 |===
 |Configuration property|Type|Default|Lifecycle
 
 |<<quarkus.mongodb.connection-string, quarkus.mongodb.connection-string>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
- 
+
+Configures the connection string.|string 
 |
 | ⚙️
 
 |<<quarkus.mongodb.hosts, quarkus.mongodb.hosts>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
- 
+
+Configures the Mongo server addressed (one if single mode).|string 
 |
 | ⚙️
 
 |<<quarkus.mongodb.database, quarkus.mongodb.database>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
- 
+
+Configure the database name.|string 
 |
 | ⚙️
 
 |<<quarkus.mongodb.application-name, quarkus.mongodb.application-name>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
- 
+
+Configures the application name.|string 
 |
 | ⚙️
 
 |<<quarkus.mongodb.max-pool-size, quarkus.mongodb.max-pool-size>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html[Integer]
- 
+
+Configures the maximum number of connections in the connection pool.|int 
 |
 | ⚙️
 
 |<<quarkus.mongodb.min-pool-size, quarkus.mongodb.min-pool-size>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html[Integer]
- 
+
+Configures the minimum number of connections in the connection pool.|int 
 |
 | ⚙️
 
 |<<quarkus.mongodb.max-connection-idle-time, quarkus.mongodb.max-connection-idle-time>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html[Duration]
+
+Maximum idle time of a pooled connection.|link:https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html[Duration]
  +++
 <a href="#duration-note-anchor" title="More information about the Duration format">ℹ️</a>
 +++
@@ -49,7 +52,8 @@
 | ⚙️
 
 |<<quarkus.mongodb.max-connection-life-time, quarkus.mongodb.max-connection-life-time>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html[Duration]
+
+Maximum life time of a pooled connection.|link:https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html[Duration]
  +++
 <a href="#duration-note-anchor" title="More information about the Duration format">ℹ️</a>
 +++
@@ -57,7 +61,8 @@
 | ⚙️
 
 |<<quarkus.mongodb.wait-queue-timeout, quarkus.mongodb.wait-queue-timeout>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html[Duration]
+
+The maximum wait time that a thread may wait for a connection to become available.|link:https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html[Duration]
  +++
 <a href="#duration-note-anchor" title="More information about the Duration format">ℹ️</a>
 +++
@@ -65,7 +70,8 @@
 | ⚙️
 
 |<<quarkus.mongodb.maintenance-frequency, quarkus.mongodb.maintenance-frequency>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html[Duration]
+
+Configures the time period between runs of the maintenance job.|link:https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html[Duration]
  +++
 <a href="#duration-note-anchor" title="More information about the Duration format">ℹ️</a>
 +++
@@ -73,7 +79,8 @@
 | ⚙️
 
 |<<quarkus.mongodb.maintenance-initial-delay, quarkus.mongodb.maintenance-initial-delay>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html[Duration]
+
+Configures period of time to wait before running the first maintenance job on the connection pool.|link:https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html[Duration]
  +++
 <a href="#duration-note-anchor" title="More information about the Duration format">ℹ️</a>
 +++
@@ -81,13 +88,14 @@
 | ⚙️
 
 |<<quarkus.mongodb.wait-queue-multiple, quarkus.mongodb.wait-queue-multiple>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html[Integer]
- 
+
+This multiplier, multiplied with the `maxPoolSize` setting, gives the maximum number of threads that may be waiting for a connection to become available from the pool.|int 
 |
 | ⚙️
 
 |<<quarkus.mongodb.connect-timeout, quarkus.mongodb.connect-timeout>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html[Duration]
+
+How long a connection can take to be opened before timing out.|link:https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html[Duration]
  +++
 <a href="#duration-note-anchor" title="More information about the Duration format">ℹ️</a>
 +++
@@ -95,7 +103,8 @@
 | ⚙️
 
 |<<quarkus.mongodb.socket-timeout, quarkus.mongodb.socket-timeout>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html[Duration]
+
+How long a send or receive on a socket can take before timing out.|link:https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html[Duration]
  +++
 <a href="#duration-note-anchor" title="More information about the Duration format">ℹ️</a>
 +++
@@ -103,23 +112,26 @@
 | ⚙️
 
 |<<quarkus.mongodb.tls-insecure, quarkus.mongodb.tls-insecure>>
-|boolean 
+
+If connecting with TLS, this option enables insecure TLS connections.|boolean 
 |`false`
 | ⚙️
 
 |<<quarkus.mongodb.tls, quarkus.mongodb.tls>>
-|boolean 
+
+Whether to connect using TLS.|boolean 
 |`false`
 | ⚙️
 
 |<<quarkus.mongodb.replica-set-name, quarkus.mongodb.replica-set-name>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
- 
+
+Implies that the hosts given are a seed list, and the driver will attempt to find all members of the set.|string 
 |
 | ⚙️
 
 |<<quarkus.mongodb.server-selection-timeout, quarkus.mongodb.server-selection-timeout>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html[Duration]
+
+How long the driver will wait for server selection to succeed before throwing an exception.|link:https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html[Duration]
  +++
 <a href="#duration-note-anchor" title="More information about the Duration format">ℹ️</a>
 +++
@@ -127,7 +139,8 @@
 | ⚙️
 
 |<<quarkus.mongodb.local-threshold, quarkus.mongodb.local-threshold>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html[Duration]
+
+When choosing among multiple MongoDB servers to send a request, the driver will only send that request to a server whose ping time is less than or equal to the server with the fastest ping time plus the local threshold.|link:https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html[Duration]
  +++
 <a href="#duration-note-anchor" title="More information about the Duration format">ℹ️</a>
 +++
@@ -135,7 +148,8 @@
 | ⚙️
 
 |<<quarkus.mongodb.heartbeat-frequency, quarkus.mongodb.heartbeat-frequency>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html[Duration]
+
+The frequency that the driver will attempt to determine the current state of each server in the cluster.|link:https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html[Duration]
  +++
 <a href="#duration-note-anchor" title="More information about the Duration format">ℹ️</a>
 +++
@@ -143,28 +157,32 @@
 | ⚙️
 
 |<<quarkus.mongodb.write-concern.safe, quarkus.mongodb.write-concern.safe>>
-|boolean 
+
+Configures the safety.|boolean 
 |`true`
 | ⚙️
 
 |<<quarkus.mongodb.write-concern.journal, quarkus.mongodb.write-concern.journal>>
-|boolean 
+
+Configures the journal writing aspect.|boolean 
 |`true`
 | ⚙️
 
 |<<quarkus.mongodb.write-concern.w, quarkus.mongodb.write-concern.w>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
- 
+
+When set, the driver adds `w: wValue` to all write commands.|string 
 |
 | ⚙️
 
 |<<quarkus.mongodb.write-concern.retry-writes, quarkus.mongodb.write-concern.retry-writes>>
-|boolean 
+
+If set to `true`, the driver will retry supported write operations if they fail due to a network error.|boolean 
 |`false`
 | ⚙️
 
 |<<quarkus.mongodb.write-concern.w-timeout, quarkus.mongodb.write-concern.w-timeout>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html[Duration]
+
+When set, the driver adds `wtimeout : ms` to all write commands.|link:https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html[Duration]
  +++
 <a href="#duration-note-anchor" title="More information about the Duration format">ℹ️</a>
 +++
@@ -172,43 +190,44 @@
 | ⚙️
 
 |<<quarkus.mongodb.read-preference, quarkus.mongodb.read-preference>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
- 
+
+Configures the read preferences.|string 
 |
 | ⚙️
 
 |<<quarkus.mongodb.credentials.username, quarkus.mongodb.credentials.username>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
- 
+
+Configures the username.|string 
 |
 | ⚙️
 
 |<<quarkus.mongodb.credentials.password, quarkus.mongodb.credentials.password>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
- 
+
+Configures the password.|string 
 |
 | ⚙️
 
 |<<quarkus.mongodb.credentials.auth-mechanism, quarkus.mongodb.credentials.auth-mechanism>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
- 
+
+Configures the authentication mechanism to use if a credential was supplied.|string 
 |
 | ⚙️
 
 |<<quarkus.mongodb.credentials.auth-source, quarkus.mongodb.credentials.auth-source>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
- 
+
+Configures the source of the authentication credentials.|string 
 |
 | ⚙️
 
 |<<quarkus.mongodb.max-wait-queue-size, quarkus.mongodb.max-wait-queue-size>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html[Integer]
- 
+
+Configures the maximum number of concurrent operations allowed to wait for a server to become available.|int 
 |
 | ⚙️
 
 |<<quarkus.mongodb.credentials.auth-mechanism-properties.auth-mechanism-properties, quarkus.mongodb.credentials.auth-mechanism-properties."<auth-mechanism-properties>">>
-|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
+
+Allows passing authentication mechanism properties.|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
  
 |
 | ⚙️
@@ -232,98 +251,98 @@
  - `/database` is the name of the database to login to and thus is only relevant if the `username:password@` syntax is used. If not specified the "admin" database will be used by default. 
  - `?options` are connection options. Note that if `database` is absent there is still a `/` required between the last host and the `?` introducing the options. Options are name=value pairs and the pairs are separated by "&". Additionally with the mongodb+srv protocol, TXT records are looked up from a Domain Name Server for the given host, and the text value of each one is prepended to any options on the URI itself. Because the last specified value for any option wins, that means that options provided on the URI will override any that are provided via TXT records.  
 +
-Type: `java.lang.String` +
+Type: `string` +
 
 
 
 [[quarkus.mongodb.hosts]]
 `quarkus.mongodb.hosts`⚙️:: Configures the Mongo server addressed (one if single mode). The addressed are passed as `host:port`. 
 +
-Type: `java.lang.String` +
+Type: `string` +
 
 
 
 [[quarkus.mongodb.database]]
 `quarkus.mongodb.database`⚙️:: Configure the database name. 
 +
-Type: `java.lang.String` +
+Type: `string` +
 
 
 
 [[quarkus.mongodb.application-name]]
 `quarkus.mongodb.application-name`⚙️:: Configures the application name. 
 +
-Type: `java.lang.String` +
+Type: `string` +
 
 
 
 [[quarkus.mongodb.max-pool-size]]
 `quarkus.mongodb.max-pool-size`⚙️:: Configures the maximum number of connections in the connection pool. 
 +
-Type: `java.lang.Integer` +
+Type: `int` +
 
 
 
 [[quarkus.mongodb.min-pool-size]]
 `quarkus.mongodb.min-pool-size`⚙️:: Configures the minimum number of connections in the connection pool. 
 +
-Type: `java.lang.Integer` +
+Type: `int` +
 
 
 
 [[quarkus.mongodb.max-connection-idle-time]]
 `quarkus.mongodb.max-connection-idle-time`⚙️:: Maximum idle time of a pooled connection. A connection that exceeds this limit will be closed. 
 +
-Type: `java.time.Duration` +
+Type: `Duration` +
 
 
 
 [[quarkus.mongodb.max-connection-life-time]]
 `quarkus.mongodb.max-connection-life-time`⚙️:: Maximum life time of a pooled connection. A connection that exceeds this limit will be closed. 
 +
-Type: `java.time.Duration` +
+Type: `Duration` +
 
 
 
 [[quarkus.mongodb.wait-queue-timeout]]
 `quarkus.mongodb.wait-queue-timeout`⚙️:: The maximum wait time that a thread may wait for a connection to become available. 
 +
-Type: `java.time.Duration` +
+Type: `Duration` +
 
 
 
 [[quarkus.mongodb.maintenance-frequency]]
 `quarkus.mongodb.maintenance-frequency`⚙️:: Configures the time period between runs of the maintenance job. 
 +
-Type: `java.time.Duration` +
+Type: `Duration` +
 
 
 
 [[quarkus.mongodb.maintenance-initial-delay]]
 `quarkus.mongodb.maintenance-initial-delay`⚙️:: Configures period of time to wait before running the first maintenance job on the connection pool. 
 +
-Type: `java.time.Duration` +
+Type: `Duration` +
 
 
 
 [[quarkus.mongodb.wait-queue-multiple]]
 `quarkus.mongodb.wait-queue-multiple`⚙️:: This multiplier, multiplied with the `maxPoolSize` setting, gives the maximum number of threads that may be waiting for a connection to become available from the pool. All further threads will get an exception right away. 
 +
-Type: `java.lang.Integer` +
+Type: `int` +
 
 
 
 [[quarkus.mongodb.connect-timeout]]
 `quarkus.mongodb.connect-timeout`⚙️:: How long a connection can take to be opened before timing out. 
 +
-Type: `java.time.Duration` +
+Type: `Duration` +
 
 
 
 [[quarkus.mongodb.socket-timeout]]
 `quarkus.mongodb.socket-timeout`⚙️:: How long a send or receive on a socket can take before timing out. 
 +
-Type: `java.time.Duration` +
+Type: `Duration` +
 
 
 
@@ -346,28 +365,28 @@ Defaults to: `false` +
 [[quarkus.mongodb.replica-set-name]]
 `quarkus.mongodb.replica-set-name`⚙️:: Implies that the hosts given are a seed list, and the driver will attempt to find all members of the set. 
 +
-Type: `java.lang.String` +
+Type: `string` +
 
 
 
 [[quarkus.mongodb.server-selection-timeout]]
 `quarkus.mongodb.server-selection-timeout`⚙️:: How long the driver will wait for server selection to succeed before throwing an exception. 
 +
-Type: `java.time.Duration` +
+Type: `Duration` +
 
 
 
 [[quarkus.mongodb.local-threshold]]
 `quarkus.mongodb.local-threshold`⚙️:: When choosing among multiple MongoDB servers to send a request, the driver will only send that request to a server whose ping time is less than or equal to the server with the fastest ping time plus the local threshold. 
 +
-Type: `java.time.Duration` +
+Type: `Duration` +
 
 
 
 [[quarkus.mongodb.heartbeat-frequency]]
 `quarkus.mongodb.heartbeat-frequency`⚙️:: The frequency that the driver will attempt to determine the current state of each server in the cluster. 
 +
-Type: `java.time.Duration` +
+Type: `Duration` +
 
 
 
@@ -391,7 +410,7 @@ Defaults to: `true` +
 [[quarkus.mongodb.write-concern.w]]
 `quarkus.mongodb.write-concern.w`⚙️:: When set, the driver adds `w: wValue` to all write commands. It requires `safe` to be `true`. The value is typically a number, but can also be the `majority` string. 
 +
-Type: `java.lang.String` +
+Type: `string` +
 
 
 
@@ -406,56 +425,56 @@ Defaults to: `false` +
 [[quarkus.mongodb.write-concern.w-timeout]]
 `quarkus.mongodb.write-concern.w-timeout`⚙️:: When set, the driver adds `wtimeout : ms` to all write commands. It requires `safe` to be `true`. 
 +
-Type: `java.time.Duration` +
+Type: `Duration` +
 
 
 
 [[quarkus.mongodb.read-preference]]
 `quarkus.mongodb.read-preference`⚙️:: Configures the read preferences. Supported values are: `primary|primaryPreferred|secondary|secondaryPreferred|nearest` 
 +
-Type: `java.lang.String` +
+Type: `string` +
 
 
 
 [[quarkus.mongodb.credentials.username]]
 `quarkus.mongodb.credentials.username`⚙️:: Configures the username. 
 +
-Type: `java.lang.String` +
+Type: `string` +
 
 
 
 [[quarkus.mongodb.credentials.password]]
 `quarkus.mongodb.credentials.password`⚙️:: Configures the password. 
 +
-Type: `java.lang.String` +
+Type: `string` +
 
 
 
 [[quarkus.mongodb.credentials.auth-mechanism]]
 `quarkus.mongodb.credentials.auth-mechanism`⚙️:: Configures the authentication mechanism to use if a credential was supplied. The default is unspecified, in which case the client will pick the most secure mechanism available based on the sever version. For the GSSAPI and MONGODB-X509 mechanisms, no password is accepted, only the username. Supported values: `MONGO-CR|GSSAPI|PLAIN|MONGODB-X509` 
 +
-Type: `java.lang.String` +
+Type: `string` +
 
 
 
 [[quarkus.mongodb.credentials.auth-source]]
 `quarkus.mongodb.credentials.auth-source`⚙️:: Configures the source of the authentication credentials. This is typically the database that the credentials have been created. The value defaults to the database specified in the path portion of the connection string or in the 'database' configuration property.. If the database is specified in neither place, the default value is `admin`. This option is only respected when using the MONGO-CR mechanism (the default). 
 +
-Type: `java.lang.String` +
+Type: `string` +
 
 
 
 [[quarkus.mongodb.max-wait-queue-size]]
 `quarkus.mongodb.max-wait-queue-size`⚙️:: Configures the maximum number of concurrent operations allowed to wait for a server to become available. All further operations will get an exception immediately. 
 +
-Type: `java.lang.Integer` +
+Type: `int` +
 
 
 
 [[quarkus.mongodb.credentials.auth-mechanism-properties.auth-mechanism-properties]]
 `quarkus.mongodb.credentials.auth-mechanism-properties."<auth-mechanism-properties>"`⚙️:: Allows passing authentication mechanism properties. 
 +
-Type: `java.lang.String` +
+Type: `String` +
 
 
 

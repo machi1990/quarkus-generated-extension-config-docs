@@ -1,30 +1,33 @@
 == Summary
 
 📦 Configuration property fixed at build time - ⚙️️ Configuration property overridable at runtime 
+
+[cols="50,10,10,5"]
 |===
 |Configuration property|Type|Default|Lifecycle
 
 |<<quarkus.kafka-streams.application-id, quarkus.kafka-streams.application-id>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
- 
+
+A unique identifier for this Kafka Streams application.|string 
 |
 | ⚙️
 
 |<<quarkus.kafka-streams.bootstrap-servers, quarkus.kafka-streams.bootstrap-servers>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/net/InetSocketAddress.html[InetSocketAddress]
+
+A comma-separated list of host:port pairs identifying the Kafka bootstrap server(s)|link:https://docs.oracle.com/javase/8/docs/api/java/net/InetSocketAddress.html[InetSocketAddress]
  
 |`localhost:9012`
 | ⚙️
 
 |<<quarkus.kafka-streams.application-server, quarkus.kafka-streams.application-server>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
- 
+
+A unique identifier of this application instance, typically in the form host:port.|string 
 |
 | ⚙️
 
 |<<quarkus.kafka-streams.topics, quarkus.kafka-streams.topics>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
- 
+
+A comma-separated list of topic names processed by this stream processing application.|string 
 |
 | ⚙️
 |===
@@ -35,14 +38,14 @@
 [[quarkus.kafka-streams.application-id]]
 `quarkus.kafka-streams.application-id`⚙️:: A unique identifier for this Kafka Streams application. 
 +
-Type: `java.lang.String` +
+Type: `string` +
 
 
 
 [[quarkus.kafka-streams.bootstrap-servers]]
 `quarkus.kafka-streams.bootstrap-servers`⚙️:: A comma-separated list of host:port pairs identifying the Kafka bootstrap server(s) 
 +
-Type: `java.net.InetSocketAddress` +
+Type: `InetSocketAddress` +
 Defaults to: `localhost:9012` +
 
 
@@ -50,13 +53,13 @@ Defaults to: `localhost:9012` +
 [[quarkus.kafka-streams.application-server]]
 `quarkus.kafka-streams.application-server`⚙️:: A unique identifier of this application instance, typically in the form host:port. 
 +
-Type: `java.lang.String` +
+Type: `string` +
 
 
 
 [[quarkus.kafka-streams.topics]]
 `quarkus.kafka-streams.topics`⚙️:: A comma-separated list of topic names processed by this stream processing application. The pipeline will only be started once all these topics are present in the Kafka cluster. 
 +
-Type: `java.lang.String` +
+Type: `string` +
 
 

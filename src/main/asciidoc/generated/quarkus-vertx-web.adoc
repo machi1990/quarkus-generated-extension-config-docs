@@ -1,66 +1,74 @@
 == Summary
 
 📦 Configuration property fixed at build time - ⚙️️ Configuration property overridable at runtime 
+
+[cols="50,10,10,5"]
 |===
 |Configuration property|Type|Default|Lifecycle
 
 |<<quarkus.http.cors, quarkus.http.cors>>
-|boolean 
+
+Enable the CORS filter.|boolean 
 |`false`
 | ⚙️
 
 |<<quarkus.http.port, quarkus.http.port>>
-|int 
+
+The HTTP port|int 
 |`8080`
 | ⚙️
 
 |<<quarkus.http.test-port, quarkus.http.test-port>>
-|int 
+
+The HTTP port used to run tests|int 
 |`8081`
 | ⚙️
 
 |<<quarkus.http.host, quarkus.http.host>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
- 
+
+The HTTP host|string 
 |`0.0.0.0`
 | ⚙️
 
 |<<quarkus.http.ssl-port, quarkus.http.ssl-port>>
-|int 
+
+The HTTPS port|int 
 |`8443`
 | ⚙️
 
 |<<quarkus.http.test-ssl-port, quarkus.http.test-ssl-port>>
-|int 
+
+The HTTPS port used to run tests|int 
 |`8444`
 | ⚙️
 
 |<<quarkus.http.cors.origins, quarkus.http.cors.origins>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
- 
+
+Origins allowed for CORS Comma separated list of valid URLs.|string 
 |
 | ⚙️
 
 |<<quarkus.http.cors.methods, quarkus.http.cors.methods>>
-|link:https://vertx.io/docs/apidocs/io/vertx/core/http/HttpMethod.html[HttpMethod]
- 
+
+HTTP methods allowed for CORS Comma separated list of valid methods.|`options`, `get`, `head`, `post`, `put`, `delete`, `trace`, `connect`, `patch`, `other` 
 |
 | ⚙️
 
 |<<quarkus.http.cors.headers, quarkus.http.cors.headers>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
- 
+
+HTTP headers allowed for CORS Comma separated list of valid headers.|string 
 |
 | ⚙️
 
 |<<quarkus.http.cors.exposed-headers, quarkus.http.cors.exposed-headers>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
- 
+
+HTTP headers exposed in CORS Comma separated list of valid headers.|string 
 |
 | ⚙️
 
 |<<quarkus.http.cors.access-control-max-age, quarkus.http.cors.access-control-max-age>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html[Duration]
+
+The `Access-Control-Max-Age` response header value indicating how long the results of a pre-flight request can be cached.|link:https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html[Duration]
  +++
 <a href="#duration-note-anchor" title="More information about the Duration format">ℹ️</a>
 +++
@@ -68,55 +76,56 @@
 | ⚙️
 
 |<<quarkus.http.ssl.certificate.file, quarkus.http.ssl.certificate.file>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/nio/file/Path.html[Path]
- 
+
+The file path to a server certificate or certificate chain in PEM format.|path 
 |
 | ⚙️
 
 |<<quarkus.http.ssl.certificate.key-file, quarkus.http.ssl.certificate.key-file>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/nio/file/Path.html[Path]
- 
+
+The file path to the corresponding certificate private key file in PEM format.|path 
 |
 | ⚙️
 
 |<<quarkus.http.ssl.certificate.key-store-file, quarkus.http.ssl.certificate.key-store-file>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/nio/file/Path.html[Path]
- 
+
+An optional key store which holds the certificate information instead of specifying separate files.|path 
 |
 | ⚙️
 
 |<<quarkus.http.ssl.certificate.key-store-file-type, quarkus.http.ssl.certificate.key-store-file-type>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
- 
+
+An optional parameter to specify type of the key store file.|string 
 |
 | ⚙️
 
 |<<quarkus.http.ssl.certificate.key-store-password, quarkus.http.ssl.certificate.key-store-password>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
- 
+
+A parameter to specify the password of the key store file.|string 
 |`password`
 | ⚙️
 
 |<<quarkus.http.ssl.cipher-suites, quarkus.http.ssl.cipher-suites>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
- 
+
+The cipher suites to use.|string 
 |
 | ⚙️
 
 |<<quarkus.http.ssl.protocols, quarkus.http.ssl.protocols>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
- 
+
+The list of protocols to explicitly enable.|string 
 |`TLSv1.3,TLSv1.2`
 | ⚙️
 
 |<<quarkus.http.io-threads, quarkus.http.io-threads>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html[Integer]
- 
+
+The number if IO threads used to perform IO.|int 
 |
 | ⚙️
 
 |<<quarkus.http.virtual, quarkus.http.virtual>>
-|boolean 
+
+If this is true then only a virtual channel will be set up for vertx web.|boolean 
 |`false`
 | ⚙️
 |===
@@ -151,7 +160,7 @@ Defaults to: `8081` +
 [[quarkus.http.host]]
 `quarkus.http.host`⚙️:: The HTTP host 
 +
-Type: `java.lang.String` +
+Type: `string` +
 Defaults to: `0.0.0.0` +
 
 
@@ -175,70 +184,70 @@ Defaults to: `8444` +
 [[quarkus.http.cors.origins]]
 `quarkus.http.cors.origins`⚙️:: Origins allowed for CORS Comma separated list of valid URLs. ex: http://www.quarkus.io,http://localhost:3000 The filter allows any origin if this is not set. default: returns any requested origin as valid 
 +
-Type: `java.lang.String` +
+Type: `string` +
 
 
 
 [[quarkus.http.cors.methods]]
 `quarkus.http.cors.methods`⚙️:: HTTP methods allowed for CORS Comma separated list of valid methods. ex: GET,PUT,POST The filter allows any method if this is not set. default: returns any requested method as valid 
 +
-Type: `io.vertx.core.http.HttpMethod` +
+Type: ``options`, `get`, `head`, `post`, `put`, `delete`, `trace`, `connect`, `patch`, `other`` +
 
 
 
 [[quarkus.http.cors.headers]]
 `quarkus.http.cors.headers`⚙️:: HTTP headers allowed for CORS Comma separated list of valid headers. ex: X-Custom,Content-Disposition The filter allows any header if this is not set. default: returns any requested header as valid 
 +
-Type: `java.lang.String` +
+Type: `string` +
 
 
 
 [[quarkus.http.cors.exposed-headers]]
 `quarkus.http.cors.exposed-headers`⚙️:: HTTP headers exposed in CORS Comma separated list of valid headers. ex: X-Custom,Content-Disposition default: empty 
 +
-Type: `java.lang.String` +
+Type: `string` +
 
 
 
 [[quarkus.http.cors.access-control-max-age]]
 `quarkus.http.cors.access-control-max-age`⚙️:: The `Access-Control-Max-Age` response header value indicating how long the results of a pre-flight request can be cached. 
 +
-Type: `java.time.Duration` +
+Type: `Duration` +
 
 
 
 [[quarkus.http.ssl.certificate.file]]
 `quarkus.http.ssl.certificate.file`⚙️:: The file path to a server certificate or certificate chain in PEM format. 
 +
-Type: `java.nio.file.Path` +
+Type: `path` +
 
 
 
 [[quarkus.http.ssl.certificate.key-file]]
 `quarkus.http.ssl.certificate.key-file`⚙️:: The file path to the corresponding certificate private key file in PEM format. 
 +
-Type: `java.nio.file.Path` +
+Type: `path` +
 
 
 
 [[quarkus.http.ssl.certificate.key-store-file]]
 `quarkus.http.ssl.certificate.key-store-file`⚙️:: An optional key store which holds the certificate information instead of specifying separate files. 
 +
-Type: `java.nio.file.Path` +
+Type: `path` +
 
 
 
 [[quarkus.http.ssl.certificate.key-store-file-type]]
 `quarkus.http.ssl.certificate.key-store-file-type`⚙️:: An optional parameter to specify type of the key store file. If not given, the type is automatically detected based on the file name. 
 +
-Type: `java.lang.String` +
+Type: `string` +
 
 
 
 [[quarkus.http.ssl.certificate.key-store-password]]
 `quarkus.http.ssl.certificate.key-store-password`⚙️:: A parameter to specify the password of the key store file. If not given, the default ("password") is used. 
 +
-Type: `java.lang.String` +
+Type: `string` +
 Defaults to: `password` +
 
 
@@ -246,14 +255,14 @@ Defaults to: `password` +
 [[quarkus.http.ssl.cipher-suites]]
 `quarkus.http.ssl.cipher-suites`⚙️:: The cipher suites to use. If none is given, a reasonable default is selected. 
 +
-Type: `java.lang.String` +
+Type: `string` +
 
 
 
 [[quarkus.http.ssl.protocols]]
 `quarkus.http.ssl.protocols`⚙️:: The list of protocols to explicitly enable. 
 +
-Type: `java.lang.String` +
+Type: `string` +
 Defaults to: `TLSv1.3,TLSv1.2` +
 
 
@@ -261,7 +270,7 @@ Defaults to: `TLSv1.3,TLSv1.2` +
 [[quarkus.http.io-threads]]
 `quarkus.http.io-threads`⚙️:: The number if IO threads used to perform IO. This will be automatically set to a reasonable value based on the number of CPU cores if it is not provided 
 +
-Type: `java.lang.Integer` +
+Type: `int` +
 
 
 

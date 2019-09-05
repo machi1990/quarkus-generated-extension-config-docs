@@ -1,18 +1,20 @@
 == Summary
 
 📦 Configuration property fixed at build time - ⚙️️ Configuration property overridable at runtime 
+
+[cols="50,10,10,5"]
 |===
 |Configuration property|Type|Default|Lifecycle
 
 |<<quarkus.hot-reload.password, quarkus.hot-reload.password>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
- 
+
+|string 
 |
 | 📦
 
 |<<quarkus.hot-reload.url, quarkus.hot-reload.url>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
- 
+
+|string 
 |
 | 📦
 |===
@@ -23,13 +25,13 @@
 [[quarkus.hot-reload.password]]
 `quarkus.hot-reload.password`📦::  
 +
-Type: `java.lang.String` +
+Type: `string` +
 
 
 
 [[quarkus.hot-reload.url]]
 `quarkus.hot-reload.url`📦::  
 +
-Type: `java.lang.String` +
+Type: `string` +
 
 

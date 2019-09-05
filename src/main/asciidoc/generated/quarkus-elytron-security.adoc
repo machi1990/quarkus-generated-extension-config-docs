@@ -1,69 +1,75 @@
 == Summary
 
 📦 Configuration property fixed at build time - ⚙️️ Configuration property overridable at runtime 
+
+[cols="50,10,10,5"]
 |===
 |Configuration property|Type|Default|Lifecycle
 
 |<<quarkus.security.file.auth-mechanism, quarkus.security.file.auth-mechanism>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
- 
+
+The authentication mechanism|string 
 |`BASIC`
 | 📦
 
 |<<quarkus.security.file.realm-name, quarkus.security.file.realm-name>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
- 
+
+The authentication mechanism|string 
 |`Quarkus`
 | 📦
 
 |<<quarkus.security.file.enabled, quarkus.security.file.enabled>>
-|boolean 
+
+If the properties store is enabled.|boolean 
 |`false`
 | 📦
 
 |<<quarkus.security.file.users, quarkus.security.file.users>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
- 
+
+The location of the users property resource|string 
 |`users.properties`
 | 📦
 
 |<<quarkus.security.file.roles, quarkus.security.file.roles>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
- 
+
+The location of the roles property file|string 
 |`roles.properties`
 | 📦
 
 |<<quarkus.security.embedded.auth-mechanism, quarkus.security.embedded.auth-mechanism>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
- 
+
+The authentication mechanism|string 
 |`BASIC`
 | 📦
 
 |<<quarkus.security.embedded.realm-name, quarkus.security.embedded.realm-name>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
- 
+
+The authentication mechanism|string 
 |`Quarkus`
 | 📦
 
 |<<quarkus.security.embedded.enabled, quarkus.security.embedded.enabled>>
-|boolean 
+
+If the embedded store is enabled.|boolean 
 |`false`
 | 📦
 
 |<<quarkus.security.security-providers, quarkus.security.security-providers>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
- 
+
+List of security providers to enable for reflection|string 
 |
 | 📦
 
 |<<quarkus.security.embedded.users.users, quarkus.security.embedded.users."<users>">>
-|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
+
+The realm users user1=password\nuser2=password2.|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
  
 |
 | 📦
 
 |<<quarkus.security.embedded.roles.roles, quarkus.security.embedded.roles."<roles>">>
-|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
+
+The realm roles user1=role1,role2,.|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
  
 |
 | 📦
@@ -75,7 +81,7 @@
 [[quarkus.security.file.auth-mechanism]]
 `quarkus.security.file.auth-mechanism`📦:: The authentication mechanism 
 +
-Type: `java.lang.String` +
+Type: `string` +
 Defaults to: `BASIC` +
 
 
@@ -83,7 +89,7 @@ Defaults to: `BASIC` +
 [[quarkus.security.file.realm-name]]
 `quarkus.security.file.realm-name`📦:: The authentication mechanism 
 +
-Type: `java.lang.String` +
+Type: `string` +
 Defaults to: `Quarkus` +
 
 
@@ -99,7 +105,7 @@ Defaults to: `false` +
 [[quarkus.security.file.users]]
 `quarkus.security.file.users`📦:: The location of the users property resource 
 +
-Type: `java.lang.String` +
+Type: `string` +
 Defaults to: `users.properties` +
 
 
@@ -107,7 +113,7 @@ Defaults to: `users.properties` +
 [[quarkus.security.file.roles]]
 `quarkus.security.file.roles`📦:: The location of the roles property file 
 +
-Type: `java.lang.String` +
+Type: `string` +
 Defaults to: `roles.properties` +
 
 
@@ -115,7 +121,7 @@ Defaults to: `roles.properties` +
 [[quarkus.security.embedded.auth-mechanism]]
 `quarkus.security.embedded.auth-mechanism`📦:: The authentication mechanism 
 +
-Type: `java.lang.String` +
+Type: `string` +
 Defaults to: `BASIC` +
 
 
@@ -123,7 +129,7 @@ Defaults to: `BASIC` +
 [[quarkus.security.embedded.realm-name]]
 `quarkus.security.embedded.realm-name`📦:: The authentication mechanism 
 +
-Type: `java.lang.String` +
+Type: `string` +
 Defaults to: `Quarkus` +
 
 
@@ -139,20 +145,20 @@ Defaults to: `false` +
 [[quarkus.security.security-providers]]
 `quarkus.security.security-providers`📦:: List of security providers to enable for reflection 
 +
-Type: `java.lang.String` +
+Type: `string` +
 
 
 
 [[quarkus.security.embedded.users.users]]
 `quarkus.security.embedded.users."<users>"`📦:: The realm users user1=password\nuser2=password2... mapping 
 +
-Type: `java.lang.String` +
+Type: `String` +
 
 
 
 [[quarkus.security.embedded.roles.roles]]
 `quarkus.security.embedded.roles."<roles>"`📦:: The realm roles user1=role1,role2,...\nuser2=role1,role2,... mapping 
 +
-Type: `java.lang.String` +
+Type: `String` +
 
 

@@ -1,12 +1,14 @@
 == Summary
 
 📦 Configuration property fixed at build time - ⚙️️ Configuration property overridable at runtime 
+
+[cols="50,10,10,5"]
 |===
 |Configuration property|Type|Default|Lifecycle
 
 |<<quarkus.servlet.context-path, quarkus.servlet.context-path>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
- 
+
+The context path to serve all Servlet context from.|string 
 |
 | 📦
 |===
@@ -17,6 +19,6 @@
 [[quarkus.servlet.context-path]]
 `quarkus.servlet.context-path`📦:: The context path to serve all Servlet context from. This will also affect any resources that run as a Servlet, e.g. JAX-RS 
 +
-Type: `java.lang.String` +
+Type: `string` +
 
 

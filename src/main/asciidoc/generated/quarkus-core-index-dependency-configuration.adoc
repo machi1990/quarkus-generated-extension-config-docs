@@ -1,24 +1,26 @@
 == Summary
 
 📦 Configuration property fixed at build time - ⚙️️ Configuration property overridable at runtime 
+
+[cols="50,10,10,5"]
 |===
 |Configuration property|Type|Default|Lifecycle
 
 |<<quarkus.index-dependency.index-dependency.group-id, quarkus.index-dependency."<index-dependency>".group-id>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
- 
+
+The maven groupId of the artifact to index|string 
 |
 | 📦
 
 |<<quarkus.index-dependency.index-dependency.artifact-id, quarkus.index-dependency."<index-dependency>".artifact-id>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
- 
+
+The maven artifactId of the artifact to index|string 
 |
 | 📦
 
 |<<quarkus.index-dependency.index-dependency.classifier, quarkus.index-dependency."<index-dependency>".classifier>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
- 
+
+The maven classifier of the artifact to index|string 
 |
 | 📦
 |===
@@ -29,20 +31,20 @@
 [[quarkus.index-dependency.index-dependency.group-id]]
 `quarkus.index-dependency."<index-dependency>".group-id`📦:: The maven groupId of the artifact to index 
 +
-Type: `java.lang.String` +
+Type: `string` +
 
 
 
 [[quarkus.index-dependency.index-dependency.artifact-id]]
 `quarkus.index-dependency."<index-dependency>".artifact-id`📦:: The maven artifactId of the artifact to index 
 +
-Type: `java.lang.String` +
+Type: `string` +
 
 
 
 [[quarkus.index-dependency.index-dependency.classifier]]
 `quarkus.index-dependency."<index-dependency>".classifier`📦:: The maven classifier of the artifact to index 
 +
-Type: `java.lang.String` +
+Type: `string` +
 
 

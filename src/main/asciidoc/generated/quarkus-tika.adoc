@@ -1,17 +1,20 @@
 == Summary
 
 📦 Configuration property fixed at build time - ⚙️️ Configuration property overridable at runtime 
+
+[cols="50,10,10,5"]
 |===
 |Configuration property|Type|Default|Lifecycle
 
 |<<quarkus.tika.tika-config-path, quarkus.tika.tika-config-path>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
- 
+
+The path to the tika-config.|string 
 |`tika-config.xml`
 | 📦
 
 |<<quarkus.tika.append-embedded-content, quarkus.tika.append-embedded-content>>
-|boolean 
+
+Controls how the content of the embedded documents is parsed.|boolean 
 |`true`
 | 📦
 |===
@@ -22,7 +25,7 @@
 [[quarkus.tika.tika-config-path]]
 `quarkus.tika.tika-config-path`📦:: The path to the tika-config.xml 
 +
-Type: `java.lang.String` +
+Type: `string` +
 Defaults to: `tika-config.xml` +
 
 

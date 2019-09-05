@@ -1,56 +1,62 @@
 == Summary
 
 📦 Configuration property fixed at build time - ⚙️️ Configuration property overridable at runtime 
+
+[cols="50,10,10,5"]
 |===
 |Configuration property|Type|Default|Lifecycle
 
 |<<quarkus.datasource.driver, quarkus.datasource.driver>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
- 
+
+The datasource driver class name|string 
 |
 | 📦
 
 |<<quarkus.datasource.xa, quarkus.datasource.xa>>
-|boolean 
+
+Whether we want to use XA.|boolean 
 |`false`
 | 📦
 
 |<<quarkus.datasource.url, quarkus.datasource.url>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
- 
+
+The datasource URL|string 
 |
 | ⚙️
 
 |<<quarkus.datasource.username, quarkus.datasource.username>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
- 
+
+The datasource username|string 
 |
 | ⚙️
 
 |<<quarkus.datasource.password, quarkus.datasource.password>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
- 
+
+The datasource password|string 
 |
 | ⚙️
 
 |<<quarkus.datasource.initial-size, quarkus.datasource.initial-size>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html[Integer]
- 
+
+The initial size of the pool|int 
 |
 | ⚙️
 
 |<<quarkus.datasource.min-size, quarkus.datasource.min-size>>
-|int 
+
+The datasource pool minimum size|int 
 |`5`
 | ⚙️
 
 |<<quarkus.datasource.max-size, quarkus.datasource.max-size>>
-|int 
+
+The datasource pool maximum size|int 
 |`20`
 | ⚙️
 
 |<<quarkus.datasource.background-validation-interval, quarkus.datasource.background-validation-interval>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html[Duration]
+
+The interval at which we validate idle connections in the background|link:https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html[Duration]
  +++
 <a href="#duration-note-anchor" title="More information about the Duration format">ℹ️</a>
 +++
@@ -58,7 +64,8 @@
 | ⚙️
 
 |<<quarkus.datasource.acquisition-timeout, quarkus.datasource.acquisition-timeout>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html[Duration]
+
+The timeout before cancelling the acquisition of a new connection|link:https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html[Duration]
  +++
 <a href="#duration-note-anchor" title="More information about the Duration format">ℹ️</a>
 +++
@@ -66,7 +73,8 @@
 | ⚙️
 
 |<<quarkus.datasource.leak-detection-interval, quarkus.datasource.leak-detection-interval>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html[Duration]
+
+The interval at which we check for connection leaks.|link:https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html[Duration]
  +++
 <a href="#duration-note-anchor" title="More information about the Duration format">ℹ️</a>
 +++
@@ -74,7 +82,8 @@
 | ⚙️
 
 |<<quarkus.datasource.idle-removal-interval, quarkus.datasource.idle-removal-interval>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html[Duration]
+
+The interval at which we try to remove idle connections.|link:https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html[Duration]
  +++
 <a href="#duration-note-anchor" title="More information about the Duration format">ℹ️</a>
 +++
@@ -82,7 +91,8 @@
 | ⚙️
 
 |<<quarkus.datasource.max-lifetime, quarkus.datasource.max-lifetime>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html[Duration]
+
+The max lifetime of a connection.|link:https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html[Duration]
  +++
 <a href="#duration-note-anchor" title="More information about the Duration format">ℹ️</a>
 +++
@@ -90,63 +100,68 @@
 | ⚙️
 
 |<<quarkus.datasource.transaction-isolation-level, quarkus.datasource.transaction-isolation-level>>
-|link:https://jar-download.com/javaDoc/io.agroal/agroal-api/1.5/index.html?io/agroal/api/configuration/AgroalConnectionFactoryConfiguration.TransactionIsolation.html[TransactionIsolation]
- 
+
+The transaction isolation level.|`undefined`, `none`, `read-uncommitted`, `read-committed`, `repeatable-read`, `serializable` 
 |
 | ⚙️
 
 |<<quarkus.datasource.enable-metrics, quarkus.datasource.enable-metrics>>
-|boolean 
+
+Enable datasource metrics collection.|boolean 
 |`false`
 | ⚙️
 
 |<<quarkus.datasource.named-data-sources.driver, quarkus.datasource."<named-data-sources>".driver>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
- 
+
+The datasource driver class name|string 
 |
 | 📦
 
 |<<quarkus.datasource.named-data-sources.xa, quarkus.datasource."<named-data-sources>".xa>>
-|boolean 
+
+Whether we want to use XA.|boolean 
 |`false`
 | 📦
 
 |<<quarkus.datasource.named-data-sources.url, quarkus.datasource."<named-data-sources>".url>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
- 
+
+The datasource URL|string 
 |
 | ⚙️
 
 |<<quarkus.datasource.named-data-sources.username, quarkus.datasource."<named-data-sources>".username>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
- 
+
+The datasource username|string 
 |
 | ⚙️
 
 |<<quarkus.datasource.named-data-sources.password, quarkus.datasource."<named-data-sources>".password>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
- 
+
+The datasource password|string 
 |
 | ⚙️
 
 |<<quarkus.datasource.named-data-sources.initial-size, quarkus.datasource."<named-data-sources>".initial-size>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html[Integer]
- 
+
+The initial size of the pool|int 
 |
 | ⚙️
 
 |<<quarkus.datasource.named-data-sources.min-size, quarkus.datasource."<named-data-sources>".min-size>>
-|int 
+
+The datasource pool minimum size|int 
 |`5`
 | ⚙️
 
 |<<quarkus.datasource.named-data-sources.max-size, quarkus.datasource."<named-data-sources>".max-size>>
-|int 
+
+The datasource pool maximum size|int 
 |`20`
 | ⚙️
 
 |<<quarkus.datasource.named-data-sources.background-validation-interval, quarkus.datasource."<named-data-sources>".background-validation-interval>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html[Duration]
+
+The interval at which we validate idle connections in the background|link:https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html[Duration]
  +++
 <a href="#duration-note-anchor" title="More information about the Duration format">ℹ️</a>
 +++
@@ -154,7 +169,8 @@
 | ⚙️
 
 |<<quarkus.datasource.named-data-sources.acquisition-timeout, quarkus.datasource."<named-data-sources>".acquisition-timeout>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html[Duration]
+
+The timeout before cancelling the acquisition of a new connection|link:https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html[Duration]
  +++
 <a href="#duration-note-anchor" title="More information about the Duration format">ℹ️</a>
 +++
@@ -162,7 +178,8 @@
 | ⚙️
 
 |<<quarkus.datasource.named-data-sources.leak-detection-interval, quarkus.datasource."<named-data-sources>".leak-detection-interval>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html[Duration]
+
+The interval at which we check for connection leaks.|link:https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html[Duration]
  +++
 <a href="#duration-note-anchor" title="More information about the Duration format">ℹ️</a>
 +++
@@ -170,7 +187,8 @@
 | ⚙️
 
 |<<quarkus.datasource.named-data-sources.idle-removal-interval, quarkus.datasource."<named-data-sources>".idle-removal-interval>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html[Duration]
+
+The interval at which we try to remove idle connections.|link:https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html[Duration]
  +++
 <a href="#duration-note-anchor" title="More information about the Duration format">ℹ️</a>
 +++
@@ -178,7 +196,8 @@
 | ⚙️
 
 |<<quarkus.datasource.named-data-sources.max-lifetime, quarkus.datasource."<named-data-sources>".max-lifetime>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html[Duration]
+
+The max lifetime of a connection.|link:https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html[Duration]
  +++
 <a href="#duration-note-anchor" title="More information about the Duration format">ℹ️</a>
 +++
@@ -186,13 +205,14 @@
 | ⚙️
 
 |<<quarkus.datasource.named-data-sources.transaction-isolation-level, quarkus.datasource."<named-data-sources>".transaction-isolation-level>>
-|link:https://jar-download.com/javaDoc/io.agroal/agroal-api/1.5/index.html?io/agroal/api/configuration/AgroalConnectionFactoryConfiguration.TransactionIsolation.html[TransactionIsolation]
- 
+
+The transaction isolation level.|`undefined`, `none`, `read-uncommitted`, `read-committed`, `repeatable-read`, `serializable` 
 |
 | ⚙️
 
 |<<quarkus.datasource.named-data-sources.enable-metrics, quarkus.datasource."<named-data-sources>".enable-metrics>>
-|boolean 
+
+Enable datasource metrics collection.|boolean 
 |`false`
 | ⚙️
 |===
@@ -203,7 +223,7 @@
 [[quarkus.datasource.driver]]
 `quarkus.datasource.driver`📦:: The datasource driver class name 
 +
-Type: `java.lang.String` +
+Type: `string` +
 
 
 
@@ -219,28 +239,28 @@ Defaults to: `false` +
 [[quarkus.datasource.url]]
 `quarkus.datasource.url`⚙️:: The datasource URL 
 +
-Type: `java.lang.String` +
+Type: `string` +
 
 
 
 [[quarkus.datasource.username]]
 `quarkus.datasource.username`⚙️:: The datasource username 
 +
-Type: `java.lang.String` +
+Type: `string` +
 
 
 
 [[quarkus.datasource.password]]
 `quarkus.datasource.password`⚙️:: The datasource password 
 +
-Type: `java.lang.String` +
+Type: `string` +
 
 
 
 [[quarkus.datasource.initial-size]]
 `quarkus.datasource.initial-size`⚙️:: The initial size of the pool 
 +
-Type: `java.lang.Integer` +
+Type: `int` +
 
 
 
@@ -263,7 +283,7 @@ Defaults to: `20` +
 [[quarkus.datasource.background-validation-interval]]
 `quarkus.datasource.background-validation-interval`⚙️:: The interval at which we validate idle connections in the background 
 +
-Type: `java.time.Duration` +
+Type: `Duration` +
 Defaults to: `2M` +
 
 
@@ -271,7 +291,7 @@ Defaults to: `2M` +
 [[quarkus.datasource.acquisition-timeout]]
 `quarkus.datasource.acquisition-timeout`⚙️:: The timeout before cancelling the acquisition of a new connection 
 +
-Type: `java.time.Duration` +
+Type: `Duration` +
 Defaults to: `5` +
 
 
@@ -279,14 +299,14 @@ Defaults to: `5` +
 [[quarkus.datasource.leak-detection-interval]]
 `quarkus.datasource.leak-detection-interval`⚙️:: The interval at which we check for connection leaks. 
 +
-Type: `java.time.Duration` +
+Type: `Duration` +
 
 
 
 [[quarkus.datasource.idle-removal-interval]]
 `quarkus.datasource.idle-removal-interval`⚙️:: The interval at which we try to remove idle connections. 
 +
-Type: `java.time.Duration` +
+Type: `Duration` +
 Defaults to: `5M` +
 
 
@@ -294,14 +314,14 @@ Defaults to: `5M` +
 [[quarkus.datasource.max-lifetime]]
 `quarkus.datasource.max-lifetime`⚙️:: The max lifetime of a connection. 
 +
-Type: `java.time.Duration` +
+Type: `Duration` +
 
 
 
 [[quarkus.datasource.transaction-isolation-level]]
 `quarkus.datasource.transaction-isolation-level`⚙️:: The transaction isolation level. 
 +
-Type: `io.agroal.api.configuration.AgroalConnectionFactoryConfiguration.TransactionIsolation` +
+Type: ``undefined`, `none`, `read-uncommitted`, `read-committed`, `repeatable-read`, `serializable`` +
 
 
 
@@ -316,7 +336,7 @@ Defaults to: `false` +
 [[quarkus.datasource.named-data-sources.driver]]
 `quarkus.datasource."<named-data-sources>".driver`📦:: The datasource driver class name 
 +
-Type: `java.lang.String` +
+Type: `string` +
 
 
 
@@ -332,28 +352,28 @@ Defaults to: `false` +
 [[quarkus.datasource.named-data-sources.url]]
 `quarkus.datasource."<named-data-sources>".url`⚙️:: The datasource URL 
 +
-Type: `java.lang.String` +
+Type: `string` +
 
 
 
 [[quarkus.datasource.named-data-sources.username]]
 `quarkus.datasource."<named-data-sources>".username`⚙️:: The datasource username 
 +
-Type: `java.lang.String` +
+Type: `string` +
 
 
 
 [[quarkus.datasource.named-data-sources.password]]
 `quarkus.datasource."<named-data-sources>".password`⚙️:: The datasource password 
 +
-Type: `java.lang.String` +
+Type: `string` +
 
 
 
 [[quarkus.datasource.named-data-sources.initial-size]]
 `quarkus.datasource."<named-data-sources>".initial-size`⚙️:: The initial size of the pool 
 +
-Type: `java.lang.Integer` +
+Type: `int` +
 
 
 
@@ -376,7 +396,7 @@ Defaults to: `20` +
 [[quarkus.datasource.named-data-sources.background-validation-interval]]
 `quarkus.datasource."<named-data-sources>".background-validation-interval`⚙️:: The interval at which we validate idle connections in the background 
 +
-Type: `java.time.Duration` +
+Type: `Duration` +
 Defaults to: `2M` +
 
 
@@ -384,7 +404,7 @@ Defaults to: `2M` +
 [[quarkus.datasource.named-data-sources.acquisition-timeout]]
 `quarkus.datasource."<named-data-sources>".acquisition-timeout`⚙️:: The timeout before cancelling the acquisition of a new connection 
 +
-Type: `java.time.Duration` +
+Type: `Duration` +
 Defaults to: `5` +
 
 
@@ -392,14 +412,14 @@ Defaults to: `5` +
 [[quarkus.datasource.named-data-sources.leak-detection-interval]]
 `quarkus.datasource."<named-data-sources>".leak-detection-interval`⚙️:: The interval at which we check for connection leaks. 
 +
-Type: `java.time.Duration` +
+Type: `Duration` +
 
 
 
 [[quarkus.datasource.named-data-sources.idle-removal-interval]]
 `quarkus.datasource."<named-data-sources>".idle-removal-interval`⚙️:: The interval at which we try to remove idle connections. 
 +
-Type: `java.time.Duration` +
+Type: `Duration` +
 Defaults to: `5M` +
 
 
@@ -407,14 +427,14 @@ Defaults to: `5M` +
 [[quarkus.datasource.named-data-sources.max-lifetime]]
 `quarkus.datasource."<named-data-sources>".max-lifetime`⚙️:: The max lifetime of a connection. 
 +
-Type: `java.time.Duration` +
+Type: `Duration` +
 
 
 
 [[quarkus.datasource.named-data-sources.transaction-isolation-level]]
 `quarkus.datasource."<named-data-sources>".transaction-isolation-level`⚙️:: The transaction isolation level. 
 +
-Type: `io.agroal.api.configuration.AgroalConnectionFactoryConfiguration.TransactionIsolation` +
+Type: ``undefined`, `none`, `read-uncommitted`, `read-committed`, `repeatable-read`, `serializable`` +
 
 
 

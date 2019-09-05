@@ -1,11 +1,14 @@
 == Summary
 
 📦 Configuration property fixed at build time - ⚙️️ Configuration property overridable at runtime 
+
+[cols="50,10,10,5"]
 |===
 |Configuration property|Type|Default|Lifecycle
 
 |<<quarkus.amazon-lambda-resteasy.debug, quarkus.amazon-lambda-resteasy.debug>>
-|boolean 
+
+Indicates if we are in debug mode.|boolean 
 |`false`
 | 📦
 |===

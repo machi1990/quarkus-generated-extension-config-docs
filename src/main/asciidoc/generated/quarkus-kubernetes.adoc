@@ -1,18 +1,20 @@
 == Summary
 
 📦 Configuration property fixed at build time - ⚙️️ Configuration property overridable at runtime 
+
+[cols="50,10,10,5"]
 |===
 |Configuration property|Type|Default|Lifecycle
 
 |<<quarkus.kubernetes.group, quarkus.kubernetes.group>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
- 
+
+The group of the application.|string 
 |
 | 📦
 
 |<<quarkus.kubernetes.docker.registry, quarkus.kubernetes.docker.registry>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
- 
+
+The docker registry to which the images will be pushed|string 
 |`docker.io`
 | 📦
 |===
@@ -23,14 +25,14 @@
 [[quarkus.kubernetes.group]]
 `quarkus.kubernetes.group`📦:: The group of the application. This value will be use as: - docker image repo - labeling resources 
 +
-Type: `java.lang.String` +
+Type: `string` +
 
 
 
 [[quarkus.kubernetes.docker.registry]]
 `quarkus.kubernetes.docker.registry`📦:: The docker registry to which the images will be pushed 
 +
-Type: `java.lang.String` +
+Type: `string` +
 Defaults to: `docker.io` +
 
 

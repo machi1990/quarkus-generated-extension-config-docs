@@ -1,17 +1,20 @@
 == Summary
 
 📦 Configuration property fixed at build time - ⚙️️ Configuration property overridable at runtime 
+
+[cols="50,10,10,5"]
 |===
 |Configuration property|Type|Default|Lifecycle
 
 |<<quarkus.infinispan-client.near-cache-max-entries, quarkus.infinispan-client.near-cache-max-entries>>
-|int 
+
+Sets the bounded entry count for near cache.|int 
 |`0`
 | 📦
 
 |<<quarkus.infinispan-client.server-list, quarkus.infinispan-client.server-list>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
- 
+
+Sets the host name/port to connect to.|string 
 |
 | ⚙️
 |===
@@ -30,6 +33,6 @@ Defaults to: `0` +
 [[quarkus.infinispan-client.server-list]]
 `quarkus.infinispan-client.server-list`⚙️:: Sets the host name/port to connect to. Each one is separated by a semicolon (eg. host1:11222;host2:11222). 
 +
-Type: `java.lang.String` +
+Type: `string` +
 
 

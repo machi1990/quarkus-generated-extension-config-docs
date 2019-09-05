@@ -1,17 +1,20 @@
 == Summary
 
 📦 Configuration property fixed at build time - ⚙️️ Configuration property overridable at runtime 
+
+[cols="50,10,10,5"]
 |===
 |Configuration property|Type|Default|Lifecycle
 
 |<<quarkus.jni.library-paths, quarkus.jni.library-paths>>
-|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
- 
+
+Paths of library to load.|string 
 |
 | 📦
 
 |<<quarkus.jni.enable, quarkus.jni.enable>>
-|boolean 
+
+Enable JNI support.|boolean 
 |`false`
 | 📦
 |===
@@ -22,7 +25,7 @@
 [[quarkus.jni.library-paths]]
 `quarkus.jni.library-paths`📦:: Paths of library to load. 
 +
-Type: `java.lang.String` +
+Type: `string` +
 
 
 
