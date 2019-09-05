@@ -17,8 +17,10 @@ Enable native SSL support.|boolean
 == Details
 
 [[quarkus.ssl.native]]
-`quarkus.ssl.native` icon:archive[title=Fixed at build time]:: Enable native SSL support. 
+`quarkus.ssl.native` icon:archive[title=Fixed at build time]::
 +
-Type: `boolean`  +
+--
+Enable native SSL support.
 
-
+Type: `boolean` 
+--

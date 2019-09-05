@@ -23,16 +23,21 @@ The docker registry to which the images will be pushed.|string
 == Details
 
 [[quarkus.kubernetes.group]]
-`quarkus.kubernetes.group` icon:archive[title=Fixed at build time]:: The group of the application. This value will be use as: - docker image repo - labeling resources 
+`quarkus.kubernetes.group` icon:archive[title=Fixed at build time]::
 +
-Type: `string`  +
+--
+The group of the application. This value will be use as: - docker image repo - labeling resources
 
-
+Type: `string` 
+--
 
 [[quarkus.kubernetes.docker.registry]]
-`quarkus.kubernetes.docker.registry` icon:archive[title=Fixed at build time]:: The docker registry to which the images will be pushed 
+`quarkus.kubernetes.docker.registry` icon:archive[title=Fixed at build time]::
 +
-Type: `string`  +
-Defaults to: `docker.io` +
+--
+The docker registry to which the images will be pushed
 
+Type: `string` 
 
+Defaults to: `docker.io`
+--

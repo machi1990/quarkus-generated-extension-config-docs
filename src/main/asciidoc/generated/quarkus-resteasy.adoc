@@ -24,21 +24,27 @@ Maximum deflated file bytes size
 == Details
 
 [[quarkus.resteasy.gzip.enabled]]
-`quarkus.resteasy.gzip.enabled` icon:archive[title=Fixed at build time]:: If gzip is enabled 
+`quarkus.resteasy.gzip.enabled` icon:archive[title=Fixed at build time]::
 +
-Type: `boolean`  +
-Defaults to: `false` +
+--
+If gzip is enabled
 
+Type: `boolean` 
 
+Defaults to: `false`
+--
 
 [[quarkus.resteasy.gzip.max-input]]
-`quarkus.resteasy.gzip.max-input` icon:archive[title=Fixed at build time]:: Maximum deflated file bytes size 
- If the limit is exceeded, Resteasy will return Response with status 413("Request Entity Too Large") 
+`quarkus.resteasy.gzip.max-input` icon:archive[title=Fixed at build time]::
 +
-Type: `MemorySize`  link:#memory-size-note-anchor[icon:question-circle[], title=More information about the MemorySize format] +
-Defaults to: `10M` +
+--
+Maximum deflated file bytes size 
+ If the limit is exceeded, Resteasy will return Response with status 413("Request Entity Too Large")
 
+Type: `MemorySize`  link:#memory-size-note-anchor[icon:question-circle[], title=More information about the MemorySize format]
 
+Defaults to: `10M`
+--
 
 [NOTE]
 [[memory-size-note-anchor]]

@@ -29,22 +29,28 @@ Password for authentication, only used with JMS.|string
 == Details
 
 [[quarkus.artemis.url]]
-`quarkus.artemis.url` icon:gears[title=Overridable at runtime]:: Artemis connection url 
+`quarkus.artemis.url` icon:gears[title=Overridable at runtime]::
 +
-Type: `string`  +
+--
+Artemis connection url
 
-
+Type: `string` 
+--
 
 [[quarkus.artemis.username]]
-`quarkus.artemis.username` icon:gears[title=Overridable at runtime]:: Username for authentication, only used with JMS 
+`quarkus.artemis.username` icon:gears[title=Overridable at runtime]::
 +
-Type: `string`  +
+--
+Username for authentication, only used with JMS
 
-
+Type: `string` 
+--
 
 [[quarkus.artemis.password]]
-`quarkus.artemis.password` icon:gears[title=Overridable at runtime]:: Password for authentication, only used with JMS 
+`quarkus.artemis.password` icon:gears[title=Overridable at runtime]::
 +
-Type: `string`  +
+--
+Password for authentication, only used with JMS
 
-
+Type: `string` 
+--

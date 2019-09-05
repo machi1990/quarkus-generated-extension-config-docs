@@ -132,153 +132,202 @@ If this is true then only a virtual channel will be set up for vertx web.|boolea
 == Details
 
 [[quarkus.http.cors]]
-`quarkus.http.cors` icon:gears[title=Overridable at runtime]:: Enable the CORS filter. 
+`quarkus.http.cors` icon:gears[title=Overridable at runtime]::
 +
-Type: `boolean`  +
-Defaults to: `false` +
+--
+Enable the CORS filter.
 
+Type: `boolean` 
 
+Defaults to: `false`
+--
 
 [[quarkus.http.port]]
-`quarkus.http.port` icon:gears[title=Overridable at runtime]:: The HTTP port 
+`quarkus.http.port` icon:gears[title=Overridable at runtime]::
 +
-Type: `int`  +
-Defaults to: `8080` +
+--
+The HTTP port
 
+Type: `int` 
 
+Defaults to: `8080`
+--
 
 [[quarkus.http.test-port]]
-`quarkus.http.test-port` icon:gears[title=Overridable at runtime]:: The HTTP port used to run tests 
+`quarkus.http.test-port` icon:gears[title=Overridable at runtime]::
 +
-Type: `int`  +
-Defaults to: `8081` +
+--
+The HTTP port used to run tests
 
+Type: `int` 
 
+Defaults to: `8081`
+--
 
 [[quarkus.http.host]]
-`quarkus.http.host` icon:gears[title=Overridable at runtime]:: The HTTP host 
+`quarkus.http.host` icon:gears[title=Overridable at runtime]::
 +
-Type: `string`  +
-Defaults to: `0.0.0.0` +
+--
+The HTTP host
 
+Type: `string` 
 
+Defaults to: `0.0.0.0`
+--
 
 [[quarkus.http.ssl-port]]
-`quarkus.http.ssl-port` icon:gears[title=Overridable at runtime]:: The HTTPS port 
+`quarkus.http.ssl-port` icon:gears[title=Overridable at runtime]::
 +
-Type: `int`  +
-Defaults to: `8443` +
+--
+The HTTPS port
 
+Type: `int` 
 
+Defaults to: `8443`
+--
 
 [[quarkus.http.test-ssl-port]]
-`quarkus.http.test-ssl-port` icon:gears[title=Overridable at runtime]:: The HTTPS port used to run tests 
+`quarkus.http.test-ssl-port` icon:gears[title=Overridable at runtime]::
 +
-Type: `int`  +
-Defaults to: `8444` +
+--
+The HTTPS port used to run tests
 
+Type: `int` 
 
+Defaults to: `8444`
+--
 
 [[quarkus.http.cors.origins]]
-`quarkus.http.cors.origins` icon:gears[title=Overridable at runtime]:: Origins allowed for CORS Comma separated list of valid URLs. ex: http://www.quarkus.io,http://localhost:3000 The filter allows any origin if this is not set. default: returns any requested origin as valid 
+`quarkus.http.cors.origins` icon:gears[title=Overridable at runtime]::
 +
-Type: `string`  +
+--
+Origins allowed for CORS Comma separated list of valid URLs. ex: http://www.quarkus.io,http://localhost:3000 The filter allows any origin if this is not set. default: returns any requested origin as valid
 
-
+Type: `string` 
+--
 
 [[quarkus.http.cors.methods]]
-`quarkus.http.cors.methods` icon:gears[title=Overridable at runtime]:: HTTP methods allowed for CORS Comma separated list of valid methods. ex: GET,PUT,POST The filter allows any method if this is not set. default: returns any requested method as valid 
+`quarkus.http.cors.methods` icon:gears[title=Overridable at runtime]::
 +
-Accepted values: `options`, `get`, `head`, `post`, `put`, `delete`, `trace`, `connect`, `patch`, `other` +
+--
+HTTP methods allowed for CORS Comma separated list of valid methods. ex: GET,PUT,POST The filter allows any method if this is not set. default: returns any requested method as valid
 
-
+Accepted values: `options`, `get`, `head`, `post`, `put`, `delete`, `trace`, `connect`, `patch`, `other`
+--
 
 [[quarkus.http.cors.headers]]
-`quarkus.http.cors.headers` icon:gears[title=Overridable at runtime]:: HTTP headers allowed for CORS Comma separated list of valid headers. ex: X-Custom,Content-Disposition The filter allows any header if this is not set. default: returns any requested header as valid 
+`quarkus.http.cors.headers` icon:gears[title=Overridable at runtime]::
 +
-Type: `string`  +
+--
+HTTP headers allowed for CORS Comma separated list of valid headers. ex: X-Custom,Content-Disposition The filter allows any header if this is not set. default: returns any requested header as valid
 
-
+Type: `string` 
+--
 
 [[quarkus.http.cors.exposed-headers]]
-`quarkus.http.cors.exposed-headers` icon:gears[title=Overridable at runtime]:: HTTP headers exposed in CORS Comma separated list of valid headers. ex: X-Custom,Content-Disposition default: empty 
+`quarkus.http.cors.exposed-headers` icon:gears[title=Overridable at runtime]::
 +
-Type: `string`  +
+--
+HTTP headers exposed in CORS Comma separated list of valid headers. ex: X-Custom,Content-Disposition default: empty
 
-
+Type: `string` 
+--
 
 [[quarkus.http.cors.access-control-max-age]]
-`quarkus.http.cors.access-control-max-age` icon:gears[title=Overridable at runtime]:: The `Access-Control-Max-Age` response header value indicating how long the results of a pre-flight request can be cached. 
+`quarkus.http.cors.access-control-max-age` icon:gears[title=Overridable at runtime]::
 +
-Type: `Duration`  link:#duration-note-anchor[icon:question-circle[], title=More information about the Duration format] +
+--
+The `Access-Control-Max-Age` response header value indicating how long the results of a pre-flight request can be cached.
 
-
+Type: `Duration`  link:#duration-note-anchor[icon:question-circle[], title=More information about the Duration format]
+--
 
 [[quarkus.http.ssl.certificate.file]]
-`quarkus.http.ssl.certificate.file` icon:gears[title=Overridable at runtime]:: The file path to a server certificate or certificate chain in PEM format. 
+`quarkus.http.ssl.certificate.file` icon:gears[title=Overridable at runtime]::
 +
-Type: `path`  +
+--
+The file path to a server certificate or certificate chain in PEM format.
 
-
+Type: `path` 
+--
 
 [[quarkus.http.ssl.certificate.key-file]]
-`quarkus.http.ssl.certificate.key-file` icon:gears[title=Overridable at runtime]:: The file path to the corresponding certificate private key file in PEM format. 
+`quarkus.http.ssl.certificate.key-file` icon:gears[title=Overridable at runtime]::
 +
-Type: `path`  +
+--
+The file path to the corresponding certificate private key file in PEM format.
 
-
+Type: `path` 
+--
 
 [[quarkus.http.ssl.certificate.key-store-file]]
-`quarkus.http.ssl.certificate.key-store-file` icon:gears[title=Overridable at runtime]:: An optional key store which holds the certificate information instead of specifying separate files. 
+`quarkus.http.ssl.certificate.key-store-file` icon:gears[title=Overridable at runtime]::
 +
-Type: `path`  +
+--
+An optional key store which holds the certificate information instead of specifying separate files.
 
-
+Type: `path` 
+--
 
 [[quarkus.http.ssl.certificate.key-store-file-type]]
-`quarkus.http.ssl.certificate.key-store-file-type` icon:gears[title=Overridable at runtime]:: An optional parameter to specify type of the key store file. If not given, the type is automatically detected based on the file name. 
+`quarkus.http.ssl.certificate.key-store-file-type` icon:gears[title=Overridable at runtime]::
 +
-Type: `string`  +
+--
+An optional parameter to specify type of the key store file. If not given, the type is automatically detected based on the file name.
 
-
+Type: `string` 
+--
 
 [[quarkus.http.ssl.certificate.key-store-password]]
-`quarkus.http.ssl.certificate.key-store-password` icon:gears[title=Overridable at runtime]:: A parameter to specify the password of the key store file. If not given, the default ("password") is used. 
+`quarkus.http.ssl.certificate.key-store-password` icon:gears[title=Overridable at runtime]::
 +
-Type: `string`  +
-Defaults to: `password` +
+--
+A parameter to specify the password of the key store file. If not given, the default ("password") is used.
 
+Type: `string` 
 
+Defaults to: `password`
+--
 
 [[quarkus.http.ssl.cipher-suites]]
-`quarkus.http.ssl.cipher-suites` icon:gears[title=Overridable at runtime]:: The cipher suites to use. If none is given, a reasonable default is selected. 
+`quarkus.http.ssl.cipher-suites` icon:gears[title=Overridable at runtime]::
 +
-Type: `string`  +
+--
+The cipher suites to use. If none is given, a reasonable default is selected.
 
-
+Type: `string` 
+--
 
 [[quarkus.http.ssl.protocols]]
-`quarkus.http.ssl.protocols` icon:gears[title=Overridable at runtime]:: The list of protocols to explicitly enable. 
+`quarkus.http.ssl.protocols` icon:gears[title=Overridable at runtime]::
 +
-Type: `string`  +
-Defaults to: `TLSv1.3,TLSv1.2` +
+--
+The list of protocols to explicitly enable.
 
+Type: `string` 
 
+Defaults to: `TLSv1.3,TLSv1.2`
+--
 
 [[quarkus.http.io-threads]]
-`quarkus.http.io-threads` icon:gears[title=Overridable at runtime]:: The number if IO threads used to perform IO. This will be automatically set to a reasonable value based on the number of CPU cores if it is not provided 
+`quarkus.http.io-threads` icon:gears[title=Overridable at runtime]::
 +
-Type: `int`  +
+--
+The number if IO threads used to perform IO. This will be automatically set to a reasonable value based on the number of CPU cores if it is not provided
 
-
+Type: `int` 
+--
 
 [[quarkus.http.virtual]]
-`quarkus.http.virtual` icon:gears[title=Overridable at runtime]:: If this is true then only a virtual channel will be set up for vertx web. We have this switch for testing purposes. 
+`quarkus.http.virtual` icon:gears[title=Overridable at runtime]::
 +
-Type: `boolean`  +
-Defaults to: `false` +
+--
+If this is true then only a virtual channel will be set up for vertx web. We have this switch for testing purposes.
 
+Type: `boolean` 
 
+Defaults to: `false`
+--
 
 [NOTE]
 [[duration-note-anchor]]

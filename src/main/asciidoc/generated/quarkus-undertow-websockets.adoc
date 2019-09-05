@@ -23,15 +23,19 @@ icon:archive[title=Fixed at build time] Configuration property fixed at build ti
 == Details
 
 [[quarkus.hot-reload.password]]
-`quarkus.hot-reload.password` icon:archive[title=Fixed at build time]::  
+`quarkus.hot-reload.password` icon:archive[title=Fixed at build time]::
 +
-Type: `string`  +
+--
 
 
+Type: `string` 
+--
 
 [[quarkus.hot-reload.url]]
-`quarkus.hot-reload.url` icon:archive[title=Fixed at build time]::  
+`quarkus.hot-reload.url` icon:archive[title=Fixed at build time]::
 +
-Type: `string`  +
+--
 
 
+Type: `string` 
+--

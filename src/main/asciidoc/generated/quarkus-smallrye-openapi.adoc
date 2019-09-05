@@ -17,9 +17,12 @@ The path at which to register the OpenAPI Servlet.|string
 == Details
 
 [[quarkus.smallrye-openapi.path]]
-`quarkus.smallrye-openapi.path` icon:archive[title=Fixed at build time]:: The path at which to register the OpenAPI Servlet. 
+`quarkus.smallrye-openapi.path` icon:archive[title=Fixed at build time]::
 +
-Type: `string`  +
-Defaults to: `/openapi` +
+--
+The path at which to register the OpenAPI Servlet.
 
+Type: `string` 
 
+Defaults to: `/openapi`
+--

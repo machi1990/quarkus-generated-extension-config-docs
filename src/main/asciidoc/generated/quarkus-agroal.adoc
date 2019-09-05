@@ -201,230 +201,304 @@ Enable datasource metrics collection.|boolean
 == Details
 
 [[quarkus.datasource.driver]]
-`quarkus.datasource.driver` icon:archive[title=Fixed at build time]:: The datasource driver class name 
+`quarkus.datasource.driver` icon:archive[title=Fixed at build time]::
 +
-Type: `string`  +
+--
+The datasource driver class name
 
-
+Type: `string` 
+--
 
 [[quarkus.datasource.xa]]
-`quarkus.datasource.xa` icon:archive[title=Fixed at build time]:: Whether we want to use XA. 
- If used, the driver has to support it. 
+`quarkus.datasource.xa` icon:archive[title=Fixed at build time]::
 +
-Type: `boolean`  +
-Defaults to: `false` +
+--
+Whether we want to use XA. 
+ If used, the driver has to support it.
 
+Type: `boolean` 
 
+Defaults to: `false`
+--
 
 [[quarkus.datasource.url]]
-`quarkus.datasource.url` icon:gears[title=Overridable at runtime]:: The datasource URL 
+`quarkus.datasource.url` icon:gears[title=Overridable at runtime]::
 +
-Type: `string`  +
+--
+The datasource URL
 
-
+Type: `string` 
+--
 
 [[quarkus.datasource.username]]
-`quarkus.datasource.username` icon:gears[title=Overridable at runtime]:: The datasource username 
+`quarkus.datasource.username` icon:gears[title=Overridable at runtime]::
 +
-Type: `string`  +
+--
+The datasource username
 
-
+Type: `string` 
+--
 
 [[quarkus.datasource.password]]
-`quarkus.datasource.password` icon:gears[title=Overridable at runtime]:: The datasource password 
+`quarkus.datasource.password` icon:gears[title=Overridable at runtime]::
 +
-Type: `string`  +
+--
+The datasource password
 
-
+Type: `string` 
+--
 
 [[quarkus.datasource.initial-size]]
-`quarkus.datasource.initial-size` icon:gears[title=Overridable at runtime]:: The initial size of the pool 
+`quarkus.datasource.initial-size` icon:gears[title=Overridable at runtime]::
 +
-Type: `int`  +
+--
+The initial size of the pool
 
-
+Type: `int` 
+--
 
 [[quarkus.datasource.min-size]]
-`quarkus.datasource.min-size` icon:gears[title=Overridable at runtime]:: The datasource pool minimum size 
+`quarkus.datasource.min-size` icon:gears[title=Overridable at runtime]::
 +
-Type: `int`  +
-Defaults to: `5` +
+--
+The datasource pool minimum size
 
+Type: `int` 
 
+Defaults to: `5`
+--
 
 [[quarkus.datasource.max-size]]
-`quarkus.datasource.max-size` icon:gears[title=Overridable at runtime]:: The datasource pool maximum size 
+`quarkus.datasource.max-size` icon:gears[title=Overridable at runtime]::
 +
-Type: `int`  +
-Defaults to: `20` +
+--
+The datasource pool maximum size
 
+Type: `int` 
 
+Defaults to: `20`
+--
 
 [[quarkus.datasource.background-validation-interval]]
-`quarkus.datasource.background-validation-interval` icon:gears[title=Overridable at runtime]:: The interval at which we validate idle connections in the background 
+`quarkus.datasource.background-validation-interval` icon:gears[title=Overridable at runtime]::
 +
-Type: `Duration`  link:#duration-note-anchor[icon:question-circle[], title=More information about the Duration format] +
-Defaults to: `2M` +
+--
+The interval at which we validate idle connections in the background
 
+Type: `Duration`  link:#duration-note-anchor[icon:question-circle[], title=More information about the Duration format]
 
+Defaults to: `2M`
+--
 
 [[quarkus.datasource.acquisition-timeout]]
-`quarkus.datasource.acquisition-timeout` icon:gears[title=Overridable at runtime]:: The timeout before cancelling the acquisition of a new connection 
+`quarkus.datasource.acquisition-timeout` icon:gears[title=Overridable at runtime]::
 +
-Type: `Duration`  link:#duration-note-anchor[icon:question-circle[], title=More information about the Duration format] +
-Defaults to: `5` +
+--
+The timeout before cancelling the acquisition of a new connection
 
+Type: `Duration`  link:#duration-note-anchor[icon:question-circle[], title=More information about the Duration format]
 
+Defaults to: `5`
+--
 
 [[quarkus.datasource.leak-detection-interval]]
-`quarkus.datasource.leak-detection-interval` icon:gears[title=Overridable at runtime]:: The interval at which we check for connection leaks. 
+`quarkus.datasource.leak-detection-interval` icon:gears[title=Overridable at runtime]::
 +
-Type: `Duration`  link:#duration-note-anchor[icon:question-circle[], title=More information about the Duration format] +
+--
+The interval at which we check for connection leaks.
 
-
+Type: `Duration`  link:#duration-note-anchor[icon:question-circle[], title=More information about the Duration format]
+--
 
 [[quarkus.datasource.idle-removal-interval]]
-`quarkus.datasource.idle-removal-interval` icon:gears[title=Overridable at runtime]:: The interval at which we try to remove idle connections. 
+`quarkus.datasource.idle-removal-interval` icon:gears[title=Overridable at runtime]::
 +
-Type: `Duration`  link:#duration-note-anchor[icon:question-circle[], title=More information about the Duration format] +
-Defaults to: `5M` +
+--
+The interval at which we try to remove idle connections.
 
+Type: `Duration`  link:#duration-note-anchor[icon:question-circle[], title=More information about the Duration format]
 
+Defaults to: `5M`
+--
 
 [[quarkus.datasource.max-lifetime]]
-`quarkus.datasource.max-lifetime` icon:gears[title=Overridable at runtime]:: The max lifetime of a connection. 
+`quarkus.datasource.max-lifetime` icon:gears[title=Overridable at runtime]::
 +
-Type: `Duration`  link:#duration-note-anchor[icon:question-circle[], title=More information about the Duration format] +
+--
+The max lifetime of a connection.
 
-
+Type: `Duration`  link:#duration-note-anchor[icon:question-circle[], title=More information about the Duration format]
+--
 
 [[quarkus.datasource.transaction-isolation-level]]
-`quarkus.datasource.transaction-isolation-level` icon:gears[title=Overridable at runtime]:: The transaction isolation level. 
+`quarkus.datasource.transaction-isolation-level` icon:gears[title=Overridable at runtime]::
 +
-Accepted values: `undefined`, `none`, `read-uncommitted`, `read-committed`, `repeatable-read`, `serializable` +
+--
+The transaction isolation level.
 
-
+Accepted values: `undefined`, `none`, `read-uncommitted`, `read-committed`, `repeatable-read`, `serializable`
+--
 
 [[quarkus.datasource.enable-metrics]]
-`quarkus.datasource.enable-metrics` icon:gears[title=Overridable at runtime]:: Enable datasource metrics collection. 
+`quarkus.datasource.enable-metrics` icon:gears[title=Overridable at runtime]::
 +
-Type: `boolean`  +
-Defaults to: `false` +
+--
+Enable datasource metrics collection.
 
+Type: `boolean` 
 
+Defaults to: `false`
+--
 
 [[quarkus.datasource.named-data-sources.driver]]
-`quarkus.datasource."<named-data-sources>".driver` icon:archive[title=Fixed at build time]:: The datasource driver class name 
+`quarkus.datasource."<named-data-sources>".driver` icon:archive[title=Fixed at build time]::
 +
-Type: `string`  +
+--
+The datasource driver class name
 
-
+Type: `string` 
+--
 
 [[quarkus.datasource.named-data-sources.xa]]
-`quarkus.datasource."<named-data-sources>".xa` icon:archive[title=Fixed at build time]:: Whether we want to use XA. 
- If used, the driver has to support it. 
+`quarkus.datasource."<named-data-sources>".xa` icon:archive[title=Fixed at build time]::
 +
-Type: `boolean`  +
-Defaults to: `false` +
+--
+Whether we want to use XA. 
+ If used, the driver has to support it.
 
+Type: `boolean` 
 
+Defaults to: `false`
+--
 
 [[quarkus.datasource.named-data-sources.url]]
-`quarkus.datasource."<named-data-sources>".url` icon:gears[title=Overridable at runtime]:: The datasource URL 
+`quarkus.datasource."<named-data-sources>".url` icon:gears[title=Overridable at runtime]::
 +
-Type: `string`  +
+--
+The datasource URL
 
-
+Type: `string` 
+--
 
 [[quarkus.datasource.named-data-sources.username]]
-`quarkus.datasource."<named-data-sources>".username` icon:gears[title=Overridable at runtime]:: The datasource username 
+`quarkus.datasource."<named-data-sources>".username` icon:gears[title=Overridable at runtime]::
 +
-Type: `string`  +
+--
+The datasource username
 
-
+Type: `string` 
+--
 
 [[quarkus.datasource.named-data-sources.password]]
-`quarkus.datasource."<named-data-sources>".password` icon:gears[title=Overridable at runtime]:: The datasource password 
+`quarkus.datasource."<named-data-sources>".password` icon:gears[title=Overridable at runtime]::
 +
-Type: `string`  +
+--
+The datasource password
 
-
+Type: `string` 
+--
 
 [[quarkus.datasource.named-data-sources.initial-size]]
-`quarkus.datasource."<named-data-sources>".initial-size` icon:gears[title=Overridable at runtime]:: The initial size of the pool 
+`quarkus.datasource."<named-data-sources>".initial-size` icon:gears[title=Overridable at runtime]::
 +
-Type: `int`  +
+--
+The initial size of the pool
 
-
+Type: `int` 
+--
 
 [[quarkus.datasource.named-data-sources.min-size]]
-`quarkus.datasource."<named-data-sources>".min-size` icon:gears[title=Overridable at runtime]:: The datasource pool minimum size 
+`quarkus.datasource."<named-data-sources>".min-size` icon:gears[title=Overridable at runtime]::
 +
-Type: `int`  +
-Defaults to: `5` +
+--
+The datasource pool minimum size
 
+Type: `int` 
 
+Defaults to: `5`
+--
 
 [[quarkus.datasource.named-data-sources.max-size]]
-`quarkus.datasource."<named-data-sources>".max-size` icon:gears[title=Overridable at runtime]:: The datasource pool maximum size 
+`quarkus.datasource."<named-data-sources>".max-size` icon:gears[title=Overridable at runtime]::
 +
-Type: `int`  +
-Defaults to: `20` +
+--
+The datasource pool maximum size
 
+Type: `int` 
 
+Defaults to: `20`
+--
 
 [[quarkus.datasource.named-data-sources.background-validation-interval]]
-`quarkus.datasource."<named-data-sources>".background-validation-interval` icon:gears[title=Overridable at runtime]:: The interval at which we validate idle connections in the background 
+`quarkus.datasource."<named-data-sources>".background-validation-interval` icon:gears[title=Overridable at runtime]::
 +
-Type: `Duration`  link:#duration-note-anchor[icon:question-circle[], title=More information about the Duration format] +
-Defaults to: `2M` +
+--
+The interval at which we validate idle connections in the background
 
+Type: `Duration`  link:#duration-note-anchor[icon:question-circle[], title=More information about the Duration format]
 
+Defaults to: `2M`
+--
 
 [[quarkus.datasource.named-data-sources.acquisition-timeout]]
-`quarkus.datasource."<named-data-sources>".acquisition-timeout` icon:gears[title=Overridable at runtime]:: The timeout before cancelling the acquisition of a new connection 
+`quarkus.datasource."<named-data-sources>".acquisition-timeout` icon:gears[title=Overridable at runtime]::
 +
-Type: `Duration`  link:#duration-note-anchor[icon:question-circle[], title=More information about the Duration format] +
-Defaults to: `5` +
+--
+The timeout before cancelling the acquisition of a new connection
 
+Type: `Duration`  link:#duration-note-anchor[icon:question-circle[], title=More information about the Duration format]
 
+Defaults to: `5`
+--
 
 [[quarkus.datasource.named-data-sources.leak-detection-interval]]
-`quarkus.datasource."<named-data-sources>".leak-detection-interval` icon:gears[title=Overridable at runtime]:: The interval at which we check for connection leaks. 
+`quarkus.datasource."<named-data-sources>".leak-detection-interval` icon:gears[title=Overridable at runtime]::
 +
-Type: `Duration`  link:#duration-note-anchor[icon:question-circle[], title=More information about the Duration format] +
+--
+The interval at which we check for connection leaks.
 
-
+Type: `Duration`  link:#duration-note-anchor[icon:question-circle[], title=More information about the Duration format]
+--
 
 [[quarkus.datasource.named-data-sources.idle-removal-interval]]
-`quarkus.datasource."<named-data-sources>".idle-removal-interval` icon:gears[title=Overridable at runtime]:: The interval at which we try to remove idle connections. 
+`quarkus.datasource."<named-data-sources>".idle-removal-interval` icon:gears[title=Overridable at runtime]::
 +
-Type: `Duration`  link:#duration-note-anchor[icon:question-circle[], title=More information about the Duration format] +
-Defaults to: `5M` +
+--
+The interval at which we try to remove idle connections.
 
+Type: `Duration`  link:#duration-note-anchor[icon:question-circle[], title=More information about the Duration format]
 
+Defaults to: `5M`
+--
 
 [[quarkus.datasource.named-data-sources.max-lifetime]]
-`quarkus.datasource."<named-data-sources>".max-lifetime` icon:gears[title=Overridable at runtime]:: The max lifetime of a connection. 
+`quarkus.datasource."<named-data-sources>".max-lifetime` icon:gears[title=Overridable at runtime]::
 +
-Type: `Duration`  link:#duration-note-anchor[icon:question-circle[], title=More information about the Duration format] +
+--
+The max lifetime of a connection.
 
-
+Type: `Duration`  link:#duration-note-anchor[icon:question-circle[], title=More information about the Duration format]
+--
 
 [[quarkus.datasource.named-data-sources.transaction-isolation-level]]
-`quarkus.datasource."<named-data-sources>".transaction-isolation-level` icon:gears[title=Overridable at runtime]:: The transaction isolation level. 
+`quarkus.datasource."<named-data-sources>".transaction-isolation-level` icon:gears[title=Overridable at runtime]::
 +
-Accepted values: `undefined`, `none`, `read-uncommitted`, `read-committed`, `repeatable-read`, `serializable` +
+--
+The transaction isolation level.
 
-
+Accepted values: `undefined`, `none`, `read-uncommitted`, `read-committed`, `repeatable-read`, `serializable`
+--
 
 [[quarkus.datasource.named-data-sources.enable-metrics]]
-`quarkus.datasource."<named-data-sources>".enable-metrics` icon:gears[title=Overridable at runtime]:: Enable datasource metrics collection. 
+`quarkus.datasource."<named-data-sources>".enable-metrics` icon:gears[title=Overridable at runtime]::
 +
-Type: `boolean`  +
-Defaults to: `false` +
+--
+Enable datasource metrics collection.
 
+Type: `boolean` 
 
+Defaults to: `false`
+--
 
 [NOTE]
 [[duration-note-anchor]]

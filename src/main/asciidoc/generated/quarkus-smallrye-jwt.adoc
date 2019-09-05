@@ -35,33 +35,45 @@ The name of the `java.|string
 == Details
 
 [[quarkus.smallrye-jwt.auth-mechanism]]
-`quarkus.smallrye-jwt.auth-mechanism` icon:archive[title=Fixed at build time]:: The authentication mechanism 
+`quarkus.smallrye-jwt.auth-mechanism` icon:archive[title=Fixed at build time]::
 +
-Type: `string`  +
-Defaults to: `MP-JWT` +
+--
+The authentication mechanism
 
+Type: `string` 
 
+Defaults to: `MP-JWT`
+--
 
 [[quarkus.smallrye-jwt.realm-name]]
-`quarkus.smallrye-jwt.realm-name` icon:archive[title=Fixed at build time]:: The authentication mechanism 
+`quarkus.smallrye-jwt.realm-name` icon:archive[title=Fixed at build time]::
 +
-Type: `string`  +
-Defaults to: `Quarkus-JWT` +
+--
+The authentication mechanism
 
+Type: `string` 
 
+Defaults to: `Quarkus-JWT`
+--
 
 [[quarkus.smallrye-jwt.enabled]]
-`quarkus.smallrye-jwt.enabled` icon:archive[title=Fixed at build time]:: The MP-JWT configuration object 
+`quarkus.smallrye-jwt.enabled` icon:archive[title=Fixed at build time]::
 +
-Type: `boolean`  +
-Defaults to: `true` +
+--
+The MP-JWT configuration object
 
+Type: `boolean` 
 
+Defaults to: `true`
+--
 
 [[quarkus.smallrye-jwt.rsa-sig-provider]]
-`quarkus.smallrye-jwt.rsa-sig-provider` icon:archive[title=Fixed at build time]:: The name of the `java.security.Provider` that supports SHA256withRSA signatures 
+`quarkus.smallrye-jwt.rsa-sig-provider` icon:archive[title=Fixed at build time]::
 +
-Type: `string`  +
-Defaults to: `SunRsaSign` +
+--
+The name of the `java.security.Provider` that supports SHA256withRSA signatures
 
+Type: `string` 
 
+Defaults to: `SunRsaSign`
+--

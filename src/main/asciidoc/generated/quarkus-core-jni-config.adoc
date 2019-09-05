@@ -23,16 +23,21 @@ Enable JNI support.|boolean
 == Details
 
 [[quarkus.jni.library-paths]]
-`quarkus.jni.library-paths` icon:archive[title=Fixed at build time]:: Paths of library to load. 
+`quarkus.jni.library-paths` icon:archive[title=Fixed at build time]::
 +
-Type: `string`  +
+--
+Paths of library to load.
 
-
+Type: `string` 
+--
 
 [[quarkus.jni.enable]]
-`quarkus.jni.enable` icon:archive[title=Fixed at build time]:: Enable JNI support. 
+`quarkus.jni.enable` icon:archive[title=Fixed at build time]::
 +
-Type: `boolean`  +
-Defaults to: `false` +
+--
+Enable JNI support.
 
+Type: `boolean` 
 
+Defaults to: `false`
+--

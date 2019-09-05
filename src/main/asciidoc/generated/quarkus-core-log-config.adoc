@@ -252,311 +252,424 @@ The message starts to match.|string
 == Details
 
 [[quarkus.log.level]]
-`quarkus.log.level` icon:gears[title=Overridable at runtime]:: The default log level 
+`quarkus.log.level` icon:gears[title=Overridable at runtime]::
 +
-Type: `Level`  +
+--
+The default log level
 
-
+Type: `Level` 
+--
 
 [[quarkus.log.min-level]]
-`quarkus.log.min-level` icon:gears[title=Overridable at runtime]:: The default minimum log level 
+`quarkus.log.min-level` icon:gears[title=Overridable at runtime]::
 +
-Type: `Level`  +
-Defaults to: `INFO` +
+--
+The default minimum log level
 
+Type: `Level` 
 
+Defaults to: `INFO`
+--
 
 [[quarkus.log.console.enable]]
-`quarkus.log.console.enable` icon:gears[title=Overridable at runtime]:: If console logging should be enabled 
+`quarkus.log.console.enable` icon:gears[title=Overridable at runtime]::
 +
-Type: `boolean`  +
-Defaults to: `true` +
+--
+If console logging should be enabled
 
+Type: `boolean` 
 
+Defaults to: `true`
+--
 
 [[quarkus.log.console.format]]
-`quarkus.log.console.format` icon:gears[title=Overridable at runtime]:: The log format 
+`quarkus.log.console.format` icon:gears[title=Overridable at runtime]::
 +
-Type: `string`  +
-Defaults to: `%d{yyyy-MM-dd HH:mm:ss,SSS} %-5p [%c{3.}] (%t) %s%e%n` +
+--
+The log format
 
+Type: `string` 
 
+Defaults to: `%d{yyyy-MM-dd HH:mm:ss,SSS} %-5p [%c{3.}] (%t) %s%e%n`
+--
 
 [[quarkus.log.console.level]]
-`quarkus.log.console.level` icon:gears[title=Overridable at runtime]:: The console log level 
+`quarkus.log.console.level` icon:gears[title=Overridable at runtime]::
 +
-Type: `Level`  +
-Defaults to: `ALL` +
+--
+The console log level
 
+Type: `Level` 
 
+Defaults to: `ALL`
+--
 
 [[quarkus.log.console.color]]
-`quarkus.log.console.color` icon:gears[title=Overridable at runtime]:: If the console logging should be in color 
+`quarkus.log.console.color` icon:gears[title=Overridable at runtime]::
 +
-Type: `boolean`  +
-Defaults to: `true` +
+--
+If the console logging should be in color
 
+Type: `boolean` 
 
+Defaults to: `true`
+--
 
 [[quarkus.log.console.darken]]
-`quarkus.log.console.darken` icon:gears[title=Overridable at runtime]:: Specify how much the colors should be darkened 
+`quarkus.log.console.darken` icon:gears[title=Overridable at runtime]::
 +
-Type: `int`  +
-Defaults to: `0` +
+--
+Specify how much the colors should be darkened
 
+Type: `int` 
 
+Defaults to: `0`
+--
 
 [[quarkus.log.console.async]]
-`quarkus.log.console.async` icon:gears[title=Overridable at runtime]:: Indicates whether to log asynchronously 
+`quarkus.log.console.async` icon:gears[title=Overridable at runtime]::
 +
-Type: `boolean`  +
-Defaults to: `false` +
+--
+Indicates whether to log asynchronously
 
+Type: `boolean` 
 
+Defaults to: `false`
+--
 
 [[quarkus.log.console.async.queue-length]]
-`quarkus.log.console.async.queue-length` icon:gears[title=Overridable at runtime]:: The queue length to use before flushing writing 
+`quarkus.log.console.async.queue-length` icon:gears[title=Overridable at runtime]::
 +
-Type: `int`  +
-Defaults to: `512` +
+--
+The queue length to use before flushing writing
 
+Type: `int` 
 
+Defaults to: `512`
+--
 
 [[quarkus.log.console.async.overflow]]
-`quarkus.log.console.async.overflow` icon:gears[title=Overridable at runtime]:: Determine whether to block the publisher (rather than drop the message) when the queue is full 
+`quarkus.log.console.async.overflow` icon:gears[title=Overridable at runtime]::
 +
-Accepted values: `block`, `discard` +
-Defaults to: `block` +
+--
+Determine whether to block the publisher (rather than drop the message) when the queue is full
 
+Accepted values: `block`, `discard`
 
+Defaults to: `block`
+--
 
 [[quarkus.log.file.enable]]
-`quarkus.log.file.enable` icon:gears[title=Overridable at runtime]:: If file logging should be enabled 
+`quarkus.log.file.enable` icon:gears[title=Overridable at runtime]::
 +
-Type: `boolean`  +
-Defaults to: `false` +
+--
+If file logging should be enabled
 
+Type: `boolean` 
 
+Defaults to: `false`
+--
 
 [[quarkus.log.file.format]]
-`quarkus.log.file.format` icon:gears[title=Overridable at runtime]:: The log format 
+`quarkus.log.file.format` icon:gears[title=Overridable at runtime]::
 +
-Type: `string`  +
-Defaults to: `%d{yyyy-MM-dd HH:mm:ss,SSS} %h %N[%i] %-5p [%c{3.}] (%t) %s%e%n` +
+--
+The log format
 
+Type: `string` 
 
+Defaults to: `%d{yyyy-MM-dd HH:mm:ss,SSS} %h %N[%i] %-5p [%c{3.}] (%t) %s%e%n`
+--
 
 [[quarkus.log.file.level]]
-`quarkus.log.file.level` icon:gears[title=Overridable at runtime]:: The level of logs to be written into the file. 
+`quarkus.log.file.level` icon:gears[title=Overridable at runtime]::
 +
-Type: `Level`  +
-Defaults to: `ALL` +
+--
+The level of logs to be written into the file.
 
+Type: `Level` 
 
+Defaults to: `ALL`
+--
 
 [[quarkus.log.file.path]]
-`quarkus.log.file.path` icon:gears[title=Overridable at runtime]:: The name of the file in which logs will be written. 
+`quarkus.log.file.path` icon:gears[title=Overridable at runtime]::
 +
-Type: `File`  +
-Defaults to: `quarkus.log` +
+--
+The name of the file in which logs will be written.
 
+Type: `File` 
 
+Defaults to: `quarkus.log`
+--
 
 [[quarkus.log.file.async]]
-`quarkus.log.file.async` icon:gears[title=Overridable at runtime]:: Indicates whether to log asynchronously 
+`quarkus.log.file.async` icon:gears[title=Overridable at runtime]::
 +
-Type: `boolean`  +
-Defaults to: `false` +
+--
+Indicates whether to log asynchronously
 
+Type: `boolean` 
 
+Defaults to: `false`
+--
 
 [[quarkus.log.file.async.queue-length]]
-`quarkus.log.file.async.queue-length` icon:gears[title=Overridable at runtime]:: The queue length to use before flushing writing 
+`quarkus.log.file.async.queue-length` icon:gears[title=Overridable at runtime]::
 +
-Type: `int`  +
-Defaults to: `512` +
+--
+The queue length to use before flushing writing
 
+Type: `int` 
 
+Defaults to: `512`
+--
 
 [[quarkus.log.file.async.overflow]]
-`quarkus.log.file.async.overflow` icon:gears[title=Overridable at runtime]:: Determine whether to block the publisher (rather than drop the message) when the queue is full 
+`quarkus.log.file.async.overflow` icon:gears[title=Overridable at runtime]::
 +
-Accepted values: `block`, `discard` +
-Defaults to: `block` +
+--
+Determine whether to block the publisher (rather than drop the message) when the queue is full
 
+Accepted values: `block`, `discard`
 
+Defaults to: `block`
+--
 
 [[quarkus.log.file.rotation.max-file-size]]
-`quarkus.log.file.rotation.max-file-size` icon:gears[title=Overridable at runtime]:: The maximum file size of the log file after which a rotation is executed. 
+`quarkus.log.file.rotation.max-file-size` icon:gears[title=Overridable at runtime]::
 +
-Type: `MemorySize`  link:#memory-size-note-anchor[icon:question-circle[], title=More information about the MemorySize format] +
+--
+The maximum file size of the log file after which a rotation is executed.
 
-
+Type: `MemorySize`  link:#memory-size-note-anchor[icon:question-circle[], title=More information about the MemorySize format]
+--
 
 [[quarkus.log.file.rotation.max-backup-index]]
-`quarkus.log.file.rotation.max-backup-index` icon:gears[title=Overridable at runtime]:: The maximum number of backups to keep. 
+`quarkus.log.file.rotation.max-backup-index` icon:gears[title=Overridable at runtime]::
 +
-Type: `int`  +
-Defaults to: `1` +
+--
+The maximum number of backups to keep.
 
+Type: `int` 
 
+Defaults to: `1`
+--
 
 [[quarkus.log.file.rotation.file-suffix]]
-`quarkus.log.file.rotation.file-suffix` icon:gears[title=Overridable at runtime]:: File handler rotation file suffix. Example fileSuffix: .yyyy-MM-dd 
+`quarkus.log.file.rotation.file-suffix` icon:gears[title=Overridable at runtime]::
 +
-Type: `string`  +
+--
+File handler rotation file suffix. Example fileSuffix: .yyyy-MM-dd
 
-
+Type: `string` 
+--
 
 [[quarkus.log.file.rotation.rotate-on-boot]]
-`quarkus.log.file.rotation.rotate-on-boot` icon:gears[title=Overridable at runtime]:: Indicates whether to rotate log files on server initialization. 
+`quarkus.log.file.rotation.rotate-on-boot` icon:gears[title=Overridable at runtime]::
 +
-Type: `boolean`  +
-Defaults to: `true` +
+--
+Indicates whether to rotate log files on server initialization.
 
+Type: `boolean` 
 
+Defaults to: `true`
+--
 
 [[quarkus.log.syslog.enable]]
-`quarkus.log.syslog.enable` icon:gears[title=Overridable at runtime]:: If syslog logging should be enabled 
+`quarkus.log.syslog.enable` icon:gears[title=Overridable at runtime]::
 +
-Type: `boolean`  +
-Defaults to: `false` +
+--
+If syslog logging should be enabled
 
+Type: `boolean` 
 
+Defaults to: `false`
+--
 
 [[quarkus.log.syslog.endpoint]]
-`quarkus.log.syslog.endpoint` icon:gears[title=Overridable at runtime]:: The IP address and port of the syslog server 
+`quarkus.log.syslog.endpoint` icon:gears[title=Overridable at runtime]::
 +
-Type: `InetSocketAddress`  +
-Defaults to: `localhost:514` +
+--
+The IP address and port of the syslog server
 
+Type: `InetSocketAddress` 
 
+Defaults to: `localhost:514`
+--
 
 [[quarkus.log.syslog.app-name]]
-`quarkus.log.syslog.app-name` icon:gears[title=Overridable at runtime]:: The app name used when formatting the message in RFC5424 format 
+`quarkus.log.syslog.app-name` icon:gears[title=Overridable at runtime]::
 +
-Type: `string`  +
+--
+The app name used when formatting the message in RFC5424 format
 
-
+Type: `string` 
+--
 
 [[quarkus.log.syslog.hostname]]
-`quarkus.log.syslog.hostname` icon:gears[title=Overridable at runtime]:: The name of the host the messages are being sent from 
+`quarkus.log.syslog.hostname` icon:gears[title=Overridable at runtime]::
 +
-Type: `string`  +
+--
+The name of the host the messages are being sent from
 
-
+Type: `string` 
+--
 
 [[quarkus.log.syslog.facility]]
-`quarkus.log.syslog.facility` icon:gears[title=Overridable at runtime]:: Sets the facility used when calculating the priority of the message as defined by RFC-5424 and RFC-3164 
+`quarkus.log.syslog.facility` icon:gears[title=Overridable at runtime]::
 +
-Accepted values: `kernel`, `user-level`, `mail-system`, `system-daemons`, `security`, `syslogd`, `line-printer`, `network-news`, `uucp`, `clock-daemon`, `security2`, `ftp-daemon`, `ntp`, `log-audit`, `log-alert`, `clock-daemon2`, `local-use-0`, `local-use-1`, `local-use-2`, `local-use-3`, `local-use-4`, `local-use-5`, `local-use-6`, `local-use-7` +
-Defaults to: `USER_LEVEL` +
+--
+Sets the facility used when calculating the priority of the message as defined by RFC-5424 and RFC-3164
 
+Accepted values: `kernel`, `user-level`, `mail-system`, `system-daemons`, `security`, `syslogd`, `line-printer`, `network-news`, `uucp`, `clock-daemon`, `security2`, `ftp-daemon`, `ntp`, `log-audit`, `log-alert`, `clock-daemon2`, `local-use-0`, `local-use-1`, `local-use-2`, `local-use-3`, `local-use-4`, `local-use-5`, `local-use-6`, `local-use-7`
 
+Defaults to: `USER_LEVEL`
+--
 
 [[quarkus.log.syslog.syslog-type]]
-`quarkus.log.syslog.syslog-type` icon:gears[title=Overridable at runtime]:: Set the `SyslogType syslog type` this handler should use to format the message sent 
+`quarkus.log.syslog.syslog-type` icon:gears[title=Overridable at runtime]::
 +
-Accepted values: `rfc5424`, `rfc3164` +
-Defaults to: `RFC5424` +
+--
+Set the `SyslogType syslog type` this handler should use to format the message sent
 
+Accepted values: `rfc5424`, `rfc3164`
 
+Defaults to: `RFC5424`
+--
 
 [[quarkus.log.syslog.protocol]]
-`quarkus.log.syslog.protocol` icon:gears[title=Overridable at runtime]:: Sets the protocol used to connect to the syslog server 
+`quarkus.log.syslog.protocol` icon:gears[title=Overridable at runtime]::
 +
-Accepted values: `tcp`, `udp`, `ssl-tcp` +
-Defaults to: `TCP` +
+--
+Sets the protocol used to connect to the syslog server
 
+Accepted values: `tcp`, `udp`, `ssl-tcp`
 
+Defaults to: `TCP`
+--
 
 [[quarkus.log.syslog.use-counting-framing]]
-`quarkus.log.syslog.use-counting-framing` icon:gears[title=Overridable at runtime]:: Set to `true` if the message being sent should be prefixed with the size of the message 
+`quarkus.log.syslog.use-counting-framing` icon:gears[title=Overridable at runtime]::
 +
-Type: `boolean`  +
-Defaults to: `false` +
+--
+Set to `true` if the message being sent should be prefixed with the size of the message
 
+Type: `boolean` 
 
+Defaults to: `false`
+--
 
 [[quarkus.log.syslog.truncate]]
-`quarkus.log.syslog.truncate` icon:gears[title=Overridable at runtime]:: Set to `true` if the message should be truncated 
+`quarkus.log.syslog.truncate` icon:gears[title=Overridable at runtime]::
 +
-Type: `boolean`  +
-Defaults to: `true` +
+--
+Set to `true` if the message should be truncated
 
+Type: `boolean` 
 
+Defaults to: `true`
+--
 
 [[quarkus.log.syslog.block-on-reconnect]]
-`quarkus.log.syslog.block-on-reconnect` icon:gears[title=Overridable at runtime]:: Enables or disables blocking when attempting to reconnect a `org.jboss.logmanager.handlers.SyslogHandler.Protocol#TCP TCP` or `org.jboss.logmanager.handlers.SyslogHandler.Protocol#SSL_TCP SSL TCP` protocol 
+`quarkus.log.syslog.block-on-reconnect` icon:gears[title=Overridable at runtime]::
 +
-Type: `boolean`  +
-Defaults to: `false` +
+--
+Enables or disables blocking when attempting to reconnect a `org.jboss.logmanager.handlers.SyslogHandler.Protocol#TCP
+ TCP` or `org.jboss.logmanager.handlers.SyslogHandler.Protocol#SSL_TCP SSL TCP` protocol
 
+Type: `boolean` 
 
+Defaults to: `false`
+--
 
 [[quarkus.log.syslog.format]]
-`quarkus.log.syslog.format` icon:gears[title=Overridable at runtime]:: The log message format 
+`quarkus.log.syslog.format` icon:gears[title=Overridable at runtime]::
 +
-Type: `string`  +
-Defaults to: `%d{yyyy-MM-dd HH:mm:ss,SSS} %-5p [%c{3.}] (%t) %s%e%n` +
+--
+The log message format
 
+Type: `string` 
 
+Defaults to: `%d{yyyy-MM-dd HH:mm:ss,SSS} %-5p [%c{3.}] (%t) %s%e%n`
+--
 
 [[quarkus.log.syslog.level]]
-`quarkus.log.syslog.level` icon:gears[title=Overridable at runtime]:: The log level specifying, which message levels will be logged by syslog logger 
+`quarkus.log.syslog.level` icon:gears[title=Overridable at runtime]::
 +
-Type: `Level`  +
-Defaults to: `ALL` +
+--
+The log level specifying, which message levels will be logged by syslog logger
 
+Type: `Level` 
 
+Defaults to: `ALL`
+--
 
 [[quarkus.log.syslog.async]]
-`quarkus.log.syslog.async` icon:gears[title=Overridable at runtime]:: Indicates whether to log asynchronously 
+`quarkus.log.syslog.async` icon:gears[title=Overridable at runtime]::
 +
-Type: `boolean`  +
-Defaults to: `false` +
+--
+Indicates whether to log asynchronously
 
+Type: `boolean` 
 
+Defaults to: `false`
+--
 
 [[quarkus.log.syslog.async.queue-length]]
-`quarkus.log.syslog.async.queue-length` icon:gears[title=Overridable at runtime]:: The queue length to use before flushing writing 
+`quarkus.log.syslog.async.queue-length` icon:gears[title=Overridable at runtime]::
 +
-Type: `int`  +
-Defaults to: `512` +
+--
+The queue length to use before flushing writing
 
+Type: `int` 
 
+Defaults to: `512`
+--
 
 [[quarkus.log.syslog.async.overflow]]
-`quarkus.log.syslog.async.overflow` icon:gears[title=Overridable at runtime]:: Determine whether to block the publisher (rather than drop the message) when the queue is full 
+`quarkus.log.syslog.async.overflow` icon:gears[title=Overridable at runtime]::
 +
-Accepted values: `block`, `discard` +
-Defaults to: `block` +
+--
+Determine whether to block the publisher (rather than drop the message) when the queue is full
 
+Accepted values: `block`, `discard`
 
+Defaults to: `block`
+--
 
 [[quarkus.log.category.categories.min-level]]
-`quarkus.log.category."<categories>".min-level` icon:gears[title=Overridable at runtime]:: The minimum level that this category can be set to 
+`quarkus.log.category."<categories>".min-level` icon:gears[title=Overridable at runtime]::
 +
-Type: `string`  +
-Defaults to: `inherit` +
+--
+The minimum level that this category can be set to
 
+Type: `string` 
 
+Defaults to: `inherit`
+--
 
 [[quarkus.log.category.categories.level]]
-`quarkus.log.category."<categories>".level` icon:gears[title=Overridable at runtime]:: The log level level for this category 
+`quarkus.log.category."<categories>".level` icon:gears[title=Overridable at runtime]::
 +
-Type: `string`  +
-Defaults to: `inherit` +
+--
+The log level level for this category
 
+Type: `string` 
 
+Defaults to: `inherit`
+--
 
 [[quarkus.log.filter.filters.if-starts-with]]
-`quarkus.log.filter."<filters>".if-starts-with` icon:gears[title=Overridable at runtime]:: The message starts to match 
+`quarkus.log.filter."<filters>".if-starts-with` icon:gears[title=Overridable at runtime]::
 +
-Type: `string`  +
-Defaults to: `inherit` +
+--
+The message starts to match
 
+Type: `string` 
 
+Defaults to: `inherit`
+--
 
 [NOTE]
 [[memory-size-note-anchor]]

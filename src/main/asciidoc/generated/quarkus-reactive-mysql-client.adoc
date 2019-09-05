@@ -53,50 +53,64 @@ Collation for connections.|string
 == Details
 
 [[quarkus.datasource.url]]
-`quarkus.datasource.url` icon:gears[title=Overridable at runtime]:: The datasource URL. 
+`quarkus.datasource.url` icon:gears[title=Overridable at runtime]::
 +
-Type: `string`  +
+--
+The datasource URL.
 
-
+Type: `string` 
+--
 
 [[quarkus.datasource.username]]
-`quarkus.datasource.username` icon:gears[title=Overridable at runtime]:: The datasource username. 
+`quarkus.datasource.username` icon:gears[title=Overridable at runtime]::
 +
-Type: `string`  +
+--
+The datasource username.
 
-
+Type: `string` 
+--
 
 [[quarkus.datasource.password]]
-`quarkus.datasource.password` icon:gears[title=Overridable at runtime]:: The datasource password. 
+`quarkus.datasource.password` icon:gears[title=Overridable at runtime]::
 +
-Type: `string`  +
+--
+The datasource password.
 
-
+Type: `string` 
+--
 
 [[quarkus.datasource.max-size]]
-`quarkus.datasource.max-size` icon:gears[title=Overridable at runtime]:: The datasource pool maximum size. 
+`quarkus.datasource.max-size` icon:gears[title=Overridable at runtime]::
 +
-Type: `int`  +
+--
+The datasource pool maximum size.
 
-
+Type: `int` 
+--
 
 [[quarkus.reactive-mysql-client.cache-prepared-statements]]
-`quarkus.reactive-mysql-client.cache-prepared-statements` icon:gears[title=Overridable at runtime]:: Whether prepared statements should be cached on the client side. 
+`quarkus.reactive-mysql-client.cache-prepared-statements` icon:gears[title=Overridable at runtime]::
 +
-Type: `boolean`  +
+--
+Whether prepared statements should be cached on the client side.
 
-
+Type: `boolean` 
+--
 
 [[quarkus.reactive-mysql-client.charset]]
-`quarkus.reactive-mysql-client.charset` icon:gears[title=Overridable at runtime]:: Charset for connections. 
+`quarkus.reactive-mysql-client.charset` icon:gears[title=Overridable at runtime]::
 +
-Type: `string`  +
+--
+Charset for connections.
 
-
+Type: `string` 
+--
 
 [[quarkus.reactive-mysql-client.collation]]
-`quarkus.reactive-mysql-client.collation` icon:gears[title=Overridable at runtime]:: Collation for connections. 
+`quarkus.reactive-mysql-client.collation` icon:gears[title=Overridable at runtime]::
 +
-Type: `string`  +
+--
+Collation for connections.
 
-
+Type: `string` 
+--

@@ -17,9 +17,12 @@ The path to the metrics Servlet.|string
 == Details
 
 [[quarkus.smallrye-metrics.path]]
-`quarkus.smallrye-metrics.path` icon:archive[title=Fixed at build time]:: The path to the metrics Servlet. 
+`quarkus.smallrye-metrics.path` icon:archive[title=Fixed at build time]::
 +
-Type: `string`  +
-Defaults to: `/metrics` +
+--
+The path to the metrics Servlet.
 
+Type: `string` 
 
+Defaults to: `/metrics`
+--

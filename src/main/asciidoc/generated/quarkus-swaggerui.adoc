@@ -23,17 +23,23 @@ If this should be included every time.|boolean
 == Details
 
 [[quarkus.swagger-ui.path]]
-`quarkus.swagger-ui.path` icon:archive[title=Fixed at build time]:: The path of the swagger-ui servlet. 
+`quarkus.swagger-ui.path` icon:archive[title=Fixed at build time]::
 +
-Type: `string`  +
-Defaults to: `/swagger-ui` +
+--
+The path of the swagger-ui servlet.
 
+Type: `string` 
 
+Defaults to: `/swagger-ui`
+--
 
 [[quarkus.swagger-ui.always-include]]
-`quarkus.swagger-ui.always-include` icon:archive[title=Fixed at build time]:: If this should be included every time. By default this is only included when the application is running in dev mode. 
+`quarkus.swagger-ui.always-include` icon:archive[title=Fixed at build time]::
 +
-Type: `boolean`  +
-Defaults to: `false` +
+--
+If this should be included every time. By default this is only included when the application is running in dev mode.
 
+Type: `boolean` 
 
+Defaults to: `false`
+--

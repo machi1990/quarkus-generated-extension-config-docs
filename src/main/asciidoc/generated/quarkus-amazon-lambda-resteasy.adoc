@@ -17,9 +17,12 @@ Indicates if we are in debug mode.|boolean
 == Details
 
 [[quarkus.amazon-lambda-resteasy.debug]]
-`quarkus.amazon-lambda-resteasy.debug` icon:archive[title=Fixed at build time]:: Indicates if we are in debug mode. 
+`quarkus.amazon-lambda-resteasy.debug` icon:archive[title=Fixed at build time]::
 +
-Type: `boolean`  +
-Defaults to: `false` +
+--
+Indicates if we are in debug mode.
 
+Type: `boolean` 
 
+Defaults to: `false`
+--

@@ -8,8 +8,7 @@ icon:archive[title=Fixed at build time] Configuration property fixed at build ti
 
 |<<quarkus.arc.remove-unused-beans, quarkus.arc.remove-unused-beans>>
 
- 
- - If set to `all` (or `true`) the container will attempt to remove all unused beans.|string 
+- If set to `all` (or `true`) the container will attempt to remove all unused beans.|string 
 |`all`
 | icon:archive[title=Fixed at build time]
 
@@ -24,8 +23,10 @@ If set to true `@Inject` is automatically added to all non-static fields that ar
 == Details
 
 [[quarkus.arc.remove-unused-beans]]
-`quarkus.arc.remove-unused-beans` icon:archive[title=Fixed at build time]::  
- - If set to `all` (or `true`) the container will attempt to remove all unused beans. 
+`quarkus.arc.remove-unused-beans` icon:archive[title=Fixed at build time]::
++
+--
+- If set to `all` (or `true`) the container will attempt to remove all unused beans. 
  - If set to none (or `false`) no beans will ever be removed even if they are unused (according to the criteria set out below) 
  - If set to `fwk`, then all unused beans will be removed, except the unused beans whose classes are declared in the application code  
  
@@ -36,18 +37,20 @@ If set to true `@Inject` is automatically added to all non-static fields that ar
  - does not have a name, 
  - does not declare an observer, 
  - does not declare any producer which is eligible for injection to any injection point, 
- - is not directly eligible for injection into any `javax.enterprise.inject.Instance` injection point  
- @see UnremovableBeanBuildItem 
-+
-Type: `string`  +
-Defaults to: `all` +
+ - is not directly eligible for injection into any `javax.enterprise.inject.Instance` injection point
 
+Type: `string` 
 
+Defaults to: `all`
+--
 
 [[quarkus.arc.auto-inject-fields]]
-`quarkus.arc.auto-inject-fields` icon:archive[title=Fixed at build time]:: If set to true `@Inject` is automatically added to all non-static fields that are annotated with one of the annotations defined by `AutoInjectAnnotationBuildItem`. 
+`quarkus.arc.auto-inject-fields` icon:archive[title=Fixed at build time]::
 +
-Type: `boolean`  +
-Defaults to: `true` +
+--
+If set to true `@Inject` is automatically added to all non-static fields that are annotated with one of the annotations defined by `AutoInjectAnnotationBuildItem`.
 
+Type: `boolean` 
 
+Defaults to: `true`
+--
