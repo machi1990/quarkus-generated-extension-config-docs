@@ -40,6 +40,8 @@ Type: `string`
 Defaults to: `quarkus`
 --
 
+***
+
 [[quarkus.transaction-manager.xa-node-name]]
 `quarkus.transaction-manager.xa-node-name` icon:gears[title=Overridable at runtime]::
 +
@@ -48,6 +50,8 @@ The XA node name used by the transaction manager
 
 Type: `string` 
 --
+
+***
 
 [[quarkus.transaction-manager.default-transaction-timeout]]
 `quarkus.transaction-manager.default-transaction-timeout` icon:gears[title=Overridable at runtime]::
@@ -59,6 +63,8 @@ Type: `Duration`  link:#duration-note-anchor[icon:question-circle[], title=More 
 
 Defaults to: `60`
 --
+
+***
 
 [NOTE]
 [[duration-note-anchor]]

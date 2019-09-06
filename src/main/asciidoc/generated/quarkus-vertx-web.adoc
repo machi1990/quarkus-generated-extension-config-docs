@@ -142,6 +142,8 @@ Type: `boolean`
 Defaults to: `false`
 --
 
+***
+
 [[quarkus.http.port]]
 `quarkus.http.port` icon:gears[title=Overridable at runtime]::
 +
@@ -152,6 +154,8 @@ Type: `int`
 
 Defaults to: `8080`
 --
+
+***
 
 [[quarkus.http.test-port]]
 `quarkus.http.test-port` icon:gears[title=Overridable at runtime]::
@@ -164,6 +168,8 @@ Type: `int`
 Defaults to: `8081`
 --
 
+***
+
 [[quarkus.http.host]]
 `quarkus.http.host` icon:gears[title=Overridable at runtime]::
 +
@@ -174,6 +180,8 @@ Type: `string`
 
 Defaults to: `0.0.0.0`
 --
+
+***
 
 [[quarkus.http.ssl-port]]
 `quarkus.http.ssl-port` icon:gears[title=Overridable at runtime]::
@@ -186,6 +194,8 @@ Type: `int`
 Defaults to: `8443`
 --
 
+***
+
 [[quarkus.http.test-ssl-port]]
 `quarkus.http.test-ssl-port` icon:gears[title=Overridable at runtime]::
 +
@@ -197,6 +207,8 @@ Type: `int`
 Defaults to: `8444`
 --
 
+***
+
 [[quarkus.http.cors.origins]]
 `quarkus.http.cors.origins` icon:gears[title=Overridable at runtime]::
 +
@@ -205,6 +217,8 @@ Origins allowed for CORS Comma separated list of valid URLs. ex: http://www.quar
 
 Type: `string` 
 --
+
+***
 
 [[quarkus.http.cors.methods]]
 `quarkus.http.cors.methods` icon:gears[title=Overridable at runtime]::
@@ -215,6 +229,8 @@ HTTP methods allowed for CORS Comma separated list of valid methods. ex: GET,PUT
 Accepted values: `options`, `get`, `head`, `post`, `put`, `delete`, `trace`, `connect`, `patch`, `other`
 --
 
+***
+
 [[quarkus.http.cors.headers]]
 `quarkus.http.cors.headers` icon:gears[title=Overridable at runtime]::
 +
@@ -223,6 +239,8 @@ HTTP headers allowed for CORS Comma separated list of valid headers. ex: X-Custo
 
 Type: `string` 
 --
+
+***
 
 [[quarkus.http.cors.exposed-headers]]
 `quarkus.http.cors.exposed-headers` icon:gears[title=Overridable at runtime]::
@@ -233,6 +251,8 @@ HTTP headers exposed in CORS Comma separated list of valid headers. ex: X-Custom
 Type: `string` 
 --
 
+***
+
 [[quarkus.http.cors.access-control-max-age]]
 `quarkus.http.cors.access-control-max-age` icon:gears[title=Overridable at runtime]::
 +
@@ -241,6 +261,8 @@ The `Access-Control-Max-Age` response header value indicating how long the resul
 
 Type: `Duration`  link:#duration-note-anchor[icon:question-circle[], title=More information about the Duration format]
 --
+
+***
 
 [[quarkus.http.ssl.certificate.file]]
 `quarkus.http.ssl.certificate.file` icon:gears[title=Overridable at runtime]::
@@ -251,6 +273,8 @@ The file path to a server certificate or certificate chain in PEM format.
 Type: `path` 
 --
 
+***
+
 [[quarkus.http.ssl.certificate.key-file]]
 `quarkus.http.ssl.certificate.key-file` icon:gears[title=Overridable at runtime]::
 +
@@ -259,6 +283,8 @@ The file path to the corresponding certificate private key file in PEM format.
 
 Type: `path` 
 --
+
+***
 
 [[quarkus.http.ssl.certificate.key-store-file]]
 `quarkus.http.ssl.certificate.key-store-file` icon:gears[title=Overridable at runtime]::
@@ -269,6 +295,8 @@ An optional key store which holds the certificate information instead of specify
 Type: `path` 
 --
 
+***
+
 [[quarkus.http.ssl.certificate.key-store-file-type]]
 `quarkus.http.ssl.certificate.key-store-file-type` icon:gears[title=Overridable at runtime]::
 +
@@ -277,6 +305,8 @@ An optional parameter to specify type of the key store file. If not given, the t
 
 Type: `string` 
 --
+
+***
 
 [[quarkus.http.ssl.certificate.key-store-password]]
 `quarkus.http.ssl.certificate.key-store-password` icon:gears[title=Overridable at runtime]::
@@ -289,6 +319,8 @@ Type: `string`
 Defaults to: `password`
 --
 
+***
+
 [[quarkus.http.ssl.cipher-suites]]
 `quarkus.http.ssl.cipher-suites` icon:gears[title=Overridable at runtime]::
 +
@@ -297,6 +329,8 @@ The cipher suites to use. If none is given, a reasonable default is selected.
 
 Type: `string` 
 --
+
+***
 
 [[quarkus.http.ssl.protocols]]
 `quarkus.http.ssl.protocols` icon:gears[title=Overridable at runtime]::
@@ -309,6 +343,8 @@ Type: `string`
 Defaults to: `TLSv1.3,TLSv1.2`
 --
 
+***
+
 [[quarkus.http.io-threads]]
 `quarkus.http.io-threads` icon:gears[title=Overridable at runtime]::
 +
@@ -317,6 +353,8 @@ The number if IO threads used to perform IO. This will be automatically set to a
 
 Type: `int` 
 --
+
+***
 
 [[quarkus.http.virtual]]
 `quarkus.http.virtual` icon:gears[title=Overridable at runtime]::
@@ -328,6 +366,8 @@ Type: `boolean`
 
 Defaults to: `false`
 --
+
+***
 
 [NOTE]
 [[duration-note-anchor]]

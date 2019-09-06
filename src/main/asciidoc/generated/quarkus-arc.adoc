@@ -44,6 +44,8 @@ Type: `string`
 Defaults to: `all`
 --
 
+***
+
 [[quarkus.arc.auto-inject-fields]]
 `quarkus.arc.auto-inject-fields` icon:archive[title=Fixed at build time]::
 +
@@ -54,3 +56,5 @@ Type: `boolean`
 
 Defaults to: `true`
 --
+
+***

@@ -89,6 +89,8 @@ Type: `string`
 Defaults to: `BASIC`
 --
 
+***
+
 [[quarkus.security.file.realm-name]]
 `quarkus.security.file.realm-name` icon:archive[title=Fixed at build time]::
 +
@@ -99,6 +101,8 @@ Type: `string`
 
 Defaults to: `Quarkus`
 --
+
+***
 
 [[quarkus.security.file.enabled]]
 `quarkus.security.file.enabled` icon:archive[title=Fixed at build time]::
@@ -111,6 +115,8 @@ Type: `boolean`
 Defaults to: `false`
 --
 
+***
+
 [[quarkus.security.file.users]]
 `quarkus.security.file.users` icon:archive[title=Fixed at build time]::
 +
@@ -121,6 +127,8 @@ Type: `string`
 
 Defaults to: `users.properties`
 --
+
+***
 
 [[quarkus.security.file.roles]]
 `quarkus.security.file.roles` icon:archive[title=Fixed at build time]::
@@ -133,6 +141,8 @@ Type: `string`
 Defaults to: `roles.properties`
 --
 
+***
+
 [[quarkus.security.embedded.auth-mechanism]]
 `quarkus.security.embedded.auth-mechanism` icon:archive[title=Fixed at build time]::
 +
@@ -143,6 +153,8 @@ Type: `string`
 
 Defaults to: `BASIC`
 --
+
+***
 
 [[quarkus.security.embedded.realm-name]]
 `quarkus.security.embedded.realm-name` icon:archive[title=Fixed at build time]::
@@ -155,6 +167,8 @@ Type: `string`
 Defaults to: `Quarkus`
 --
 
+***
+
 [[quarkus.security.embedded.enabled]]
 `quarkus.security.embedded.enabled` icon:archive[title=Fixed at build time]::
 +
@@ -166,6 +180,8 @@ Type: `boolean`
 Defaults to: `false`
 --
 
+***
+
 [[quarkus.security.security-providers]]
 `quarkus.security.security-providers` icon:archive[title=Fixed at build time]::
 +
@@ -174,6 +190,8 @@ List of security providers to enable for reflection
 
 Type: `string` 
 --
+
+***
 
 [[quarkus.security.embedded.users.users]]
 `quarkus.security.embedded.users."<users>"` icon:archive[title=Fixed at build time]::
@@ -184,6 +202,8 @@ The realm users user1=password\nuser2=password2... mapping
 Type: `String` 
 --
 
+***
+
 [[quarkus.security.embedded.roles.roles]]
 `quarkus.security.embedded.roles."<roles>"` icon:archive[title=Fixed at build time]::
 +
@@ -192,3 +212,5 @@ The realm roles user1=role1,role2,...\nuser2=role1,role2,... mapping
 
 Type: `String` 
 --
+
+***

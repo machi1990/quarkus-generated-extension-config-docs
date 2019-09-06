@@ -33,6 +33,8 @@ Type: `string`
 Defaults to: `tika-config.xml`
 --
 
+***
+
 [[quarkus.tika.append-embedded-content]]
 `quarkus.tika.append-embedded-content` icon:archive[title=Fixed at build time]::
 +
@@ -43,3 +45,5 @@ Type: `boolean`
 
 Defaults to: `true`
 --
+
+***

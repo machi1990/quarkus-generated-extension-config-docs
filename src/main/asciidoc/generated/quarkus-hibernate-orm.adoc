@@ -141,6 +141,8 @@ MariaDB, Microsoft SQL Server and H2.
 Type: `string` 
 --
 
+***
+
 [[quarkus.hibernate-orm.dialect.storage-engine]]
 `quarkus.hibernate-orm.dialect.storage-engine` icon:archive[title=Fixed at build time]::
 +
@@ -151,6 +153,8 @@ E.g. `MyISAM` or `InnoDB` for MySQL.
 
 Type: `string` 
 --
+
+***
 
 [[quarkus.hibernate-orm.sql-load-script]]
 `quarkus.hibernate-orm.sql-load-script` icon:archive[title=Fixed at build time]::
@@ -180,6 +184,8 @@ Each SQL statement must be terminated by a semicolon.
 Type: `string` 
 --
 
+***
+
 [[quarkus.hibernate-orm.batch-fetch-size]]
 `quarkus.hibernate-orm.batch-fetch-size` icon:archive[title=Fixed at build time]::
 +
@@ -193,6 +199,8 @@ Type: `int`
 Defaults to: `-1`
 --
 
+***
+
 [[quarkus.hibernate-orm.query.query-plan-cache-max-size]]
 `quarkus.hibernate-orm.query.query-plan-cache-max-size` icon:archive[title=Fixed at build time]::
 +
@@ -201,6 +209,8 @@ The maximum size of the query plan cache.
 
 Type: `string` 
 --
+
+***
 
 [[quarkus.hibernate-orm.query.default-null-ordering]]
 `quarkus.hibernate-orm.query.default-null-ordering` icon:archive[title=Fixed at build time]::
@@ -213,6 +223,8 @@ Valid values are: `none`, `first`, `last`.
 Type: `string` 
 --
 
+***
+
 [[quarkus.hibernate-orm.database.generation]]
 `quarkus.hibernate-orm.database.generation` icon:archive[title=Fixed at build time]::
 +
@@ -223,6 +235,8 @@ Type: `string`
 
 Defaults to: `none`
 --
+
+***
 
 [[quarkus.hibernate-orm.database.generation.halt-on-error]]
 `quarkus.hibernate-orm.database.generation.halt-on-error` icon:archive[title=Fixed at build time]::
@@ -235,6 +249,8 @@ Type: `boolean`
 Defaults to: `false`
 --
 
+***
+
 [[quarkus.hibernate-orm.database.default-catalog]]
 `quarkus.hibernate-orm.database.default-catalog` icon:archive[title=Fixed at build time]::
 +
@@ -243,6 +259,8 @@ The default catalog to use for the database objects.
 
 Type: `string` 
 --
+
+***
 
 [[quarkus.hibernate-orm.database.default-schema]]
 `quarkus.hibernate-orm.database.default-schema` icon:archive[title=Fixed at build time]::
@@ -253,6 +271,8 @@ The default schema to use for the database objects.
 Type: `string` 
 --
 
+***
+
 [[quarkus.hibernate-orm.database.charset]]
 `quarkus.hibernate-orm.database.charset` icon:archive[title=Fixed at build time]::
 +
@@ -261,6 +281,8 @@ The charset of the database.
 
 Type: `string` 
 --
+
+***
 
 [[quarkus.hibernate-orm.jdbc.timezone]]
 `quarkus.hibernate-orm.jdbc.timezone` icon:archive[title=Fixed at build time]::
@@ -271,6 +293,8 @@ The time zone pushed to the JDBC driver.
 Type: `string` 
 --
 
+***
+
 [[quarkus.hibernate-orm.jdbc.statement-fetch-size]]
 `quarkus.hibernate-orm.jdbc.statement-fetch-size` icon:archive[title=Fixed at build time]::
 +
@@ -280,6 +304,8 @@ How many rows are fetched at a time by the JDBC driver.
 Type: `int` 
 --
 
+***
+
 [[quarkus.hibernate-orm.jdbc.statement-batch-size]]
 `quarkus.hibernate-orm.jdbc.statement-batch-size` icon:archive[title=Fixed at build time]::
 +
@@ -288,6 +314,8 @@ The number of updates (inserts, updates and deletes) that are sent by the JDBC d
 
 Type: `int` 
 --
+
+***
 
 [[quarkus.hibernate-orm.log.sql]]
 `quarkus.hibernate-orm.log.sql` icon:archive[title=Fixed at build time]::
@@ -301,6 +329,8 @@ Type: `boolean`
 Defaults to: `false`
 --
 
+***
+
 [[quarkus.hibernate-orm.log.jdbc-warnings]]
 `quarkus.hibernate-orm.log.jdbc-warnings` icon:archive[title=Fixed at build time]::
 +
@@ -310,6 +340,8 @@ Whether JDBC warnings should be collected and logged.
 
 Type: `boolean` 
 --
+
+***
 
 [[quarkus.hibernate-orm.statistics]]
 `quarkus.hibernate-orm.statistics` icon:archive[title=Fixed at build time]::
@@ -322,6 +354,8 @@ Type: `boolean`
 Defaults to: `false`
 --
 
+***
+
 [[quarkus.hibernate-orm.cache.cache.expiration.max-idle]]
 `quarkus.hibernate-orm.cache."<cache>".expiration.max-idle` icon:archive[title=Fixed at build time]::
 +
@@ -331,6 +365,8 @@ The maximum time before an object of the cache is considered expired.
 Type: `Duration`  link:#duration-note-anchor[icon:question-circle[], title=More information about the Duration format]
 --
 
+***
+
 [[quarkus.hibernate-orm.cache.cache.memory.object-count]]
 `quarkus.hibernate-orm.cache."<cache>".memory.object-count` icon:archive[title=Fixed at build time]::
 +
@@ -339,6 +375,8 @@ The maximum number of objects kept in memory in the cache.
 
 Type: `long` 
 --
+
+***
 
 [NOTE]
 [[duration-note-anchor]]

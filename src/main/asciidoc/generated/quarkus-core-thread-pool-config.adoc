@@ -73,6 +73,8 @@ Type: `int`
 Defaults to: `1`
 --
 
+***
+
 [[quarkus.thread-pool.max-threads]]
 `quarkus.thread-pool.max-threads` icon:gears[title=Overridable at runtime]::
 +
@@ -82,6 +84,8 @@ The maximum number of threads. If this is not specified then it will be automati
 Type: `int` 
 --
 
+***
+
 [[quarkus.thread-pool.queue-size]]
 `quarkus.thread-pool.queue-size` icon:gears[title=Overridable at runtime]::
 +
@@ -90,6 +94,8 @@ The queue size. For most applications this should be unbounded
 
 Type: `int` 
 --
+
+***
 
 [[quarkus.thread-pool.growth-resistance]]
 `quarkus.thread-pool.growth-resistance` icon:gears[title=Overridable at runtime]::
@@ -102,6 +108,8 @@ Type: `float`
 Defaults to: `0`
 --
 
+***
+
 [[quarkus.thread-pool.shutdown-timeout]]
 `quarkus.thread-pool.shutdown-timeout` icon:gears[title=Overridable at runtime]::
 +
@@ -112,6 +120,8 @@ Type: `Duration`  link:#duration-note-anchor[icon:question-circle[], title=More 
 
 Defaults to: `1M`
 --
+
+***
 
 [[quarkus.thread-pool.shutdown-interrupt]]
 `quarkus.thread-pool.shutdown-interrupt` icon:gears[title=Overridable at runtime]::
@@ -124,6 +134,8 @@ Type: `Duration`  link:#duration-note-anchor[icon:question-circle[], title=More 
 Defaults to: `10`
 --
 
+***
+
 [[quarkus.thread-pool.shutdown-check-interval]]
 `quarkus.thread-pool.shutdown-check-interval` icon:gears[title=Overridable at runtime]::
 +
@@ -135,6 +147,8 @@ Type: `Duration`  link:#duration-note-anchor[icon:question-circle[], title=More 
 Defaults to: `5`
 --
 
+***
+
 [[quarkus.thread-pool.keep-alive-time]]
 `quarkus.thread-pool.keep-alive-time` icon:gears[title=Overridable at runtime]::
 +
@@ -145,6 +159,8 @@ Type: `Duration`  link:#duration-note-anchor[icon:question-circle[], title=More 
 
 Defaults to: `30`
 --
+
+***
 
 [NOTE]
 [[duration-note-anchor]]

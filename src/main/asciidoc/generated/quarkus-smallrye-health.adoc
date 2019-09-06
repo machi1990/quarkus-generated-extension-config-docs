@@ -39,6 +39,8 @@ Type: `string`
 Defaults to: `/health`
 --
 
+***
+
 [[quarkus.smallrye-health.liveness-path]]
 `quarkus.smallrye-health.liveness-path` icon:archive[title=Fixed at build time]::
 +
@@ -50,6 +52,8 @@ Type: `string`
 Defaults to: `/live`
 --
 
+***
+
 [[quarkus.smallrye-health.readiness-path]]
 `quarkus.smallrye-health.readiness-path` icon:archive[title=Fixed at build time]::
 +
@@ -60,3 +64,5 @@ Type: `string`
 
 Defaults to: `/ready`
 --
+
+***

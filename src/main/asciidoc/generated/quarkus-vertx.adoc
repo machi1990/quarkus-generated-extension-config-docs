@@ -287,6 +287,8 @@ Type: `boolean`
 Defaults to: `true`
 --
 
+***
+
 [[quarkus.vertx.classpath-resolving]]
 `quarkus.vertx.classpath-resolving` icon:gears[title=Overridable at runtime]::
 +
@@ -298,6 +300,8 @@ Type: `boolean`
 Defaults to: `true`
 --
 
+***
+
 [[quarkus.vertx.event-loops-pool-size]]
 `quarkus.vertx.event-loops-pool-size` icon:gears[title=Overridable at runtime]::
 +
@@ -306,6 +310,8 @@ The number of event loops. 2 x the number of core by default.
 
 Type: `int` 
 --
+
+***
 
 [[quarkus.vertx.max-event-loop-execute-time]]
 `quarkus.vertx.max-event-loop-execute-time` icon:gears[title=Overridable at runtime]::
@@ -318,6 +324,8 @@ Type: `Duration`  link:#duration-note-anchor[icon:question-circle[], title=More 
 Defaults to: `2`
 --
 
+***
+
 [[quarkus.vertx.warning-exception-time]]
 `quarkus.vertx.warning-exception-time` icon:gears[title=Overridable at runtime]::
 +
@@ -328,6 +336,8 @@ Type: `Duration`  link:#duration-note-anchor[icon:question-circle[], title=More 
 
 Defaults to: `2`
 --
+
+***
 
 [[quarkus.vertx.worker-pool-size]]
 `quarkus.vertx.worker-pool-size` icon:gears[title=Overridable at runtime]::
@@ -340,6 +350,8 @@ Type: `int`
 Defaults to: `20`
 --
 
+***
+
 [[quarkus.vertx.max-worker-execute-time]]
 `quarkus.vertx.max-worker-execute-time` icon:gears[title=Overridable at runtime]::
 +
@@ -350,6 +362,8 @@ Type: `Duration`  link:#duration-note-anchor[icon:question-circle[], title=More 
 
 Defaults to: `60`
 --
+
+***
 
 [[quarkus.vertx.internal-blocking-pool-size]]
 `quarkus.vertx.internal-blocking-pool-size` icon:gears[title=Overridable at runtime]::
@@ -362,6 +376,8 @@ Type: `int`
 Defaults to: `20`
 --
 
+***
+
 [[quarkus.vertx.use-async-dns]]
 `quarkus.vertx.use-async-dns` icon:gears[title=Overridable at runtime]::
 +
@@ -373,6 +389,8 @@ Type: `boolean`
 Defaults to: `false`
 --
 
+***
+
 [[quarkus.vertx.eventbus.key-certificate-pem.keys]]
 `quarkus.vertx.eventbus.key-certificate-pem.keys` icon:gears[title=Overridable at runtime]::
 +
@@ -381,6 +399,8 @@ Comma-separated list of the path to the key files (Pem format).
 
 Type: `string` 
 --
+
+***
 
 [[quarkus.vertx.eventbus.key-certificate-pem.certs]]
 `quarkus.vertx.eventbus.key-certificate-pem.certs` icon:gears[title=Overridable at runtime]::
@@ -391,6 +411,8 @@ Comma-separated list of the path to the certificate files (Pem format).
 Type: `string` 
 --
 
+***
+
 [[quarkus.vertx.eventbus.key-certificate-jks.path]]
 `quarkus.vertx.eventbus.key-certificate-jks.path` icon:gears[title=Overridable at runtime]::
 +
@@ -399,6 +421,8 @@ Path of the key file (JKS format).
 
 Type: `string` 
 --
+
+***
 
 [[quarkus.vertx.eventbus.key-certificate-jks.password]]
 `quarkus.vertx.eventbus.key-certificate-jks.password` icon:gears[title=Overridable at runtime]::
@@ -409,6 +433,8 @@ Password of the key file.
 Type: `string` 
 --
 
+***
+
 [[quarkus.vertx.eventbus.key-certificate-pfx.path]]
 `quarkus.vertx.eventbus.key-certificate-pfx.path` icon:gears[title=Overridable at runtime]::
 +
@@ -417,6 +443,8 @@ Path to the key file (PFX format)
 
 Type: `string` 
 --
+
+***
 
 [[quarkus.vertx.eventbus.key-certificate-pfx.password]]
 `quarkus.vertx.eventbus.key-certificate-pfx.password` icon:gears[title=Overridable at runtime]::
@@ -427,6 +455,8 @@ Password of the key.
 Type: `string` 
 --
 
+***
+
 [[quarkus.vertx.eventbus.trust-certificate-pem.certs]]
 `quarkus.vertx.eventbus.trust-certificate-pem.certs` icon:gears[title=Overridable at runtime]::
 +
@@ -435,6 +465,8 @@ Comma-separated list of the trust certificate files (Pem format).
 
 Type: `string` 
 --
+
+***
 
 [[quarkus.vertx.eventbus.trust-certificate-jks.path]]
 `quarkus.vertx.eventbus.trust-certificate-jks.path` icon:gears[title=Overridable at runtime]::
@@ -445,6 +477,8 @@ Path of the key file (JKS format).
 Type: `string` 
 --
 
+***
+
 [[quarkus.vertx.eventbus.trust-certificate-jks.password]]
 `quarkus.vertx.eventbus.trust-certificate-jks.password` icon:gears[title=Overridable at runtime]::
 +
@@ -453,6 +487,8 @@ Password of the key file.
 
 Type: `string` 
 --
+
+***
 
 [[quarkus.vertx.eventbus.trust-certificate-pfx.path]]
 `quarkus.vertx.eventbus.trust-certificate-pfx.path` icon:gears[title=Overridable at runtime]::
@@ -463,6 +499,8 @@ Path to the key file (PFX format)
 Type: `string` 
 --
 
+***
+
 [[quarkus.vertx.eventbus.trust-certificate-pfx.password]]
 `quarkus.vertx.eventbus.trust-certificate-pfx.password` icon:gears[title=Overridable at runtime]::
 +
@@ -472,6 +510,8 @@ Password of the key.
 Type: `string` 
 --
 
+***
+
 [[quarkus.vertx.eventbus.accept-backlog]]
 `quarkus.vertx.eventbus.accept-backlog` icon:gears[title=Overridable at runtime]::
 +
@@ -480,6 +520,8 @@ The accept backlog.
 
 Type: `int` 
 --
+
+***
 
 [[quarkus.vertx.eventbus.client-auth]]
 `quarkus.vertx.eventbus.client-auth` icon:gears[title=Overridable at runtime]::
@@ -492,6 +534,8 @@ Type: `string`
 Defaults to: `NONE`
 --
 
+***
+
 [[quarkus.vertx.eventbus.connect-timeout]]
 `quarkus.vertx.eventbus.connect-timeout` icon:gears[title=Overridable at runtime]::
 +
@@ -503,6 +547,8 @@ Type: `Duration`  link:#duration-note-anchor[icon:question-circle[], title=More 
 Defaults to: `60`
 --
 
+***
+
 [[quarkus.vertx.eventbus.idle-timeout]]
 `quarkus.vertx.eventbus.idle-timeout` icon:gears[title=Overridable at runtime]::
 +
@@ -512,6 +558,8 @@ The idle timeout in milliseconds.
 Type: `Duration`  link:#duration-note-anchor[icon:question-circle[], title=More information about the Duration format]
 --
 
+***
+
 [[quarkus.vertx.eventbus.receive-buffer-size]]
 `quarkus.vertx.eventbus.receive-buffer-size` icon:gears[title=Overridable at runtime]::
 +
@@ -520,6 +568,8 @@ The receive buffer size.
 
 Type: `int` 
 --
+
+***
 
 [[quarkus.vertx.eventbus.reconnect-attempts]]
 `quarkus.vertx.eventbus.reconnect-attempts` icon:gears[title=Overridable at runtime]::
@@ -532,6 +582,8 @@ Type: `int`
 Defaults to: `0`
 --
 
+***
+
 [[quarkus.vertx.eventbus.reconnect-interval]]
 `quarkus.vertx.eventbus.reconnect-interval` icon:gears[title=Overridable at runtime]::
 +
@@ -542,6 +594,8 @@ Type: `Duration`  link:#duration-note-anchor[icon:question-circle[], title=More 
 
 Defaults to: `1`
 --
+
+***
 
 [[quarkus.vertx.eventbus.reuse-address]]
 `quarkus.vertx.eventbus.reuse-address` icon:gears[title=Overridable at runtime]::
@@ -554,6 +608,8 @@ Type: `boolean`
 Defaults to: `true`
 --
 
+***
+
 [[quarkus.vertx.eventbus.reuse-port]]
 `quarkus.vertx.eventbus.reuse-port` icon:gears[title=Overridable at runtime]::
 +
@@ -565,6 +621,8 @@ Type: `boolean`
 Defaults to: `false`
 --
 
+***
+
 [[quarkus.vertx.eventbus.send-buffer-size]]
 `quarkus.vertx.eventbus.send-buffer-size` icon:gears[title=Overridable at runtime]::
 +
@@ -574,6 +632,8 @@ The send buffer size.
 Type: `int` 
 --
 
+***
+
 [[quarkus.vertx.eventbus.soLinger]]
 `quarkus.vertx.eventbus.soLinger` icon:gears[title=Overridable at runtime]::
 +
@@ -582,6 +642,8 @@ The so linger.
 
 Type: `int` 
 --
+
+***
 
 [[quarkus.vertx.eventbus.ssl]]
 `quarkus.vertx.eventbus.ssl` icon:gears[title=Overridable at runtime]::
@@ -594,6 +656,8 @@ Type: `boolean`
 Defaults to: `false`
 --
 
+***
+
 [[quarkus.vertx.eventbus.tcp-keep-alive]]
 `quarkus.vertx.eventbus.tcp-keep-alive` icon:gears[title=Overridable at runtime]::
 +
@@ -604,6 +668,8 @@ Type: `boolean`
 
 Defaults to: `false`
 --
+
+***
 
 [[quarkus.vertx.eventbus.tcp-no-delay]]
 `quarkus.vertx.eventbus.tcp-no-delay` icon:gears[title=Overridable at runtime]::
@@ -616,6 +682,8 @@ Type: `boolean`
 Defaults to: `true`
 --
 
+***
+
 [[quarkus.vertx.eventbus.traffic-class]]
 `quarkus.vertx.eventbus.traffic-class` icon:gears[title=Overridable at runtime]::
 +
@@ -624,6 +692,8 @@ Configure the traffic class.
 
 Type: `int` 
 --
+
+***
 
 [[quarkus.vertx.eventbus.trust-all]]
 `quarkus.vertx.eventbus.trust-all` icon:gears[title=Overridable at runtime]::
@@ -636,6 +706,8 @@ Type: `boolean`
 Defaults to: `false`
 --
 
+***
+
 [[quarkus.vertx.cluster.host]]
 `quarkus.vertx.cluster.host` icon:gears[title=Overridable at runtime]::
 +
@@ -647,6 +719,8 @@ Type: `string`
 Defaults to: `localhost`
 --
 
+***
+
 [[quarkus.vertx.cluster.port]]
 `quarkus.vertx.cluster.port` icon:gears[title=Overridable at runtime]::
 +
@@ -655,6 +729,8 @@ The port.
 
 Type: `int` 
 --
+
+***
 
 [[quarkus.vertx.cluster.public-host]]
 `quarkus.vertx.cluster.public-host` icon:gears[title=Overridable at runtime]::
@@ -665,6 +741,8 @@ The public host name.
 Type: `string` 
 --
 
+***
+
 [[quarkus.vertx.cluster.public-port]]
 `quarkus.vertx.cluster.public-port` icon:gears[title=Overridable at runtime]::
 +
@@ -673,6 +751,8 @@ The public port.
 
 Type: `int` 
 --
+
+***
 
 [[quarkus.vertx.cluster.clustered]]
 `quarkus.vertx.cluster.clustered` icon:gears[title=Overridable at runtime]::
@@ -685,6 +765,8 @@ Type: `boolean`
 Defaults to: `false`
 --
 
+***
+
 [[quarkus.vertx.cluster.ping-interval]]
 `quarkus.vertx.cluster.ping-interval` icon:gears[title=Overridable at runtime]::
 +
@@ -696,6 +778,8 @@ Type: `Duration`  link:#duration-note-anchor[icon:question-circle[], title=More 
 Defaults to: `20`
 --
 
+***
+
 [[quarkus.vertx.cluster.ping-reply-interval]]
 `quarkus.vertx.cluster.ping-reply-interval` icon:gears[title=Overridable at runtime]::
 +
@@ -706,6 +790,8 @@ Type: `Duration`  link:#duration-note-anchor[icon:question-circle[], title=More 
 
 Defaults to: `20`
 --
+
+***
 
 [NOTE]
 [[duration-note-anchor]]

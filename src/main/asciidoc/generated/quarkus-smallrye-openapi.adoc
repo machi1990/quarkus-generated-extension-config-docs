@@ -26,3 +26,5 @@ Type: `string`
 
 Defaults to: `/openapi`
 --
+
+***

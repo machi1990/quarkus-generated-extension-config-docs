@@ -45,6 +45,8 @@ Type: `string`
 Defaults to: `MP-JWT`
 --
 
+***
+
 [[quarkus.smallrye-jwt.realm-name]]
 `quarkus.smallrye-jwt.realm-name` icon:archive[title=Fixed at build time]::
 +
@@ -55,6 +57,8 @@ Type: `string`
 
 Defaults to: `Quarkus-JWT`
 --
+
+***
 
 [[quarkus.smallrye-jwt.enabled]]
 `quarkus.smallrye-jwt.enabled` icon:archive[title=Fixed at build time]::
@@ -67,6 +71,8 @@ Type: `boolean`
 Defaults to: `true`
 --
 
+***
+
 [[quarkus.smallrye-jwt.rsa-sig-provider]]
 `quarkus.smallrye-jwt.rsa-sig-provider` icon:archive[title=Fixed at build time]::
 +
@@ -77,3 +83,5 @@ Type: `string`
 
 Defaults to: `SunRsaSign`
 --
+
+***

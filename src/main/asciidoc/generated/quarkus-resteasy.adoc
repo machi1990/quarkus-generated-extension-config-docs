@@ -34,6 +34,8 @@ Type: `boolean`
 Defaults to: `false`
 --
 
+***
+
 [[quarkus.resteasy.gzip.max-input]]
 `quarkus.resteasy.gzip.max-input` icon:archive[title=Fixed at build time]::
 +
@@ -45,6 +47,8 @@ Type: `MemorySize`  link:#memory-size-note-anchor[icon:question-circle[], title=
 
 Defaults to: `10M`
 --
+
+***
 
 [NOTE]
 [[memory-size-note-anchor]]

@@ -31,6 +31,8 @@ icon:archive[title=Fixed at build time] Configuration property fixed at build ti
 Type: `string` 
 --
 
+***
+
 [[quarkus.hot-reload.url]]
 `quarkus.hot-reload.url` icon:archive[title=Fixed at build time]::
 +
@@ -39,3 +41,5 @@ Type: `string`
 
 Type: `string` 
 --
+
+***

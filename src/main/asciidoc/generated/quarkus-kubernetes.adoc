@@ -31,6 +31,8 @@ The group of the application. This value will be use as: - docker image repo - l
 Type: `string` 
 --
 
+***
+
 [[quarkus.kubernetes.docker.registry]]
 `quarkus.kubernetes.docker.registry` icon:archive[title=Fixed at build time]::
 +
@@ -41,3 +43,5 @@ Type: `string`
 
 Defaults to: `docker.io`
 --
+
+***

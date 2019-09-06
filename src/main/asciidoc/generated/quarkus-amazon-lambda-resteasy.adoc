@@ -26,3 +26,5 @@ Type: `boolean`
 
 Defaults to: `false`
 --
+
+***

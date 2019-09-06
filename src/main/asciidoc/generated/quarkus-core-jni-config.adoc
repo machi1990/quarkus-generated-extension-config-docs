@@ -31,6 +31,8 @@ Paths of library to load.
 Type: `string` 
 --
 
+***
+
 [[quarkus.jni.enable]]
 `quarkus.jni.enable` icon:archive[title=Fixed at build time]::
 +
@@ -41,3 +43,5 @@ Type: `boolean`
 
 Defaults to: `false`
 --
+
+***

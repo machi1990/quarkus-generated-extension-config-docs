@@ -84,6 +84,8 @@ Type: `string`
 Defaults to: `bolt://localhost:7687`
 --
 
+***
+
 [[quarkus.neo4j.authentication.username]]
 `quarkus.neo4j.authentication.username` icon:gears[title=Overridable at runtime]::
 +
@@ -94,6 +96,8 @@ Type: `string`
 
 Defaults to: `neo4j`
 --
+
+***
 
 [[quarkus.neo4j.authentication.password]]
 `quarkus.neo4j.authentication.password` icon:gears[title=Overridable at runtime]::
@@ -106,6 +110,8 @@ Type: `string`
 Defaults to: `neo4j`
 --
 
+***
+
 [[quarkus.neo4j.authentication.disabled]]
 `quarkus.neo4j.authentication.disabled` icon:gears[title=Overridable at runtime]::
 +
@@ -116,6 +122,8 @@ Type: `boolean`
 
 Defaults to: `false`
 --
+
+***
 
 [[quarkus.neo4j.pool.metrics-enabled]]
 `quarkus.neo4j.pool.metrics-enabled` icon:gears[title=Overridable at runtime]::
@@ -128,6 +136,8 @@ Type: `boolean`
 Defaults to: `false`
 --
 
+***
+
 [[quarkus.neo4j.pool.log-leaked-sessions]]
 `quarkus.neo4j.pool.log-leaked-sessions` icon:gears[title=Overridable at runtime]::
 +
@@ -138,6 +148,8 @@ Type: `boolean`
 
 Defaults to: `false`
 --
+
+***
 
 [[quarkus.neo4j.pool.max-connection-pool-size]]
 `quarkus.neo4j.pool.max-connection-pool-size` icon:gears[title=Overridable at runtime]::
@@ -150,6 +162,8 @@ Type: `int`
 Defaults to: `100`
 --
 
+***
+
 [[quarkus.neo4j.pool.idle-time-before-connection-test]]
 `quarkus.neo4j.pool.idle-time-before-connection-test` icon:gears[title=Overridable at runtime]::
 +
@@ -160,6 +174,8 @@ Type: `Duration`  link:#duration-note-anchor[icon:question-circle[], title=More 
 
 Defaults to: `-0.001S`
 --
+
+***
 
 [[quarkus.neo4j.pool.max-connection-lifetime]]
 `quarkus.neo4j.pool.max-connection-lifetime` icon:gears[title=Overridable at runtime]::
@@ -172,6 +188,8 @@ Type: `Duration`  link:#duration-note-anchor[icon:question-circle[], title=More 
 Defaults to: `1H`
 --
 
+***
+
 [[quarkus.neo4j.pool.connection-acquisition-timeout]]
 `quarkus.neo4j.pool.connection-acquisition-timeout` icon:gears[title=Overridable at runtime]::
 +
@@ -182,6 +200,8 @@ Type: `Duration`  link:#duration-note-anchor[icon:question-circle[], title=More 
 
 Defaults to: `1M`
 --
+
+***
 
 [NOTE]
 [[duration-note-anchor]]

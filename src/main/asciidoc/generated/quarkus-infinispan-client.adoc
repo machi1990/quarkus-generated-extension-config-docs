@@ -33,6 +33,8 @@ Type: `int`
 Defaults to: `0`
 --
 
+***
+
 [[quarkus.infinispan-client.server-list]]
 `quarkus.infinispan-client.server-list` icon:gears[title=Overridable at runtime]::
 +
@@ -41,3 +43,5 @@ Sets the host name/port to connect to. Each one is separated by a semicolon (eg.
 
 Type: `string` 
 --
+
+***

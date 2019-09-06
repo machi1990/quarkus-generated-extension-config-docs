@@ -57,6 +57,8 @@ Type: `boolean`
 Defaults to: `true`
 --
 
+***
+
 [[quarkus.oauth2.client-id]]
 `quarkus.oauth2.client-id` icon:archive[title=Fixed at build time]::
 +
@@ -65,6 +67,8 @@ The identifier of the client on the OAuth2 Authorization Server
 
 Type: `string` 
 --
+
+***
 
 [[quarkus.oauth2.client-secret]]
 `quarkus.oauth2.client-secret` icon:archive[title=Fixed at build time]::
@@ -75,6 +79,8 @@ The secret of the client
 Type: `string` 
 --
 
+***
+
 [[quarkus.oauth2.introspection-url]]
 `quarkus.oauth2.introspection-url` icon:archive[title=Fixed at build time]::
 +
@@ -84,6 +90,8 @@ The URL of token introspection endpoint
 Type: `string` 
 --
 
+***
+
 [[quarkus.oauth2.ca-cert-file]]
 `quarkus.oauth2.ca-cert-file` icon:archive[title=Fixed at build time]::
 +
@@ -92,6 +100,8 @@ The path to a custom cert file This is not supported in native mode
 
 Type: `string` 
 --
+
+***
 
 [[quarkus.oauth2.role-claim]]
 `quarkus.oauth2.role-claim` icon:archive[title=Fixed at build time]::
@@ -103,3 +113,5 @@ Type: `string`
 
 Defaults to: `scope`
 --
+
+***
