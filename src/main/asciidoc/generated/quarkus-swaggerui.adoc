@@ -26,7 +26,8 @@ If this should be included every time.|boolean
 `quarkus.swagger-ui.path` icon:archive[title=Fixed at build time]::
 +
 --
-The path of the swagger-ui servlet.
+The path of the swagger-ui servlet. 
+ The value `/` is not allowed as it blocks the application from serving anything else.
 
 Type: `string` 
 
