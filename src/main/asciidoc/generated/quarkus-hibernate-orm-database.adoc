@@ -1,0 +1,102 @@
+= Database related configuration
+
+== Summary
+
+icon:archive[title=Fixed at build time] Configuration property fixed at build time - icon:cogs[title=Overridable at runtime]️ Configuration property overridable at runtime 
+
+[.configuration-reference, cols="65,.^17,.^13,^.^5"]
+|===
+|Configuration property|Type|Default|Lifecycle
+
+|<<quarkus.hibernate-orm.database.generation, quarkus.hibernate-orm.database.generation>>
+
+Select whether the database schema is generated or not.|string 
+|`none`
+| icon:archive[title=Fixed at build time]
+
+|<<quarkus.hibernate-orm.database.generation.halt-on-error, quarkus.hibernate-orm.database.generation.halt-on-error>>
+
+Whether we should stop on the first error when applying the schema.|boolean 
+|`false`
+| icon:archive[title=Fixed at build time]
+
+|<<quarkus.hibernate-orm.database.default-catalog, quarkus.hibernate-orm.database.default-catalog>>
+
+The default catalog to use for the database objects.|string 
+|
+| icon:archive[title=Fixed at build time]
+
+|<<quarkus.hibernate-orm.database.default-schema, quarkus.hibernate-orm.database.default-schema>>
+
+The default schema to use for the database objects.|string 
+|
+| icon:archive[title=Fixed at build time]
+
+|<<quarkus.hibernate-orm.database.charset, quarkus.hibernate-orm.database.charset>>
+
+The charset of the database.|string 
+|
+| icon:archive[title=Fixed at build time]
+|===
+
+
+== Details
+
+[[quarkus.hibernate-orm.database.generation]]
+`quarkus.hibernate-orm.database.generation` icon:archive[title=Fixed at build time]::
++
+--
+Select whether the database schema is generated or not. `drop-and-create` is awesome in development mode. Accepted values: `none`, `create`, `drop-and-create`, `drop`, `update`.
+
+Type: `string` 
+
+Defaults to: `none`
+--
+
+***
+
+[[quarkus.hibernate-orm.database.generation.halt-on-error]]
+`quarkus.hibernate-orm.database.generation.halt-on-error` icon:archive[title=Fixed at build time]::
++
+--
+Whether we should stop on the first error when applying the schema.
+
+Type: `boolean` 
+
+Defaults to: `false`
+--
+
+***
+
+[[quarkus.hibernate-orm.database.default-catalog]]
+`quarkus.hibernate-orm.database.default-catalog` icon:archive[title=Fixed at build time]::
++
+--
+The default catalog to use for the database objects.
+
+Type: `string` 
+--
+
+***
+
+[[quarkus.hibernate-orm.database.default-schema]]
+`quarkus.hibernate-orm.database.default-schema` icon:archive[title=Fixed at build time]::
++
+--
+The default schema to use for the database objects.
+
+Type: `string` 
+--
+
+***
+
+[[quarkus.hibernate-orm.database.charset]]
+`quarkus.hibernate-orm.database.charset` icon:archive[title=Fixed at build time]::
++
+--
+The charset of the database.
+
+Type: `string` 
+--
+
+***
