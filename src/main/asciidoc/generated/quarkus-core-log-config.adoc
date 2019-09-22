@@ -42,7 +42,7 @@ The console log level.|link:https://docs.oracle.com/javase/8/docs/api/java/util/
 |<<quarkus.log.console.color, quarkus.log.console.color>>
 
 If the console logging should be in color.|boolean 
-|`true`
+|
 | icon:cogs[title=Overridable at runtime]
 
 |<<quarkus.log.console.darken, quarkus.log.console.darken>>
@@ -318,11 +318,9 @@ Defaults to: `ALL`
 `quarkus.log.console.color` icon:cogs[title=Overridable at runtime]::
 +
 --
-If the console logging should be in color
+If the console logging should be in color. If undefined quarkus takes best guess based on operating system and environment.
 
 Type: `boolean` 
-
-Defaults to: `true`
 --
 
 ***
