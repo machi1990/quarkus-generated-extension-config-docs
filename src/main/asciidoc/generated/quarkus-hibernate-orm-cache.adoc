@@ -8,14 +8,14 @@ icon:archive[title=Fixed at build time] Configuration property fixed at build ti
 |===
 |Configuration property|Type|Default|Lifecycle
 
-|<<quarkus.hibernate-orm.cache.cache.expiration.max-idle, quarkus.hibernate-orm.cache."<cache>".expiration.max-idle>>
+|<<quarkus.hibernate-orm.cache.cache.expiration.max-idle, quarkus.hibernate-orm.cache."cache".expiration.max-idle>>
 
 The maximum time before an object of the cache is considered expired.|link:https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html[Duration]
   link:#duration-note-anchor[icon:question-circle[], title=More information about the Duration format]
 |
 | icon:archive[title=Fixed at build time]
 
-|<<quarkus.hibernate-orm.cache.cache.memory.object-count, quarkus.hibernate-orm.cache."<cache>".memory.object-count>>
+|<<quarkus.hibernate-orm.cache.cache.memory.object-count, quarkus.hibernate-orm.cache."cache".memory.object-count>>
 
 The maximum number of objects kept in memory in the cache.|long 
 |
@@ -26,7 +26,7 @@ The maximum number of objects kept in memory in the cache.|long
 == Details
 
 [[quarkus.hibernate-orm.cache.cache.expiration.max-idle]]
-`quarkus.hibernate-orm.cache."<cache>".expiration.max-idle` icon:archive[title=Fixed at build time]::
+`quarkus.hibernate-orm.cache."cache".expiration.max-idle` icon:archive[title=Fixed at build time]::
 +
 --
 The maximum time before an object of the cache is considered expired.
@@ -37,7 +37,7 @@ Type: `Duration`  link:#duration-note-anchor[icon:question-circle[], title=More 
 ***
 
 [[quarkus.hibernate-orm.cache.cache.memory.object-count]]
-`quarkus.hibernate-orm.cache."<cache>".memory.object-count` icon:archive[title=Fixed at build time]::
+`quarkus.hibernate-orm.cache."cache".memory.object-count` icon:archive[title=Fixed at build time]::
 +
 --
 The maximum number of objects kept in memory in the cache.

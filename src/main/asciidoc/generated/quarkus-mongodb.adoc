@@ -203,7 +203,7 @@ Configures the maximum number of concurrent operations allowed to wait for a ser
 |
 | icon:cogs[title=Overridable at runtime]
 
-|<<quarkus.mongodb.credentials.auth-mechanism-properties.auth-mechanism-properties, quarkus.mongodb.credentials.auth-mechanism-properties."<auth-mechanism-properties>">>
+|<<quarkus.mongodb.credentials.auth-mechanism-properties.auth-mechanism-properties, quarkus.mongodb.credentials.auth-mechanism-properties."auth-mechanism-properties">>
 
 Allows passing authentication mechanism properties.|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
  
@@ -579,7 +579,7 @@ Type: `int`
 ***
 
 [[quarkus.mongodb.credentials.auth-mechanism-properties.auth-mechanism-properties]]
-`quarkus.mongodb.credentials.auth-mechanism-properties."<auth-mechanism-properties>"` icon:cogs[title=Overridable at runtime]::
+`quarkus.mongodb.credentials.auth-mechanism-properties."auth-mechanism-properties"` icon:cogs[title=Overridable at runtime]::
 +
 --
 Allows passing authentication mechanism properties.

@@ -6,19 +6,19 @@ icon:archive[title=Fixed at build time] Configuration property fixed at build ti
 |===
 |Configuration property|Type|Default|Lifecycle
 
-|<<quarkus.index-dependency.index-dependency.group-id, quarkus.index-dependency."<index-dependency>".group-id>>
+|<<quarkus.index-dependency.index-dependency.group-id, quarkus.index-dependency."index-dependency".group-id>>
 
 The maven groupId of the artifact to index.|string 
 |
 | icon:archive[title=Fixed at build time]
 
-|<<quarkus.index-dependency.index-dependency.artifact-id, quarkus.index-dependency."<index-dependency>".artifact-id>>
+|<<quarkus.index-dependency.index-dependency.artifact-id, quarkus.index-dependency."index-dependency".artifact-id>>
 
 The maven artifactId of the artifact to index.|string 
 |
 | icon:archive[title=Fixed at build time]
 
-|<<quarkus.index-dependency.index-dependency.classifier, quarkus.index-dependency."<index-dependency>".classifier>>
+|<<quarkus.index-dependency.index-dependency.classifier, quarkus.index-dependency."index-dependency".classifier>>
 
 The maven classifier of the artifact to index.|string 
 |
@@ -29,7 +29,7 @@ The maven classifier of the artifact to index.|string
 == Details
 
 [[quarkus.index-dependency.index-dependency.group-id]]
-`quarkus.index-dependency."<index-dependency>".group-id` icon:archive[title=Fixed at build time]::
+`quarkus.index-dependency."index-dependency".group-id` icon:archive[title=Fixed at build time]::
 +
 --
 The maven groupId of the artifact to index
@@ -40,7 +40,7 @@ Type: `string`
 ***
 
 [[quarkus.index-dependency.index-dependency.artifact-id]]
-`quarkus.index-dependency."<index-dependency>".artifact-id` icon:archive[title=Fixed at build time]::
+`quarkus.index-dependency."index-dependency".artifact-id` icon:archive[title=Fixed at build time]::
 +
 --
 The maven artifactId of the artifact to index
@@ -51,7 +51,7 @@ Type: `string`
 ***
 
 [[quarkus.index-dependency.index-dependency.classifier]]
-`quarkus.index-dependency."<index-dependency>".classifier` icon:archive[title=Fixed at build time]::
+`quarkus.index-dependency."index-dependency".classifier` icon:archive[title=Fixed at build time]::
 +
 --
 The maven classifier of the artifact to index

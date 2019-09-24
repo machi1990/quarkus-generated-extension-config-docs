@@ -384,104 +384,104 @@ List of Integer conversion with `ConvertWith`.|int
 |`one`
 | icon:cogs[title=Overridable at runtime]
 
-|<<quarkus.rt.string-map.string-map, quarkus.rt.string-map."<string-map>">>
+|<<quarkus.rt.string-map.string-map, quarkus.rt.string-map."string-map">>
 
 A map of properties.|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
  
 |
 | icon:cogs[title=Overridable at runtime]
 
-|<<quarkus.rt.string-list-map.string-list-map, quarkus.rt.string-list-map."<string-list-map>">>
+|<<quarkus.rt.string-list-map.string-list-map, quarkus.rt.string-list-map."string-list-map">>
 
 A map of property lists.|link:https://docs.oracle.com/javase/8/docs/api/java/util/List<java.lang.String>.html[java.util.List<java.lang.String>]
  
 |
 | icon:cogs[title=Overridable at runtime]
 
-|<<quarkus.rt.all-values.nested-config-map.nested-config-map.nested-value, quarkus.rt.all-values.nested-config-map."<nested-config-map>".nested-value>>
+|<<quarkus.rt.all-values.nested-config-map.nested-config-map.nested-value, quarkus.rt.all-values.nested-config-map."nested-config-map".nested-value>>
 
 A nested string value.|string 
 |
 | icon:cogs[title=Overridable at runtime]
 
-|<<quarkus.rt.all-values.nested-config-map.nested-config-map.oov, quarkus.rt.all-values.nested-config-map."<nested-config-map>".oov>>
+|<<quarkus.rt.all-values.nested-config-map.nested-config-map.oov, quarkus.rt.all-values.nested-config-map."nested-config-map".oov>>
 
 A nested ObjectOfValue value.|ObjectOfValue 
 |
 | icon:cogs[title=Overridable at runtime]
 
-|<<quarkus.rt.all-values.string-map.string-map, quarkus.rt.all-values.string-map."<string-map>">>
+|<<quarkus.rt.all-values.string-map.string-property, quarkus.rt.all-values.string-map."string-property">>
 
 A map of properties.|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
  
 |
 | icon:cogs[title=Overridable at runtime]
 
-|<<quarkus.rt.all-values.string-list-map.string-list-map, quarkus.rt.all-values.string-list-map."<string-list-map>">>
+|<<quarkus.rt.all-values.string-list-map.list-of-strings, quarkus.rt.all-values.string-list-map."list-of-strings">>
 
 A map of property lists.|link:https://docs.oracle.com/javase/8/docs/api/java/util/List<java.lang.String>.html[java.util.List<java.lang.String>]
  
 |
 | icon:cogs[title=Overridable at runtime]
 
-|<<quarkus.rt.map-of-numbers.map-of-numbers, quarkus.rt.map-of-numbers."<map-of-numbers>">>
+|<<quarkus.rt.map-of-numbers.map-of-numbers, quarkus.rt.map-of-numbers."map-of-numbers">>
 
 Map of Integer conversion with `ConvertWith`.|int 
 |
 | icon:cogs[title=Overridable at runtime]
 
-|<<quarkus.btrt.all-values.nested-config-map.nested-config-map.nested-value, quarkus.btrt.all-values.nested-config-map."<nested-config-map>".nested-value>>
+|<<quarkus.btrt.all-values.nested-config-map.nested-config-map.nested-value, quarkus.btrt.all-values.nested-config-map."nested-config-map".nested-value>>
 
 A nested string value.|string 
 |
 | icon:archive[title=Fixed at build time]
 
-|<<quarkus.btrt.all-values.nested-config-map.nested-config-map.oov, quarkus.btrt.all-values.nested-config-map."<nested-config-map>".oov>>
+|<<quarkus.btrt.all-values.nested-config-map.nested-config-map.oov, quarkus.btrt.all-values.nested-config-map."nested-config-map".oov>>
 
 A nested ObjectOfValue value.|ObjectOfValue 
 |
 | icon:archive[title=Fixed at build time]
 
-|<<quarkus.btrt.all-values.string-map.string-map, quarkus.btrt.all-values.string-map."<string-map>">>
+|<<quarkus.btrt.all-values.string-map.string-property, quarkus.btrt.all-values.string-map."string-property">>
 
 A map of properties.|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
  
 |
 | icon:archive[title=Fixed at build time]
 
-|<<quarkus.btrt.all-values.string-list-map.string-list-map, quarkus.btrt.all-values.string-list-map."<string-list-map>">>
+|<<quarkus.btrt.all-values.string-list-map.list-of-strings, quarkus.btrt.all-values.string-list-map."list-of-strings">>
 
 A map of property lists.|link:https://docs.oracle.com/javase/8/docs/api/java/util/List<java.lang.String>.html[java.util.List<java.lang.String>]
  
 |
 | icon:archive[title=Fixed at build time]
 
-|<<quarkus.btrt.map-of-numbers.map-of-numbers, quarkus.btrt.map-of-numbers."<map-of-numbers>">>
+|<<quarkus.btrt.map-of-numbers.map-of-numbers, quarkus.btrt.map-of-numbers."map-of-numbers">>
 
 Map of Integer conversion with `ConvertWith`.|int 
 |
 | icon:archive[title=Fixed at build time]
 
-|<<quarkus.bt.all-values.nested-config-map.nested-config-map.nested-value, quarkus.bt.all-values.nested-config-map."<nested-config-map>".nested-value>>
+|<<quarkus.bt.all-values.nested-config-map.nested-config-map.nested-value, quarkus.bt.all-values.nested-config-map."nested-config-map".nested-value>>
 
 A nested string value.|string 
 |
 | icon:archive[title=Fixed at build time]
 
-|<<quarkus.bt.all-values.nested-config-map.nested-config-map.oov, quarkus.bt.all-values.nested-config-map."<nested-config-map>".oov>>
+|<<quarkus.bt.all-values.nested-config-map.nested-config-map.oov, quarkus.bt.all-values.nested-config-map."nested-config-map".oov>>
 
 A nested ObjectOfValue value.|ObjectOfValue 
 |
 | icon:archive[title=Fixed at build time]
 
-|<<quarkus.bt.all-values.string-map.string-map, quarkus.bt.all-values.string-map."<string-map>">>
+|<<quarkus.bt.all-values.string-map.string-property, quarkus.bt.all-values.string-map."string-property">>
 
 A map of properties.|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
  
 |
 | icon:archive[title=Fixed at build time]
 
-|<<quarkus.bt.all-values.string-list-map.string-list-map, quarkus.bt.all-values.string-list-map."<string-list-map>">>
+|<<quarkus.bt.all-values.string-list-map.list-of-strings, quarkus.bt.all-values.string-list-map."list-of-strings">>
 
 A map of property lists.|link:https://docs.oracle.com/javase/8/docs/api/java/util/List<java.lang.String>.html[java.util.List<java.lang.String>]
  
@@ -1238,7 +1238,7 @@ Defaults to: `one`
 ***
 
 [[quarkus.rt.string-map.string-map]]
-`quarkus.rt.string-map."<string-map>"` icon:cogs[title=Overridable at runtime]::
+`quarkus.rt.string-map."string-map"` icon:cogs[title=Overridable at runtime]::
 +
 --
 A map of properties
@@ -1249,7 +1249,7 @@ Type: `String`
 ***
 
 [[quarkus.rt.string-list-map.string-list-map]]
-`quarkus.rt.string-list-map."<string-list-map>"` icon:cogs[title=Overridable at runtime]::
+`quarkus.rt.string-list-map."string-list-map"` icon:cogs[title=Overridable at runtime]::
 +
 --
 A map of property lists
@@ -1260,7 +1260,7 @@ Type: `java.util.List<java.lang.String>`
 ***
 
 [[quarkus.rt.all-values.nested-config-map.nested-config-map.nested-value]]
-`quarkus.rt.all-values.nested-config-map."<nested-config-map>".nested-value` icon:cogs[title=Overridable at runtime]::
+`quarkus.rt.all-values.nested-config-map."nested-config-map".nested-value` icon:cogs[title=Overridable at runtime]::
 +
 --
 A nested string value
@@ -1271,7 +1271,7 @@ Type: `string`
 ***
 
 [[quarkus.rt.all-values.nested-config-map.nested-config-map.oov]]
-`quarkus.rt.all-values.nested-config-map."<nested-config-map>".oov` icon:cogs[title=Overridable at runtime]::
+`quarkus.rt.all-values.nested-config-map."nested-config-map".oov` icon:cogs[title=Overridable at runtime]::
 +
 --
 A nested ObjectOfValue value
@@ -1281,8 +1281,8 @@ Type: `ObjectOfValue`
 
 ***
 
-[[quarkus.rt.all-values.string-map.string-map]]
-`quarkus.rt.all-values.string-map."<string-map>"` icon:cogs[title=Overridable at runtime]::
+[[quarkus.rt.all-values.string-map.string-property]]
+`quarkus.rt.all-values.string-map."string-property"` icon:cogs[title=Overridable at runtime]::
 +
 --
 A map of properties
@@ -1292,8 +1292,8 @@ Type: `String`
 
 ***
 
-[[quarkus.rt.all-values.string-list-map.string-list-map]]
-`quarkus.rt.all-values.string-list-map."<string-list-map>"` icon:cogs[title=Overridable at runtime]::
+[[quarkus.rt.all-values.string-list-map.list-of-strings]]
+`quarkus.rt.all-values.string-list-map."list-of-strings"` icon:cogs[title=Overridable at runtime]::
 +
 --
 A map of property lists
@@ -1304,7 +1304,7 @@ Type: `java.util.List<java.lang.String>`
 ***
 
 [[quarkus.rt.map-of-numbers.map-of-numbers]]
-`quarkus.rt.map-of-numbers."<map-of-numbers>"` icon:cogs[title=Overridable at runtime]::
+`quarkus.rt.map-of-numbers."map-of-numbers"` icon:cogs[title=Overridable at runtime]::
 +
 --
 Map of Integer conversion with `ConvertWith`
@@ -1315,7 +1315,7 @@ Type: `int`
 ***
 
 [[quarkus.btrt.all-values.nested-config-map.nested-config-map.nested-value]]
-`quarkus.btrt.all-values.nested-config-map."<nested-config-map>".nested-value` icon:archive[title=Fixed at build time]::
+`quarkus.btrt.all-values.nested-config-map."nested-config-map".nested-value` icon:archive[title=Fixed at build time]::
 +
 --
 A nested string value
@@ -1326,7 +1326,7 @@ Type: `string`
 ***
 
 [[quarkus.btrt.all-values.nested-config-map.nested-config-map.oov]]
-`quarkus.btrt.all-values.nested-config-map."<nested-config-map>".oov` icon:archive[title=Fixed at build time]::
+`quarkus.btrt.all-values.nested-config-map."nested-config-map".oov` icon:archive[title=Fixed at build time]::
 +
 --
 A nested ObjectOfValue value
@@ -1336,8 +1336,8 @@ Type: `ObjectOfValue`
 
 ***
 
-[[quarkus.btrt.all-values.string-map.string-map]]
-`quarkus.btrt.all-values.string-map."<string-map>"` icon:archive[title=Fixed at build time]::
+[[quarkus.btrt.all-values.string-map.string-property]]
+`quarkus.btrt.all-values.string-map."string-property"` icon:archive[title=Fixed at build time]::
 +
 --
 A map of properties
@@ -1347,8 +1347,8 @@ Type: `String`
 
 ***
 
-[[quarkus.btrt.all-values.string-list-map.string-list-map]]
-`quarkus.btrt.all-values.string-list-map."<string-list-map>"` icon:archive[title=Fixed at build time]::
+[[quarkus.btrt.all-values.string-list-map.list-of-strings]]
+`quarkus.btrt.all-values.string-list-map."list-of-strings"` icon:archive[title=Fixed at build time]::
 +
 --
 A map of property lists
@@ -1359,7 +1359,7 @@ Type: `java.util.List<java.lang.String>`
 ***
 
 [[quarkus.btrt.map-of-numbers.map-of-numbers]]
-`quarkus.btrt.map-of-numbers."<map-of-numbers>"` icon:archive[title=Fixed at build time]::
+`quarkus.btrt.map-of-numbers."map-of-numbers"` icon:archive[title=Fixed at build time]::
 +
 --
 Map of Integer conversion with `ConvertWith`
@@ -1370,7 +1370,7 @@ Type: `int`
 ***
 
 [[quarkus.bt.all-values.nested-config-map.nested-config-map.nested-value]]
-`quarkus.bt.all-values.nested-config-map."<nested-config-map>".nested-value` icon:archive[title=Fixed at build time]::
+`quarkus.bt.all-values.nested-config-map."nested-config-map".nested-value` icon:archive[title=Fixed at build time]::
 +
 --
 A nested string value
@@ -1381,7 +1381,7 @@ Type: `string`
 ***
 
 [[quarkus.bt.all-values.nested-config-map.nested-config-map.oov]]
-`quarkus.bt.all-values.nested-config-map."<nested-config-map>".oov` icon:archive[title=Fixed at build time]::
+`quarkus.bt.all-values.nested-config-map."nested-config-map".oov` icon:archive[title=Fixed at build time]::
 +
 --
 A nested ObjectOfValue value
@@ -1391,8 +1391,8 @@ Type: `ObjectOfValue`
 
 ***
 
-[[quarkus.bt.all-values.string-map.string-map]]
-`quarkus.bt.all-values.string-map."<string-map>"` icon:archive[title=Fixed at build time]::
+[[quarkus.bt.all-values.string-map.string-property]]
+`quarkus.bt.all-values.string-map."string-property"` icon:archive[title=Fixed at build time]::
 +
 --
 A map of properties
@@ -1402,8 +1402,8 @@ Type: `String`
 
 ***
 
-[[quarkus.bt.all-values.string-list-map.string-list-map]]
-`quarkus.bt.all-values.string-list-map."<string-list-map>"` icon:archive[title=Fixed at build time]::
+[[quarkus.bt.all-values.string-list-map.list-of-strings]]
+`quarkus.bt.all-values.string-list-map."list-of-strings"` icon:archive[title=Fixed at build time]::
 +
 --
 A map of property lists

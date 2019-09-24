@@ -229,19 +229,19 @@ Determine whether to block the publisher (rather than drop the message) when the
 |`block`
 | icon:cogs[title=Overridable at runtime]
 
-|<<quarkus.log.category.categories.min-level, quarkus.log.category."<categories>".min-level>>
+|<<quarkus.log.category.categories.min-level, quarkus.log.category."categories".min-level>>
 
 The minimum level that this category can be set to.|string 
 |`inherit`
 | icon:cogs[title=Overridable at runtime]
 
-|<<quarkus.log.category.categories.level, quarkus.log.category."<categories>".level>>
+|<<quarkus.log.category.categories.level, quarkus.log.category."categories".level>>
 
 The log level level for this category.|string 
 |`inherit`
 | icon:cogs[title=Overridable at runtime]
 
-|<<quarkus.log.filter.filters.if-starts-with, quarkus.log.filter."<filters>".if-starts-with>>
+|<<quarkus.log.filter.filters.if-starts-with, quarkus.log.filter."filters".if-starts-with>>
 
 The message starts to match.|string 
 |`inherit`
@@ -709,7 +709,7 @@ Defaults to: `block`
 ***
 
 [[quarkus.log.category.categories.min-level]]
-`quarkus.log.category."<categories>".min-level` icon:cogs[title=Overridable at runtime]::
+`quarkus.log.category."categories".min-level` icon:cogs[title=Overridable at runtime]::
 +
 --
 The minimum level that this category can be set to
@@ -722,7 +722,7 @@ Defaults to: `inherit`
 ***
 
 [[quarkus.log.category.categories.level]]
-`quarkus.log.category."<categories>".level` icon:cogs[title=Overridable at runtime]::
+`quarkus.log.category."categories".level` icon:cogs[title=Overridable at runtime]::
 +
 --
 The log level level for this category
@@ -735,7 +735,7 @@ Defaults to: `inherit`
 ***
 
 [[quarkus.log.filter.filters.if-starts-with]]
-`quarkus.log.filter."<filters>".if-starts-with` icon:cogs[title=Overridable at runtime]::
+`quarkus.log.filter."filters".if-starts-with` icon:cogs[title=Overridable at runtime]::
 +
 --
 The message starts to match

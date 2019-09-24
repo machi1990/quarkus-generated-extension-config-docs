@@ -8,37 +8,37 @@ icon:archive[title=Fixed at build time] Configuration property fixed at build ti
 |===
 |Configuration property|Type|Default|Lifecycle
 
-|<<quarkus.rt.all-values.nested-config-map.nested-config-map.nested-value, quarkus.rt.all-values.nested-config-map."<nested-config-map>".nested-value>>
+|<<quarkus.rt.all-values.nested-config-map.nested-config-map.nested-value, quarkus.rt.all-values.nested-config-map."nested-config-map".nested-value>>
 
 A nested string value.|string 
 |
 | icon:cogs[title=Overridable at runtime]
 
-|<<quarkus.rt.all-values.nested-config-map.nested-config-map.oov, quarkus.rt.all-values.nested-config-map."<nested-config-map>".oov>>
+|<<quarkus.rt.all-values.nested-config-map.nested-config-map.oov, quarkus.rt.all-values.nested-config-map."nested-config-map".oov>>
 
 A nested ObjectOfValue value.|ObjectOfValue 
 |
 | icon:cogs[title=Overridable at runtime]
 
-|<<quarkus.btrt.all-values.nested-config-map.nested-config-map.nested-value, quarkus.btrt.all-values.nested-config-map."<nested-config-map>".nested-value>>
+|<<quarkus.btrt.all-values.nested-config-map.nested-config-map.nested-value, quarkus.btrt.all-values.nested-config-map."nested-config-map".nested-value>>
 
 A nested string value.|string 
 |
 | icon:archive[title=Fixed at build time]
 
-|<<quarkus.btrt.all-values.nested-config-map.nested-config-map.oov, quarkus.btrt.all-values.nested-config-map."<nested-config-map>".oov>>
+|<<quarkus.btrt.all-values.nested-config-map.nested-config-map.oov, quarkus.btrt.all-values.nested-config-map."nested-config-map".oov>>
 
 A nested ObjectOfValue value.|ObjectOfValue 
 |
 | icon:archive[title=Fixed at build time]
 
-|<<quarkus.bt.all-values.nested-config-map.nested-config-map.nested-value, quarkus.bt.all-values.nested-config-map."<nested-config-map>".nested-value>>
+|<<quarkus.bt.all-values.nested-config-map.nested-config-map.nested-value, quarkus.bt.all-values.nested-config-map."nested-config-map".nested-value>>
 
 A nested string value.|string 
 |
 | icon:archive[title=Fixed at build time]
 
-|<<quarkus.bt.all-values.nested-config-map.nested-config-map.oov, quarkus.bt.all-values.nested-config-map."<nested-config-map>".oov>>
+|<<quarkus.bt.all-values.nested-config-map.nested-config-map.oov, quarkus.bt.all-values.nested-config-map."nested-config-map".oov>>
 
 A nested ObjectOfValue value.|ObjectOfValue 
 |
@@ -49,7 +49,7 @@ A nested ObjectOfValue value.|ObjectOfValue
 == Details
 
 [[quarkus.rt.all-values.nested-config-map.nested-config-map.nested-value]]
-`quarkus.rt.all-values.nested-config-map."<nested-config-map>".nested-value` icon:cogs[title=Overridable at runtime]::
+`quarkus.rt.all-values.nested-config-map."nested-config-map".nested-value` icon:cogs[title=Overridable at runtime]::
 +
 --
 A nested string value
@@ -60,7 +60,7 @@ Type: `string`
 ***
 
 [[quarkus.rt.all-values.nested-config-map.nested-config-map.oov]]
-`quarkus.rt.all-values.nested-config-map."<nested-config-map>".oov` icon:cogs[title=Overridable at runtime]::
+`quarkus.rt.all-values.nested-config-map."nested-config-map".oov` icon:cogs[title=Overridable at runtime]::
 +
 --
 A nested ObjectOfValue value
@@ -71,7 +71,7 @@ Type: `ObjectOfValue`
 ***
 
 [[quarkus.btrt.all-values.nested-config-map.nested-config-map.nested-value]]
-`quarkus.btrt.all-values.nested-config-map."<nested-config-map>".nested-value` icon:archive[title=Fixed at build time]::
+`quarkus.btrt.all-values.nested-config-map."nested-config-map".nested-value` icon:archive[title=Fixed at build time]::
 +
 --
 A nested string value
@@ -82,7 +82,7 @@ Type: `string`
 ***
 
 [[quarkus.btrt.all-values.nested-config-map.nested-config-map.oov]]
-`quarkus.btrt.all-values.nested-config-map."<nested-config-map>".oov` icon:archive[title=Fixed at build time]::
+`quarkus.btrt.all-values.nested-config-map."nested-config-map".oov` icon:archive[title=Fixed at build time]::
 +
 --
 A nested ObjectOfValue value
@@ -93,7 +93,7 @@ Type: `ObjectOfValue`
 ***
 
 [[quarkus.bt.all-values.nested-config-map.nested-config-map.nested-value]]
-`quarkus.bt.all-values.nested-config-map."<nested-config-map>".nested-value` icon:archive[title=Fixed at build time]::
+`quarkus.bt.all-values.nested-config-map."nested-config-map".nested-value` icon:archive[title=Fixed at build time]::
 +
 --
 A nested string value
@@ -104,7 +104,7 @@ Type: `string`
 ***
 
 [[quarkus.bt.all-values.nested-config-map.nested-config-map.oov]]
-`quarkus.bt.all-values.nested-config-map."<nested-config-map>".oov` icon:archive[title=Fixed at build time]::
+`quarkus.bt.all-values.nested-config-map."nested-config-map".oov` icon:archive[title=Fixed at build time]::
 +
 --
 A nested ObjectOfValue value

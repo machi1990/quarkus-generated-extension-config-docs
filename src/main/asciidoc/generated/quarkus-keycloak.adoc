@@ -276,85 +276,85 @@ Specifies how scopes should be mapped to HTTP methods.|boolean
 |`false`
 | icon:archive[title=Fixed at build time]
 
-|<<quarkus.keycloak.credentials.jwt.jwt, quarkus.keycloak.credentials.jwt."<jwt>">>
+|<<quarkus.keycloak.credentials.jwt.jwt, quarkus.keycloak.credentials.jwt."jwt">>
 
 The settings for client authentication with signed JWT.|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
  
 |
 | icon:archive[title=Fixed at build time]
 
-|<<quarkus.keycloak.credentials.secret-jwt.secret-jwt, quarkus.keycloak.credentials.secret-jwt."<secret-jwt>">>
+|<<quarkus.keycloak.credentials.secret-jwt.secret-jwt, quarkus.keycloak.credentials.secret-jwt."secret-jwt">>
 
 The settings for client authentication with JWT using client secret.|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
  
 |
 | icon:archive[title=Fixed at build time]
 
-|<<quarkus.keycloak.redirect-rewrite-rules.redirect-rewrite-rules, quarkus.keycloak.redirect-rewrite-rules."<redirect-rewrite-rules>">>
+|<<quarkus.keycloak.redirect-rewrite-rules.redirect-rewrite-rules, quarkus.keycloak.redirect-rewrite-rules."redirect-rewrite-rules">>
 
 If needed, specify the Redirect URI rewrite rule.|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
  
 |
 | icon:archive[title=Fixed at build time]
 
-|<<quarkus.keycloak.policy-enforcer.paths.paths.name, quarkus.keycloak.policy-enforcer.paths."<paths>".name>>
+|<<quarkus.keycloak.policy-enforcer.paths.paths.name, quarkus.keycloak.policy-enforcer.paths."paths".name>>
 
 The name of a resource on the server that is to be associated with a given path.|string 
 |
 | icon:archive[title=Fixed at build time]
 
-|<<quarkus.keycloak.policy-enforcer.paths.paths.path, quarkus.keycloak.policy-enforcer.paths."<paths>".path>>
+|<<quarkus.keycloak.policy-enforcer.paths.paths.path, quarkus.keycloak.policy-enforcer.paths."paths".path>>
 
 A URI relative to the application’s context path that should be protected by the policy enforcer.|string 
 |
 | icon:archive[title=Fixed at build time]
 
-|<<quarkus.keycloak.policy-enforcer.paths.paths.methods.methods.method, quarkus.keycloak.policy-enforcer.paths."<paths>".methods."<methods>".method>>
+|<<quarkus.keycloak.policy-enforcer.paths.paths.methods.methods.method, quarkus.keycloak.policy-enforcer.paths."paths".methods."methods".method>>
 
 The name of the HTTP method.|string 
 |
 | icon:archive[title=Fixed at build time]
 
-|<<quarkus.keycloak.policy-enforcer.paths.paths.methods.methods.scopes, quarkus.keycloak.policy-enforcer.paths."<paths>".methods."<methods>".scopes>>
+|<<quarkus.keycloak.policy-enforcer.paths.paths.methods.methods.scopes, quarkus.keycloak.policy-enforcer.paths."paths".methods."methods".scopes>>
 
 An array of strings with the scopes associated with the method.|string 
 |
 | icon:archive[title=Fixed at build time]
 
-|<<quarkus.keycloak.policy-enforcer.paths.paths.methods.methods.scopes-enforcement-mode, quarkus.keycloak.policy-enforcer.paths."<paths>".methods."<methods>".scopes-enforcement-mode>>
+|<<quarkus.keycloak.policy-enforcer.paths.paths.methods.methods.scopes-enforcement-mode, quarkus.keycloak.policy-enforcer.paths."paths".methods."methods".scopes-enforcement-mode>>
 
 A string referencing the enforcement mode for the scopes associated with a method.|`all`, `any`, `disabled` 
 |`ALL`
 | icon:archive[title=Fixed at build time]
 
-|<<quarkus.keycloak.policy-enforcer.paths.paths.enforcement-mode, quarkus.keycloak.policy-enforcer.paths."<paths>".enforcement-mode>>
+|<<quarkus.keycloak.policy-enforcer.paths.paths.enforcement-mode, quarkus.keycloak.policy-enforcer.paths."paths".enforcement-mode>>
 
 Specifies how policies are enforced.|`permissive`, `enforcing`, `disabled` 
 |`ENFORCING`
 | icon:archive[title=Fixed at build time]
 
-|<<quarkus.keycloak.policy-enforcer.paths.paths.claim-information-point.complex-config, quarkus.keycloak.policy-enforcer.paths."<paths>".claim-information-point."<complex-config>">>
+|<<quarkus.keycloak.policy-enforcer.paths.paths.claim-information-point.complex-config, quarkus.keycloak.policy-enforcer.paths."paths".claim-information-point."complex-config">>
 
 |link:https://docs.oracle.com/javase/8/docs/api/java/util/Map<java.lang.String,java.util.Map<java.lang.String,java.lang.String>>.html[java.util.Map<java.lang.String,java.util.Map<java.lang.String,java.lang.String>>]
  
 |
 | icon:archive[title=Fixed at build time]
 
-|<<quarkus.keycloak.policy-enforcer.paths.paths.claim-information-point.simple-config, quarkus.keycloak.policy-enforcer.paths."<paths>".claim-information-point."<simple-config>">>
+|<<quarkus.keycloak.policy-enforcer.paths.paths.claim-information-point.simple-config, quarkus.keycloak.policy-enforcer.paths."paths".claim-information-point."simple-config">>
 
 |link:https://docs.oracle.com/javase/8/docs/api/java/util/Map<java.lang.String,java.lang.String>.html[java.util.Map<java.lang.String,java.lang.String>]
  
 |
 | icon:archive[title=Fixed at build time]
 
-|<<quarkus.keycloak.policy-enforcer.claim-information-point.complex-config, quarkus.keycloak.policy-enforcer.claim-information-point."<complex-config>">>
+|<<quarkus.keycloak.policy-enforcer.claim-information-point.complex-config, quarkus.keycloak.policy-enforcer.claim-information-point."complex-config">>
 
 |link:https://docs.oracle.com/javase/8/docs/api/java/util/Map<java.lang.String,java.util.Map<java.lang.String,java.lang.String>>.html[java.util.Map<java.lang.String,java.util.Map<java.lang.String,java.lang.String>>]
  
 |
 | icon:archive[title=Fixed at build time]
 
-|<<quarkus.keycloak.policy-enforcer.claim-information-point.simple-config, quarkus.keycloak.policy-enforcer.claim-information-point."<simple-config>">>
+|<<quarkus.keycloak.policy-enforcer.claim-information-point.simple-config, quarkus.keycloak.policy-enforcer.claim-information-point."simple-config">>
 
 |link:https://docs.oracle.com/javase/8/docs/api/java/util/Map<java.lang.String,java.lang.String>.html[java.util.Map<java.lang.String,java.lang.String>]
  
@@ -917,7 +917,7 @@ Defaults to: `false`
 ***
 
 [[quarkus.keycloak.credentials.jwt.jwt]]
-`quarkus.keycloak.credentials.jwt."<jwt>"` icon:archive[title=Fixed at build time]::
+`quarkus.keycloak.credentials.jwt."jwt"` icon:archive[title=Fixed at build time]::
 +
 --
 The settings for client authentication with signed JWT
@@ -928,7 +928,7 @@ Type: `String`
 ***
 
 [[quarkus.keycloak.credentials.secret-jwt.secret-jwt]]
-`quarkus.keycloak.credentials.secret-jwt."<secret-jwt>"` icon:archive[title=Fixed at build time]::
+`quarkus.keycloak.credentials.secret-jwt."secret-jwt"` icon:archive[title=Fixed at build time]::
 +
 --
 The settings for client authentication with JWT using client secret
@@ -939,7 +939,7 @@ Type: `String`
 ***
 
 [[quarkus.keycloak.redirect-rewrite-rules.redirect-rewrite-rules]]
-`quarkus.keycloak.redirect-rewrite-rules."<redirect-rewrite-rules>"` icon:archive[title=Fixed at build time]::
+`quarkus.keycloak.redirect-rewrite-rules."redirect-rewrite-rules"` icon:archive[title=Fixed at build time]::
 +
 --
 If needed, specify the Redirect URI rewrite rule. This is an object notation where the key is the regular expression to which the Redirect URI is to be matched and the value is the replacement String. $ character can be used for backreferences in the replacement String
@@ -950,7 +950,7 @@ Type: `String`
 ***
 
 [[quarkus.keycloak.policy-enforcer.paths.paths.name]]
-`quarkus.keycloak.policy-enforcer.paths."<paths>".name` icon:archive[title=Fixed at build time]::
+`quarkus.keycloak.policy-enforcer.paths."paths".name` icon:archive[title=Fixed at build time]::
 +
 --
 The name of a resource on the server that is to be associated with a given path
@@ -961,7 +961,7 @@ Type: `string`
 ***
 
 [[quarkus.keycloak.policy-enforcer.paths.paths.path]]
-`quarkus.keycloak.policy-enforcer.paths."<paths>".path` icon:archive[title=Fixed at build time]::
+`quarkus.keycloak.policy-enforcer.paths."paths".path` icon:archive[title=Fixed at build time]::
 +
 --
 A URI relative to the application’s context path that should be protected by the policy enforcer
@@ -972,7 +972,7 @@ Type: `string`
 ***
 
 [[quarkus.keycloak.policy-enforcer.paths.paths.methods.methods.method]]
-`quarkus.keycloak.policy-enforcer.paths."<paths>".methods."<methods>".method` icon:archive[title=Fixed at build time]::
+`quarkus.keycloak.policy-enforcer.paths."paths".methods."methods".method` icon:archive[title=Fixed at build time]::
 +
 --
 The name of the HTTP method
@@ -983,7 +983,7 @@ Type: `string`
 ***
 
 [[quarkus.keycloak.policy-enforcer.paths.paths.methods.methods.scopes]]
-`quarkus.keycloak.policy-enforcer.paths."<paths>".methods."<methods>".scopes` icon:archive[title=Fixed at build time]::
+`quarkus.keycloak.policy-enforcer.paths."paths".methods."methods".scopes` icon:archive[title=Fixed at build time]::
 +
 --
 An array of strings with the scopes associated with the method
@@ -994,7 +994,7 @@ Type: `string`
 ***
 
 [[quarkus.keycloak.policy-enforcer.paths.paths.methods.methods.scopes-enforcement-mode]]
-`quarkus.keycloak.policy-enforcer.paths."<paths>".methods."<methods>".scopes-enforcement-mode` icon:archive[title=Fixed at build time]::
+`quarkus.keycloak.policy-enforcer.paths."paths".methods."methods".scopes-enforcement-mode` icon:archive[title=Fixed at build time]::
 +
 --
 A string referencing the enforcement mode for the scopes associated with a method
@@ -1007,7 +1007,7 @@ Defaults to: `ALL`
 ***
 
 [[quarkus.keycloak.policy-enforcer.paths.paths.enforcement-mode]]
-`quarkus.keycloak.policy-enforcer.paths."<paths>".enforcement-mode` icon:archive[title=Fixed at build time]::
+`quarkus.keycloak.policy-enforcer.paths."paths".enforcement-mode` icon:archive[title=Fixed at build time]::
 +
 --
 Specifies how policies are enforced
@@ -1020,7 +1020,7 @@ Defaults to: `ENFORCING`
 ***
 
 [[quarkus.keycloak.policy-enforcer.paths.paths.claim-information-point.complex-config]]
-`quarkus.keycloak.policy-enforcer.paths."<paths>".claim-information-point."<complex-config>"` icon:archive[title=Fixed at build time]::
+`quarkus.keycloak.policy-enforcer.paths."paths".claim-information-point."complex-config"` icon:archive[title=Fixed at build time]::
 +
 --
 
@@ -1031,7 +1031,7 @@ Type: `java.util.Map<java.lang.String,java.util.Map<java.lang.String,java.lang.S
 ***
 
 [[quarkus.keycloak.policy-enforcer.paths.paths.claim-information-point.simple-config]]
-`quarkus.keycloak.policy-enforcer.paths."<paths>".claim-information-point."<simple-config>"` icon:archive[title=Fixed at build time]::
+`quarkus.keycloak.policy-enforcer.paths."paths".claim-information-point."simple-config"` icon:archive[title=Fixed at build time]::
 +
 --
 
@@ -1042,7 +1042,7 @@ Type: `java.util.Map<java.lang.String,java.lang.String>`
 ***
 
 [[quarkus.keycloak.policy-enforcer.claim-information-point.complex-config]]
-`quarkus.keycloak.policy-enforcer.claim-information-point."<complex-config>"` icon:archive[title=Fixed at build time]::
+`quarkus.keycloak.policy-enforcer.claim-information-point."complex-config"` icon:archive[title=Fixed at build time]::
 +
 --
 
@@ -1053,7 +1053,7 @@ Type: `java.util.Map<java.lang.String,java.util.Map<java.lang.String,java.lang.S
 ***
 
 [[quarkus.keycloak.policy-enforcer.claim-information-point.simple-config]]
-`quarkus.keycloak.policy-enforcer.claim-information-point."<simple-config>"` icon:archive[title=Fixed at build time]::
+`quarkus.keycloak.policy-enforcer.claim-information-point."simple-config"` icon:archive[title=Fixed at build time]::
 +
 --
 

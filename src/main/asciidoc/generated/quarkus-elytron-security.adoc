@@ -60,14 +60,14 @@ List of security providers to enable for reflection.|string
 |
 | icon:archive[title=Fixed at build time]
 
-|<<quarkus.security.embedded.users.users, quarkus.security.embedded.users."<users>">>
+|<<quarkus.security.embedded.users.users, quarkus.security.embedded.users."users">>
 
 The realm users user1=password\nuser2=password2.|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
  
 |
 | icon:archive[title=Fixed at build time]
 
-|<<quarkus.security.embedded.roles.roles, quarkus.security.embedded.roles."<roles>">>
+|<<quarkus.security.embedded.roles.roles, quarkus.security.embedded.roles."roles">>
 
 The realm roles user1=role1,role2,.|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
  
@@ -194,7 +194,7 @@ Type: `string`
 ***
 
 [[quarkus.security.embedded.users.users]]
-`quarkus.security.embedded.users."<users>"` icon:archive[title=Fixed at build time]::
+`quarkus.security.embedded.users."users"` icon:archive[title=Fixed at build time]::
 +
 --
 The realm users user1=password\nuser2=password2... mapping
@@ -205,7 +205,7 @@ Type: `String`
 ***
 
 [[quarkus.security.embedded.roles.roles]]
-`quarkus.security.embedded.roles."<roles>"` icon:archive[title=Fixed at build time]::
+`quarkus.security.embedded.roles."roles"` icon:archive[title=Fixed at build time]::
 +
 --
 The realm roles user1=role1,role2,...\nuser2=role1,role2,... mapping
