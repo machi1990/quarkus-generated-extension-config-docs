@@ -1,0 +1,170 @@
+== Summary
+
+icon:archive[title=Fixed at build time] Configuration property fixed at build time - icon:cogs[title=Overridable at runtime]️ Configuration property overridable at runtime 
+
+[.configuration-reference, cols="65,.^17,.^13,^.^5"]
+|===
+|Configuration property|Type|Default|Lifecycle
+
+|<<quarkus.keycloak.realm, quarkus.keycloak.realm>>
+
+Name of the realm.|string 
+|
+| icon:archive[title=Fixed at build time]
+
+|<<quarkus.keycloak.realm-public-key, quarkus.keycloak.realm-public-key>>
+
+Name of the realm key.|string 
+|
+| icon:archive[title=Fixed at build time]
+
+|<<quarkus.keycloak.resource, quarkus.keycloak.resource>>
+
+The client-id of the application.|string 
+|
+| icon:archive[title=Fixed at build time]
+
+|<<quarkus.keycloak.auth-server-url, quarkus.keycloak.auth-server-url>>
+
+The base URL of the Keycloak server.|string 
+|
+| icon:archive[title=Fixed at build time]
+
+|<<quarkus.keycloak.public-client, quarkus.keycloak.public-client>>
+
+If this application is a public client.|boolean 
+|`false`
+| icon:archive[title=Fixed at build time]
+
+|<<quarkus.keycloak.credentials.secret, quarkus.keycloak.credentials.secret>>
+
+The client secret.|string 
+|
+| icon:archive[title=Fixed at build time]
+
+|<<quarkus.keycloak.bearer-only, quarkus.keycloak.bearer-only>>
+
+This should be set to true for services.|boolean 
+|`true`
+| icon:archive[title=Fixed at build time]
+
+|<<quarkus.keycloak.credentials.jwt.jwt, quarkus.keycloak.credentials.jwt."jwt">>
+
+The settings for client authentication with signed JWT.|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
+ 
+|
+| icon:archive[title=Fixed at build time]
+
+|<<quarkus.keycloak.credentials.secret-jwt.secret-jwt, quarkus.keycloak.credentials.secret-jwt."secret-jwt">>
+
+The settings for client authentication with JWT using client secret.|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
+ 
+|
+| icon:archive[title=Fixed at build time]
+|===
+
+
+== Details
+
+[[quarkus.keycloak.realm]]
+`quarkus.keycloak.realm` icon:archive[title=Fixed at build time]::
++
+--
+Name of the realm.
+
+Type: `string` 
+--
+
+***
+
+[[quarkus.keycloak.realm-public-key]]
+`quarkus.keycloak.realm-public-key` icon:archive[title=Fixed at build time]::
++
+--
+Name of the realm key.
+
+Type: `string` 
+--
+
+***
+
+[[quarkus.keycloak.resource]]
+`quarkus.keycloak.resource` icon:archive[title=Fixed at build time]::
++
+--
+The client-id of the application. Each application has a client-id that is used to identify the application
+
+Type: `string` 
+--
+
+***
+
+[[quarkus.keycloak.auth-server-url]]
+`quarkus.keycloak.auth-server-url` icon:archive[title=Fixed at build time]::
++
+--
+The base URL of the Keycloak server. All other Keycloak pages and REST service endpoints are derived from this. It is usually of the form https://host:port/auth
+
+Type: `string` 
+--
+
+***
+
+[[quarkus.keycloak.public-client]]
+`quarkus.keycloak.public-client` icon:archive[title=Fixed at build time]::
++
+--
+If this application is a public client
+
+Type: `boolean` 
+
+Defaults to: `false`
+--
+
+***
+
+[[quarkus.keycloak.credentials.secret]]
+`quarkus.keycloak.credentials.secret` icon:archive[title=Fixed at build time]::
++
+--
+The client secret
+
+Type: `string` 
+--
+
+***
+
+[[quarkus.keycloak.bearer-only]]
+`quarkus.keycloak.bearer-only` icon:archive[title=Fixed at build time]::
++
+--
+This should be set to true for services. If enabled the adapter will not attempt to authenticate users, but only verify bearer tokens
+
+Type: `boolean` 
+
+Defaults to: `true`
+--
+
+***
+
+[[quarkus.keycloak.credentials.jwt.jwt]]
+`quarkus.keycloak.credentials.jwt."jwt"` icon:archive[title=Fixed at build time]::
++
+--
+The settings for client authentication with signed JWT
+
+Type: `String` 
+--
+
+***
+
+[[quarkus.keycloak.credentials.secret-jwt.secret-jwt]]
+`quarkus.keycloak.credentials.secret-jwt."secret-jwt"` icon:archive[title=Fixed at build time]::
++
+--
+The settings for client authentication with JWT using client secret
+
+Type: `String` 
+--
+
+***

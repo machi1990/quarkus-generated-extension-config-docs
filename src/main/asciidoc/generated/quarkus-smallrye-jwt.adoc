@@ -6,18 +6,6 @@ icon:archive[title=Fixed at build time] Configuration property fixed at build ti
 |===
 |Configuration property|Type|Default|Lifecycle
 
-|<<quarkus.smallrye-jwt.auth-mechanism, quarkus.smallrye-jwt.auth-mechanism>>
-
-The authentication mechanism.|string 
-|`MP-JWT`
-| icon:archive[title=Fixed at build time]
-
-|<<quarkus.smallrye-jwt.realm-name, quarkus.smallrye-jwt.realm-name>>
-
-The authentication mechanism.|string 
-|`Quarkus-JWT`
-| icon:archive[title=Fixed at build time]
-
 |<<quarkus.smallrye-jwt.enabled, quarkus.smallrye-jwt.enabled>>
 
 The MP-JWT configuration object.|boolean 
@@ -33,32 +21,6 @@ The name of the `java.|string
 
 
 == Details
-
-[[quarkus.smallrye-jwt.auth-mechanism]]
-`quarkus.smallrye-jwt.auth-mechanism` icon:archive[title=Fixed at build time]::
-+
---
-The authentication mechanism
-
-Type: `string` 
-
-Defaults to: `MP-JWT`
---
-
-***
-
-[[quarkus.smallrye-jwt.realm-name]]
-`quarkus.smallrye-jwt.realm-name` icon:archive[title=Fixed at build time]::
-+
---
-The authentication mechanism
-
-Type: `string` 
-
-Defaults to: `Quarkus-JWT`
---
-
-***
 
 [[quarkus.smallrye-jwt.enabled]]
 `quarkus.smallrye-jwt.enabled` icon:archive[title=Fixed at build time]::

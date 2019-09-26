@@ -6,12 +6,6 @@ icon:archive[title=Fixed at build time] Configuration property fixed at build ti
 |===
 |Configuration property|Type|Default|Lifecycle
 
-|<<quarkus.security.file.auth-mechanism, quarkus.security.file.auth-mechanism>>
-
-The authentication mechanism.|string 
-|`BASIC`
-| icon:archive[title=Fixed at build time]
-
 |<<quarkus.security.file.realm-name, quarkus.security.file.realm-name>>
 
 The authentication mechanism.|string 
@@ -34,12 +28,6 @@ The location of the users property resource.|string
 
 The location of the roles property file.|string 
 |`roles.properties`
-| icon:archive[title=Fixed at build time]
-
-|<<quarkus.security.embedded.auth-mechanism, quarkus.security.embedded.auth-mechanism>>
-
-The authentication mechanism.|string 
-|`BASIC`
 | icon:archive[title=Fixed at build time]
 
 |<<quarkus.security.embedded.realm-name, quarkus.security.embedded.realm-name>>
@@ -77,19 +65,6 @@ The realm roles user1=role1,role2,.|link:https://docs.oracle.com/javase/8/docs/a
 
 
 == Details
-
-[[quarkus.security.file.auth-mechanism]]
-`quarkus.security.file.auth-mechanism` icon:archive[title=Fixed at build time]::
-+
---
-The authentication mechanism
-
-Type: `string` 
-
-Defaults to: `BASIC`
---
-
-***
 
 [[quarkus.security.file.realm-name]]
 `quarkus.security.file.realm-name` icon:archive[title=Fixed at build time]::
@@ -139,19 +114,6 @@ The location of the roles property file
 Type: `string` 
 
 Defaults to: `roles.properties`
---
-
-***
-
-[[quarkus.security.embedded.auth-mechanism]]
-`quarkus.security.embedded.auth-mechanism` icon:archive[title=Fixed at build time]::
-+
---
-The authentication mechanism
-
-Type: `string` 
-
-Defaults to: `BASIC`
 --
 
 ***

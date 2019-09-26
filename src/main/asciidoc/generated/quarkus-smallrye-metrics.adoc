@@ -8,7 +8,7 @@ icon:archive[title=Fixed at build time] Configuration property fixed at build ti
 
 |<<quarkus.smallrye-metrics.path, quarkus.smallrye-metrics.path>>
 
-The path to the metrics Servlet.|string 
+The path to the metrics handler.|string 
 |`/metrics`
 | icon:archive[title=Fixed at build time]
 |===
@@ -20,7 +20,7 @@ The path to the metrics Servlet.|string
 `quarkus.smallrye-metrics.path` icon:archive[title=Fixed at build time]::
 +
 --
-The path to the metrics Servlet.
+The path to the metrics handler.
 
 Type: `string` 
 
