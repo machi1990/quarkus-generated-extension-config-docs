@@ -1171,7 +1171,7 @@ Type: `java.util.List<java.lang.String>`
 --
 
 ***
-= A map of config group objects
+=== A map of config group objects
 
 
 [[quarkus.bt.all-values.nested-config-map.nested-config-map.nested-value]]
@@ -1195,7 +1195,7 @@ Type: `ObjectOfValue`
 --
 
 ***
-= A nested config group with all supported value types
+=== A nested config group with all supported value types
 
 
 [[quarkus.btrt.all-values.long-primitive]]
@@ -1372,7 +1372,7 @@ Type: `java.util.List<java.lang.String>`
 --
 
 ***
-= A map of config group objects
+==== A map of config group objects
 
 
 [[quarkus.btrt.all-values.nested-config-map.nested-config-map.nested-value]]
@@ -1396,7 +1396,7 @@ Type: `ObjectOfValue`
 --
 
 ***
-= A map of config group objects
+=== A map of config group objects
 
 
 [[quarkus.rt.all-values.nested-config-map.nested-config-map.nested-value]]

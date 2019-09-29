@@ -220,7 +220,7 @@ Defaults to: `false`
 --
 
 ***
-= Query related configuration
+=== Query related configuration
 
 
 [[quarkus.hibernate-orm.query.query-plan-cache-max-size]]
@@ -246,7 +246,7 @@ Type: `string`
 --
 
 ***
-= Database related configuration
+=== Database related configuration
 
 
 [[quarkus.hibernate-orm.database.generation]]
@@ -307,7 +307,7 @@ Type: `string`
 --
 
 ***
-= JDBC related configuration
+=== JDBC related configuration
 
 
 [[quarkus.hibernate-orm.jdbc.timezone]]
@@ -342,7 +342,7 @@ Type: `int`
 --
 
 ***
-= Logging configuration
+=== Logging configuration
 
 
 [[quarkus.hibernate-orm.log.sql]]
@@ -370,7 +370,7 @@ Type: `boolean`
 --
 
 ***
-= Caching configuration
+=== Caching configuration
 
 
 [[quarkus.hibernate-orm.cache.cache.expiration.max-idle]]
