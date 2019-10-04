@@ -39,8 +39,7 @@ Password to send as part of "Basic" authentication to the endpoint.|string
 
 |<<quarkus.jaeger.agent-host-port, quarkus.jaeger.agent-host-port>>
 
-The hostname and port for communicating with agent via UDP.|link:https://docs.oracle.com/javase/8/docs/api/java/net/InetSocketAddress.html[InetSocketAddress]
- 
+The hostname and port for communicating with agent via UDP.|host:port 
 |
 | icon:cogs[title=Overridable at runtime]
 
@@ -78,8 +77,7 @@ The sampler parameter (number).|link:https://docs.oracle.com/javase/8/docs/api/j
 
 |<<quarkus.jaeger.sampler-manager-host-port, quarkus.jaeger.sampler-manager-host-port>>
 
-The host name and port when using the remote controlled sampler.|link:https://docs.oracle.com/javase/8/docs/api/java/net/InetSocketAddress.html[InetSocketAddress]
- 
+The host name and port when using the remote controlled sampler.|host:port 
 |
 | icon:cogs[title=Overridable at runtime]
 
@@ -174,7 +172,7 @@ Type: `string`
 --
 The hostname and port for communicating with agent via UDP
 
-Type: `InetSocketAddress` 
+Type: `host:port` 
 --
 
 ***
@@ -240,7 +238,7 @@ Type: `BigDecimal`
 --
 The host name and port when using the remote controlled sampler
 
-Type: `InetSocketAddress` 
+Type: `host:port` 
 --
 
 ***

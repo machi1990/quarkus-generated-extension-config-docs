@@ -138,6 +138,36 @@ The the maximum length of all headers.|MemorySize  link:#memory-size-note-anchor
 The maximum size of a request body.|MemorySize  link:#memory-size-note-anchor[icon:question-circle[], title=More information about the MemorySize format]
 |
 | icon:cogs[title=Overridable at runtime]
+
+|<<quarkus.http.body.handle-file-uploads, quarkus.http.body.handle-file-uploads>>
+
+Whether the files sent using `multipart/form-data` will be stored locally.|boolean 
+|`true`
+| icon:cogs[title=Overridable at runtime]
+
+|<<quarkus.http.body.uploads-directory, quarkus.http.body.uploads-directory>>
+
+The directory where the files sent using `multipart/form-data` should be stored.|string 
+|`file-uploads`
+| icon:cogs[title=Overridable at runtime]
+
+|<<quarkus.http.body.merge-form-attributes, quarkus.http.body.merge-form-attributes>>
+
+Whether the form attributes should be added to the request parameters.|boolean 
+|`true`
+| icon:cogs[title=Overridable at runtime]
+
+|<<quarkus.http.body.delete-uploaded-files-on-end, quarkus.http.body.delete-uploaded-files-on-end>>
+
+Whether the uploaded files should be removed after serving the request.|boolean 
+|`false`
+| icon:cogs[title=Overridable at runtime]
+
+|<<quarkus.http.body.preallocate-body-buffer, quarkus.http.body.preallocate-body-buffer>>
+
+Whether the body buffer should pre-allocated based on the `Content-Length` header value.|boolean 
+|`false`
+| icon:cogs[title=Overridable at runtime]
 |===
 
 
@@ -401,6 +431,76 @@ Defaults to: `20K`
 The maximum size of a request body. Default: no limit.
 
 Type: `MemorySize`  link:#memory-size-note-anchor[icon:question-circle[], title=More information about the MemorySize format]
+--
+
+***
+
+[[quarkus.http.body.handle-file-uploads]]
+`quarkus.http.body.handle-file-uploads` icon:cogs[title=Overridable at runtime]::
++
+--
+Whether the files sent using `multipart/form-data` will be stored locally. 
+ If `true`, they will be stored in `quarkus.http.body-handler.uploads-directory` and will be made available via `io.vertx.ext.web.RoutingContext.fileUploads()`. Otherwise, the the files sent using `multipart/form-data` will not be stored locally, and `io.vertx.ext.web.RoutingContext.fileUploads()` will always return an empty collection. Note that even with this option being set to `false`, the `multipart/form-data` requests will be accepted.
+
+Type: `boolean` 
+
+Defaults to: `true`
+--
+
+***
+
+[[quarkus.http.body.uploads-directory]]
+`quarkus.http.body.uploads-directory` icon:cogs[title=Overridable at runtime]::
++
+--
+The directory where the files sent using `multipart/form-data` should be stored. 
+ Either an absolute path or a path relative to the current directory of the application process.
+
+Type: `string` 
+
+Defaults to: `file-uploads`
+--
+
+***
+
+[[quarkus.http.body.merge-form-attributes]]
+`quarkus.http.body.merge-form-attributes` icon:cogs[title=Overridable at runtime]::
++
+--
+Whether the form attributes should be added to the request parameters. 
+ If `true`, the form attributes will be added to the request parameters; otherwise the form parameters will not be added to the request parameters
+
+Type: `boolean` 
+
+Defaults to: `true`
+--
+
+***
+
+[[quarkus.http.body.delete-uploaded-files-on-end]]
+`quarkus.http.body.delete-uploaded-files-on-end` icon:cogs[title=Overridable at runtime]::
++
+--
+Whether the uploaded files should be removed after serving the request. 
+ If `true` the uploaded files stored in `quarkus.http.body-handler.uploads-directory` will be removed after handling the request. Otherwise the files will be left there forever.
+
+Type: `boolean` 
+
+Defaults to: `false`
+--
+
+***
+
+[[quarkus.http.body.preallocate-body-buffer]]
+`quarkus.http.body.preallocate-body-buffer` icon:cogs[title=Overridable at runtime]::
++
+--
+Whether the body buffer should pre-allocated based on the `Content-Length` header value. 
+ If `true` the body buffer is pre-allocated according to the size read from the `Content-Length` header. Otherwise the body buffer is pre-allocated to 1KB, and is resized dynamically
+
+Type: `boolean` 
+
+Defaults to: `false`
 --
 
 ***

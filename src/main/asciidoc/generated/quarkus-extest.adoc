@@ -360,7 +360,7 @@ A map of property lists.|link:https://docs.oracle.com/javase/8/docs/api/java/uti
 |
 | icon:archive[title=Fixed at build time]
 
-4+h|A map of config group objects <<quarkus.bt.all-values.nested-config-map,[icon:plus-circle[], title=More information about A map of config group objects]>>
+4+h|A map of config group objects link:#quarkus.bt.all-values.nested-config-map[icon:plus-circle[], title=More information about A map of config group objects]
 
 |<<quarkus.bt.all-values.nested-config-map.nested-config-map.nested-value, quarkus.bt.all-values.nested-config-map."nested-config-map".nested-value>>
 
@@ -374,7 +374,7 @@ A nested ObjectOfValue value.|ObjectOfValue
 |
 | icon:archive[title=Fixed at build time]
 
-4+h|A nested config group with all supported value types <<quarkus.btrt.all-values,[icon:plus-circle[], title=More information about A nested config group with all supported value types]>>
+4+h|A nested config group with all supported value types link:#quarkus.btrt.all-values[icon:plus-circle[], title=More information about A nested config group with all supported value types]
 
 |<<quarkus.btrt.all-values.long-primitive, quarkus.btrt.all-values.long-primitive>>
 
@@ -468,7 +468,7 @@ A map of property lists.|link:https://docs.oracle.com/javase/8/docs/api/java/uti
 |
 | icon:archive[title=Fixed at build time]
 
-4+h|A map of config group objects <<quarkus.btrt.all-values.nested-config-map,[icon:plus-circle[], title=More information about A map of config group objects]>>
+4+h|A map of config group objects link:#quarkus.btrt.all-values.nested-config-map[icon:plus-circle[], title=More information about A map of config group objects]
 
 |<<quarkus.btrt.all-values.nested-config-map.nested-config-map.nested-value, quarkus.btrt.all-values.nested-config-map."nested-config-map".nested-value>>
 
@@ -482,7 +482,7 @@ A nested ObjectOfValue value.|ObjectOfValue
 |
 | icon:archive[title=Fixed at build time]
 
-4+h|A map of config group objects <<quarkus.rt.all-values.nested-config-map,[icon:plus-circle[], title=More information about A map of config group objects]>>
+4+h|A map of config group objects link:#quarkus.rt.all-values.nested-config-map[icon:plus-circle[], title=More information about A map of config group objects]
 
 |<<quarkus.rt.all-values.nested-config-map.nested-config-map.nested-value, quarkus.rt.all-values.nested-config-map."nested-config-map".nested-value>>
 

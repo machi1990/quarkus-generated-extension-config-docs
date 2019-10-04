@@ -1,0 +1,28 @@
+== Summary
+
+icon:archive[title=Fixed at build time] Configuration property fixed at build time - icon:cogs[title=Overridable at runtime]️ Configuration property overridable at runtime 
+
+[.configuration-reference, cols="65,.^17,.^13,^.^5"]
+|===
+|Configuration property|Type|Default|Lifecycle
+
+|<<quarkus.lambda.handler, quarkus.lambda.handler>>
+
+The handler name.|string 
+|
+| icon:cogs[title=Overridable at runtime]
+|===
+
+
+== Details
+
+[[quarkus.lambda.handler]]
+`quarkus.lambda.handler` icon:cogs[title=Overridable at runtime]::
++
+--
+The handler name. Handler names are specified on handler classes using the `@javax.inject.Named` annotation. If this name is unspecified and there is exactly one unnamed implementation of `com.amazonaws.services.lambda.runtime.RequestHandler` then this unnamed handler will be used. If there is only a single named handler and the name is unspecified then the named handler will be used.
+
+Type: `string` 
+--
+
+***

@@ -14,8 +14,7 @@ A unique identifier for this Kafka Streams application.|string
 
 |<<quarkus.kafka-streams.bootstrap-servers, quarkus.kafka-streams.bootstrap-servers>>
 
-A comma-separated list of host:port pairs identifying the Kafka bootstrap server(s).|link:https://docs.oracle.com/javase/8/docs/api/java/net/InetSocketAddress.html[InetSocketAddress]
- 
+A comma-separated list of host:port pairs identifying the Kafka bootstrap server(s).|host:port 
 |`localhost:9012`
 | icon:cogs[title=Overridable at runtime]
 
@@ -52,7 +51,7 @@ Type: `string`
 --
 A comma-separated list of host:port pairs identifying the Kafka bootstrap server(s)
 
-Type: `InetSocketAddress` 
+Type: `host:port` 
 
 Defaults to: `localhost:9012`
 --

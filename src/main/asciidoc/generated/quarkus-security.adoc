@@ -1,0 +1,28 @@
+== Summary
+
+icon:archive[title=Fixed at build time] Configuration property fixed at build time - icon:cogs[title=Overridable at runtime]️ Configuration property overridable at runtime 
+
+[.configuration-reference, cols="65,.^17,.^13,^.^5"]
+|===
+|Configuration property|Type|Default|Lifecycle
+
+|<<quarkus.security.security-providers, quarkus.security.security-providers>>
+
+List of security providers to enable for reflection.|string 
+|
+| icon:archive[title=Fixed at build time]
+|===
+
+
+== Details
+
+[[quarkus.security.security-providers]]
+`quarkus.security.security-providers` icon:archive[title=Fixed at build time]::
++
+--
+List of security providers to enable for reflection
+
+Type: `string` 
+--
+
+***

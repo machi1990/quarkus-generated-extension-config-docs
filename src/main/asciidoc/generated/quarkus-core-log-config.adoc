@@ -145,8 +145,7 @@ If syslog logging should be enabled.|boolean
 
 |<<quarkus.log.syslog.endpoint, quarkus.log.syslog.endpoint>>
 
-The IP address and port of the syslog server.|link:https://docs.oracle.com/javase/8/docs/api/java/net/InetSocketAddress.html[InetSocketAddress]
- 
+The IP address and port of the syslog server.|host:port 
 |`localhost:514`
 | icon:cogs[title=Overridable at runtime]
 
@@ -535,7 +534,7 @@ Defaults to: `false`
 --
 The IP address and port of the syslog server
 
-Type: `InetSocketAddress` 
+Type: `host:port` 
 
 Defaults to: `localhost:514`
 --

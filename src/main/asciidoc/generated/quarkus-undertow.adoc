@@ -32,7 +32,7 @@ If Servlet should use direct buffers, this gives maximum performance but can be 
 `quarkus.servlet.context-path` icon:archive[title=Fixed at build time]::
 +
 --
-The context path to serve all Servlet context from. This will also affect any resources that run as a Servlet, e.g. JAX-RS
+The context path to serve all Servlet context from. This will also affect any resources that run as a Servlet, e.g. JAX-RS. Note that this is relative to the HTTP root path set in quarkus.http.root-path, so if the context path is /bar and the http root is /foo then the actual Servlet path will be /foo/bar.
 
 Type: `string` 
 --

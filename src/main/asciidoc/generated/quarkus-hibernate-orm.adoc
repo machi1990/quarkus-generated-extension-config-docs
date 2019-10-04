@@ -36,7 +36,7 @@ Whether statistics collection is enabled.|boolean
 |`false`
 | icon:archive[title=Fixed at build time]
 
-4+h|Query related configuration <<quarkus.hibernate-orm.query,[icon:plus-circle[], title=More information about Query related configuration]>>
+4+h|Query related configuration link:#quarkus.hibernate-orm.query[icon:plus-circle[], title=More information about Query related configuration]
 
 |<<quarkus.hibernate-orm.query.query-plan-cache-max-size, quarkus.hibernate-orm.query.query-plan-cache-max-size>>
 
@@ -50,7 +50,7 @@ Default precedence of null values in `ORDER BY` clauses.|string
 |
 | icon:archive[title=Fixed at build time]
 
-4+h|Database related configuration <<quarkus.hibernate-orm.database,[icon:plus-circle[], title=More information about Database related configuration]>>
+4+h|Database related configuration link:#quarkus.hibernate-orm.database[icon:plus-circle[], title=More information about Database related configuration]
 
 |<<quarkus.hibernate-orm.database.generation, quarkus.hibernate-orm.database.generation>>
 
@@ -82,7 +82,7 @@ The charset of the database.|string
 |
 | icon:archive[title=Fixed at build time]
 
-4+h|JDBC related configuration <<quarkus.hibernate-orm.jdbc,[icon:plus-circle[], title=More information about JDBC related configuration]>>
+4+h|JDBC related configuration link:#quarkus.hibernate-orm.jdbc[icon:plus-circle[], title=More information about JDBC related configuration]
 
 |<<quarkus.hibernate-orm.jdbc.timezone, quarkus.hibernate-orm.jdbc.timezone>>
 
@@ -102,7 +102,7 @@ The number of updates (inserts, updates and deletes) that are sent by the JDBC d
 |
 | icon:archive[title=Fixed at build time]
 
-4+h|Logging configuration <<quarkus.hibernate-orm.log,[icon:plus-circle[], title=More information about Logging configuration]>>
+4+h|Logging configuration link:#quarkus.hibernate-orm.log[icon:plus-circle[], title=More information about Logging configuration]
 
 |<<quarkus.hibernate-orm.log.sql, quarkus.hibernate-orm.log.sql>>
 
@@ -116,7 +116,7 @@ Whether JDBC warnings should be collected and logged.|boolean
 |
 | icon:archive[title=Fixed at build time]
 
-4+h|Caching configuration <<quarkus.hibernate-orm.cache,[icon:plus-circle[], title=More information about Caching configuration]>>
+4+h|Caching configuration link:#quarkus.hibernate-orm.cache[icon:plus-circle[], title=More information about Caching configuration]
 
 |<<quarkus.hibernate-orm.cache.cache.expiration.max-idle, quarkus.hibernate-orm.cache."cache".expiration.max-idle>>
 
