@@ -26,6 +26,15 @@ If the java runner should be packed as an uberjar
 |`false`
 
 
+a|icon:archive[title=Fixed at build time] [[quarkus-core-package-config_quarkus.package.manifest.add-implementation-entries]]`link:#quarkus-core-package-config_quarkus.package.manifest.add-implementation-entries[quarkus.package.manifest.add-implementation-entries]`
+
+[.description]
+--
+If the Implementation information should be included in the runner jar's MANIFEST.MF.
+--|boolean 
+|`true`
+
+
 a|icon:archive[title=Fixed at build time] [[quarkus-core-package-config_quarkus.package.main-class]]`link:#quarkus-core-package-config_quarkus.package.main-class[quarkus.package.main-class]`
 
 [.description]

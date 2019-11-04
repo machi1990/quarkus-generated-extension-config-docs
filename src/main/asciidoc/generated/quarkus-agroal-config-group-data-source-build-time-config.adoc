@@ -27,6 +27,10 @@ Whether we want to use regular JDBC transactions, XA, or disable all transaction
 |`enabled`
 
 
+h|[[quarkus-agroal-config-group-data-source-build-time-config_additional-named-datasources]]link:#quarkus-agroal-config-group-data-source-build-time-config_additional-named-datasources[Additional named datasources]
+h|Type
+h|Default
+
 a|icon:archive[title=Fixed at build time] [[quarkus-agroal-config-group-data-source-build-time-config_quarkus.datasource.-datasource-name-.driver]]`link:#quarkus-agroal-config-group-data-source-build-time-config_quarkus.datasource.-datasource-name-.driver[quarkus.datasource."datasource-name".driver]`
 
 [.description]
