@@ -219,7 +219,7 @@ Query executed when first using a connection.
 |
 
 
-a|icon:archive[title=Fixed at build time] [[quarkus-agroal_quarkus.datasource.-named-data-sources-.driver]]`link:#quarkus-agroal_quarkus.datasource.-named-data-sources-.driver[quarkus.datasource."named-data-sources".driver]`
+a|icon:archive[title=Fixed at build time] [[quarkus-agroal_quarkus.datasource.-datasource-name-.driver]]`link:#quarkus-agroal_quarkus.datasource.-datasource-name-.driver[quarkus.datasource."datasource-name".driver]`
 
 [.description]
 --
@@ -228,7 +228,7 @@ The datasource driver class name
 |
 
 
-a|icon:archive[title=Fixed at build time] [[quarkus-agroal_quarkus.datasource.-named-data-sources-.transactions]]`link:#quarkus-agroal_quarkus.datasource.-named-data-sources-.transactions[quarkus.datasource."named-data-sources".transactions]`
+a|icon:archive[title=Fixed at build time] [[quarkus-agroal_quarkus.datasource.-datasource-name-.transactions]]`link:#quarkus-agroal_quarkus.datasource.-datasource-name-.transactions[quarkus.datasource."datasource-name".transactions]`
 
 [.description]
 --
