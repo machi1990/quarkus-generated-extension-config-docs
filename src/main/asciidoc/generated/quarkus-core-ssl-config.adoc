@@ -1,28 +1,19 @@
-== Summary
-
+[.configuration-legend]
 icon:archive[title=Fixed at build time] Configuration property fixed at build time - icon:cogs[title=Overridable at runtime]️ Configuration property overridable at runtime 
 
-[.configuration-reference, cols="65,.^17,.^13,^.^5"]
-|===
-|Configuration property|Type|Default|Lifecycle
-
-|<<quarkus.ssl.native, quarkus.ssl.native>>
-
-Enable native SSL support.|boolean 
-|
-| icon:archive[title=Fixed at build time]
+[.configuration-reference.searchable, cols="80,.^10,.^10"]
 |===
 
+h|[[quarkus-core-ssl-config_configuration]]link:#quarkus-core-ssl-config_configuration[Configuration property]
+h|Type
+h|Default
 
-== Details
+a|icon:archive[title=Fixed at build time] [[quarkus-core-ssl-config_quarkus.ssl.native]]`link:#quarkus-core-ssl-config_quarkus.ssl.native[quarkus.ssl.native]`
 
-[[quarkus.ssl.native]]
-`quarkus.ssl.native` icon:archive[title=Fixed at build time]::
-+
+[.description]
 --
 Enable native SSL support.
+--|boolean 
+|
 
-Type: `boolean` 
---
-
-***
+|===

@@ -1,199 +1,104 @@
-== Summary
-
+[.configuration-legend]
 icon:archive[title=Fixed at build time] Configuration property fixed at build time - icon:cogs[title=Overridable at runtime]️ Configuration property overridable at runtime 
 
-[.configuration-reference, cols="65,.^17,.^13,^.^5"]
-|===
-|Configuration property|Type|Default|Lifecycle
-
-|<<quarkus.security.users.file.realm-name, quarkus.security.users.file.realm-name>>
-
-The realm name.|string 
-|`Quarkus`
-| icon:archive[title=Fixed at build time]
-
-|<<quarkus.security.users.file.enabled, quarkus.security.users.file.enabled>>
-
-If the properties store is enabled.|boolean 
-|`false`
-| icon:archive[title=Fixed at build time]
-
-|<<quarkus.security.users.file.plain-text, quarkus.security.users.file.plain-text>>
-
-If the properties are stored in plain text.|boolean 
-|`false`
-| icon:archive[title=Fixed at build time]
-
-|<<quarkus.security.users.file.users, quarkus.security.users.file.users>>
-
-The location of the users property resource.|string 
-|`users.properties`
-| icon:archive[title=Fixed at build time]
-
-|<<quarkus.security.users.file.roles, quarkus.security.users.file.roles>>
-
-The location of the roles property file.|string 
-|`roles.properties`
-| icon:archive[title=Fixed at build time]
-
-|<<quarkus.security.users.embedded.realm-name, quarkus.security.users.embedded.realm-name>>
-
-The authentication mechanism.|string 
-|`Quarkus`
-| icon:archive[title=Fixed at build time]
-
-|<<quarkus.security.users.embedded.plain-text, quarkus.security.users.embedded.plain-text>>
-
-If the properties are stored in plain text.|boolean 
-|`false`
-| icon:archive[title=Fixed at build time]
-
-|<<quarkus.security.users.embedded.enabled, quarkus.security.users.embedded.enabled>>
-
-If the embedded store is enabled.|boolean 
-|`false`
-| icon:archive[title=Fixed at build time]
-
-|<<quarkus.security.users.embedded.users.users, quarkus.security.users.embedded.users."users">>
-
-The realm users user1=password\nuser2=password2.|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
- 
-|
-| icon:archive[title=Fixed at build time]
-
-|<<quarkus.security.users.embedded.roles.roles, quarkus.security.users.embedded.roles."roles">>
-
-The realm roles user1=role1,role2,.|link:https://docs.oracle.com/javase/8/docs/api/java/lang/String.html[String]
- 
-|
-| icon:archive[title=Fixed at build time]
+[.configuration-reference.searchable, cols="80,.^10,.^10"]
 |===
 
+h|[[quarkus-elytron-security_property-files-realm-configuration]]link:#quarkus-elytron-security_property-files-realm-configuration[Property Files Realm Configuration]
+h|Type
+h|Default
 
-== Details
+a|icon:archive[title=Fixed at build time] [[quarkus-elytron-security_quarkus.security.users.file.realm-name]]`link:#quarkus-elytron-security_quarkus.security.users.file.realm-name[quarkus.security.users.file.realm-name]`
 
-[[quarkus.security.users.file.realm-name]]
-`quarkus.security.users.file.realm-name` icon:archive[title=Fixed at build time]::
-+
+[.description]
 --
 The realm name. This is used when generating a hashed password
+--|string 
+|`Quarkus`
 
-Type: `string` 
 
-Defaults to: `Quarkus`
+a|icon:archive[title=Fixed at build time] [[quarkus-elytron-security_quarkus.security.users.file.enabled]]`link:#quarkus-elytron-security_quarkus.security.users.file.enabled[quarkus.security.users.file.enabled]`
+
+[.description]
 --
+Determine whether security via the file realm is enabled.
+--|boolean 
+|`false`
 
-***
 
-[[quarkus.security.users.file.enabled]]
-`quarkus.security.users.file.enabled` icon:archive[title=Fixed at build time]::
-+
---
-If the properties store is enabled.
+a|icon:archive[title=Fixed at build time] [[quarkus-elytron-security_quarkus.security.users.file.plain-text]]`link:#quarkus-elytron-security_quarkus.security.users.file.plain-text[quarkus.security.users.file.plain-text]`
 
-Type: `boolean` 
-
-Defaults to: `false`
---
-
-***
-
-[[quarkus.security.users.file.plain-text]]
-`quarkus.security.users.file.plain-text` icon:archive[title=Fixed at build time]::
-+
+[.description]
 --
 If the properties are stored in plain text. If this is false (the default) then it is expected that the passwords are of the form HEX( MD5( username ":" realm ":" password ) )
+--|boolean 
+|`false`
 
-Type: `boolean` 
 
-Defaults to: `false`
+a|icon:archive[title=Fixed at build time] [[quarkus-elytron-security_quarkus.security.users.file.users]]`link:#quarkus-elytron-security_quarkus.security.users.file.users[quarkus.security.users.file.users]`
+
+[.description]
 --
+Classpath resource name of properties file containing user to password mappings. See link:#users-properties[Users.properties].
+--|string 
+|`users.properties`
 
-***
 
-[[quarkus.security.users.file.users]]
-`quarkus.security.users.file.users` icon:archive[title=Fixed at build time]::
-+
+a|icon:archive[title=Fixed at build time] [[quarkus-elytron-security_quarkus.security.users.file.roles]]`link:#quarkus-elytron-security_quarkus.security.users.file.roles[quarkus.security.users.file.roles]`
+
+[.description]
 --
-The location of the users property resource
+Classpath resource name of properties file containing user to role mappings. See link:#roles-properties[Roles.properties].
+--|string 
+|`roles.properties`
 
-Type: `string` 
 
-Defaults to: `users.properties`
+h|[[quarkus-elytron-security_embedded-realm-configuration]]link:#quarkus-elytron-security_embedded-realm-configuration[Embedded Realm Configuration]
+h|Type
+h|Default
+
+a|icon:archive[title=Fixed at build time] [[quarkus-elytron-security_quarkus.security.users.embedded.realm-name]]`link:#quarkus-elytron-security_quarkus.security.users.embedded.realm-name[quarkus.security.users.embedded.realm-name]`
+
+[.description]
 --
+The realm name. This is used when generating a hashed password
+--|string 
+|`Quarkus`
 
-***
 
-[[quarkus.security.users.file.roles]]
-`quarkus.security.users.file.roles` icon:archive[title=Fixed at build time]::
-+
---
-The location of the roles property file
+a|icon:archive[title=Fixed at build time] [[quarkus-elytron-security_quarkus.security.users.embedded.plain-text]]`link:#quarkus-elytron-security_quarkus.security.users.embedded.plain-text[quarkus.security.users.embedded.plain-text]`
 
-Type: `string` 
-
-Defaults to: `roles.properties`
---
-
-***
-
-[[quarkus.security.users.embedded.realm-name]]
-`quarkus.security.users.embedded.realm-name` icon:archive[title=Fixed at build time]::
-+
---
-The authentication mechanism
-
-Type: `string` 
-
-Defaults to: `Quarkus`
---
-
-***
-
-[[quarkus.security.users.embedded.plain-text]]
-`quarkus.security.users.embedded.plain-text` icon:archive[title=Fixed at build time]::
-+
+[.description]
 --
 If the properties are stored in plain text. If this is false (the default) then it is expected that the passwords are of the form HEX( MD5( username ":" realm ":" password ) )
+--|boolean 
+|`false`
 
-Type: `boolean` 
 
-Defaults to: `false`
+a|icon:archive[title=Fixed at build time] [[quarkus-elytron-security_quarkus.security.users.embedded.enabled]]`link:#quarkus-elytron-security_quarkus.security.users.embedded.enabled[quarkus.security.users.embedded.enabled]`
+
+[.description]
 --
+Determine whether security via the embedded realm is enabled.
+--|boolean 
+|`false`
 
-***
 
-[[quarkus.security.users.embedded.enabled]]
-`quarkus.security.users.embedded.enabled` icon:archive[title=Fixed at build time]::
-+
+a|icon:archive[title=Fixed at build time] [[quarkus-elytron-security_quarkus.security.users.embedded.users-users]]`link:#quarkus-elytron-security_quarkus.security.users.embedded.users-users[quarkus.security.users.embedded.users]`
+
+[.description]
 --
-If the embedded store is enabled.
+The realm users user1=password\nuser2=password2... mapping. See link:#embedded-users[Embedded Users].
+--|`Map<String,String>` 
+|`none`
 
-Type: `boolean` 
 
-Defaults to: `false`
+a|icon:archive[title=Fixed at build time] [[quarkus-elytron-security_quarkus.security.users.embedded.roles-roles]]`link:#quarkus-elytron-security_quarkus.security.users.embedded.roles-roles[quarkus.security.users.embedded.roles]`
+
+[.description]
 --
+The realm roles user1=role1,role2,...\nuser2=role1,role2,... mapping See link:#embedded-roles[Embedded Roles].
+--|`Map<String,String>` 
+|`none`
 
-***
-
-[[quarkus.security.users.embedded.users.users]]
-`quarkus.security.users.embedded.users."users"` icon:archive[title=Fixed at build time]::
-+
---
-The realm users user1=password\nuser2=password2... mapping
-
-Type: `String` 
---
-
-***
-
-[[quarkus.security.users.embedded.roles.roles]]
-`quarkus.security.users.embedded.roles."roles"` icon:archive[title=Fixed at build time]::
-+
---
-The realm roles user1=role1,role2,...\nuser2=role1,role2,... mapping
-
-Type: `String` 
---
-
-***
+|===

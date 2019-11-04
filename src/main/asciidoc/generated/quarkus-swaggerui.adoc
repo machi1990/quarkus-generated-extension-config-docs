@@ -1,50 +1,29 @@
-== Summary
-
+[.configuration-legend]
 icon:archive[title=Fixed at build time] Configuration property fixed at build time - icon:cogs[title=Overridable at runtime]️ Configuration property overridable at runtime 
 
-[.configuration-reference, cols="65,.^17,.^13,^.^5"]
-|===
-|Configuration property|Type|Default|Lifecycle
-
-|<<quarkus.swagger-ui.path, quarkus.swagger-ui.path>>
-
-The path of the swagger-ui servlet.|string 
-|`/swagger-ui`
-| icon:archive[title=Fixed at build time]
-
-|<<quarkus.swagger-ui.always-include, quarkus.swagger-ui.always-include>>
-
-If this should be included every time.|boolean 
-|`false`
-| icon:archive[title=Fixed at build time]
+[.configuration-reference.searchable, cols="80,.^10,.^10"]
 |===
 
+h|[[quarkus-swaggerui_configuration]]link:#quarkus-swaggerui_configuration[Configuration property]
+h|Type
+h|Default
 
-== Details
+a|icon:archive[title=Fixed at build time] [[quarkus-swaggerui_quarkus.swagger-ui.path]]`link:#quarkus-swaggerui_quarkus.swagger-ui.path[quarkus.swagger-ui.path]`
 
-[[quarkus.swagger-ui.path]]
-`quarkus.swagger-ui.path` icon:archive[title=Fixed at build time]::
-+
+[.description]
 --
 The path of the swagger-ui servlet. 
  The value `/` is not allowed as it blocks the application from serving anything else.
+--|string 
+|`/swagger-ui`
 
-Type: `string` 
 
-Defaults to: `/swagger-ui`
---
+a|icon:archive[title=Fixed at build time] [[quarkus-swaggerui_quarkus.swagger-ui.always-include]]`link:#quarkus-swaggerui_quarkus.swagger-ui.always-include[quarkus.swagger-ui.always-include]`
 
-***
-
-[[quarkus.swagger-ui.always-include]]
-`quarkus.swagger-ui.always-include` icon:archive[title=Fixed at build time]::
-+
+[.description]
 --
 If this should be included every time. By default this is only included when the application is running in dev mode.
+--|boolean 
+|`false`
 
-Type: `boolean` 
-
-Defaults to: `false`
---
-
-***
+|===

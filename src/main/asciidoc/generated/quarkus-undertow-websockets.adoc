@@ -1,45 +1,28 @@
-== Summary
-
+[.configuration-legend]
 icon:archive[title=Fixed at build time] Configuration property fixed at build time - icon:cogs[title=Overridable at runtime]️ Configuration property overridable at runtime 
 
-[.configuration-reference, cols="65,.^17,.^13,^.^5"]
-|===
-|Configuration property|Type|Default|Lifecycle
-
-|<<quarkus.hot-reload.password, quarkus.hot-reload.password>>
-
-|string 
-|
-| icon:archive[title=Fixed at build time]
-
-|<<quarkus.hot-reload.url, quarkus.hot-reload.url>>
-
-|string 
-|
-| icon:archive[title=Fixed at build time]
+[.configuration-reference.searchable, cols="80,.^10,.^10"]
 |===
 
+h|[[quarkus-undertow-websockets_configuration]]link:#quarkus-undertow-websockets_configuration[Configuration property]
+h|Type
+h|Default
 
-== Details
+a|icon:archive[title=Fixed at build time] [[quarkus-undertow-websockets_quarkus.hot-reload.password]]`link:#quarkus-undertow-websockets_quarkus.hot-reload.password[quarkus.hot-reload.password]`
 
-[[quarkus.hot-reload.password]]
-`quarkus.hot-reload.password` icon:archive[title=Fixed at build time]::
-+
+[.description]
 --
 
+--|string 
+|required icon:exclamation-circle[title=Configuration property is required]
 
-Type: `string` 
+
+a|icon:archive[title=Fixed at build time] [[quarkus-undertow-websockets_quarkus.hot-reload.url]]`link:#quarkus-undertow-websockets_quarkus.hot-reload.url[quarkus.hot-reload.url]`
+
+[.description]
 --
 
-***
+--|string 
+|required icon:exclamation-circle[title=Configuration property is required]
 
-[[quarkus.hot-reload.url]]
-`quarkus.hot-reload.url` icon:archive[title=Fixed at build time]::
-+
---
-
-
-Type: `string` 
---
-
-***
+|===

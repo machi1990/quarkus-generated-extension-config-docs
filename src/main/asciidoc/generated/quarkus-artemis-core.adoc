@@ -1,62 +1,37 @@
-== Summary
-
+[.configuration-legend]
 icon:archive[title=Fixed at build time] Configuration property fixed at build time - icon:cogs[title=Overridable at runtime]️ Configuration property overridable at runtime 
 
-[.configuration-reference, cols="65,.^17,.^13,^.^5"]
-|===
-|Configuration property|Type|Default|Lifecycle
-
-|<<quarkus.artemis.url, quarkus.artemis.url>>
-
-Artemis connection url.|string 
-|
-| icon:cogs[title=Overridable at runtime]
-
-|<<quarkus.artemis.username, quarkus.artemis.username>>
-
-Username for authentication, only used with JMS.|string 
-|
-| icon:cogs[title=Overridable at runtime]
-
-|<<quarkus.artemis.password, quarkus.artemis.password>>
-
-Password for authentication, only used with JMS.|string 
-|
-| icon:cogs[title=Overridable at runtime]
+[.configuration-reference.searchable, cols="80,.^10,.^10"]
 |===
 
+h|[[quarkus-artemis-core_configuration]]link:#quarkus-artemis-core_configuration[Configuration property]
+h|Type
+h|Default
 
-== Details
+a|icon:cogs[title=Overridable at runtime] [[quarkus-artemis-core_quarkus.artemis.url]]`link:#quarkus-artemis-core_quarkus.artemis.url[quarkus.artemis.url]`
 
-[[quarkus.artemis.url]]
-`quarkus.artemis.url` icon:cogs[title=Overridable at runtime]::
-+
+[.description]
 --
 Artemis connection url
+--|string 
+|required icon:exclamation-circle[title=Configuration property is required]
 
-Type: `string` 
---
 
-***
+a|icon:cogs[title=Overridable at runtime] [[quarkus-artemis-core_quarkus.artemis.username]]`link:#quarkus-artemis-core_quarkus.artemis.username[quarkus.artemis.username]`
 
-[[quarkus.artemis.username]]
-`quarkus.artemis.username` icon:cogs[title=Overridable at runtime]::
-+
+[.description]
 --
 Username for authentication, only used with JMS
+--|string 
+|
 
-Type: `string` 
---
 
-***
+a|icon:cogs[title=Overridable at runtime] [[quarkus-artemis-core_quarkus.artemis.password]]`link:#quarkus-artemis-core_quarkus.artemis.password[quarkus.artemis.password]`
 
-[[quarkus.artemis.password]]
-`quarkus.artemis.password` icon:cogs[title=Overridable at runtime]::
-+
+[.description]
 --
 Password for authentication, only used with JMS
+--|string 
+|
 
-Type: `string` 
---
-
-***
+|===

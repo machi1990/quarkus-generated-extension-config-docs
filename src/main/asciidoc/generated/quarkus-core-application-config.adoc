@@ -1,45 +1,28 @@
-== Summary
-
+[.configuration-legend]
 icon:archive[title=Fixed at build time] Configuration property fixed at build time - icon:cogs[title=Overridable at runtime]️ Configuration property overridable at runtime 
 
-[.configuration-reference, cols="65,.^17,.^13,^.^5"]
-|===
-|Configuration property|Type|Default|Lifecycle
-
-|<<quarkus.application.name, quarkus.application.name>>
-
-The name of the application.|string 
-|
-| icon:archive[title=Fixed at build time]
-
-|<<quarkus.application.version, quarkus.application.version>>
-
-The version of the application.|string 
-|
-| icon:archive[title=Fixed at build time]
+[.configuration-reference.searchable, cols="80,.^10,.^10"]
 |===
 
+h|[[quarkus-core-application-config_configuration]]link:#quarkus-core-application-config_configuration[Configuration property]
+h|Type
+h|Default
 
-== Details
+a|icon:archive[title=Fixed at build time] [[quarkus-core-application-config_quarkus.application.name]]`link:#quarkus-core-application-config_quarkus.application.name[quarkus.application.name]`
 
-[[quarkus.application.name]]
-`quarkus.application.name` icon:archive[title=Fixed at build time]::
-+
+[.description]
 --
 The name of the application. If not set, defaults to the name of the project.
+--|string 
+|required icon:exclamation-circle[title=Configuration property is required]
 
-Type: `string` 
---
 
-***
+a|icon:archive[title=Fixed at build time] [[quarkus-core-application-config_quarkus.application.version]]`link:#quarkus-core-application-config_quarkus.application.version[quarkus.application.version]`
 
-[[quarkus.application.version]]
-`quarkus.application.version` icon:archive[title=Fixed at build time]::
-+
+[.description]
 --
 The version of the application. If not set, defaults to the version of the project
+--|string 
+|required icon:exclamation-circle[title=Configuration property is required]
 
-Type: `string` 
---
-
-***
+|===

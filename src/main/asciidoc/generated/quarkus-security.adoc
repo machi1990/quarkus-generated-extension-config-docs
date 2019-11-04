@@ -1,28 +1,28 @@
-== Summary
-
+[.configuration-legend]
 icon:archive[title=Fixed at build time] Configuration property fixed at build time - icon:cogs[title=Overridable at runtime]️ Configuration property overridable at runtime 
 
-[.configuration-reference, cols="65,.^17,.^13,^.^5"]
-|===
-|Configuration property|Type|Default|Lifecycle
-
-|<<quarkus.security.security-providers, quarkus.security.security-providers>>
-
-List of security providers to enable for reflection.|string 
-|
-| icon:archive[title=Fixed at build time]
+[.configuration-reference.searchable, cols="80,.^10,.^10"]
 |===
 
+h|[[quarkus-security_configuration]]link:#quarkus-security_configuration[Configuration property]
+h|Type
+h|Default
 
-== Details
+a|icon:archive[title=Fixed at build time] [[quarkus-security_quarkus.security.security-providers]]`link:#quarkus-security_quarkus.security.security-providers[quarkus.security.security-providers]`
 
-[[quarkus.security.security-providers]]
-`quarkus.security.security-providers` icon:archive[title=Fixed at build time]::
-+
+[.description]
 --
 List of security providers to enable for reflection
+--|list of string 
+|required icon:exclamation-circle[title=Configuration property is required]
 
-Type: `string` 
+
+a|icon:archive[title=Fixed at build time] [[quarkus-security_quarkus.security.deny-unannotated-members]]`link:#quarkus-security_quarkus.security.deny-unannotated-members[quarkus.security.deny-unannotated-members]`
+
+[.description]
 --
+If set to true, access to all methods of beans that have any security annotations on other members will be denied by default. E.g. if enabled, in the following bean, `methodB` will be denied.  `@`ApplicationScoped public class A { `@`RolesAllowed("admin") public void methodA() { ... } public void methodB() { ... } }
+--|boolean 
+|`false`
 
-***
+|===
