@@ -28,7 +28,7 @@ The default minimum log level
 |`INFO`
 
 
-h|[[quarkus-core-log-config_logging-categories]]link:#quarkus-core-log-config_logging-categories[Logging categories]
+h|[[quarkus-core-log-config_quarkus.log.categories]]link:#quarkus-core-log-config_quarkus.log.categories[Logging categories]
 h|Type
 h|Default
 
@@ -50,7 +50,7 @@ The log level level for this category
 |`inherit`
 
 
-h|[[quarkus-core-log-config_console-logging]]link:#quarkus-core-log-config_console-logging[Console logging]
+h|[[quarkus-core-log-config_quarkus.log.console]]link:#quarkus-core-log-config_quarkus.log.console[Console logging]
 h|Type
 h|Default
 
@@ -127,7 +127,7 @@ Determine whether to block the publisher (rather than drop the message) when the
 |`block`
 
 
-h|[[quarkus-core-log-config_file-logging]]link:#quarkus-core-log-config_file-logging[File logging]
+h|[[quarkus-core-log-config_quarkus.log.file]]link:#quarkus-core-log-config_quarkus.log.file[File logging]
 h|Type
 h|Default
 
@@ -232,7 +232,7 @@ Indicates whether to rotate log files on server initialization.
 |`true`
 
 
-h|[[quarkus-core-log-config_syslog-logging]]link:#quarkus-core-log-config_syslog-logging[Syslog logging]
+h|[[quarkus-core-log-config_quarkus.log.syslog]]link:#quarkus-core-log-config_quarkus.log.syslog[Syslog logging]
 h|Type
 h|Default
 
@@ -373,7 +373,7 @@ Determine whether to block the publisher (rather than drop the message) when the
 |`block`
 
 
-h|[[quarkus-core-log-config_log-cleanup-filters-internal-use]]link:#quarkus-core-log-config_log-cleanup-filters-internal-use[Log cleanup filters - internal use]
+h|[[quarkus-core-log-config_quarkus.log.filters]]link:#quarkus-core-log-config_quarkus.log.filters[Log cleanup filters - internal use]
 h|Type
 h|Default
 

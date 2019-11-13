@@ -169,7 +169,16 @@ Query executed when first using a connection.
 |
 
 
-h|[[quarkus-agroal-config-group-data-source-runtime-config_additional-named-datasources]]link:#quarkus-agroal-config-group-data-source-runtime-config_additional-named-datasources[Additional named datasources]
+a|icon:cogs[title=Overridable at runtime] [[quarkus-agroal-config-group-data-source-runtime-config_quarkus.datasource.validation-query-sql]]`link:#quarkus-agroal-config-group-data-source-runtime-config_quarkus.datasource.validation-query-sql[quarkus.datasource.validation-query-sql]`
+
+[.description]
+--
+Query executed to validate a connection.
+--|string 
+|
+
+
+h|[[quarkus-agroal-config-group-data-source-runtime-config_quarkus.datasource.named-data-sources]]link:#quarkus-agroal-config-group-data-source-runtime-config_quarkus.datasource.named-data-sources[Additional named datasources]
 h|Type
 h|Default
 
@@ -333,6 +342,15 @@ Query executed when first using a connection.
 --|string 
 |
 
+
+a|icon:cogs[title=Overridable at runtime] [[quarkus-agroal-config-group-data-source-runtime-config_quarkus.datasource.-datasource-name-.validation-query-sql]]`link:#quarkus-agroal-config-group-data-source-runtime-config_quarkus.datasource.-datasource-name-.validation-query-sql[quarkus.datasource."datasource-name".validation-query-sql]`
+
+[.description]
+--
+Query executed to validate a connection.
+--|string 
+|
+
 |===
 [NOTE]
 [[duration-note-anchor]]
@@ -343,5 +361,5 @@ You can learn more about it in the link:https://docs.oracle.com/javase/8/docs/ap
 
 You can also provide duration values starting with a number.
 In this case, if the value consists only of a number, the converter treats the value as seconds.
-Otherwise, `PT` is implicitly appended to the value to obtain a standard `java.time.Duration` format.
+Otherwise, `PT` is implicitly prepended to the value to obtain a standard `java.time.Duration` format.
 ====

@@ -8,15 +8,6 @@ h|[[quarkus-dynamodb-config-group-sync-http-client-config_configuration]]link:#q
 h|Type
 h|Default
 
-a|icon:cogs[title=Overridable at runtime] [[quarkus-dynamodb-config-group-sync-http-client-config_quarkus.dynamodb.sync-client.type]]`link:#quarkus-dynamodb-config-group-sync-http-client-config_quarkus.dynamodb.sync-client.type[quarkus.dynamodb.sync-client.type]`
-
-[.description]
---
-Type of the sync HTTP client implementation
---|`url`, `apache` 
-|`url`
-
-
 a|icon:cogs[title=Overridable at runtime] [[quarkus-dynamodb-config-group-sync-http-client-config_quarkus.dynamodb.sync-client.connection-timeout]]`link:#quarkus-dynamodb-config-group-sync-http-client-config_quarkus.dynamodb.sync-client.connection-timeout[quarkus.dynamodb.sync-client.connection-timeout]`
 
 [.description]
@@ -224,5 +215,5 @@ You can learn more about it in the link:https://docs.oracle.com/javase/8/docs/ap
 
 You can also provide duration values starting with a number.
 In this case, if the value consists only of a number, the converter treats the value as seconds.
-Otherwise, `PT` is implicitly appended to the value to obtain a standard `java.time.Duration` format.
+Otherwise, `PT` is implicitly prepended to the value to obtain a standard `java.time.Duration` format.
 ====

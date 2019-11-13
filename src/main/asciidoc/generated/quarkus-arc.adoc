@@ -36,4 +36,13 @@ If set to true `@Inject` is automatically added to all non-static fields that ar
 --|boolean 
 |`true`
 
+
+a|icon:archive[title=Fixed at build time] [[quarkus-arc_quarkus.arc.remove-final-for-proxyable-methods]]`link:#quarkus-arc_quarkus.arc.remove-final-for-proxyable-methods[quarkus.arc.remove-final-for-proxyable-methods]`
+
+[.description]
+--
+If set to true, Arc will transform the bytecode of beans containing methods that need to be proxyable but have been declared as final. The transformation is simply a matter of removing final. This ensures that a proxy can be created properly. If the value is set to false, then an exception is thrown at build time indicating that a proxy could not be created because a method was final.
+--|boolean 
+|`true`
+
 |===

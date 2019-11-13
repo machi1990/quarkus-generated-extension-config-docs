@@ -62,6 +62,16 @@ The client-id of the application. Each application has a client-id that is used 
 |
 
 
+a|icon:cogs[title=Overridable at runtime] [[quarkus-oidc_quarkus.oidc.connection-delay]]`link:#quarkus-oidc_quarkus.oidc.connection-delay[quarkus.oidc.connection-delay]`
+
+[.description]
+--
+The maximum amount of time the adapter will try connecting to the currently unavailable OIDC server for. For example, setting it to '20S' will let the adapter keep requesting the connection for up to 20 seconds.
+--|link:https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html[Duration]
+  link:#duration-note-anchor[icon:question-circle[], title=More information about the Duration format]
+|
+
+
 a|icon:cogs[title=Overridable at runtime] [[quarkus-oidc_quarkus.oidc.roles.role-claim-path]]`link:#quarkus-oidc_quarkus.oidc.roles.role-claim-path[quarkus.oidc.roles.role-claim-path]`
 
 [.description]
@@ -107,3 +117,14 @@ The application type, which can be one of the following values from enum `Applic
 |`service`
 
 |===
+[NOTE]
+[[duration-note-anchor]]
+.About the Duration format
+====
+The format for durations uses the standard `java.time.Duration` format.
+You can learn more about it in the link:https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html#parse-java.lang.CharSequence-[Duration#parse() javadoc].
+
+You can also provide duration values starting with a number.
+In this case, if the value consists only of a number, the converter treats the value as seconds.
+Otherwise, `PT` is implicitly prepended to the value to obtain a standard `java.time.Duration` format.
+====

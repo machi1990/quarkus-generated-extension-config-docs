@@ -8,6 +8,25 @@ h|[[quarkus-dynamodb_configuration]]link:#quarkus-dynamodb_configuration[Configu
 h|Type
 h|Default
 
+a|icon:archive[title=Fixed at build time] [[quarkus-dynamodb_quarkus.dynamodb.interceptors]]`link:#quarkus-dynamodb_quarkus.dynamodb.interceptors[quarkus.dynamodb.interceptors]`
+
+[.description]
+--
+List of execution interceptors that will have access to read and modify the request and response objects as they are processed by the AWS SDK. 
+ The list should consists of class names which implements `software.amazon.awssdk.core.interceptor.ExecutionInterceptor` interface.
+--|list of class name 
+|required icon:exclamation-circle[title=Configuration property is required]
+
+
+a|icon:archive[title=Fixed at build time] [[quarkus-dynamodb_quarkus.dynamodb.sync-client.type]]`link:#quarkus-dynamodb_quarkus.dynamodb.sync-client.type[quarkus.dynamodb.sync-client.type]`
+
+[.description]
+--
+Type of the sync HTTP client implementation
+--|`url`, `apache` 
+|`url`
+
+
 a|icon:cogs[title=Overridable at runtime] [[quarkus-dynamodb_quarkus.dynamodb.enable-endpoint-discovery]]`link:#quarkus-dynamodb_quarkus.dynamodb.enable-endpoint-discovery[quarkus.dynamodb.enable-endpoint-discovery]`
 
 [.description]
@@ -49,16 +68,6 @@ The amount of time to wait for the HTTP request to complete before giving up and
 --|link:https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html[Duration]
   link:#duration-note-anchor[icon:question-circle[], title=More information about the Duration format]
 |
-
-
-a|icon:cogs[title=Overridable at runtime] [[quarkus-dynamodb_quarkus.dynamodb.interceptors]]`link:#quarkus-dynamodb_quarkus.dynamodb.interceptors[quarkus.dynamodb.interceptors]`
-
-[.description]
---
-List of execution interceptors that will have access to read and modify the request and response objects as they are processed by the AWS SDK. 
- The list should consists of class names which implements `software.amazon.awssdk.core.interceptor.ExecutionInterceptor` interface.
---|list of class name 
-|required icon:exclamation-circle[title=Configuration property is required]
 
 
 a|icon:cogs[title=Overridable at runtime] [[quarkus-dynamodb_quarkus.dynamodb.aws.region]]`link:#quarkus-dynamodb_quarkus.dynamodb.aws.region[quarkus.dynamodb.aws.region]`
@@ -198,15 +207,6 @@ a|icon:cogs[title=Overridable at runtime] [[quarkus-dynamodb_quarkus.dynamodb.aw
 The command that should be executed to retrieve credentials.
 --|string 
 |required icon:exclamation-circle[title=Configuration property is required]
-
-
-a|icon:cogs[title=Overridable at runtime] [[quarkus-dynamodb_quarkus.dynamodb.sync-client.type]]`link:#quarkus-dynamodb_quarkus.dynamodb.sync-client.type[quarkus.dynamodb.sync-client.type]`
-
-[.description]
---
-Type of the sync HTTP client implementation
---|`url`, `apache` 
-|`url`
 
 
 a|icon:cogs[title=Overridable at runtime] [[quarkus-dynamodb_quarkus.dynamodb.sync-client.connection-timeout]]`link:#quarkus-dynamodb_quarkus.dynamodb.sync-client.connection-timeout[quarkus.dynamodb.sync-client.connection-timeout]`
@@ -643,7 +643,7 @@ You can learn more about it in the link:https://docs.oracle.com/javase/8/docs/ap
 
 You can also provide duration values starting with a number.
 In this case, if the value consists only of a number, the converter treats the value as seconds.
-Otherwise, `PT` is implicitly appended to the value to obtain a standard `java.time.Duration` format.
+Otherwise, `PT` is implicitly prepended to the value to obtain a standard `java.time.Duration` format.
 ====
 
 [NOTE]

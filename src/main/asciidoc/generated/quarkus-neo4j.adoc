@@ -17,7 +17,7 @@ The uri this driver should connect to. The driver supports bolt, bolt+routing or
 |`bolt://localhost:7687`
 
 
-h|[[quarkus-neo4j_authentication]]link:#quarkus-neo4j_authentication[Authentication]
+h|[[quarkus-neo4j_quarkus.neo4j.authentication]]link:#quarkus-neo4j_quarkus.neo4j.authentication[Authentication]
 h|Type
 h|Default
 
@@ -48,7 +48,7 @@ Set this to true to disable authentication.
 |`false`
 
 
-h|[[quarkus-neo4j_connection-pool]]link:#quarkus-neo4j_connection-pool[Connection pool]
+h|[[quarkus-neo4j_quarkus.neo4j.pool]]link:#quarkus-neo4j_quarkus.neo4j.pool[Connection pool]
 h|Type
 h|Default
 
@@ -118,5 +118,5 @@ You can learn more about it in the link:https://docs.oracle.com/javase/8/docs/ap
 
 You can also provide duration values starting with a number.
 In this case, if the value consists only of a number, the converter treats the value as seconds.
-Otherwise, `PT` is implicitly appended to the value to obtain a standard `java.time.Duration` format.
+Otherwise, `PT` is implicitly prepended to the value to obtain a standard `java.time.Duration` format.
 ====

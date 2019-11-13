@@ -4,7 +4,7 @@ icon:archive[title=Fixed at build time] Configuration property fixed at build ti
 [.configuration-reference.searchable, cols="80,.^10,.^10"]
 |===
 
-h|[[quarkus-amazon-lambda_aws-lambda]]link:#quarkus-amazon-lambda_aws-lambda[AWS Lambda]
+h|[[quarkus-amazon-lambda_quarkus-amazon-lambda]]link:#quarkus-amazon-lambda_quarkus-amazon-lambda[AWS Lambda]
 h|Type
 h|Default
 
@@ -26,7 +26,7 @@ If true, this will enable the aws event poll loop within a Quarkus test run. Thi
 |`false`
 
 
-h|[[quarkus-agroal_agroal-database-connection-pool]]link:#quarkus-agroal_agroal-database-connection-pool[Agroal - Database connection pool]
+h|[[quarkus-agroal_quarkus-agroal]]link:#quarkus-agroal_quarkus-agroal[Agroal - Database connection pool]
 h|Type
 h|Default
 
@@ -219,7 +219,16 @@ Query executed when first using a connection.
 |
 
 
-h|[[quarkus-agroal_additional-named-datasources]]link:#quarkus-agroal_additional-named-datasources[Additional named datasources]
+a|icon:cogs[title=Overridable at runtime] [[quarkus-agroal_quarkus.datasource.validation-query-sql]]`link:#quarkus-agroal_quarkus.datasource.validation-query-sql[quarkus.datasource.validation-query-sql]`
+
+[.description]
+--
+Query executed to validate a connection.
+--|string 
+|
+
+
+h|[[quarkus-agroal_quarkus.datasource.named-data-sources]]link:#quarkus-agroal_quarkus.datasource.named-data-sources[Additional named datasources]
 h|Type
 h|Default
 
@@ -403,9 +412,37 @@ Query executed when first using a connection.
 |
 
 
-h|[[quarkus-amazon-dynamodb_amazon-dynamodb-client]]link:#quarkus-amazon-dynamodb_amazon-dynamodb-client[Amazon DynamoDB client]
+a|icon:cogs[title=Overridable at runtime] [[quarkus-agroal_quarkus.datasource.-datasource-name-.validation-query-sql]]`link:#quarkus-agroal_quarkus.datasource.-datasource-name-.validation-query-sql[quarkus.datasource."datasource-name".validation-query-sql]`
+
+[.description]
+--
+Query executed to validate a connection.
+--|string 
+|
+
+
+h|[[quarkus-amazon-dynamodb_quarkus-amazon-dynamodb]]link:#quarkus-amazon-dynamodb_quarkus-amazon-dynamodb[Amazon DynamoDB client]
 h|Type
 h|Default
+
+a|icon:archive[title=Fixed at build time] [[quarkus-amazon-dynamodb_quarkus.dynamodb.interceptors]]`link:#quarkus-amazon-dynamodb_quarkus.dynamodb.interceptors[quarkus.dynamodb.interceptors]`
+
+[.description]
+--
+List of execution interceptors that will have access to read and modify the request and response objects as they are processed by the AWS SDK. 
+ The list should consists of class names which implements `software.amazon.awssdk.core.interceptor.ExecutionInterceptor` interface.
+--|list of class name 
+|required icon:exclamation-circle[title=Configuration property is required]
+
+
+a|icon:archive[title=Fixed at build time] [[quarkus-amazon-dynamodb_quarkus.dynamodb.sync-client.type]]`link:#quarkus-amazon-dynamodb_quarkus.dynamodb.sync-client.type[quarkus.dynamodb.sync-client.type]`
+
+[.description]
+--
+Type of the sync HTTP client implementation
+--|`url`, `apache` 
+|`url`
+
 
 a|icon:cogs[title=Overridable at runtime] [[quarkus-amazon-dynamodb_quarkus.dynamodb.enable-endpoint-discovery]]`link:#quarkus-amazon-dynamodb_quarkus.dynamodb.enable-endpoint-discovery[quarkus.dynamodb.enable-endpoint-discovery]`
 
@@ -448,16 +485,6 @@ The amount of time to wait for the HTTP request to complete before giving up and
 --|link:https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html[Duration]
   link:#duration-note-anchor[icon:question-circle[], title=More information about the Duration format]
 |
-
-
-a|icon:cogs[title=Overridable at runtime] [[quarkus-amazon-dynamodb_quarkus.dynamodb.interceptors]]`link:#quarkus-amazon-dynamodb_quarkus.dynamodb.interceptors[quarkus.dynamodb.interceptors]`
-
-[.description]
---
-List of execution interceptors that will have access to read and modify the request and response objects as they are processed by the AWS SDK. 
- The list should consists of class names which implements `software.amazon.awssdk.core.interceptor.ExecutionInterceptor` interface.
---|list of class name 
-|required icon:exclamation-circle[title=Configuration property is required]
 
 
 a|icon:cogs[title=Overridable at runtime] [[quarkus-amazon-dynamodb_quarkus.dynamodb.aws.region]]`link:#quarkus-amazon-dynamodb_quarkus.dynamodb.aws.region[quarkus.dynamodb.aws.region]`
@@ -597,15 +624,6 @@ a|icon:cogs[title=Overridable at runtime] [[quarkus-amazon-dynamodb_quarkus.dyna
 The command that should be executed to retrieve credentials.
 --|string 
 |required icon:exclamation-circle[title=Configuration property is required]
-
-
-a|icon:cogs[title=Overridable at runtime] [[quarkus-amazon-dynamodb_quarkus.dynamodb.sync-client.type]]`link:#quarkus-amazon-dynamodb_quarkus.dynamodb.sync-client.type[quarkus.dynamodb.sync-client.type]`
-
-[.description]
---
-Type of the sync HTTP client implementation
---|`url`, `apache` 
-|`url`
 
 
 a|icon:cogs[title=Overridable at runtime] [[quarkus-amazon-dynamodb_quarkus.dynamodb.sync-client.connection-timeout]]`link:#quarkus-amazon-dynamodb_quarkus.dynamodb.sync-client.connection-timeout[quarkus.dynamodb.sync-client.connection-timeout]`
@@ -1033,7 +1051,7 @@ The thread name prefix for threads created by this thread factory used by event 
 |
 
 
-h|[[quarkus-kafka-streams_apache-kafka-streams]]link:#quarkus-kafka-streams_apache-kafka-streams[Apache Kafka Streams]
+h|[[quarkus-kafka-streams_quarkus-kafka-streams]]link:#quarkus-kafka-streams_quarkus-kafka-streams[Apache Kafka Streams]
 h|Type
 h|Default
 
@@ -1073,7 +1091,7 @@ A comma-separated list of topic names. The pipeline will only be started once al
 |required icon:exclamation-circle[title=Configuration property is required]
 
 
-h|[[quarkus-tika_apache-tika]]link:#quarkus-tika_apache-tika[Apache Tika]
+h|[[quarkus-tika_quarkus-tika]]link:#quarkus-tika_quarkus-tika[Apache Tika]
 h|Type
 h|Default
 
@@ -1106,7 +1124,7 @@ Controls how the content of the embedded documents is parsed. By default it is a
 |`true`
 
 
-h|[[quarkus-arc_arc]]link:#quarkus-arc_arc[ArC]
+h|[[quarkus-arc_quarkus-arc]]link:#quarkus-arc_quarkus-arc[ArC]
 h|Type
 h|Default
 
@@ -1139,7 +1157,16 @@ If set to true `@Inject` is automatically added to all non-static fields that ar
 |`true`
 
 
-h|[[quarkus-artemis-core_artemis-core]]link:#quarkus-artemis-core_artemis-core[Artemis Core]
+a|icon:archive[title=Fixed at build time] [[quarkus-arc_quarkus.arc.remove-final-for-proxyable-methods]]`link:#quarkus-arc_quarkus.arc.remove-final-for-proxyable-methods[quarkus.arc.remove-final-for-proxyable-methods]`
+
+[.description]
+--
+If set to true, Arc will transform the bytecode of beans containing methods that need to be proxyable but have been declared as final. The transformation is simply a matter of removing final. This ensures that a proxy can be created properly. If the value is set to false, then an exception is thrown at build time indicating that a proxy could not be created because a method was final.
+--|boolean 
+|`true`
+
+
+h|[[quarkus-artemis-core_quarkus-artemis-core]]link:#quarkus-artemis-core_quarkus-artemis-core[Artemis Core]
 h|Type
 h|Default
 
@@ -1170,7 +1197,7 @@ Password for authentication, only used with JMS
 |
 
 
-h|[[quarkus-vertx-core_eclipse-vert.x-core]]link:#quarkus-vertx-core_eclipse-vert.x-core[Eclipse Vert.x - Core]
+h|[[quarkus-vertx-core_quarkus-vertx-core]]link:#quarkus-vertx-core_quarkus-vertx-core[Eclipse Vert.x - Core]
 h|Type
 h|Default
 
@@ -1569,7 +1596,7 @@ The ping reply interval.
 |`20`
 
 
-h|[[quarkus-vertx-http_eclipse-vert.x-http]]link:#quarkus-vertx-http_eclipse-vert.x-http[Eclipse Vert.x - HTTP]
+h|[[quarkus-vertx-http_quarkus-vertx-http]]link:#quarkus-vertx-http_quarkus-vertx-http[Eclipse Vert.x - HTTP]
 h|Type
 h|Default
 
@@ -1864,6 +1891,16 @@ The maximum size of a request body. Default: no limit.
 |
 
 
+a|icon:cogs[title=Overridable at runtime] [[quarkus-vertx-http_quarkus.http.idle-timeout]]`link:#quarkus-vertx-http_quarkus.http.idle-timeout[quarkus.http.idle-timeout]`
+
+[.description]
+--
+Http connection idle timeout
+--|link:https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html[Duration]
+  link:#duration-note-anchor[icon:question-circle[], title=More information about the Duration format]
+|`30M`
+
+
 a|icon:cogs[title=Overridable at runtime] [[quarkus-vertx-http_quarkus.http.body.handle-file-uploads]]`link:#quarkus-vertx-http_quarkus.http.body.handle-file-uploads[quarkus.http.body.handle-file-uploads]`
 
 [.description]
@@ -1959,7 +1996,7 @@ The roles that are allowed to access resources protected by this policy
 |required icon:exclamation-circle[title=Configuration property is required]
 
 
-h|[[quarkus-elytron-security-jdbc_elytron-security-jdbc-realm]]link:#quarkus-elytron-security-jdbc_elytron-security-jdbc-realm[Elytron Security JDBC Realm]
+h|[[quarkus-elytron-security-jdbc_quarkus-elytron-security-jdbc]]link:#quarkus-elytron-security-jdbc_quarkus-elytron-security-jdbc[Elytron Security JDBC Realm]
 h|Type
 h|Default
 
@@ -2197,7 +2234,7 @@ The index (1 based numbering) of the column containing the Bcrypt iteration coun
 |`0`
 
 
-h|[[quarkus-elytron-security-oauth2_elytron-security-oauth-2.0]]link:#quarkus-elytron-security-oauth2_elytron-security-oauth-2.0[Elytron Security OAuth 2.0]
+h|[[quarkus-elytron-security-oauth2_quarkus-elytron-security-oauth2]]link:#quarkus-elytron-security-oauth2_quarkus-elytron-security-oauth2[Elytron Security OAuth 2.0]
 h|Type
 h|Default
 
@@ -2255,7 +2292,7 @@ The claim that is used in the introspection endpoint response to load the roles.
 |`scope`
 
 
-h|[[quarkus-flyway_flyway]]link:#quarkus-flyway_flyway[Flyway]
+h|[[quarkus-flyway_quarkus-flyway]]link:#quarkus-flyway_quarkus-flyway[Flyway]
 h|Type
 h|Default
 
@@ -2349,7 +2386,7 @@ The description to tag an existing schema with when executing baseline.
 |
 
 
-h|[[quarkus-hibernate-orm_hibernate-orm]]link:#quarkus-hibernate-orm_hibernate-orm[Hibernate ORM]
+h|[[quarkus-hibernate-orm_quarkus-hibernate-orm]]link:#quarkus-hibernate-orm_quarkus-hibernate-orm[Hibernate ORM]
 h|Type
 h|Default
 
@@ -2435,7 +2472,7 @@ Whether statistics collection is enabled.
 |`false`
 
 
-h|[[quarkus-hibernate-orm_query-related-configuration]]link:#quarkus-hibernate-orm_query-related-configuration[Query related configuration]
+h|[[quarkus-hibernate-orm_quarkus.hibernate-orm.query]]link:#quarkus-hibernate-orm_quarkus.hibernate-orm.query[Query related configuration]
 h|Type
 h|Default
 
@@ -2459,7 +2496,7 @@ Valid values are: `none`, `first`, `last`.
 |
 
 
-h|[[quarkus-hibernate-orm_database-related-configuration]]link:#quarkus-hibernate-orm_database-related-configuration[Database related configuration]
+h|[[quarkus-hibernate-orm_quarkus.hibernate-orm.database]]link:#quarkus-hibernate-orm_quarkus.hibernate-orm.database[Database related configuration]
 h|Type
 h|Default
 
@@ -2508,7 +2545,7 @@ The charset of the database.
 |
 
 
-h|[[quarkus-hibernate-orm_jdbc-related-configuration]]link:#quarkus-hibernate-orm_jdbc-related-configuration[JDBC related configuration]
+h|[[quarkus-hibernate-orm_quarkus.hibernate-orm.jdbc]]link:#quarkus-hibernate-orm_quarkus.hibernate-orm.jdbc[JDBC related configuration]
 h|Type
 h|Default
 
@@ -2539,7 +2576,7 @@ The number of updates (inserts, updates and deletes) that are sent by the JDBC d
 |
 
 
-h|[[quarkus-hibernate-orm_logging-configuration]]link:#quarkus-hibernate-orm_logging-configuration[Logging configuration]
+h|[[quarkus-hibernate-orm_quarkus.hibernate-orm.log]]link:#quarkus-hibernate-orm_quarkus.hibernate-orm.log[Logging configuration]
 h|Type
 h|Default
 
@@ -2562,7 +2599,7 @@ Whether JDBC warnings should be collected and logged.
 |`depends on dialect`
 
 
-h|[[quarkus-hibernate-orm_caching-configuration]]link:#quarkus-hibernate-orm_caching-configuration[Caching configuration]
+h|[[quarkus-hibernate-orm_quarkus.hibernate-orm.cache]]link:#quarkus-hibernate-orm_quarkus.hibernate-orm.cache[Caching configuration]
 h|Type
 h|Default
 
@@ -2585,7 +2622,60 @@ The maximum number of objects kept in memory in the cache.
 |
 
 
-h|[[quarkus-hibernate-search-elasticsearch_hibernate-search-elasticsearch]]link:#quarkus-hibernate-search-elasticsearch_hibernate-search-elasticsearch[Hibernate Search + Elasticsearch]
+h|[[quarkus-hibernate-search-elasticsearch_quarkus-hibernate-search-elasticsearch]]link:#quarkus-hibernate-search-elasticsearch_quarkus-hibernate-search-elasticsearch[Hibernate Search + Elasticsearch]
+h|Type
+h|Default
+
+a|icon:archive[title=Fixed at build time] [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.background-failure-handler]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.background-failure-handler[quarkus.hibernate-search.background-failure-handler]`
+
+[.description]
+--
+The class or the name of the bean that should be notified of any failure occurring in a background process (mainly index operations). 
+ Must implement `org.hibernate.search.engine.reporting.FailureHandler`.
+--|class name 
+|
+
+
+a|icon:cogs[title=Overridable at runtime] [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.query.loading.cache-lookup.strategy]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.query.loading.cache-lookup.strategy[quarkus.hibernate-search.query.loading.cache-lookup.strategy]`
+
+[.description]
+--
+The strategy to use when loading entities during the execution of a search query.
+--|`skip`, `persistence-context`, `persistence-context-then-second-level-cache` 
+|`skip`
+
+
+a|icon:cogs[title=Overridable at runtime] [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.query.loading.fetch-size]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.query.loading.fetch-size[quarkus.hibernate-search.query.loading.fetch-size]`
+
+[.description]
+--
+The fetch size to use when loading entities during the execution of a search query.
+--|int 
+|`100`
+
+
+a|icon:cogs[title=Overridable at runtime] [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.automatic-indexing.synchronization.strategy]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.automatic-indexing.synchronization.strategy[quarkus.hibernate-search.automatic-indexing.synchronization.strategy]`
+
+[.description]
+--
+The synchronization strategy to use when indexing automatically. 
+ Defines the status for which you wait before considering the operation completed by Hibernate Search. 
+ Use `queued` or `committed` in production environments. `searchable` is useful in integration tests.
+--|`queued`, `committed`, `searchable` 
+|`committed`
+
+
+a|icon:cogs[title=Overridable at runtime] [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.automatic-indexing.enable-dirty-check]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.automatic-indexing.enable-dirty-check[quarkus.hibernate-search.automatic-indexing.enable-dirty-check]`
+
+[.description]
+--
+Whether to check if dirty properties are relevant to indexing before actually reindexing an entity. 
+ When enabled, re-indexing of an entity is skipped if the only changes are on properties that are not used when indexing.
+--|boolean 
+|`true`
+
+
+h|[[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.default-backend]]link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.default-backend[Default backend]
 h|Type
 h|Default
 
@@ -2610,32 +2700,13 @@ The class or the name of the bean used to configure full text analysis (e.g. ana
 |
 
 
-a|icon:archive[title=Fixed at build time] [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.default-backend]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.default-backend[quarkus.hibernate-search.default-backend]`
-
-[.description]
---
-If not using the default backend configuration, the name of the default backend that is part of the `additional-backends`.
---|string 
-|
-
-
-a|icon:archive[title=Fixed at build time] [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.background-failure-handler]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.background-failure-handler[quarkus.hibernate-search.background-failure-handler]`
-
-[.description]
---
-The class or the name of the bean that should be notified of any failure occurring in a background process (mainly index operations). 
- Must implement `org.hibernate.search.engine.reporting.FailureHandler`.
---|class name 
-|
-
-
 a|icon:cogs[title=Overridable at runtime] [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.hosts]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.hosts[quarkus.hibernate-search.elasticsearch.hosts]`
 
 [.description]
 --
 The list of hosts of the Elasticsearch servers.
 --|list of string 
-|required icon:exclamation-circle[title=Configuration property is required]
+|`http://localhost:9200`
 
 
 a|icon:cogs[title=Overridable at runtime] [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.username]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.username[quarkus.hibernate-search.elasticsearch.username]`
@@ -2663,7 +2734,7 @@ a|icon:cogs[title=Overridable at runtime] [[quarkus-hibernate-search-elasticsear
 The connection timeout.
 --|link:https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html[Duration]
   link:#duration-note-anchor[icon:question-circle[], title=More information about the Duration format]
-|
+|`3S`
 
 
 a|icon:cogs[title=Overridable at runtime] [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.max-connections]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.max-connections[quarkus.hibernate-search.elasticsearch.max-connections]`
@@ -2672,7 +2743,7 @@ a|icon:cogs[title=Overridable at runtime] [[quarkus-hibernate-search-elasticsear
 --
 The maximum number of connections to all the Elasticsearch servers.
 --|int 
-|
+|`20`
 
 
 a|icon:cogs[title=Overridable at runtime] [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.max-connections-per-route]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.max-connections-per-route[quarkus.hibernate-search.elasticsearch.max-connections-per-route]`
@@ -2681,7 +2752,7 @@ a|icon:cogs[title=Overridable at runtime] [[quarkus-hibernate-search-elasticsear
 --
 The maximum number of connections per Elasticsearch server.
 --|int 
-|
+|`10`
 
 
 a|icon:cogs[title=Overridable at runtime] [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.discovery.enabled]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.discovery.enabled[quarkus.hibernate-search.elasticsearch.discovery.enabled]`
@@ -2690,7 +2761,7 @@ a|icon:cogs[title=Overridable at runtime] [[quarkus-hibernate-search-elasticsear
 --
 Defines if automatic discovery is enabled.
 --|boolean 
-|
+|`false`
 
 
 a|icon:cogs[title=Overridable at runtime] [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.discovery.refresh-interval]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.discovery.refresh-interval[quarkus.hibernate-search.elasticsearch.discovery.refresh-interval]`
@@ -2700,7 +2771,7 @@ a|icon:cogs[title=Overridable at runtime] [[quarkus-hibernate-search-elasticsear
 Refresh interval of the node list.
 --|link:https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html[Duration]
   link:#duration-note-anchor[icon:question-circle[], title=More information about the Duration format]
-|
+|`10S`
 
 
 a|icon:cogs[title=Overridable at runtime] [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.discovery.default-scheme]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.discovery.default-scheme[quarkus.hibernate-search.elasticsearch.discovery.default-scheme]`
@@ -2709,27 +2780,25 @@ a|icon:cogs[title=Overridable at runtime] [[quarkus-hibernate-search-elasticsear
 --
 The scheme that should be used for the new nodes discovered.
 --|string 
-|
+|`http`
 
 
 a|icon:cogs[title=Overridable at runtime] [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.index-defaults.lifecycle.strategy]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.index-defaults.lifecycle.strategy[quarkus.hibernate-search.elasticsearch.index-defaults.lifecycle.strategy]`
 
 [.description]
 --
-The strategy used for index lifecycle. 
- Must be one of: none, validate, update, create, drop-and-create or drop-and-create-and-drop.
+The strategy used for index lifecycle.
 --|`none`, `validate`, `update`, `create`, `drop-and-create`, `drop-and-create-and-drop` 
-|
+|`create`
 
 
 a|icon:cogs[title=Overridable at runtime] [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.index-defaults.lifecycle.required-status]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.index-defaults.lifecycle.required-status[quarkus.hibernate-search.elasticsearch.index-defaults.lifecycle.required-status]`
 
 [.description]
 --
-The minimal cluster status required. 
- Must be one of: green, yellow, red.
+The minimal cluster status required.
 --|`green`, `yellow`, `red` 
-|
+|`green`
 
 
 a|icon:cogs[title=Overridable at runtime] [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.index-defaults.lifecycle.required-status-wait-timeout]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.index-defaults.lifecycle.required-status-wait-timeout[quarkus.hibernate-search.elasticsearch.index-defaults.lifecycle.required-status-wait-timeout]`
@@ -2739,85 +2808,49 @@ a|icon:cogs[title=Overridable at runtime] [[quarkus-hibernate-search-elasticsear
 How long we should wait for the status before failing the bootstrap.
 --|link:https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html[Duration]
   link:#duration-note-anchor[icon:question-circle[], title=More information about the Duration format]
-|
+|`10S`
 
 
-a|icon:cogs[title=Overridable at runtime] [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.query.loading.cache-lookup.strategy]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.query.loading.cache-lookup.strategy[quarkus.hibernate-search.elasticsearch.query.loading.cache-lookup.strategy]`
-
-[.description]
---
-The strategy to use when loading entities during the execution of a search query. 
- Can be either one of "skip", "persistence-context" or "persistence-context-then-second-level-cache". 
- Defaults to "skip".
---|`skip`, `persistence-context`, `persistence-context-then-second-level-cache` 
-|
-
-
-a|icon:cogs[title=Overridable at runtime] [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.query.loading.fetch-size]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.query.loading.fetch-size[quarkus.hibernate-search.elasticsearch.query.loading.fetch-size]`
+a|icon:cogs[title=Overridable at runtime] [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.indexes.-index-name-.lifecycle.strategy]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.indexes.-index-name-.lifecycle.strategy[quarkus.hibernate-search.elasticsearch.indexes."index-name".lifecycle.strategy]`
 
 [.description]
 --
-The fetch size to use when loading entities during the execution of a search query.
---|int 
-|`100`
-
-
-a|icon:cogs[title=Overridable at runtime] [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.automatic-indexing.synchronization.strategy]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.automatic-indexing.synchronization.strategy[quarkus.hibernate-search.elasticsearch.automatic-indexing.synchronization.strategy]`
-
-[.description]
---
-The synchronization strategy to use when indexing automatically. 
- Defines the status for which you wait before considering the operation completed by Hibernate Search. 
- Can be either one of "queued", "committed" or "searchable". 
- Using "searchable" is recommended in unit tests. 
- Defaults to "committed".
---|`queued`, `committed`, `searchable` 
-|
-
-
-a|icon:cogs[title=Overridable at runtime] [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.automatic-indexing.enable-dirty-check]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.automatic-indexing.enable-dirty-check[quarkus.hibernate-search.elasticsearch.automatic-indexing.enable-dirty-check]`
-
-[.description]
---
-Whether to check if dirty properties are relevant to indexing before actually reindexing an entity. 
- When enabled, re-indexing of an entity is skipped if the only changes are on properties that are not used when indexing.
---|boolean 
-|
-
-
-a|icon:cogs[title=Overridable at runtime] [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.indexes.-indexes-.lifecycle.strategy]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.indexes.-indexes-.lifecycle.strategy[quarkus.hibernate-search.elasticsearch.indexes."indexes".lifecycle.strategy]`
-
-[.description]
---
-The strategy used for index lifecycle. 
- Must be one of: none, validate, update, create, drop-and-create or drop-and-create-and-drop.
+The strategy used for index lifecycle.
 --|`none`, `validate`, `update`, `create`, `drop-and-create`, `drop-and-create-and-drop` 
-|
+|`create`
 
 
-a|icon:cogs[title=Overridable at runtime] [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.indexes.-indexes-.lifecycle.required-status]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.indexes.-indexes-.lifecycle.required-status[quarkus.hibernate-search.elasticsearch.indexes."indexes".lifecycle.required-status]`
+a|icon:cogs[title=Overridable at runtime] [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.indexes.-index-name-.lifecycle.required-status]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.indexes.-index-name-.lifecycle.required-status[quarkus.hibernate-search.elasticsearch.indexes."index-name".lifecycle.required-status]`
 
 [.description]
 --
-The minimal cluster status required. 
- Must be one of: green, yellow, red.
+The minimal cluster status required.
 --|`green`, `yellow`, `red` 
-|
+|`green`
 
 
-a|icon:cogs[title=Overridable at runtime] [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.indexes.-indexes-.lifecycle.required-status-wait-timeout]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.indexes.-indexes-.lifecycle.required-status-wait-timeout[quarkus.hibernate-search.elasticsearch.indexes."indexes".lifecycle.required-status-wait-timeout]`
+a|icon:cogs[title=Overridable at runtime] [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.indexes.-index-name-.lifecycle.required-status-wait-timeout]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.indexes.-index-name-.lifecycle.required-status-wait-timeout[quarkus.hibernate-search.elasticsearch.indexes."index-name".lifecycle.required-status-wait-timeout]`
 
 [.description]
 --
 How long we should wait for the status before failing the bootstrap.
 --|link:https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html[Duration]
   link:#duration-note-anchor[icon:question-circle[], title=More information about the Duration format]
-|
+|`10S`
 
 
-h|[[quarkus-hibernate-search-elasticsearch_additional-backends]]link:#quarkus-hibernate-search-elasticsearch_additional-backends[Additional backends]
+h|[[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.additional-backends]]link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.additional-backends[Additional backends]
 h|Type
 h|Default
+
+a|icon:archive[title=Fixed at build time] [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.default-backend]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.default-backend[quarkus.hibernate-search.elasticsearch.default-backend]`
+
+[.description]
+--
+Only useful when defining `backends additional backends`: the name of the default backend, i.e. the backend that will be assigned to `@Indexed` entities that do not specify a backend explicitly through `@Indexed(backend = ...)`.
+--|string 
+|
+
 
 a|icon:archive[title=Fixed at build time] [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.backends.-backend-name-.version]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.backends.-backend-name-.version[quarkus.hibernate-search.elasticsearch.backends."backend-name".version]`
 
@@ -2846,7 +2879,7 @@ a|icon:cogs[title=Overridable at runtime] [[quarkus-hibernate-search-elasticsear
 --
 The list of hosts of the Elasticsearch servers.
 --|list of string 
-|required icon:exclamation-circle[title=Configuration property is required]
+|`http://localhost:9200`
 
 
 a|icon:cogs[title=Overridable at runtime] [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.backends.-backend-name-.username]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.backends.-backend-name-.username[quarkus.hibernate-search.elasticsearch.backends."backend-name".username]`
@@ -2874,7 +2907,7 @@ a|icon:cogs[title=Overridable at runtime] [[quarkus-hibernate-search-elasticsear
 The connection timeout.
 --|link:https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html[Duration]
   link:#duration-note-anchor[icon:question-circle[], title=More information about the Duration format]
-|
+|`3S`
 
 
 a|icon:cogs[title=Overridable at runtime] [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.backends.-backend-name-.max-connections]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.backends.-backend-name-.max-connections[quarkus.hibernate-search.elasticsearch.backends."backend-name".max-connections]`
@@ -2883,7 +2916,7 @@ a|icon:cogs[title=Overridable at runtime] [[quarkus-hibernate-search-elasticsear
 --
 The maximum number of connections to all the Elasticsearch servers.
 --|int 
-|
+|`20`
 
 
 a|icon:cogs[title=Overridable at runtime] [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.backends.-backend-name-.max-connections-per-route]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.backends.-backend-name-.max-connections-per-route[quarkus.hibernate-search.elasticsearch.backends."backend-name".max-connections-per-route]`
@@ -2892,7 +2925,7 @@ a|icon:cogs[title=Overridable at runtime] [[quarkus-hibernate-search-elasticsear
 --
 The maximum number of connections per Elasticsearch server.
 --|int 
-|
+|`10`
 
 
 a|icon:cogs[title=Overridable at runtime] [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.backends.-backend-name-.discovery.enabled]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.backends.-backend-name-.discovery.enabled[quarkus.hibernate-search.elasticsearch.backends."backend-name".discovery.enabled]`
@@ -2901,7 +2934,7 @@ a|icon:cogs[title=Overridable at runtime] [[quarkus-hibernate-search-elasticsear
 --
 Defines if automatic discovery is enabled.
 --|boolean 
-|
+|`false`
 
 
 a|icon:cogs[title=Overridable at runtime] [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.backends.-backend-name-.discovery.refresh-interval]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.backends.-backend-name-.discovery.refresh-interval[quarkus.hibernate-search.elasticsearch.backends."backend-name".discovery.refresh-interval]`
@@ -2911,7 +2944,7 @@ a|icon:cogs[title=Overridable at runtime] [[quarkus-hibernate-search-elasticsear
 Refresh interval of the node list.
 --|link:https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html[Duration]
   link:#duration-note-anchor[icon:question-circle[], title=More information about the Duration format]
-|
+|`10S`
 
 
 a|icon:cogs[title=Overridable at runtime] [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.backends.-backend-name-.discovery.default-scheme]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.backends.-backend-name-.discovery.default-scheme[quarkus.hibernate-search.elasticsearch.backends."backend-name".discovery.default-scheme]`
@@ -2920,27 +2953,25 @@ a|icon:cogs[title=Overridable at runtime] [[quarkus-hibernate-search-elasticsear
 --
 The scheme that should be used for the new nodes discovered.
 --|string 
-|
+|`http`
 
 
 a|icon:cogs[title=Overridable at runtime] [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.backends.-backend-name-.index-defaults.lifecycle.strategy]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.backends.-backend-name-.index-defaults.lifecycle.strategy[quarkus.hibernate-search.elasticsearch.backends."backend-name".index-defaults.lifecycle.strategy]`
 
 [.description]
 --
-The strategy used for index lifecycle. 
- Must be one of: none, validate, update, create, drop-and-create or drop-and-create-and-drop.
+The strategy used for index lifecycle.
 --|`none`, `validate`, `update`, `create`, `drop-and-create`, `drop-and-create-and-drop` 
-|
+|`create`
 
 
 a|icon:cogs[title=Overridable at runtime] [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.backends.-backend-name-.index-defaults.lifecycle.required-status]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.backends.-backend-name-.index-defaults.lifecycle.required-status[quarkus.hibernate-search.elasticsearch.backends."backend-name".index-defaults.lifecycle.required-status]`
 
 [.description]
 --
-The minimal cluster status required. 
- Must be one of: green, yellow, red.
+The minimal cluster status required.
 --|`green`, `yellow`, `red` 
-|
+|`green`
 
 
 a|icon:cogs[title=Overridable at runtime] [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.backends.-backend-name-.index-defaults.lifecycle.required-status-wait-timeout]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.backends.-backend-name-.index-defaults.lifecycle.required-status-wait-timeout[quarkus.hibernate-search.elasticsearch.backends."backend-name".index-defaults.lifecycle.required-status-wait-timeout]`
@@ -2950,40 +2981,38 @@ a|icon:cogs[title=Overridable at runtime] [[quarkus-hibernate-search-elasticsear
 How long we should wait for the status before failing the bootstrap.
 --|link:https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html[Duration]
   link:#duration-note-anchor[icon:question-circle[], title=More information about the Duration format]
-|
+|`10S`
 
 
-a|icon:cogs[title=Overridable at runtime] [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.backends.-backend-name-.indexes.-indexes-.lifecycle.strategy]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.backends.-backend-name-.indexes.-indexes-.lifecycle.strategy[quarkus.hibernate-search.elasticsearch.backends."backend-name".indexes."indexes".lifecycle.strategy]`
+a|icon:cogs[title=Overridable at runtime] [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.backends.-backend-name-.indexes.-index-name-.lifecycle.strategy]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.backends.-backend-name-.indexes.-index-name-.lifecycle.strategy[quarkus.hibernate-search.elasticsearch.backends."backend-name".indexes."index-name".lifecycle.strategy]`
 
 [.description]
 --
-The strategy used for index lifecycle. 
- Must be one of: none, validate, update, create, drop-and-create or drop-and-create-and-drop.
+The strategy used for index lifecycle.
 --|`none`, `validate`, `update`, `create`, `drop-and-create`, `drop-and-create-and-drop` 
-|
+|`create`
 
 
-a|icon:cogs[title=Overridable at runtime] [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.backends.-backend-name-.indexes.-indexes-.lifecycle.required-status]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.backends.-backend-name-.indexes.-indexes-.lifecycle.required-status[quarkus.hibernate-search.elasticsearch.backends."backend-name".indexes."indexes".lifecycle.required-status]`
+a|icon:cogs[title=Overridable at runtime] [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.backends.-backend-name-.indexes.-index-name-.lifecycle.required-status]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.backends.-backend-name-.indexes.-index-name-.lifecycle.required-status[quarkus.hibernate-search.elasticsearch.backends."backend-name".indexes."index-name".lifecycle.required-status]`
 
 [.description]
 --
-The minimal cluster status required. 
- Must be one of: green, yellow, red.
+The minimal cluster status required.
 --|`green`, `yellow`, `red` 
-|
+|`green`
 
 
-a|icon:cogs[title=Overridable at runtime] [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.backends.-backend-name-.indexes.-indexes-.lifecycle.required-status-wait-timeout]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.backends.-backend-name-.indexes.-indexes-.lifecycle.required-status-wait-timeout[quarkus.hibernate-search.elasticsearch.backends."backend-name".indexes."indexes".lifecycle.required-status-wait-timeout]`
+a|icon:cogs[title=Overridable at runtime] [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.backends.-backend-name-.indexes.-index-name-.lifecycle.required-status-wait-timeout]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.backends.-backend-name-.indexes.-index-name-.lifecycle.required-status-wait-timeout[quarkus.hibernate-search.elasticsearch.backends."backend-name".indexes."index-name".lifecycle.required-status-wait-timeout]`
 
 [.description]
 --
 How long we should wait for the status before failing the bootstrap.
 --|link:https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html[Duration]
   link:#duration-note-anchor[icon:question-circle[], title=More information about the Duration format]
-|
+|`10S`
 
 
-h|[[quarkus-infinispan-client_infinispan-client]]link:#quarkus-infinispan-client_infinispan-client[Infinispan Client]
+h|[[quarkus-infinispan-client_quarkus-infinispan-client]]link:#quarkus-infinispan-client_quarkus-infinispan-client[Infinispan Client]
 h|Type
 h|Default
 
@@ -3086,7 +3115,7 @@ Sets SASL mechanism used by authentication
 |
 
 
-h|[[quarkus-infinispan-embedded_infinispan-embedded]]link:#quarkus-infinispan-embedded_infinispan-embedded[Infinispan Embedded]
+h|[[quarkus-infinispan-embedded_quarkus-infinispan-embedded]]link:#quarkus-infinispan-embedded_quarkus-infinispan-embedded[Infinispan Embedded]
 h|Type
 h|Default
 
@@ -3099,7 +3128,7 @@ The configured Infinispan embeddex xml file which is used by the managed Embedde
 |
 
 
-h|[[quarkus-jaeger_jaeger]]link:#quarkus-jaeger_jaeger[Jaeger]
+h|[[quarkus-jaeger_quarkus-jaeger]]link:#quarkus-jaeger_quarkus-jaeger[Jaeger]
 h|Type
 h|Default
 
@@ -3250,7 +3279,7 @@ The sender factory class name
 |
 
 
-h|[[quarkus-keycloak-authorization_keycloak-authorization]]link:#quarkus-keycloak-authorization_keycloak-authorization[Keycloak Authorization]
+h|[[quarkus-keycloak-authorization_quarkus-keycloak-authorization]]link:#quarkus-keycloak-authorization_quarkus-keycloak-authorization[Keycloak Authorization]
 h|Type
 h|Default
 
@@ -3407,7 +3436,7 @@ a|icon:archive[title=Fixed at build time] [[quarkus-keycloak-authorization_quark
 |required icon:exclamation-circle[title=Configuration property is required]
 
 
-h|[[quarkus-kubernetes-client_kubernetes-client]]link:#quarkus-kubernetes-client_kubernetes-client[Kubernetes Client]
+h|[[quarkus-kubernetes-client_quarkus-kubernetes-client]]link:#quarkus-kubernetes-client_quarkus-kubernetes-client[Kubernetes Client]
 h|Type
 h|Default
 
@@ -3623,7 +3652,7 @@ IP addresses or hosts to exclude from proxying
 |required icon:exclamation-circle[title=Configuration property is required]
 
 
-h|[[quarkus-mailer_mailer]]link:#quarkus-mailer_mailer[Mailer]
+h|[[quarkus-mailer_quarkus-mailer]]link:#quarkus-mailer_quarkus-mailer[Mailer]
 h|Type
 h|Default
 
@@ -3791,7 +3820,7 @@ Set the key store password.
 |
 
 
-h|[[quarkus-mongodb-client_mongodb-client]]link:#quarkus-mongodb-client_mongodb-client[MongoDB client]
+h|[[quarkus-mongodb-client_quarkus-mongodb-client]]link:#quarkus-mongodb-client_quarkus-mongodb-client[MongoDB client]
 h|Type
 h|Default
 
@@ -4015,7 +4044,7 @@ Configures the maximum number of concurrent operations allowed to wait for a ser
 |
 
 
-h|[[quarkus-mongodb-client_write-concern]]link:#quarkus-mongodb-client_write-concern[Write concern]
+h|[[quarkus-mongodb-client_quarkus.mongodb.write-concern]]link:#quarkus-mongodb-client_quarkus.mongodb.write-concern[Write concern]
 h|Type
 h|Default
 
@@ -4066,7 +4095,7 @@ When set, the driver adds `wtimeout : ms` to all write commands. It requires `sa
 |
 
 
-h|[[quarkus-mongodb-client_credentials-and-authentication-mechanism]]link:#quarkus-mongodb-client_credentials-and-authentication-mechanism[Credentials and authentication mechanism]
+h|[[quarkus-mongodb-client_quarkus.mongodb.credentials]]link:#quarkus-mongodb-client_quarkus.mongodb.credentials[Credentials and authentication mechanism]
 h|Type
 h|Default
 
@@ -4115,7 +4144,7 @@ Allows passing authentication mechanism properties.
 |required icon:exclamation-circle[title=Configuration property is required]
 
 
-h|[[quarkus-narayana-jta_narayana-jta-transaction-manager]]link:#quarkus-narayana-jta_narayana-jta-transaction-manager[Narayana JTA - Transaction manager]
+h|[[quarkus-narayana-jta_quarkus-narayana-jta]]link:#quarkus-narayana-jta_quarkus-narayana-jta[Narayana JTA - Transaction manager]
 h|Type
 h|Default
 
@@ -4128,15 +4157,6 @@ The node name used by the transaction manager
 |`quarkus`
 
 
-a|icon:cogs[title=Overridable at runtime] [[quarkus-narayana-jta_quarkus.transaction-manager.xa-node-name]]`link:#quarkus-narayana-jta_quarkus.transaction-manager.xa-node-name[quarkus.transaction-manager.xa-node-name]`
-
-[.description]
---
-The XA node name used by the transaction manager
---|string 
-|
-
-
 a|icon:cogs[title=Overridable at runtime] [[quarkus-narayana-jta_quarkus.transaction-manager.default-transaction-timeout]]`link:#quarkus-narayana-jta_quarkus.transaction-manager.default-transaction-timeout[quarkus.transaction-manager.default-transaction-timeout]`
 
 [.description]
@@ -4147,7 +4167,7 @@ The default transaction timeout
 |`60`
 
 
-h|[[quarkus-neo4j_neo4j-client]]link:#quarkus-neo4j_neo4j-client[Neo4j client]
+h|[[quarkus-neo4j_quarkus-neo4j]]link:#quarkus-neo4j_quarkus-neo4j[Neo4j client]
 h|Type
 h|Default
 
@@ -4160,7 +4180,7 @@ The uri this driver should connect to. The driver supports bolt, bolt+routing or
 |`bolt://localhost:7687`
 
 
-h|[[quarkus-neo4j_authentication]]link:#quarkus-neo4j_authentication[Authentication]
+h|[[quarkus-neo4j_quarkus.neo4j.authentication]]link:#quarkus-neo4j_quarkus.neo4j.authentication[Authentication]
 h|Type
 h|Default
 
@@ -4191,7 +4211,7 @@ Set this to true to disable authentication.
 |`false`
 
 
-h|[[quarkus-neo4j_connection-pool]]link:#quarkus-neo4j_connection-pool[Connection pool]
+h|[[quarkus-neo4j_quarkus.neo4j.pool]]link:#quarkus-neo4j_quarkus.neo4j.pool[Connection pool]
 h|Type
 h|Default
 
@@ -4252,7 +4272,7 @@ Acquisition of new connections will be attempted for at most configured timeout.
 |`1M`
 
 
-h|[[quarkus-oidc_openid-connect]]link:#quarkus-oidc_openid-connect[OpenID Connect]
+h|[[quarkus-oidc_quarkus-oidc]]link:#quarkus-oidc_quarkus-oidc[OpenID Connect]
 h|Type
 h|Default
 
@@ -4310,6 +4330,16 @@ The client-id of the application. Each application has a client-id that is used 
 |
 
 
+a|icon:cogs[title=Overridable at runtime] [[quarkus-oidc_quarkus.oidc.connection-delay]]`link:#quarkus-oidc_quarkus.oidc.connection-delay[quarkus.oidc.connection-delay]`
+
+[.description]
+--
+The maximum amount of time the adapter will try connecting to the currently unavailable OIDC server for. For example, setting it to '20S' will let the adapter keep requesting the connection for up to 20 seconds.
+--|link:https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html[Duration]
+  link:#duration-note-anchor[icon:question-circle[], title=More information about the Duration format]
+|
+
+
 a|icon:cogs[title=Overridable at runtime] [[quarkus-oidc_quarkus.oidc.roles.role-claim-path]]`link:#quarkus-oidc_quarkus.oidc.roles.role-claim-path[quarkus.oidc.roles.role-claim-path]`
 
 [.description]
@@ -4355,11 +4385,11 @@ The application type, which can be one of the following values from enum `Applic
 |`service`
 
 
-h|[[quarkus-elytron-security-properties-file_properties-file-based-security]]link:#quarkus-elytron-security-properties-file_properties-file-based-security[Properties File based Security]
+h|[[quarkus-elytron-security-properties-file_quarkus-elytron-security-properties-file]]link:#quarkus-elytron-security-properties-file_quarkus-elytron-security-properties-file[Properties File based Security]
 h|Type
 h|Default
 
-h|[[quarkus-elytron-security-properties-file_property-files-realm-configuration]]link:#quarkus-elytron-security-properties-file_property-files-realm-configuration[Property Files Realm Configuration]
+h|[[quarkus-elytron-security-properties-file_quarkus.security.users.file]]link:#quarkus-elytron-security-properties-file_quarkus.security.users.file[Property Files Realm Configuration]
 h|Type
 h|Default
 
@@ -4408,7 +4438,7 @@ Classpath resource name of properties file containing user to role mappings. See
 |`roles.properties`
 
 
-h|[[quarkus-elytron-security-properties-file_embedded-realm-configuration]]link:#quarkus-elytron-security-properties-file_embedded-realm-configuration[Embedded Realm Configuration]
+h|[[quarkus-elytron-security-properties-file_quarkus.security.users.embedded]]link:#quarkus-elytron-security-properties-file_quarkus.security.users.embedded[Embedded Realm Configuration]
 h|Type
 h|Default
 
@@ -4533,6 +4563,15 @@ The version of the application. If not set, defaults to the version of the proje
 |required icon:exclamation-circle[title=Configuration property is required]
 
 
+a|icon:archive[title=Fixed at build time] [[quarkus-core_quarkus.ssl.native]]`link:#quarkus-core_quarkus.ssl.native[quarkus.ssl.native]`
+
+[.description]
+--
+Enable native SSL support.
+--|boolean 
+|
+
+
 a|icon:archive[title=Fixed at build time] [[quarkus-core_quarkus.native.additional-build-args]]`link:#quarkus-core_quarkus.native.additional-build-args[quarkus.native.additional-build-args]`
 
 [.description]
@@ -4647,24 +4686,6 @@ a|icon:archive[title=Fixed at build time] [[quarkus-core_quarkus.native.cleanup-
 [.description]
 --
 If the native image server should be restarted
---|boolean 
-|`false`
-
-
-a|icon:archive[title=Fixed at build time] [[quarkus-core_quarkus.native.enable-retained-heap-reporting]]`link:#quarkus-core_quarkus.native.enable-retained-heap-reporting[quarkus.native.enable-retained-heap-reporting]`
-
-[.description]
---
-This will report on the size of the retained heap after image build
---|boolean 
-|`false`
-
-
-a|icon:archive[title=Fixed at build time] [[quarkus-core_quarkus.native.enable-code-size-reporting]]`link:#quarkus-core_quarkus.native.enable-code-size-reporting[quarkus.native.enable-code-size-reporting]`
-
-[.description]
---
-This enables reporting of the code size of the native image
 --|boolean 
 |`false`
 
@@ -4795,6 +4816,24 @@ If errors should be reported at runtime. This is a more relaxed setting, however
 |`false`
 
 
+a|icon:archive[title=Fixed at build time] [[quarkus-core_quarkus.jni.library-paths]]`link:#quarkus-core_quarkus.jni.library-paths[quarkus.jni.library-paths]`
+
+[.description]
+--
+Paths of library to load.
+--|list of string 
+|required icon:exclamation-circle[title=Configuration property is required]
+
+
+a|icon:archive[title=Fixed at build time] [[quarkus-core_quarkus.jni.enable]]`link:#quarkus-core_quarkus.jni.enable[quarkus.jni.enable]`
+
+[.description]
+--
+Enable JNI support.
+--|boolean 
+|`false`
+
+
 a|icon:cogs[title=Overridable at runtime] [[quarkus-core_quarkus.log.level]]`link:#quarkus-core_quarkus.log.level[quarkus.log.level]`
 
 [.description]
@@ -4891,7 +4930,34 @@ The amount of time a thread will stay alive with no work.
 |`30`
 
 
-h|[[quarkus-core_logging-categories]]link:#quarkus-core_logging-categories[Logging categories]
+a|icon:archive[title=Fixed at build time] [[quarkus-core_quarkus.index-dependency.-index-dependency-.group-id]]`link:#quarkus-core_quarkus.index-dependency.-index-dependency-.group-id[quarkus.index-dependency."index-dependency".group-id]`
+
+[.description]
+--
+The maven groupId of the artifact to index
+--|string 
+|required icon:exclamation-circle[title=Configuration property is required]
+
+
+a|icon:archive[title=Fixed at build time] [[quarkus-core_quarkus.index-dependency.-index-dependency-.artifact-id]]`link:#quarkus-core_quarkus.index-dependency.-index-dependency-.artifact-id[quarkus.index-dependency."index-dependency".artifact-id]`
+
+[.description]
+--
+The maven artifactId of the artifact to index
+--|string 
+|required icon:exclamation-circle[title=Configuration property is required]
+
+
+a|icon:archive[title=Fixed at build time] [[quarkus-core_quarkus.index-dependency.-index-dependency-.classifier]]`link:#quarkus-core_quarkus.index-dependency.-index-dependency-.classifier[quarkus.index-dependency."index-dependency".classifier]`
+
+[.description]
+--
+The maven classifier of the artifact to index
+--|string 
+|required icon:exclamation-circle[title=Configuration property is required]
+
+
+h|[[quarkus-core_quarkus.log.categories]]link:#quarkus-core_quarkus.log.categories[Logging categories]
 h|Type
 h|Default
 
@@ -4913,7 +4979,7 @@ The log level level for this category
 |`inherit`
 
 
-h|[[quarkus-core_console-logging]]link:#quarkus-core_console-logging[Console logging]
+h|[[quarkus-core_quarkus.log.console]]link:#quarkus-core_quarkus.log.console[Console logging]
 h|Type
 h|Default
 
@@ -4990,7 +5056,7 @@ Determine whether to block the publisher (rather than drop the message) when the
 |`block`
 
 
-h|[[quarkus-core_file-logging]]link:#quarkus-core_file-logging[File logging]
+h|[[quarkus-core_quarkus.log.file]]link:#quarkus-core_quarkus.log.file[File logging]
 h|Type
 h|Default
 
@@ -5095,7 +5161,7 @@ Indicates whether to rotate log files on server initialization.
 |`true`
 
 
-h|[[quarkus-core_syslog-logging]]link:#quarkus-core_syslog-logging[Syslog logging]
+h|[[quarkus-core_quarkus.log.syslog]]link:#quarkus-core_quarkus.log.syslog[Syslog logging]
 h|Type
 h|Default
 
@@ -5236,7 +5302,7 @@ Determine whether to block the publisher (rather than drop the message) when the
 |`block`
 
 
-h|[[quarkus-core_log-cleanup-filters-internal-use]]link:#quarkus-core_log-cleanup-filters-internal-use[Log cleanup filters - internal use]
+h|[[quarkus-core_quarkus.log.filters]]link:#quarkus-core_quarkus.log.filters[Log cleanup filters - internal use]
 h|Type
 h|Default
 
@@ -5249,7 +5315,7 @@ The message starts to match
 |`inherit`
 
 
-h|[[quarkus-resteasy_resteasy-jax-rs]]link:#quarkus-resteasy_resteasy-jax-rs[RESTEasy JAX-RS]
+h|[[quarkus-resteasy_quarkus-resteasy]]link:#quarkus-resteasy_quarkus-resteasy[RESTEasy JAX-RS]
 h|Type
 h|Default
 
@@ -5262,7 +5328,55 @@ if set to true, access to all JAX-RS resources will be denied by default
 |`false`
 
 
-h|[[quarkus-reactive-mysql-client_reactive-mysql-client]]link:#quarkus-reactive-mysql-client_reactive-mysql-client[Reactive MySQL client]
+h|[[quarkus-resteasy-common_quarkus-resteasy-common]]link:#quarkus-resteasy-common_quarkus-resteasy-common[RESTEasy JAX-RS Common]
+h|Type
+h|Default
+
+a|icon:archive[title=Fixed at build time] [[quarkus-resteasy-common_quarkus.resteasy.gzip.enabled]]`link:#quarkus-resteasy-common_quarkus.resteasy.gzip.enabled[quarkus.resteasy.gzip.enabled]`
+
+[.description]
+--
+If gzip is enabled
+--|boolean 
+|`false`
+
+
+a|icon:archive[title=Fixed at build time] [[quarkus-resteasy-common_quarkus.resteasy.gzip.max-input]]`link:#quarkus-resteasy-common_quarkus.resteasy.gzip.max-input[quarkus.resteasy.gzip.max-input]`
+
+[.description]
+--
+Maximum deflated file bytes size 
+ If the limit is exceeded, Resteasy will return Response with status 413("Request Entity Too Large")
+--|MemorySize  link:#memory-size-note-anchor[icon:question-circle[], title=More information about the MemorySize format]
+|`10M`
+
+
+h|[[quarkus-resteasy-server-common_quarkus-resteasy-server-common]]link:#quarkus-resteasy-server-common_quarkus-resteasy-server-common[RESTEasy Server Common]
+h|Type
+h|Default
+
+a|icon:archive[title=Fixed at build time] [[quarkus-resteasy-server-common_quarkus.resteasy.singleton-resources]]`link:#quarkus-resteasy-server-common_quarkus.resteasy.singleton-resources[quarkus.resteasy.singleton-resources]`
+
+[.description]
+--
+If this is true then JAX-RS will use only a single instance of a resource class to service all requests. 
+ If this is false then it will create a new instance of the resource per request. 
+ If the resource class has an explicit CDI scope annotation then the value of this annotation will always be used to control the lifecycle of the resource class. 
+ IMPLEMENTATION NOTE: `javax.ws.rs.Path` turns into a CDI stereotype with singleton scope. As a result, if a user annotates a JAX-RS resource with a stereotype which has a different default scope the deployment fails with IllegalStateException.
+--|boolean 
+|`true`
+
+
+a|icon:archive[title=Fixed at build time] [[quarkus-resteasy-server-common_quarkus.resteasy.path]]`link:#quarkus-resteasy-server-common_quarkus.resteasy.path[quarkus.resteasy.path]`
+
+[.description]
+--
+Set this to override the default path for JAX-RS resources if there are no annotated application classes.
+--|string 
+|`/`
+
+
+h|[[quarkus-reactive-mysql-client_quarkus-reactive-mysql-client]]link:#quarkus-reactive-mysql-client_quarkus-reactive-mysql-client[Reactive MySQL client]
 h|Type
 h|Default
 
@@ -5329,7 +5443,7 @@ Collation for connections.
 |
 
 
-h|[[quarkus-reactive-pg-client_reactive-postgresql-client]]link:#quarkus-reactive-pg-client_reactive-postgresql-client[Reactive PostgreSQL client]
+h|[[quarkus-reactive-pg-client_quarkus-reactive-pg-client]]link:#quarkus-reactive-pg-client_quarkus-reactive-pg-client[Reactive PostgreSQL client]
 h|Type
 h|Default
 
@@ -5387,7 +5501,7 @@ The datasource pool maximum size.
 |
 
 
-h|[[quarkus-security_security]]link:#quarkus-security_security[Security]
+h|[[quarkus-security_quarkus-security]]link:#quarkus-security_quarkus-security[Security]
 h|Type
 h|Default
 
@@ -5409,9 +5523,36 @@ If set to true, access to all methods of beans that have any security annotation
 |`false`
 
 
-h|[[quarkus-smallrye-health_smallrye-health]]link:#quarkus-smallrye-health_smallrye-health[SmallRye Health]
+h|[[quarkus-smallrye-health_quarkus-smallrye-health]]link:#quarkus-smallrye-health_quarkus-smallrye-health[SmallRye Health]
 h|Type
 h|Default
+
+a|icon:archive[title=Fixed at build time] [[quarkus-smallrye-health_quarkus.smallrye-health.root-path]]`link:#quarkus-smallrye-health_quarkus.smallrye-health.root-path[quarkus.smallrye-health.root-path]`
+
+[.description]
+--
+Root path for health-checking servlets.
+--|string 
+|`/health`
+
+
+a|icon:archive[title=Fixed at build time] [[quarkus-smallrye-health_quarkus.smallrye-health.liveness-path]]`link:#quarkus-smallrye-health_quarkus.smallrye-health.liveness-path[quarkus.smallrye-health.liveness-path]`
+
+[.description]
+--
+The relative path of the liveness health-checking servlet.
+--|string 
+|`/live`
+
+
+a|icon:archive[title=Fixed at build time] [[quarkus-smallrye-health_quarkus.smallrye-health.readiness-path]]`link:#quarkus-smallrye-health_quarkus.smallrye-health.readiness-path[quarkus.smallrye-health.readiness-path]`
+
+[.description]
+--
+The relative path of the readiness health-checking servlet.
+--|string 
+|`/ready`
+
 
 a|icon:archive[title=Fixed at build time] [[quarkus-smallrye-health_quarkus.health.extensions.enabled]]`link:#quarkus-smallrye-health_quarkus.health.extensions.enabled[quarkus.health.extensions.enabled]`
 
@@ -5422,7 +5563,7 @@ Whether or not extensions published health check should be enabled.
 |`true`
 
 
-h|[[quarkus-smallrye-jwt_smallrye-jwt]]link:#quarkus-smallrye-jwt_smallrye-jwt[SmallRye JWT]
+h|[[quarkus-smallrye-jwt_quarkus-smallrye-jwt]]link:#quarkus-smallrye-jwt_quarkus-smallrye-jwt[SmallRye JWT]
 h|Type
 h|Default
 
@@ -5444,7 +5585,56 @@ The name of the `java.security.Provider` that supports SHA256withRSA signatures
 |`SunRsaSign`
 
 
-h|[[quarkus-undertow_undertow-servlet]]link:#quarkus-undertow_undertow-servlet[Undertow Servlet]
+h|[[quarkus-smallrye-metrics_quarkus-smallrye-metrics]]link:#quarkus-smallrye-metrics_quarkus-smallrye-metrics[SmallRye Metrics]
+h|Type
+h|Default
+
+a|icon:archive[title=Fixed at build time] [[quarkus-smallrye-metrics_quarkus.smallrye-metrics.path]]`link:#quarkus-smallrye-metrics_quarkus.smallrye-metrics.path[quarkus.smallrye-metrics.path]`
+
+[.description]
+--
+The path to the metrics handler.
+--|string 
+|`/metrics`
+
+
+h|[[quarkus-smallrye-openapi_quarkus-smallrye-openapi]]link:#quarkus-smallrye-openapi_quarkus-smallrye-openapi[SmallRye OpenAPI]
+h|Type
+h|Default
+
+a|icon:archive[title=Fixed at build time] [[quarkus-smallrye-openapi_quarkus.smallrye-openapi.path]]`link:#quarkus-smallrye-openapi_quarkus.smallrye-openapi.path[quarkus.smallrye-openapi.path]`
+
+[.description]
+--
+The path at which to register the OpenAPI Servlet.
+--|string 
+|`/openapi`
+
+
+h|[[quarkus-swagger-ui_quarkus-swagger-ui]]link:#quarkus-swagger-ui_quarkus-swagger-ui[Swagger UI]
+h|Type
+h|Default
+
+a|icon:archive[title=Fixed at build time] [[quarkus-swagger-ui_quarkus.swagger-ui.path]]`link:#quarkus-swagger-ui_quarkus.swagger-ui.path[quarkus.swagger-ui.path]`
+
+[.description]
+--
+The path of the swagger-ui servlet. 
+ The value `/` is not allowed as it blocks the application from serving anything else.
+--|string 
+|`/swagger-ui`
+
+
+a|icon:archive[title=Fixed at build time] [[quarkus-swagger-ui_quarkus.swagger-ui.always-include]]`link:#quarkus-swagger-ui_quarkus.swagger-ui.always-include[quarkus.swagger-ui.always-include]`
+
+[.description]
+--
+If this should be included every time. By default this is only included when the application is running in dev mode.
+--|boolean 
+|`false`
+
+
+h|[[quarkus-undertow_quarkus-undertow]]link:#quarkus-undertow_quarkus-undertow[Undertow Servlet]
 h|Type
 h|Default
 
@@ -5475,7 +5665,29 @@ If Servlet should use direct buffers, this gives maximum performance but can be 
 |
 
 
-h|[[quarkus-vault_vault]]link:#quarkus-vault_vault[Vault]
+h|[[quarkus-undertow-websockets_quarkus-undertow-websockets]]link:#quarkus-undertow-websockets_quarkus-undertow-websockets[Undertow WebSockets]
+h|Type
+h|Default
+
+a|icon:archive[title=Fixed at build time] [[quarkus-undertow-websockets_quarkus.hot-reload.password]]`link:#quarkus-undertow-websockets_quarkus.hot-reload.password[quarkus.hot-reload.password]`
+
+[.description]
+--
+
+--|string 
+|required icon:exclamation-circle[title=Configuration property is required]
+
+
+a|icon:archive[title=Fixed at build time] [[quarkus-undertow-websockets_quarkus.hot-reload.url]]`link:#quarkus-undertow-websockets_quarkus.hot-reload.url[quarkus.hot-reload.url]`
+
+[.description]
+--
+
+--|string 
+|required icon:exclamation-circle[title=Configuration property is required]
+
+
+h|[[quarkus-vault_quarkus-vault]]link:#quarkus-vault_quarkus-vault[Vault]
 h|Type
 h|Default
 
@@ -5704,7 +5916,7 @@ You can learn more about it in the link:https://docs.oracle.com/javase/8/docs/ap
 
 You can also provide duration values starting with a number.
 In this case, if the value consists only of a number, the converter treats the value as seconds.
-Otherwise, `PT` is implicitly appended to the value to obtain a standard `java.time.Duration` format.
+Otherwise, `PT` is implicitly prepended to the value to obtain a standard `java.time.Duration` format.
 ====
 
 [NOTE]

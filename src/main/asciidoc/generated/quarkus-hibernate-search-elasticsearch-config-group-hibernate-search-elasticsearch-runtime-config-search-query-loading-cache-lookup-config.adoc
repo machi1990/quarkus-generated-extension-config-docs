@@ -8,14 +8,12 @@ h|[[quarkus-hibernate-search-elasticsearch-config-group-hibernate-search-elastic
 h|Type
 h|Default
 
-a|icon:cogs[title=Overridable at runtime] [[quarkus-hibernate-search-elasticsearch-config-group-hibernate-search-elasticsearch-runtime-config-search-query-loading-cache-lookup-config_quarkus.hibernate-search.elasticsearch.query.loading.cache-lookup.strategy]]`link:#quarkus-hibernate-search-elasticsearch-config-group-hibernate-search-elasticsearch-runtime-config-search-query-loading-cache-lookup-config_quarkus.hibernate-search.elasticsearch.query.loading.cache-lookup.strategy[quarkus.hibernate-search.elasticsearch.query.loading.cache-lookup.strategy]`
+a|icon:cogs[title=Overridable at runtime] [[quarkus-hibernate-search-elasticsearch-config-group-hibernate-search-elasticsearch-runtime-config-search-query-loading-cache-lookup-config_quarkus.hibernate-search.query.loading.cache-lookup.strategy]]`link:#quarkus-hibernate-search-elasticsearch-config-group-hibernate-search-elasticsearch-runtime-config-search-query-loading-cache-lookup-config_quarkus.hibernate-search.query.loading.cache-lookup.strategy[quarkus.hibernate-search.query.loading.cache-lookup.strategy]`
 
 [.description]
 --
-The strategy to use when loading entities during the execution of a search query. 
- Can be either one of "skip", "persistence-context" or "persistence-context-then-second-level-cache". 
- Defaults to "skip".
+The strategy to use when loading entities during the execution of a search query.
 --|`skip`, `persistence-context`, `persistence-context-then-second-level-cache` 
-|
+|`skip`
 
 |===
