@@ -1,14 +1,14 @@
 [.configuration-legend]
-icon:archive[title=Fixed at build time] Configuration property fixed at build time - icon:cogs[title=Overridable at runtime]️ Configuration property overridable at runtime 
-
+icon:lock[title=Fixed at build time] Configuration property fixed at build time - All other configuration properties are overridable at runtime
 [.configuration-reference.searchable, cols="80,.^10,.^10"]
 |===
 
 h|[[quarkus-hibernate-search-elasticsearch_configuration]]link:#quarkus-hibernate-search-elasticsearch_configuration[Configuration property]
+
 h|Type
 h|Default
 
-a|icon:archive[title=Fixed at build time] [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.background-failure-handler]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.background-failure-handler[quarkus.hibernate-search.background-failure-handler]`
+a|icon:lock[title=Fixed at build time] [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.background-failure-handler]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.background-failure-handler[quarkus.hibernate-search.background-failure-handler]`
 
 [.description]
 --
@@ -18,7 +18,16 @@ The class or the name of the bean that should be notified of any failure occurri
 |
 
 
-a|icon:cogs[title=Overridable at runtime] [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.query.loading.cache-lookup.strategy]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.query.loading.cache-lookup.strategy[quarkus.hibernate-search.query.loading.cache-lookup.strategy]`
+a| [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.schema-management.strategy]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.schema-management.strategy[quarkus.hibernate-search.schema-management.strategy]`
+
+[.description]
+--
+The strategy used for index lifecycle.
+--|`none`, `validate`, `create`, `create-or-validate`, `create-or-update`, `drop-and-create`, `drop-and-create-and-drop` 
+|`create-or-validate`
+
+
+a| [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.query.loading.cache-lookup.strategy]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.query.loading.cache-lookup.strategy[quarkus.hibernate-search.query.loading.cache-lookup.strategy]`
 
 [.description]
 --
@@ -27,7 +36,7 @@ The strategy to use when loading entities during the execution of a search query
 |`skip`
 
 
-a|icon:cogs[title=Overridable at runtime] [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.query.loading.fetch-size]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.query.loading.fetch-size[quarkus.hibernate-search.query.loading.fetch-size]`
+a| [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.query.loading.fetch-size]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.query.loading.fetch-size[quarkus.hibernate-search.query.loading.fetch-size]`
 
 [.description]
 --
@@ -36,18 +45,61 @@ The fetch size to use when loading entities during the execution of a search que
 |`100`
 
 
-a|icon:cogs[title=Overridable at runtime] [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.automatic-indexing.synchronization.strategy]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.automatic-indexing.synchronization.strategy[quarkus.hibernate-search.automatic-indexing.synchronization.strategy]`
+a| [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.automatic-indexing.synchronization.strategy]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.automatic-indexing.synchronization.strategy[quarkus.hibernate-search.automatic-indexing.synchronization.strategy]`
 
 [.description]
 --
-The synchronization strategy to use when indexing automatically. 
- Defines the status for which you wait before considering the operation completed by Hibernate Search. 
- Use `queued` or `committed` in production environments. `searchable` is useful in integration tests.
---|`queued`, `committed`, `searchable` 
-|`committed`
+The synchronization strategy to use when indexing automatically.
+
+Defines how complete indexing should be before resuming the application thread
+after a database transaction is committed.
+
+Available values:
+
+[cols=5]
+!===
+.2+h!Strategy
+.2+h!Throughput
+3+^h!Guarantees when the application thread resumes
+
+h!Changes applied
+h!Changes safe from crash/power loss
+h!Changes visible on search
+
+!async
+!Best
+^!icon:times[role=red]
+^!icon:times[role=red]
+^!icon:times[role=red]
+
+!write-sync (**default**)
+!Medium
+^!icon:check[role=lime]
+^!icon:check[role=lime]
+^!icon:times[role=red]
+
+!read-sync
+!Medium to worst
+^!icon:check[role=lime]
+^!icon:times[role=red]
+^!icon:check[role=lime]
+
+!sync
+!Worst
+^!icon:check[role=lime]
+^!icon:check[role=lime]
+^!icon:check[role=lime]
+!===
+
+See
+https://docs.jboss.org/hibernate/search/6.0/reference/en-US/html_single/#mapper-orm-indexing-automatic-synchronization[this
+section of the reference documentation]
+for more information.
+--|string 
+|`write-sync`
 
 
-a|icon:cogs[title=Overridable at runtime] [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.automatic-indexing.enable-dirty-check]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.automatic-indexing.enable-dirty-check[quarkus.hibernate-search.automatic-indexing.enable-dirty-check]`
+a| [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.automatic-indexing.enable-dirty-check]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.automatic-indexing.enable-dirty-check[quarkus.hibernate-search.automatic-indexing.enable-dirty-check]`
 
 [.description]
 --
@@ -58,10 +110,11 @@ Whether to check if dirty properties are relevant to indexing before actually re
 
 
 h|[[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.default-backend]]link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.default-backend[Default backend]
+
 h|Type
 h|Default
 
-a|icon:archive[title=Fixed at build time] [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.version]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.version[quarkus.hibernate-search.elasticsearch.version]`
+a|icon:lock[title=Fixed at build time] [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.version]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.version[quarkus.hibernate-search.elasticsearch.version]`
 
 [.description]
 --
@@ -73,7 +126,7 @@ The version of Elasticsearch used in the cluster.
 |
 
 
-a|icon:archive[title=Fixed at build time] [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.analysis.configurer]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.analysis.configurer[quarkus.hibernate-search.elasticsearch.analysis.configurer]`
+a|icon:lock[title=Fixed at build time] [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.analysis.configurer]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.analysis.configurer[quarkus.hibernate-search.elasticsearch.analysis.configurer]`
 
 [.description]
 --
@@ -82,16 +135,25 @@ The class or the name of the bean used to configure full text analysis (e.g. ana
 |
 
 
-a|icon:cogs[title=Overridable at runtime] [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.hosts]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.hosts[quarkus.hibernate-search.elasticsearch.hosts]`
+a| [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.hosts]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.hosts[quarkus.hibernate-search.elasticsearch.hosts]`
 
 [.description]
 --
 The list of hosts of the Elasticsearch servers.
 --|list of string 
-|`http://localhost:9200`
+|`localhost:9200`
 
 
-a|icon:cogs[title=Overridable at runtime] [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.username]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.username[quarkus.hibernate-search.elasticsearch.username]`
+a| [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.protocol]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.protocol[quarkus.hibernate-search.elasticsearch.protocol]`
+
+[.description]
+--
+The protocol to use when contacting Elasticsearch servers. Set to "https" to enable SSL/TLS.
+--|`http`, `https` 
+|`http`
+
+
+a| [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.username]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.username[quarkus.hibernate-search.elasticsearch.username]`
 
 [.description]
 --
@@ -100,7 +162,7 @@ The username used for authentication.
 |
 
 
-a|icon:cogs[title=Overridable at runtime] [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.password]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.password[quarkus.hibernate-search.elasticsearch.password]`
+a| [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.password]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.password[quarkus.hibernate-search.elasticsearch.password]`
 
 [.description]
 --
@@ -109,7 +171,7 @@ The password used for authentication.
 |
 
 
-a|icon:cogs[title=Overridable at runtime] [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.connection-timeout]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.connection-timeout[quarkus.hibernate-search.elasticsearch.connection-timeout]`
+a| [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.connection-timeout]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.connection-timeout[quarkus.hibernate-search.elasticsearch.connection-timeout]`
 
 [.description]
 --
@@ -119,7 +181,7 @@ The connection timeout.
 |`3S`
 
 
-a|icon:cogs[title=Overridable at runtime] [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.max-connections]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.max-connections[quarkus.hibernate-search.elasticsearch.max-connections]`
+a| [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.max-connections]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.max-connections[quarkus.hibernate-search.elasticsearch.max-connections]`
 
 [.description]
 --
@@ -128,7 +190,7 @@ The maximum number of connections to all the Elasticsearch servers.
 |`20`
 
 
-a|icon:cogs[title=Overridable at runtime] [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.max-connections-per-route]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.max-connections-per-route[quarkus.hibernate-search.elasticsearch.max-connections-per-route]`
+a| [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.max-connections-per-route]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.max-connections-per-route[quarkus.hibernate-search.elasticsearch.max-connections-per-route]`
 
 [.description]
 --
@@ -137,7 +199,7 @@ The maximum number of connections per Elasticsearch server.
 |`10`
 
 
-a|icon:cogs[title=Overridable at runtime] [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.discovery.enabled]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.discovery.enabled[quarkus.hibernate-search.elasticsearch.discovery.enabled]`
+a| [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.discovery.enabled]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.discovery.enabled[quarkus.hibernate-search.elasticsearch.discovery.enabled]`
 
 [.description]
 --
@@ -146,7 +208,7 @@ Defines if automatic discovery is enabled.
 |`false`
 
 
-a|icon:cogs[title=Overridable at runtime] [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.discovery.refresh-interval]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.discovery.refresh-interval[quarkus.hibernate-search.elasticsearch.discovery.refresh-interval]`
+a| [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.discovery.refresh-interval]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.discovery.refresh-interval[quarkus.hibernate-search.elasticsearch.discovery.refresh-interval]`
 
 [.description]
 --
@@ -156,25 +218,19 @@ Refresh interval of the node list.
 |`10S`
 
 
-a|icon:cogs[title=Overridable at runtime] [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.discovery.default-scheme]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.discovery.default-scheme[quarkus.hibernate-search.elasticsearch.discovery.default-scheme]`
+a| [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.thread-pool.size]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.thread-pool.size[quarkus.hibernate-search.elasticsearch.thread-pool.size]`
 
 [.description]
 --
-The scheme that should be used for the new nodes discovered.
---|string 
-|`http`
+The size of the thread pool assigned to the backend. 
+ Note that number is *per backend*, not per index. Adding more indexes will not add more threads. 
+ As all operations happening in this thread-pool are non-blocking, raising its size above the number of processor cores available to the JVM will not bring noticeable performance benefit. The only reason to alter this setting would be to reduce the number of threads; for example, in an application with a single index with a single indexing queue, running on a machine with 64 processor cores, you might want to bring down the number of threads. 
+ Defaults to the number of processor cores available to the JVM on startup.
+--|int 
+|
 
 
-a|icon:cogs[title=Overridable at runtime] [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.index-defaults.lifecycle.strategy]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.index-defaults.lifecycle.strategy[quarkus.hibernate-search.elasticsearch.index-defaults.lifecycle.strategy]`
-
-[.description]
---
-The strategy used for index lifecycle.
---|`none`, `validate`, `update`, `create`, `drop-and-create`, `drop-and-create-and-drop` 
-|`create`
-
-
-a|icon:cogs[title=Overridable at runtime] [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.index-defaults.lifecycle.required-status]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.index-defaults.lifecycle.required-status[quarkus.hibernate-search.elasticsearch.index-defaults.lifecycle.required-status]`
+a| [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.index-defaults.schema-management.required-status]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.index-defaults.schema-management.required-status[quarkus.hibernate-search.elasticsearch.index-defaults.schema-management.required-status]`
 
 [.description]
 --
@@ -183,7 +239,7 @@ The minimal cluster status required.
 |`green`
 
 
-a|icon:cogs[title=Overridable at runtime] [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.index-defaults.lifecycle.required-status-wait-timeout]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.index-defaults.lifecycle.required-status-wait-timeout[quarkus.hibernate-search.elasticsearch.index-defaults.lifecycle.required-status-wait-timeout]`
+a| [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.index-defaults.schema-management.required-status-wait-timeout]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.index-defaults.schema-management.required-status-wait-timeout[quarkus.hibernate-search.elasticsearch.index-defaults.schema-management.required-status-wait-timeout]`
 
 [.description]
 --
@@ -193,16 +249,38 @@ How long we should wait for the status before failing the bootstrap.
 |`10S`
 
 
-a|icon:cogs[title=Overridable at runtime] [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.indexes.-index-name-.lifecycle.strategy]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.indexes.-index-name-.lifecycle.strategy[quarkus.hibernate-search.elasticsearch.indexes."index-name".lifecycle.strategy]`
+a| [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.index-defaults.indexing.queue-count]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.index-defaults.indexing.queue-count[quarkus.hibernate-search.elasticsearch.index-defaults.indexing.queue-count]`
 
 [.description]
 --
-The strategy used for index lifecycle.
---|`none`, `validate`, `update`, `create`, `drop-and-create`, `drop-and-create-and-drop` 
-|`create`
+The number of indexing queues assigned to each index. 
+ Higher values will lead to more connections being used in parallel, which may lead to higher indexing throughput, but incurs a risk of overloading Elasticsearch, i.e. of overflowing its HTTP request buffers and tripping link:https://www.elastic.co/guide/en/elasticsearch/reference/7.6/circuit-breaker.html[circuit breakers], leading to Elasticsearch giving up on some request and resulting in indexing failures.
+--|int 
+|`10`
 
 
-a|icon:cogs[title=Overridable at runtime] [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.indexes.-index-name-.lifecycle.required-status]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.indexes.-index-name-.lifecycle.required-status[quarkus.hibernate-search.elasticsearch.indexes."index-name".lifecycle.required-status]`
+a| [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.index-defaults.indexing.queue-size]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.index-defaults.indexing.queue-size[quarkus.hibernate-search.elasticsearch.index-defaults.indexing.queue-size]`
+
+[.description]
+--
+The size of indexing queues. 
+ Lower values may lead to lower memory usage, especially if there are many queues, but values that are too low will reduce the likeliness of reaching the max bulk size and increase the likeliness of application threads blocking because the queue is full, which may lead to lower indexing throughput.
+--|int 
+|`1000`
+
+
+a| [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.index-defaults.indexing.max-bulk-size]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.index-defaults.indexing.max-bulk-size[quarkus.hibernate-search.elasticsearch.index-defaults.indexing.max-bulk-size]`
+
+[.description]
+--
+The maximum size of bulk requests created when processing indexing queues. 
+ Higher values will lead to more documents being sent in each HTTP request sent to Elasticsearch, which may lead to higher indexing throughput, but incurs a risk of overloading Elasticsearch, i.e. of overflowing its HTTP request buffers and tripping link:https://www.elastic.co/guide/en/elasticsearch/reference/7.6/circuit-breaker.html[circuit breakers], leading to Elasticsearch giving up on some request and resulting in indexing failures. 
+ Note that raising this number above the queue size has no effect, as bulks cannot include more requests than are contained in the queue.
+--|int 
+|`100`
+
+
+a| [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.indexes.-index-name-.schema-management.required-status]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.indexes.-index-name-.schema-management.required-status[quarkus.hibernate-search.elasticsearch.indexes."index-name".schema-management.required-status]`
 
 [.description]
 --
@@ -211,7 +289,7 @@ The minimal cluster status required.
 |`green`
 
 
-a|icon:cogs[title=Overridable at runtime] [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.indexes.-index-name-.lifecycle.required-status-wait-timeout]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.indexes.-index-name-.lifecycle.required-status-wait-timeout[quarkus.hibernate-search.elasticsearch.indexes."index-name".lifecycle.required-status-wait-timeout]`
+a| [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.indexes.-index-name-.schema-management.required-status-wait-timeout]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.indexes.-index-name-.schema-management.required-status-wait-timeout[quarkus.hibernate-search.elasticsearch.indexes."index-name".schema-management.required-status-wait-timeout]`
 
 [.description]
 --
@@ -219,13 +297,45 @@ How long we should wait for the status before failing the bootstrap.
 --|link:https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html[Duration]
   link:#duration-note-anchor[icon:question-circle[], title=More information about the Duration format]
 |`10S`
+
+
+a| [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.indexes.-index-name-.indexing.queue-count]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.indexes.-index-name-.indexing.queue-count[quarkus.hibernate-search.elasticsearch.indexes."index-name".indexing.queue-count]`
+
+[.description]
+--
+The number of indexing queues assigned to each index. 
+ Higher values will lead to more connections being used in parallel, which may lead to higher indexing throughput, but incurs a risk of overloading Elasticsearch, i.e. of overflowing its HTTP request buffers and tripping link:https://www.elastic.co/guide/en/elasticsearch/reference/7.6/circuit-breaker.html[circuit breakers], leading to Elasticsearch giving up on some request and resulting in indexing failures.
+--|int 
+|`10`
+
+
+a| [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.indexes.-index-name-.indexing.queue-size]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.indexes.-index-name-.indexing.queue-size[quarkus.hibernate-search.elasticsearch.indexes."index-name".indexing.queue-size]`
+
+[.description]
+--
+The size of indexing queues. 
+ Lower values may lead to lower memory usage, especially if there are many queues, but values that are too low will reduce the likeliness of reaching the max bulk size and increase the likeliness of application threads blocking because the queue is full, which may lead to lower indexing throughput.
+--|int 
+|`1000`
+
+
+a| [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.indexes.-index-name-.indexing.max-bulk-size]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.indexes.-index-name-.indexing.max-bulk-size[quarkus.hibernate-search.elasticsearch.indexes."index-name".indexing.max-bulk-size]`
+
+[.description]
+--
+The maximum size of bulk requests created when processing indexing queues. 
+ Higher values will lead to more documents being sent in each HTTP request sent to Elasticsearch, which may lead to higher indexing throughput, but incurs a risk of overloading Elasticsearch, i.e. of overflowing its HTTP request buffers and tripping link:https://www.elastic.co/guide/en/elasticsearch/reference/7.6/circuit-breaker.html[circuit breakers], leading to Elasticsearch giving up on some request and resulting in indexing failures. 
+ Note that raising this number above the queue size has no effect, as bulks cannot include more requests than are contained in the queue.
+--|int 
+|`100`
 
 
 h|[[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.additional-backends]]link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.additional-backends[Additional backends]
+
 h|Type
 h|Default
 
-a|icon:archive[title=Fixed at build time] [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.default-backend]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.default-backend[quarkus.hibernate-search.elasticsearch.default-backend]`
+a|icon:lock[title=Fixed at build time] [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.default-backend]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.default-backend[quarkus.hibernate-search.elasticsearch.default-backend]`
 
 [.description]
 --
@@ -234,7 +344,7 @@ Only useful when defining `backends additional backends`: the name of the defaul
 |
 
 
-a|icon:archive[title=Fixed at build time] [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.backends.-backend-name-.version]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.backends.-backend-name-.version[quarkus.hibernate-search.elasticsearch.backends."backend-name".version]`
+a|icon:lock[title=Fixed at build time] [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.backends.-backend-name-.version]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.backends.-backend-name-.version[quarkus.hibernate-search.elasticsearch.backends."backend-name".version]`
 
 [.description]
 --
@@ -246,7 +356,7 @@ The version of Elasticsearch used in the cluster.
 |
 
 
-a|icon:archive[title=Fixed at build time] [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.backends.-backend-name-.analysis.configurer]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.backends.-backend-name-.analysis.configurer[quarkus.hibernate-search.elasticsearch.backends."backend-name".analysis.configurer]`
+a|icon:lock[title=Fixed at build time] [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.backends.-backend-name-.analysis.configurer]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.backends.-backend-name-.analysis.configurer[quarkus.hibernate-search.elasticsearch.backends."backend-name".analysis.configurer]`
 
 [.description]
 --
@@ -255,16 +365,25 @@ The class or the name of the bean used to configure full text analysis (e.g. ana
 |
 
 
-a|icon:cogs[title=Overridable at runtime] [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.backends.-backend-name-.hosts]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.backends.-backend-name-.hosts[quarkus.hibernate-search.elasticsearch.backends."backend-name".hosts]`
+a| [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.backends.-backend-name-.hosts]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.backends.-backend-name-.hosts[quarkus.hibernate-search.elasticsearch.backends."backend-name".hosts]`
 
 [.description]
 --
 The list of hosts of the Elasticsearch servers.
 --|list of string 
-|`http://localhost:9200`
+|`localhost:9200`
 
 
-a|icon:cogs[title=Overridable at runtime] [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.backends.-backend-name-.username]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.backends.-backend-name-.username[quarkus.hibernate-search.elasticsearch.backends."backend-name".username]`
+a| [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.backends.-backend-name-.protocol]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.backends.-backend-name-.protocol[quarkus.hibernate-search.elasticsearch.backends."backend-name".protocol]`
+
+[.description]
+--
+The protocol to use when contacting Elasticsearch servers. Set to "https" to enable SSL/TLS.
+--|`http`, `https` 
+|`http`
+
+
+a| [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.backends.-backend-name-.username]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.backends.-backend-name-.username[quarkus.hibernate-search.elasticsearch.backends."backend-name".username]`
 
 [.description]
 --
@@ -273,7 +392,7 @@ The username used for authentication.
 |
 
 
-a|icon:cogs[title=Overridable at runtime] [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.backends.-backend-name-.password]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.backends.-backend-name-.password[quarkus.hibernate-search.elasticsearch.backends."backend-name".password]`
+a| [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.backends.-backend-name-.password]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.backends.-backend-name-.password[quarkus.hibernate-search.elasticsearch.backends."backend-name".password]`
 
 [.description]
 --
@@ -282,7 +401,7 @@ The password used for authentication.
 |
 
 
-a|icon:cogs[title=Overridable at runtime] [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.backends.-backend-name-.connection-timeout]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.backends.-backend-name-.connection-timeout[quarkus.hibernate-search.elasticsearch.backends."backend-name".connection-timeout]`
+a| [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.backends.-backend-name-.connection-timeout]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.backends.-backend-name-.connection-timeout[quarkus.hibernate-search.elasticsearch.backends."backend-name".connection-timeout]`
 
 [.description]
 --
@@ -292,7 +411,7 @@ The connection timeout.
 |`3S`
 
 
-a|icon:cogs[title=Overridable at runtime] [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.backends.-backend-name-.max-connections]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.backends.-backend-name-.max-connections[quarkus.hibernate-search.elasticsearch.backends."backend-name".max-connections]`
+a| [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.backends.-backend-name-.max-connections]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.backends.-backend-name-.max-connections[quarkus.hibernate-search.elasticsearch.backends."backend-name".max-connections]`
 
 [.description]
 --
@@ -301,7 +420,7 @@ The maximum number of connections to all the Elasticsearch servers.
 |`20`
 
 
-a|icon:cogs[title=Overridable at runtime] [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.backends.-backend-name-.max-connections-per-route]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.backends.-backend-name-.max-connections-per-route[quarkus.hibernate-search.elasticsearch.backends."backend-name".max-connections-per-route]`
+a| [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.backends.-backend-name-.max-connections-per-route]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.backends.-backend-name-.max-connections-per-route[quarkus.hibernate-search.elasticsearch.backends."backend-name".max-connections-per-route]`
 
 [.description]
 --
@@ -310,7 +429,7 @@ The maximum number of connections per Elasticsearch server.
 |`10`
 
 
-a|icon:cogs[title=Overridable at runtime] [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.backends.-backend-name-.discovery.enabled]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.backends.-backend-name-.discovery.enabled[quarkus.hibernate-search.elasticsearch.backends."backend-name".discovery.enabled]`
+a| [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.backends.-backend-name-.discovery.enabled]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.backends.-backend-name-.discovery.enabled[quarkus.hibernate-search.elasticsearch.backends."backend-name".discovery.enabled]`
 
 [.description]
 --
@@ -319,7 +438,7 @@ Defines if automatic discovery is enabled.
 |`false`
 
 
-a|icon:cogs[title=Overridable at runtime] [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.backends.-backend-name-.discovery.refresh-interval]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.backends.-backend-name-.discovery.refresh-interval[quarkus.hibernate-search.elasticsearch.backends."backend-name".discovery.refresh-interval]`
+a| [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.backends.-backend-name-.discovery.refresh-interval]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.backends.-backend-name-.discovery.refresh-interval[quarkus.hibernate-search.elasticsearch.backends."backend-name".discovery.refresh-interval]`
 
 [.description]
 --
@@ -329,25 +448,19 @@ Refresh interval of the node list.
 |`10S`
 
 
-a|icon:cogs[title=Overridable at runtime] [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.backends.-backend-name-.discovery.default-scheme]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.backends.-backend-name-.discovery.default-scheme[quarkus.hibernate-search.elasticsearch.backends."backend-name".discovery.default-scheme]`
+a| [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.backends.-backend-name-.thread-pool.size]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.backends.-backend-name-.thread-pool.size[quarkus.hibernate-search.elasticsearch.backends."backend-name".thread-pool.size]`
 
 [.description]
 --
-The scheme that should be used for the new nodes discovered.
---|string 
-|`http`
+The size of the thread pool assigned to the backend. 
+ Note that number is *per backend*, not per index. Adding more indexes will not add more threads. 
+ As all operations happening in this thread-pool are non-blocking, raising its size above the number of processor cores available to the JVM will not bring noticeable performance benefit. The only reason to alter this setting would be to reduce the number of threads; for example, in an application with a single index with a single indexing queue, running on a machine with 64 processor cores, you might want to bring down the number of threads. 
+ Defaults to the number of processor cores available to the JVM on startup.
+--|int 
+|
 
 
-a|icon:cogs[title=Overridable at runtime] [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.backends.-backend-name-.index-defaults.lifecycle.strategy]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.backends.-backend-name-.index-defaults.lifecycle.strategy[quarkus.hibernate-search.elasticsearch.backends."backend-name".index-defaults.lifecycle.strategy]`
-
-[.description]
---
-The strategy used for index lifecycle.
---|`none`, `validate`, `update`, `create`, `drop-and-create`, `drop-and-create-and-drop` 
-|`create`
-
-
-a|icon:cogs[title=Overridable at runtime] [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.backends.-backend-name-.index-defaults.lifecycle.required-status]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.backends.-backend-name-.index-defaults.lifecycle.required-status[quarkus.hibernate-search.elasticsearch.backends."backend-name".index-defaults.lifecycle.required-status]`
+a| [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.backends.-backend-name-.index-defaults.schema-management.required-status]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.backends.-backend-name-.index-defaults.schema-management.required-status[quarkus.hibernate-search.elasticsearch.backends."backend-name".index-defaults.schema-management.required-status]`
 
 [.description]
 --
@@ -356,7 +469,7 @@ The minimal cluster status required.
 |`green`
 
 
-a|icon:cogs[title=Overridable at runtime] [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.backends.-backend-name-.index-defaults.lifecycle.required-status-wait-timeout]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.backends.-backend-name-.index-defaults.lifecycle.required-status-wait-timeout[quarkus.hibernate-search.elasticsearch.backends."backend-name".index-defaults.lifecycle.required-status-wait-timeout]`
+a| [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.backends.-backend-name-.index-defaults.schema-management.required-status-wait-timeout]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.backends.-backend-name-.index-defaults.schema-management.required-status-wait-timeout[quarkus.hibernate-search.elasticsearch.backends."backend-name".index-defaults.schema-management.required-status-wait-timeout]`
 
 [.description]
 --
@@ -366,16 +479,38 @@ How long we should wait for the status before failing the bootstrap.
 |`10S`
 
 
-a|icon:cogs[title=Overridable at runtime] [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.backends.-backend-name-.indexes.-index-name-.lifecycle.strategy]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.backends.-backend-name-.indexes.-index-name-.lifecycle.strategy[quarkus.hibernate-search.elasticsearch.backends."backend-name".indexes."index-name".lifecycle.strategy]`
+a| [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.backends.-backend-name-.index-defaults.indexing.queue-count]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.backends.-backend-name-.index-defaults.indexing.queue-count[quarkus.hibernate-search.elasticsearch.backends."backend-name".index-defaults.indexing.queue-count]`
 
 [.description]
 --
-The strategy used for index lifecycle.
---|`none`, `validate`, `update`, `create`, `drop-and-create`, `drop-and-create-and-drop` 
-|`create`
+The number of indexing queues assigned to each index. 
+ Higher values will lead to more connections being used in parallel, which may lead to higher indexing throughput, but incurs a risk of overloading Elasticsearch, i.e. of overflowing its HTTP request buffers and tripping link:https://www.elastic.co/guide/en/elasticsearch/reference/7.6/circuit-breaker.html[circuit breakers], leading to Elasticsearch giving up on some request and resulting in indexing failures.
+--|int 
+|`10`
 
 
-a|icon:cogs[title=Overridable at runtime] [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.backends.-backend-name-.indexes.-index-name-.lifecycle.required-status]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.backends.-backend-name-.indexes.-index-name-.lifecycle.required-status[quarkus.hibernate-search.elasticsearch.backends."backend-name".indexes."index-name".lifecycle.required-status]`
+a| [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.backends.-backend-name-.index-defaults.indexing.queue-size]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.backends.-backend-name-.index-defaults.indexing.queue-size[quarkus.hibernate-search.elasticsearch.backends."backend-name".index-defaults.indexing.queue-size]`
+
+[.description]
+--
+The size of indexing queues. 
+ Lower values may lead to lower memory usage, especially if there are many queues, but values that are too low will reduce the likeliness of reaching the max bulk size and increase the likeliness of application threads blocking because the queue is full, which may lead to lower indexing throughput.
+--|int 
+|`1000`
+
+
+a| [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.backends.-backend-name-.index-defaults.indexing.max-bulk-size]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.backends.-backend-name-.index-defaults.indexing.max-bulk-size[quarkus.hibernate-search.elasticsearch.backends."backend-name".index-defaults.indexing.max-bulk-size]`
+
+[.description]
+--
+The maximum size of bulk requests created when processing indexing queues. 
+ Higher values will lead to more documents being sent in each HTTP request sent to Elasticsearch, which may lead to higher indexing throughput, but incurs a risk of overloading Elasticsearch, i.e. of overflowing its HTTP request buffers and tripping link:https://www.elastic.co/guide/en/elasticsearch/reference/7.6/circuit-breaker.html[circuit breakers], leading to Elasticsearch giving up on some request and resulting in indexing failures. 
+ Note that raising this number above the queue size has no effect, as bulks cannot include more requests than are contained in the queue.
+--|int 
+|`100`
+
+
+a| [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.backends.-backend-name-.indexes.-index-name-.schema-management.required-status]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.backends.-backend-name-.indexes.-index-name-.schema-management.required-status[quarkus.hibernate-search.elasticsearch.backends."backend-name".indexes."index-name".schema-management.required-status]`
 
 [.description]
 --
@@ -384,7 +519,7 @@ The minimal cluster status required.
 |`green`
 
 
-a|icon:cogs[title=Overridable at runtime] [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.backends.-backend-name-.indexes.-index-name-.lifecycle.required-status-wait-timeout]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.backends.-backend-name-.indexes.-index-name-.lifecycle.required-status-wait-timeout[quarkus.hibernate-search.elasticsearch.backends."backend-name".indexes."index-name".lifecycle.required-status-wait-timeout]`
+a| [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.backends.-backend-name-.indexes.-index-name-.schema-management.required-status-wait-timeout]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.backends.-backend-name-.indexes.-index-name-.schema-management.required-status-wait-timeout[quarkus.hibernate-search.elasticsearch.backends."backend-name".indexes."index-name".schema-management.required-status-wait-timeout]`
 
 [.description]
 --
@@ -392,6 +527,37 @@ How long we should wait for the status before failing the bootstrap.
 --|link:https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html[Duration]
   link:#duration-note-anchor[icon:question-circle[], title=More information about the Duration format]
 |`10S`
+
+
+a| [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.backends.-backend-name-.indexes.-index-name-.indexing.queue-count]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.backends.-backend-name-.indexes.-index-name-.indexing.queue-count[quarkus.hibernate-search.elasticsearch.backends."backend-name".indexes."index-name".indexing.queue-count]`
+
+[.description]
+--
+The number of indexing queues assigned to each index. 
+ Higher values will lead to more connections being used in parallel, which may lead to higher indexing throughput, but incurs a risk of overloading Elasticsearch, i.e. of overflowing its HTTP request buffers and tripping link:https://www.elastic.co/guide/en/elasticsearch/reference/7.6/circuit-breaker.html[circuit breakers], leading to Elasticsearch giving up on some request and resulting in indexing failures.
+--|int 
+|`10`
+
+
+a| [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.backends.-backend-name-.indexes.-index-name-.indexing.queue-size]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.backends.-backend-name-.indexes.-index-name-.indexing.queue-size[quarkus.hibernate-search.elasticsearch.backends."backend-name".indexes."index-name".indexing.queue-size]`
+
+[.description]
+--
+The size of indexing queues. 
+ Lower values may lead to lower memory usage, especially if there are many queues, but values that are too low will reduce the likeliness of reaching the max bulk size and increase the likeliness of application threads blocking because the queue is full, which may lead to lower indexing throughput.
+--|int 
+|`1000`
+
+
+a| [[quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.backends.-backend-name-.indexes.-index-name-.indexing.max-bulk-size]]`link:#quarkus-hibernate-search-elasticsearch_quarkus.hibernate-search.elasticsearch.backends.-backend-name-.indexes.-index-name-.indexing.max-bulk-size[quarkus.hibernate-search.elasticsearch.backends."backend-name".indexes."index-name".indexing.max-bulk-size]`
+
+[.description]
+--
+The maximum size of bulk requests created when processing indexing queues. 
+ Higher values will lead to more documents being sent in each HTTP request sent to Elasticsearch, which may lead to higher indexing throughput, but incurs a risk of overloading Elasticsearch, i.e. of overflowing its HTTP request buffers and tripping link:https://www.elastic.co/guide/en/elasticsearch/reference/7.6/circuit-breaker.html[circuit breakers], leading to Elasticsearch giving up on some request and resulting in indexing failures. 
+ Note that raising this number above the queue size has no effect, as bulks cannot include more requests than are contained in the queue.
+--|int 
+|`100`
 
 |===
 [NOTE]

@@ -1,14 +1,14 @@
 [.configuration-legend]
-icon:archive[title=Fixed at build time] Configuration property fixed at build time - icon:cogs[title=Overridable at runtime]️ Configuration property overridable at runtime 
-
+icon:lock[title=Fixed at build time] Configuration property fixed at build time - All other configuration properties are overridable at runtime
 [.configuration-reference.searchable, cols="80,.^10,.^10"]
 |===
 
 h|[[quarkus-hibernate-orm_configuration]]link:#quarkus-hibernate-orm_configuration[Configuration property]
+
 h|Type
 h|Default
 
-a|icon:archive[title=Fixed at build time] [[quarkus-hibernate-orm_quarkus.hibernate-orm.dialect]]`link:#quarkus-hibernate-orm_quarkus.hibernate-orm.dialect[quarkus.hibernate-orm.dialect]`
+a|icon:lock[title=Fixed at build time] [[quarkus-hibernate-orm_quarkus.hibernate-orm.dialect]]`link:#quarkus-hibernate-orm_quarkus.hibernate-orm.dialect[quarkus.hibernate-orm.dialect]`
 
 [.description]
 --
@@ -24,7 +24,7 @@ MariaDB, Microsoft SQL Server and H2.
 |
 
 
-a|icon:archive[title=Fixed at build time] [[quarkus-hibernate-orm_quarkus.hibernate-orm.dialect.storage-engine]]`link:#quarkus-hibernate-orm_quarkus.hibernate-orm.dialect.storage-engine[quarkus.hibernate-orm.dialect.storage-engine]`
+a|icon:lock[title=Fixed at build time] [[quarkus-hibernate-orm_quarkus.hibernate-orm.dialect.storage-engine]]`link:#quarkus-hibernate-orm_quarkus.hibernate-orm.dialect.storage-engine[quarkus.hibernate-orm.dialect.storage-engine]`
 
 [.description]
 --
@@ -35,7 +35,7 @@ E.g. `MyISAM` or `InnoDB` for MySQL.
 |
 
 
-a|icon:archive[title=Fixed at build time] [[quarkus-hibernate-orm_quarkus.hibernate-orm.sql-load-script]]`link:#quarkus-hibernate-orm_quarkus.hibernate-orm.sql-load-script[quarkus.hibernate-orm.sql-load-script]`
+a|icon:lock[title=Fixed at build time] [[quarkus-hibernate-orm_quarkus.hibernate-orm.sql-load-script]]`link:#quarkus-hibernate-orm_quarkus.hibernate-orm.sql-load-script[quarkus.hibernate-orm.sql-load-script]`
 
 [.description]
 --
@@ -67,10 +67,10 @@ Quarkus supports `.sql` file with SQL statements or comments spread over multipl
 Each SQL statement must be terminated by a semicolon.
 ====
 --|string 
-|`import.sql (DEV,TEST)`
+|`import.sql in DEV, TEST ; no-file otherwise`
 
 
-a|icon:archive[title=Fixed at build time] [[quarkus-hibernate-orm_quarkus.hibernate-orm.batch-fetch-size]]`link:#quarkus-hibernate-orm_quarkus.hibernate-orm.batch-fetch-size[quarkus.hibernate-orm.batch-fetch-size]`
+a|icon:lock[title=Fixed at build time] [[quarkus-hibernate-orm_quarkus.hibernate-orm.batch-fetch-size]]`link:#quarkus-hibernate-orm_quarkus.hibernate-orm.batch-fetch-size[quarkus.hibernate-orm.batch-fetch-size]`
 
 [.description]
 --
@@ -81,20 +81,59 @@ The size of the batches used when loading entities and collections.
 |`-1`
 
 
-a|icon:archive[title=Fixed at build time] [[quarkus-hibernate-orm_quarkus.hibernate-orm.statistics]]`link:#quarkus-hibernate-orm_quarkus.hibernate-orm.statistics[quarkus.hibernate-orm.statistics]`
+a|icon:lock[title=Fixed at build time] [[quarkus-hibernate-orm_quarkus.hibernate-orm.physical-naming-strategy]]`link:#quarkus-hibernate-orm_quarkus.hibernate-orm.physical-naming-strategy[quarkus.hibernate-orm.physical-naming-strategy]`
 
 [.description]
 --
-Whether statistics collection is enabled.
+Pluggable strategy contract for applying physical naming rules for database object names. Class name of the Hibernate PhysicalNamingStrategy implementation
+--|string 
+|
+
+
+a|icon:lock[title=Fixed at build time] [[quarkus-hibernate-orm_quarkus.hibernate-orm.implicit-naming-strategy]]`link:#quarkus-hibernate-orm_quarkus.hibernate-orm.implicit-naming-strategy[quarkus.hibernate-orm.implicit-naming-strategy]`
+
+[.description]
+--
+Pluggable strategy for applying implicit naming rules when an explicit name is not given. Class name of the Hibernate ImplicitNamingStrategy implementation
+--|string 
+|
+
+
+a|icon:lock[title=Fixed at build time] [[quarkus-hibernate-orm_quarkus.hibernate-orm.statistics]]`link:#quarkus-hibernate-orm_quarkus.hibernate-orm.statistics[quarkus.hibernate-orm.statistics]`
+
+[.description]
+--
+Whether statistics collection is enabled. If 'metrics.enabled' is true, then the default here is considered true, otherwise the default is false.
+--|boolean 
+|
+
+
+a|icon:lock[title=Fixed at build time] [[quarkus-hibernate-orm_quarkus.hibernate-orm.metrics.enabled]]`link:#quarkus-hibernate-orm_quarkus.hibernate-orm.metrics.enabled[quarkus.hibernate-orm.metrics.enabled]`
+
+[.description]
+--
+Whether or not metrics are published in case the smallrye-metrics extension is present (default to false).
 --|boolean 
 |`false`
 
 
+a|icon:lock[title=Fixed at build time] [[quarkus-hibernate-orm_quarkus.hibernate-orm.second-level-caching-enabled]]`link:#quarkus-hibernate-orm_quarkus.hibernate-orm.second-level-caching-enabled[quarkus.hibernate-orm.second-level-caching-enabled]`
+
+[.description]
+--
+The default in Quarkus is for 2nd level caching to be enabled, and a good implementation is already integrated for you. 
+ Just cherry-pick which entities should be using the cache. 
+ Set this to false to disable all 2nd level caches.
+--|boolean 
+|`true`
+
+
 h|[[quarkus-hibernate-orm_quarkus.hibernate-orm.query]]link:#quarkus-hibernate-orm_quarkus.hibernate-orm.query[Query related configuration]
+
 h|Type
 h|Default
 
-a|icon:archive[title=Fixed at build time] [[quarkus-hibernate-orm_quarkus.hibernate-orm.query.query-plan-cache-max-size]]`link:#quarkus-hibernate-orm_quarkus.hibernate-orm.query.query-plan-cache-max-size[quarkus.hibernate-orm.query.query-plan-cache-max-size]`
+a|icon:lock[title=Fixed at build time] [[quarkus-hibernate-orm_quarkus.hibernate-orm.query.query-plan-cache-max-size]]`link:#quarkus-hibernate-orm_quarkus.hibernate-orm.query.query-plan-cache-max-size[quarkus.hibernate-orm.query.query-plan-cache-max-size]`
 
 [.description]
 --
@@ -103,7 +142,7 @@ The maximum size of the query plan cache.
 |
 
 
-a|icon:archive[title=Fixed at build time] [[quarkus-hibernate-orm_quarkus.hibernate-orm.query.default-null-ordering]]`link:#quarkus-hibernate-orm_quarkus.hibernate-orm.query.default-null-ordering[quarkus.hibernate-orm.query.default-null-ordering]`
+a|icon:lock[title=Fixed at build time] [[quarkus-hibernate-orm_quarkus.hibernate-orm.query.default-null-ordering]]`link:#quarkus-hibernate-orm_quarkus.hibernate-orm.query.default-null-ordering[quarkus.hibernate-orm.query.default-null-ordering]`
 
 [.description]
 --
@@ -115,10 +154,11 @@ Valid values are: `none`, `first`, `last`.
 
 
 h|[[quarkus-hibernate-orm_quarkus.hibernate-orm.database]]link:#quarkus-hibernate-orm_quarkus.hibernate-orm.database[Database related configuration]
+
 h|Type
 h|Default
 
-a|icon:archive[title=Fixed at build time] [[quarkus-hibernate-orm_quarkus.hibernate-orm.database.generation]]`link:#quarkus-hibernate-orm_quarkus.hibernate-orm.database.generation[quarkus.hibernate-orm.database.generation]`
+a|icon:lock[title=Fixed at build time] [[quarkus-hibernate-orm_quarkus.hibernate-orm.database.generation]]`link:#quarkus-hibernate-orm_quarkus.hibernate-orm.database.generation[quarkus.hibernate-orm.database.generation]`
 
 [.description]
 --
@@ -127,7 +167,7 @@ Select whether the database schema is generated or not. `drop-and-create` is awe
 |`none`
 
 
-a|icon:archive[title=Fixed at build time] [[quarkus-hibernate-orm_quarkus.hibernate-orm.database.generation.halt-on-error]]`link:#quarkus-hibernate-orm_quarkus.hibernate-orm.database.generation.halt-on-error[quarkus.hibernate-orm.database.generation.halt-on-error]`
+a|icon:lock[title=Fixed at build time] [[quarkus-hibernate-orm_quarkus.hibernate-orm.database.generation.halt-on-error]]`link:#quarkus-hibernate-orm_quarkus.hibernate-orm.database.generation.halt-on-error[quarkus.hibernate-orm.database.generation.halt-on-error]`
 
 [.description]
 --
@@ -136,7 +176,7 @@ Whether we should stop on the first error when applying the schema.
 |`false`
 
 
-a|icon:archive[title=Fixed at build time] [[quarkus-hibernate-orm_quarkus.hibernate-orm.database.default-catalog]]`link:#quarkus-hibernate-orm_quarkus.hibernate-orm.database.default-catalog[quarkus.hibernate-orm.database.default-catalog]`
+a|icon:lock[title=Fixed at build time] [[quarkus-hibernate-orm_quarkus.hibernate-orm.database.default-catalog]]`link:#quarkus-hibernate-orm_quarkus.hibernate-orm.database.default-catalog[quarkus.hibernate-orm.database.default-catalog]`
 
 [.description]
 --
@@ -145,7 +185,7 @@ The default catalog to use for the database objects.
 |
 
 
-a|icon:archive[title=Fixed at build time] [[quarkus-hibernate-orm_quarkus.hibernate-orm.database.default-schema]]`link:#quarkus-hibernate-orm_quarkus.hibernate-orm.database.default-schema[quarkus.hibernate-orm.database.default-schema]`
+a|icon:lock[title=Fixed at build time] [[quarkus-hibernate-orm_quarkus.hibernate-orm.database.default-schema]]`link:#quarkus-hibernate-orm_quarkus.hibernate-orm.database.default-schema[quarkus.hibernate-orm.database.default-schema]`
 
 [.description]
 --
@@ -154,7 +194,7 @@ The default schema to use for the database objects.
 |
 
 
-a|icon:archive[title=Fixed at build time] [[quarkus-hibernate-orm_quarkus.hibernate-orm.database.charset]]`link:#quarkus-hibernate-orm_quarkus.hibernate-orm.database.charset[quarkus.hibernate-orm.database.charset]`
+a|icon:lock[title=Fixed at build time] [[quarkus-hibernate-orm_quarkus.hibernate-orm.database.charset]]`link:#quarkus-hibernate-orm_quarkus.hibernate-orm.database.charset[quarkus.hibernate-orm.database.charset]`
 
 [.description]
 --
@@ -163,11 +203,21 @@ The charset of the database.
 |
 
 
+a|icon:lock[title=Fixed at build time] [[quarkus-hibernate-orm_quarkus.hibernate-orm.database.globally-quoted-identifiers]]`link:#quarkus-hibernate-orm_quarkus.hibernate-orm.database.globally-quoted-identifiers[quarkus.hibernate-orm.database.globally-quoted-identifiers]`
+
+[.description]
+--
+Whether Hibernate should quote all identifiers.
+--|boolean 
+|`false`
+
+
 h|[[quarkus-hibernate-orm_quarkus.hibernate-orm.jdbc]]link:#quarkus-hibernate-orm_quarkus.hibernate-orm.jdbc[JDBC related configuration]
+
 h|Type
 h|Default
 
-a|icon:archive[title=Fixed at build time] [[quarkus-hibernate-orm_quarkus.hibernate-orm.jdbc.timezone]]`link:#quarkus-hibernate-orm_quarkus.hibernate-orm.jdbc.timezone[quarkus.hibernate-orm.jdbc.timezone]`
+a|icon:lock[title=Fixed at build time] [[quarkus-hibernate-orm_quarkus.hibernate-orm.jdbc.timezone]]`link:#quarkus-hibernate-orm_quarkus.hibernate-orm.jdbc.timezone[quarkus.hibernate-orm.jdbc.timezone]`
 
 [.description]
 --
@@ -176,7 +226,7 @@ The time zone pushed to the JDBC driver.
 |
 
 
-a|icon:archive[title=Fixed at build time] [[quarkus-hibernate-orm_quarkus.hibernate-orm.jdbc.statement-fetch-size]]`link:#quarkus-hibernate-orm_quarkus.hibernate-orm.jdbc.statement-fetch-size[quarkus.hibernate-orm.jdbc.statement-fetch-size]`
+a|icon:lock[title=Fixed at build time] [[quarkus-hibernate-orm_quarkus.hibernate-orm.jdbc.statement-fetch-size]]`link:#quarkus-hibernate-orm_quarkus.hibernate-orm.jdbc.statement-fetch-size[quarkus.hibernate-orm.jdbc.statement-fetch-size]`
 
 [.description]
 --
@@ -185,7 +235,7 @@ How many rows are fetched at a time by the JDBC driver.
 |
 
 
-a|icon:archive[title=Fixed at build time] [[quarkus-hibernate-orm_quarkus.hibernate-orm.jdbc.statement-batch-size]]`link:#quarkus-hibernate-orm_quarkus.hibernate-orm.jdbc.statement-batch-size[quarkus.hibernate-orm.jdbc.statement-batch-size]`
+a|icon:lock[title=Fixed at build time] [[quarkus-hibernate-orm_quarkus.hibernate-orm.jdbc.statement-batch-size]]`link:#quarkus-hibernate-orm_quarkus.hibernate-orm.jdbc.statement-batch-size[quarkus.hibernate-orm.jdbc.statement-batch-size]`
 
 [.description]
 --
@@ -195,10 +245,11 @@ The number of updates (inserts, updates and deletes) that are sent by the JDBC d
 
 
 h|[[quarkus-hibernate-orm_quarkus.hibernate-orm.log]]link:#quarkus-hibernate-orm_quarkus.hibernate-orm.log[Logging configuration]
+
 h|Type
 h|Default
 
-a|icon:archive[title=Fixed at build time] [[quarkus-hibernate-orm_quarkus.hibernate-orm.log.sql]]`link:#quarkus-hibernate-orm_quarkus.hibernate-orm.log.sql[quarkus.hibernate-orm.log.sql]`
+a|icon:lock[title=Fixed at build time] [[quarkus-hibernate-orm_quarkus.hibernate-orm.log.sql]]`link:#quarkus-hibernate-orm_quarkus.hibernate-orm.log.sql[quarkus.hibernate-orm.log.sql]`
 
 [.description]
 --
@@ -208,7 +259,17 @@ Show SQL logs and format them nicely.
 |`false`
 
 
-a|icon:archive[title=Fixed at build time] [[quarkus-hibernate-orm_quarkus.hibernate-orm.log.jdbc-warnings]]`link:#quarkus-hibernate-orm_quarkus.hibernate-orm.log.jdbc-warnings[quarkus.hibernate-orm.log.jdbc-warnings]`
+a|icon:lock[title=Fixed at build time] [[quarkus-hibernate-orm_quarkus.hibernate-orm.log.bind-param]]`link:#quarkus-hibernate-orm_quarkus.hibernate-orm.log.bind-param[quarkus.hibernate-orm.log.bind-param]`
+
+[.description]
+--
+Logs SQL bind parameter. 
+ Setting it to true is obviously not recommended in production.
+--|boolean 
+|`false`
+
+
+a|icon:lock[title=Fixed at build time] [[quarkus-hibernate-orm_quarkus.hibernate-orm.log.jdbc-warnings]]`link:#quarkus-hibernate-orm_quarkus.hibernate-orm.log.jdbc-warnings[quarkus.hibernate-orm.log.jdbc-warnings]`
 
 [.description]
 --
@@ -218,10 +279,11 @@ Whether JDBC warnings should be collected and logged.
 
 
 h|[[quarkus-hibernate-orm_quarkus.hibernate-orm.cache]]link:#quarkus-hibernate-orm_quarkus.hibernate-orm.cache[Caching configuration]
+
 h|Type
 h|Default
 
-a|icon:archive[title=Fixed at build time] [[quarkus-hibernate-orm_quarkus.hibernate-orm.cache.-cache-.expiration.max-idle]]`link:#quarkus-hibernate-orm_quarkus.hibernate-orm.cache.-cache-.expiration.max-idle[quarkus.hibernate-orm.cache."cache".expiration.max-idle]`
+a|icon:lock[title=Fixed at build time] [[quarkus-hibernate-orm_quarkus.hibernate-orm.cache.-cache-.expiration.max-idle]]`link:#quarkus-hibernate-orm_quarkus.hibernate-orm.cache.-cache-.expiration.max-idle[quarkus.hibernate-orm.cache."cache".expiration.max-idle]`
 
 [.description]
 --
@@ -231,7 +293,7 @@ The maximum time before an object of the cache is considered expired.
 |
 
 
-a|icon:archive[title=Fixed at build time] [[quarkus-hibernate-orm_quarkus.hibernate-orm.cache.-cache-.memory.object-count]]`link:#quarkus-hibernate-orm_quarkus.hibernate-orm.cache.-cache-.memory.object-count[quarkus.hibernate-orm.cache."cache".memory.object-count]`
+a|icon:lock[title=Fixed at build time] [[quarkus-hibernate-orm_quarkus.hibernate-orm.cache.-cache-.memory.object-count]]`link:#quarkus-hibernate-orm_quarkus.hibernate-orm.cache.-cache-.memory.object-count[quarkus.hibernate-orm.cache."cache".memory.object-count]`
 
 [.description]
 --

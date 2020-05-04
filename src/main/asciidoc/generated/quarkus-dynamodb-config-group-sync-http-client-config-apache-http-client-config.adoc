@@ -1,14 +1,14 @@
 [.configuration-legend]
-icon:archive[title=Fixed at build time] Configuration property fixed at build time - icon:cogs[title=Overridable at runtime]️ Configuration property overridable at runtime 
-
+icon:lock[title=Fixed at build time] Configuration property fixed at build time - All other configuration properties are overridable at runtime
 [.configuration-reference, cols="80,.^10,.^10"]
 |===
 
 h|[[quarkus-dynamodb-config-group-sync-http-client-config-apache-http-client-config_configuration]]link:#quarkus-dynamodb-config-group-sync-http-client-config-apache-http-client-config_configuration[Configuration property]
+
 h|Type
 h|Default
 
-a|icon:cogs[title=Overridable at runtime] [[quarkus-dynamodb-config-group-sync-http-client-config-apache-http-client-config_quarkus.dynamodb.sync-client.apache.connection-acquisition-timeout]]`link:#quarkus-dynamodb-config-group-sync-http-client-config-apache-http-client-config_quarkus.dynamodb.sync-client.apache.connection-acquisition-timeout[quarkus.dynamodb.sync-client.apache.connection-acquisition-timeout]`
+a| [[quarkus-dynamodb-config-group-sync-http-client-config-apache-http-client-config_quarkus.dynamodb.sync-client.apache.connection-acquisition-timeout]]`link:#quarkus-dynamodb-config-group-sync-http-client-config-apache-http-client-config_quarkus.dynamodb.sync-client.apache.connection-acquisition-timeout[quarkus.dynamodb.sync-client.apache.connection-acquisition-timeout]`
 
 [.description]
 --
@@ -18,7 +18,7 @@ The amount of time to wait when acquiring a connection from the pool before givi
 |`10S`
 
 
-a|icon:cogs[title=Overridable at runtime] [[quarkus-dynamodb-config-group-sync-http-client-config-apache-http-client-config_quarkus.dynamodb.sync-client.apache.connection-max-idle-time]]`link:#quarkus-dynamodb-config-group-sync-http-client-config-apache-http-client-config_quarkus.dynamodb.sync-client.apache.connection-max-idle-time[quarkus.dynamodb.sync-client.apache.connection-max-idle-time]`
+a| [[quarkus-dynamodb-config-group-sync-http-client-config-apache-http-client-config_quarkus.dynamodb.sync-client.apache.connection-max-idle-time]]`link:#quarkus-dynamodb-config-group-sync-http-client-config-apache-http-client-config_quarkus.dynamodb.sync-client.apache.connection-max-idle-time[quarkus.dynamodb.sync-client.apache.connection-max-idle-time]`
 
 [.description]
 --
@@ -28,7 +28,7 @@ The maximum amount of time that a connection should be allowed to remain open wh
 |`60S`
 
 
-a|icon:cogs[title=Overridable at runtime] [[quarkus-dynamodb-config-group-sync-http-client-config-apache-http-client-config_quarkus.dynamodb.sync-client.apache.connection-time-to-live]]`link:#quarkus-dynamodb-config-group-sync-http-client-config-apache-http-client-config_quarkus.dynamodb.sync-client.apache.connection-time-to-live[quarkus.dynamodb.sync-client.apache.connection-time-to-live]`
+a| [[quarkus-dynamodb-config-group-sync-http-client-config-apache-http-client-config_quarkus.dynamodb.sync-client.apache.connection-time-to-live]]`link:#quarkus-dynamodb-config-group-sync-http-client-config-apache-http-client-config_quarkus.dynamodb.sync-client.apache.connection-time-to-live[quarkus.dynamodb.sync-client.apache.connection-time-to-live]`
 
 [.description]
 --
@@ -38,7 +38,7 @@ The maximum amount of time that a connection should be allowed to remain open, r
 |
 
 
-a|icon:cogs[title=Overridable at runtime] [[quarkus-dynamodb-config-group-sync-http-client-config-apache-http-client-config_quarkus.dynamodb.sync-client.apache.max-connections]]`link:#quarkus-dynamodb-config-group-sync-http-client-config-apache-http-client-config_quarkus.dynamodb.sync-client.apache.max-connections[quarkus.dynamodb.sync-client.apache.max-connections]`
+a| [[quarkus-dynamodb-config-group-sync-http-client-config-apache-http-client-config_quarkus.dynamodb.sync-client.apache.max-connections]]`link:#quarkus-dynamodb-config-group-sync-http-client-config-apache-http-client-config_quarkus.dynamodb.sync-client.apache.max-connections[quarkus.dynamodb.sync-client.apache.max-connections]`
 
 [.description]
 --
@@ -48,7 +48,7 @@ The maximum number of connections allowed in the connection pool.
 |`50`
 
 
-a|icon:cogs[title=Overridable at runtime] [[quarkus-dynamodb-config-group-sync-http-client-config-apache-http-client-config_quarkus.dynamodb.sync-client.apache.expect-continue-enabled]]`link:#quarkus-dynamodb-config-group-sync-http-client-config-apache-http-client-config_quarkus.dynamodb.sync-client.apache.expect-continue-enabled[quarkus.dynamodb.sync-client.apache.expect-continue-enabled]`
+a| [[quarkus-dynamodb-config-group-sync-http-client-config-apache-http-client-config_quarkus.dynamodb.sync-client.apache.expect-continue-enabled]]`link:#quarkus-dynamodb-config-group-sync-http-client-config-apache-http-client-config_quarkus.dynamodb.sync-client.apache.expect-continue-enabled[quarkus.dynamodb.sync-client.apache.expect-continue-enabled]`
 
 [.description]
 --
@@ -57,7 +57,7 @@ Whether the client should send an HTTP expect-continue handshake before each req
 |`true`
 
 
-a|icon:cogs[title=Overridable at runtime] [[quarkus-dynamodb-config-group-sync-http-client-config-apache-http-client-config_quarkus.dynamodb.sync-client.apache.use-idle-connection-reaper]]`link:#quarkus-dynamodb-config-group-sync-http-client-config-apache-http-client-config_quarkus.dynamodb.sync-client.apache.use-idle-connection-reaper[quarkus.dynamodb.sync-client.apache.use-idle-connection-reaper]`
+a| [[quarkus-dynamodb-config-group-sync-http-client-config-apache-http-client-config_quarkus.dynamodb.sync-client.apache.use-idle-connection-reaper]]`link:#quarkus-dynamodb-config-group-sync-http-client-config-apache-http-client-config_quarkus.dynamodb.sync-client.apache.use-idle-connection-reaper[quarkus.dynamodb.sync-client.apache.use-idle-connection-reaper]`
 
 [.description]
 --
@@ -67,7 +67,7 @@ Whether the idle connections in the connection pool should be closed asynchronou
 |`true`
 
 
-a|icon:cogs[title=Overridable at runtime] [[quarkus-dynamodb-config-group-sync-http-client-config-apache-http-client-config_quarkus.dynamodb.sync-client.apache.proxy.enabled]]`link:#quarkus-dynamodb-config-group-sync-http-client-config-apache-http-client-config_quarkus.dynamodb.sync-client.apache.proxy.enabled[quarkus.dynamodb.sync-client.apache.proxy.enabled]`
+a| [[quarkus-dynamodb-config-group-sync-http-client-config-apache-http-client-config_quarkus.dynamodb.sync-client.apache.proxy.enabled]]`link:#quarkus-dynamodb-config-group-sync-http-client-config-apache-http-client-config_quarkus.dynamodb.sync-client.apache.proxy.enabled[quarkus.dynamodb.sync-client.apache.proxy.enabled]`
 
 [.description]
 --
@@ -76,7 +76,7 @@ Enable HTTP proxy
 |`false`
 
 
-a|icon:cogs[title=Overridable at runtime] [[quarkus-dynamodb-config-group-sync-http-client-config-apache-http-client-config_quarkus.dynamodb.sync-client.apache.proxy.endpoint]]`link:#quarkus-dynamodb-config-group-sync-http-client-config-apache-http-client-config_quarkus.dynamodb.sync-client.apache.proxy.endpoint[quarkus.dynamodb.sync-client.apache.proxy.endpoint]`
+a| [[quarkus-dynamodb-config-group-sync-http-client-config-apache-http-client-config_quarkus.dynamodb.sync-client.apache.proxy.endpoint]]`link:#quarkus-dynamodb-config-group-sync-http-client-config-apache-http-client-config_quarkus.dynamodb.sync-client.apache.proxy.endpoint[quarkus.dynamodb.sync-client.apache.proxy.endpoint]`
 
 [.description]
 --
@@ -84,10 +84,10 @@ The endpoint of the proxy server that the SDK should connect through.
  Currently, the endpoint is limited to a host and port. Any other URI components will result in an exception being raised.
 --|link:https://docs.oracle.com/javase/8/docs/api/java/net/URI.html[URI]
  
-|required icon:exclamation-circle[title=Configuration property is required]
+|
 
 
-a|icon:cogs[title=Overridable at runtime] [[quarkus-dynamodb-config-group-sync-http-client-config-apache-http-client-config_quarkus.dynamodb.sync-client.apache.proxy.username]]`link:#quarkus-dynamodb-config-group-sync-http-client-config-apache-http-client-config_quarkus.dynamodb.sync-client.apache.proxy.username[quarkus.dynamodb.sync-client.apache.proxy.username]`
+a| [[quarkus-dynamodb-config-group-sync-http-client-config-apache-http-client-config_quarkus.dynamodb.sync-client.apache.proxy.username]]`link:#quarkus-dynamodb-config-group-sync-http-client-config-apache-http-client-config_quarkus.dynamodb.sync-client.apache.proxy.username[quarkus.dynamodb.sync-client.apache.proxy.username]`
 
 [.description]
 --
@@ -96,7 +96,7 @@ The username to use when connecting through a proxy.
 |
 
 
-a|icon:cogs[title=Overridable at runtime] [[quarkus-dynamodb-config-group-sync-http-client-config-apache-http-client-config_quarkus.dynamodb.sync-client.apache.proxy.password]]`link:#quarkus-dynamodb-config-group-sync-http-client-config-apache-http-client-config_quarkus.dynamodb.sync-client.apache.proxy.password[quarkus.dynamodb.sync-client.apache.proxy.password]`
+a| [[quarkus-dynamodb-config-group-sync-http-client-config-apache-http-client-config_quarkus.dynamodb.sync-client.apache.proxy.password]]`link:#quarkus-dynamodb-config-group-sync-http-client-config-apache-http-client-config_quarkus.dynamodb.sync-client.apache.proxy.password[quarkus.dynamodb.sync-client.apache.proxy.password]`
 
 [.description]
 --
@@ -105,7 +105,7 @@ The password to use when connecting through a proxy.
 |
 
 
-a|icon:cogs[title=Overridable at runtime] [[quarkus-dynamodb-config-group-sync-http-client-config-apache-http-client-config_quarkus.dynamodb.sync-client.apache.proxy.ntlm-domain]]`link:#quarkus-dynamodb-config-group-sync-http-client-config-apache-http-client-config_quarkus.dynamodb.sync-client.apache.proxy.ntlm-domain[quarkus.dynamodb.sync-client.apache.proxy.ntlm-domain]`
+a| [[quarkus-dynamodb-config-group-sync-http-client-config-apache-http-client-config_quarkus.dynamodb.sync-client.apache.proxy.ntlm-domain]]`link:#quarkus-dynamodb-config-group-sync-http-client-config-apache-http-client-config_quarkus.dynamodb.sync-client.apache.proxy.ntlm-domain[quarkus.dynamodb.sync-client.apache.proxy.ntlm-domain]`
 
 [.description]
 --
@@ -114,7 +114,7 @@ For NTLM proxies - the Windows domain name to use when authenticating with the p
 |
 
 
-a|icon:cogs[title=Overridable at runtime] [[quarkus-dynamodb-config-group-sync-http-client-config-apache-http-client-config_quarkus.dynamodb.sync-client.apache.proxy.ntlm-workstation]]`link:#quarkus-dynamodb-config-group-sync-http-client-config-apache-http-client-config_quarkus.dynamodb.sync-client.apache.proxy.ntlm-workstation[quarkus.dynamodb.sync-client.apache.proxy.ntlm-workstation]`
+a| [[quarkus-dynamodb-config-group-sync-http-client-config-apache-http-client-config_quarkus.dynamodb.sync-client.apache.proxy.ntlm-workstation]]`link:#quarkus-dynamodb-config-group-sync-http-client-config-apache-http-client-config_quarkus.dynamodb.sync-client.apache.proxy.ntlm-workstation[quarkus.dynamodb.sync-client.apache.proxy.ntlm-workstation]`
 
 [.description]
 --
@@ -123,7 +123,7 @@ For NTLM proxies - the Windows workstation name to use when authenticating with 
 |
 
 
-a|icon:cogs[title=Overridable at runtime] [[quarkus-dynamodb-config-group-sync-http-client-config-apache-http-client-config_quarkus.dynamodb.sync-client.apache.proxy.preemptive-basic-authentication-enabled]]`link:#quarkus-dynamodb-config-group-sync-http-client-config-apache-http-client-config_quarkus.dynamodb.sync-client.apache.proxy.preemptive-basic-authentication-enabled[quarkus.dynamodb.sync-client.apache.proxy.preemptive-basic-authentication-enabled]`
+a| [[quarkus-dynamodb-config-group-sync-http-client-config-apache-http-client-config_quarkus.dynamodb.sync-client.apache.proxy.preemptive-basic-authentication-enabled]]`link:#quarkus-dynamodb-config-group-sync-http-client-config-apache-http-client-config_quarkus.dynamodb.sync-client.apache.proxy.preemptive-basic-authentication-enabled[quarkus.dynamodb.sync-client.apache.proxy.preemptive-basic-authentication-enabled]`
 
 [.description]
 --
@@ -132,16 +132,16 @@ Whether to attempt to authenticate preemptively against the proxy server using b
 |
 
 
-a|icon:cogs[title=Overridable at runtime] [[quarkus-dynamodb-config-group-sync-http-client-config-apache-http-client-config_quarkus.dynamodb.sync-client.apache.proxy.non-proxy-hosts]]`link:#quarkus-dynamodb-config-group-sync-http-client-config-apache-http-client-config_quarkus.dynamodb.sync-client.apache.proxy.non-proxy-hosts[quarkus.dynamodb.sync-client.apache.proxy.non-proxy-hosts]`
+a| [[quarkus-dynamodb-config-group-sync-http-client-config-apache-http-client-config_quarkus.dynamodb.sync-client.apache.proxy.non-proxy-hosts]]`link:#quarkus-dynamodb-config-group-sync-http-client-config-apache-http-client-config_quarkus.dynamodb.sync-client.apache.proxy.non-proxy-hosts[quarkus.dynamodb.sync-client.apache.proxy.non-proxy-hosts]`
 
 [.description]
 --
 The hosts that the client is allowed to access without going through the proxy.
 --|list of string 
-|required icon:exclamation-circle[title=Configuration property is required]
+|
 
 
-a|icon:cogs[title=Overridable at runtime] [[quarkus-dynamodb-config-group-sync-http-client-config-apache-http-client-config_quarkus.dynamodb.sync-client.apache.tls-managers-provider.type]]`link:#quarkus-dynamodb-config-group-sync-http-client-config-apache-http-client-config_quarkus.dynamodb.sync-client.apache.tls-managers-provider.type[quarkus.dynamodb.sync-client.apache.tls-managers-provider.type]`
+a| [[quarkus-dynamodb-config-group-sync-http-client-config-apache-http-client-config_quarkus.dynamodb.sync-client.apache.tls-managers-provider.type]]`link:#quarkus-dynamodb-config-group-sync-http-client-config-apache-http-client-config_quarkus.dynamodb.sync-client.apache.tls-managers-provider.type[quarkus.dynamodb.sync-client.apache.tls-managers-provider.type]`
 
 [.description]
 --
@@ -158,7 +158,12 @@ Available providers:
 |`system-property`
 
 
-a|icon:cogs[title=Overridable at runtime] [[quarkus-dynamodb-config-group-sync-http-client-config-apache-http-client-config_quarkus.dynamodb.sync-client.apache.tls-managers-provider.file-store.path]]`link:#quarkus-dynamodb-config-group-sync-http-client-config-apache-http-client-config_quarkus.dynamodb.sync-client.apache.tls-managers-provider.file-store.path[quarkus.dynamodb.sync-client.apache.tls-managers-provider.file-store.path]`
+h|[[quarkus-dynamodb-config-group-sync-http-client-config-apache-http-client-config_quarkus.dynamodb.sync-client.apache.tls-managers-provider.file-store]]link:#quarkus-dynamodb-config-group-sync-http-client-config-apache-http-client-config_quarkus.dynamodb.sync-client.apache.tls-managers-provider.file-store[Configuration of the file store provider]
+This configuration section is optional
+h|Type
+h|Default
+
+a| [[quarkus-dynamodb-config-group-sync-http-client-config-apache-http-client-config_quarkus.dynamodb.sync-client.apache.tls-managers-provider.file-store.path]]`link:#quarkus-dynamodb-config-group-sync-http-client-config-apache-http-client-config_quarkus.dynamodb.sync-client.apache.tls-managers-provider.file-store.path[quarkus.dynamodb.sync-client.apache.tls-managers-provider.file-store.path]`
 
 [.description]
 --
@@ -167,7 +172,7 @@ Path to the key store.
 |required icon:exclamation-circle[title=Configuration property is required]
 
 
-a|icon:cogs[title=Overridable at runtime] [[quarkus-dynamodb-config-group-sync-http-client-config-apache-http-client-config_quarkus.dynamodb.sync-client.apache.tls-managers-provider.file-store.type]]`link:#quarkus-dynamodb-config-group-sync-http-client-config-apache-http-client-config_quarkus.dynamodb.sync-client.apache.tls-managers-provider.file-store.type[quarkus.dynamodb.sync-client.apache.tls-managers-provider.file-store.type]`
+a| [[quarkus-dynamodb-config-group-sync-http-client-config-apache-http-client-config_quarkus.dynamodb.sync-client.apache.tls-managers-provider.file-store.type]]`link:#quarkus-dynamodb-config-group-sync-http-client-config-apache-http-client-config_quarkus.dynamodb.sync-client.apache.tls-managers-provider.file-store.type[quarkus.dynamodb.sync-client.apache.tls-managers-provider.file-store.type]`
 
 [.description]
 --
@@ -177,7 +182,35 @@ Key store type.
 |required icon:exclamation-circle[title=Configuration property is required]
 
 
-a|icon:cogs[title=Overridable at runtime] [[quarkus-dynamodb-config-group-sync-http-client-config-apache-http-client-config_quarkus.dynamodb.sync-client.apache.tls-managers-provider.file-store.password]]`link:#quarkus-dynamodb-config-group-sync-http-client-config-apache-http-client-config_quarkus.dynamodb.sync-client.apache.tls-managers-provider.file-store.password[quarkus.dynamodb.sync-client.apache.tls-managers-provider.file-store.password]`
+a| [[quarkus-dynamodb-config-group-sync-http-client-config-apache-http-client-config_quarkus.dynamodb.sync-client.apache.tls-managers-provider.file-store.password]]`link:#quarkus-dynamodb-config-group-sync-http-client-config-apache-http-client-config_quarkus.dynamodb.sync-client.apache.tls-managers-provider.file-store.password[quarkus.dynamodb.sync-client.apache.tls-managers-provider.file-store.password]`
+
+[.description]
+--
+Key store password
+--|string 
+|required icon:exclamation-circle[title=Configuration property is required]
+
+
+a| [[quarkus-dynamodb-config-group-sync-http-client-config-apache-http-client-config_quarkus.dynamodb.async-client.tls-managers-provider.file-store.path]]`link:#quarkus-dynamodb-config-group-sync-http-client-config-apache-http-client-config_quarkus.dynamodb.async-client.tls-managers-provider.file-store.path[quarkus.dynamodb.async-client.tls-managers-provider.file-store.path]`
+
+[.description]
+--
+Path to the key store.
+--|path 
+|required icon:exclamation-circle[title=Configuration property is required]
+
+
+a| [[quarkus-dynamodb-config-group-sync-http-client-config-apache-http-client-config_quarkus.dynamodb.async-client.tls-managers-provider.file-store.type]]`link:#quarkus-dynamodb-config-group-sync-http-client-config-apache-http-client-config_quarkus.dynamodb.async-client.tls-managers-provider.file-store.type[quarkus.dynamodb.async-client.tls-managers-provider.file-store.type]`
+
+[.description]
+--
+Key store type. 
+ See the KeyStore section in the https://docs.oracle.com/javase/8/docs/technotes/guides/security/StandardNames.html#KeyStore[Java Cryptography Architecture Standard Algorithm Name Documentation] for information about standard keystore types.
+--|string 
+|required icon:exclamation-circle[title=Configuration property is required]
+
+
+a| [[quarkus-dynamodb-config-group-sync-http-client-config-apache-http-client-config_quarkus.dynamodb.async-client.tls-managers-provider.file-store.password]]`link:#quarkus-dynamodb-config-group-sync-http-client-config-apache-http-client-config_quarkus.dynamodb.async-client.tls-managers-provider.file-store.password[quarkus.dynamodb.async-client.tls-managers-provider.file-store.password]`
 
 [.description]
 --

@@ -1,14 +1,14 @@
 [.configuration-legend]
-icon:archive[title=Fixed at build time] Configuration property fixed at build time - icon:cogs[title=Overridable at runtime]️ Configuration property overridable at runtime 
-
+icon:lock[title=Fixed at build time] Configuration property fixed at build time - All other configuration properties are overridable at runtime
 [.configuration-reference, cols="80,.^10,.^10"]
 |===
 
 h|[[quarkus-config-group-logging-async-config_configuration]]link:#quarkus-config-group-logging-async-config_configuration[Configuration property]
+
 h|Type
 h|Default
 
-a|icon:cogs[title=Overridable at runtime] [[quarkus-config-group-logging-async-config_quarkus.log.console.async]]`link:#quarkus-config-group-logging-async-config_quarkus.log.console.async[quarkus.log.console.async]`
+a| [[quarkus-config-group-logging-async-config_quarkus.log.console.async]]`link:#quarkus-config-group-logging-async-config_quarkus.log.console.async[quarkus.log.console.async]`
 
 [.description]
 --
@@ -17,7 +17,7 @@ Indicates whether to log asynchronously
 |`false`
 
 
-a|icon:cogs[title=Overridable at runtime] [[quarkus-config-group-logging-async-config_quarkus.log.console.async.queue-length]]`link:#quarkus-config-group-logging-async-config_quarkus.log.console.async.queue-length[quarkus.log.console.async.queue-length]`
+a| [[quarkus-config-group-logging-async-config_quarkus.log.console.async.queue-length]]`link:#quarkus-config-group-logging-async-config_quarkus.log.console.async.queue-length[quarkus.log.console.async.queue-length]`
 
 [.description]
 --
@@ -26,7 +26,7 @@ The queue length to use before flushing writing
 |`512`
 
 
-a|icon:cogs[title=Overridable at runtime] [[quarkus-config-group-logging-async-config_quarkus.log.console.async.overflow]]`link:#quarkus-config-group-logging-async-config_quarkus.log.console.async.overflow[quarkus.log.console.async.overflow]`
+a| [[quarkus-config-group-logging-async-config_quarkus.log.console.async.overflow]]`link:#quarkus-config-group-logging-async-config_quarkus.log.console.async.overflow[quarkus.log.console.async.overflow]`
 
 [.description]
 --
@@ -35,7 +35,7 @@ Determine whether to block the publisher (rather than drop the message) when the
 |`block`
 
 
-a|icon:cogs[title=Overridable at runtime] [[quarkus-config-group-logging-async-config_quarkus.log.file.async]]`link:#quarkus-config-group-logging-async-config_quarkus.log.file.async[quarkus.log.file.async]`
+a| [[quarkus-config-group-logging-async-config_quarkus.log.file.async]]`link:#quarkus-config-group-logging-async-config_quarkus.log.file.async[quarkus.log.file.async]`
 
 [.description]
 --
@@ -44,7 +44,7 @@ Indicates whether to log asynchronously
 |`false`
 
 
-a|icon:cogs[title=Overridable at runtime] [[quarkus-config-group-logging-async-config_quarkus.log.file.async.queue-length]]`link:#quarkus-config-group-logging-async-config_quarkus.log.file.async.queue-length[quarkus.log.file.async.queue-length]`
+a| [[quarkus-config-group-logging-async-config_quarkus.log.file.async.queue-length]]`link:#quarkus-config-group-logging-async-config_quarkus.log.file.async.queue-length[quarkus.log.file.async.queue-length]`
 
 [.description]
 --
@@ -53,7 +53,7 @@ The queue length to use before flushing writing
 |`512`
 
 
-a|icon:cogs[title=Overridable at runtime] [[quarkus-config-group-logging-async-config_quarkus.log.file.async.overflow]]`link:#quarkus-config-group-logging-async-config_quarkus.log.file.async.overflow[quarkus.log.file.async.overflow]`
+a| [[quarkus-config-group-logging-async-config_quarkus.log.file.async.overflow]]`link:#quarkus-config-group-logging-async-config_quarkus.log.file.async.overflow[quarkus.log.file.async.overflow]`
 
 [.description]
 --
@@ -62,7 +62,7 @@ Determine whether to block the publisher (rather than drop the message) when the
 |`block`
 
 
-a|icon:cogs[title=Overridable at runtime] [[quarkus-config-group-logging-async-config_quarkus.log.syslog.async]]`link:#quarkus-config-group-logging-async-config_quarkus.log.syslog.async[quarkus.log.syslog.async]`
+a| [[quarkus-config-group-logging-async-config_quarkus.log.syslog.async]]`link:#quarkus-config-group-logging-async-config_quarkus.log.syslog.async[quarkus.log.syslog.async]`
 
 [.description]
 --
@@ -71,7 +71,7 @@ Indicates whether to log asynchronously
 |`false`
 
 
-a|icon:cogs[title=Overridable at runtime] [[quarkus-config-group-logging-async-config_quarkus.log.syslog.async.queue-length]]`link:#quarkus-config-group-logging-async-config_quarkus.log.syslog.async.queue-length[quarkus.log.syslog.async.queue-length]`
+a| [[quarkus-config-group-logging-async-config_quarkus.log.syslog.async.queue-length]]`link:#quarkus-config-group-logging-async-config_quarkus.log.syslog.async.queue-length[quarkus.log.syslog.async.queue-length]`
 
 [.description]
 --
@@ -80,7 +80,88 @@ The queue length to use before flushing writing
 |`512`
 
 
-a|icon:cogs[title=Overridable at runtime] [[quarkus-config-group-logging-async-config_quarkus.log.syslog.async.overflow]]`link:#quarkus-config-group-logging-async-config_quarkus.log.syslog.async.overflow[quarkus.log.syslog.async.overflow]`
+a| [[quarkus-config-group-logging-async-config_quarkus.log.syslog.async.overflow]]`link:#quarkus-config-group-logging-async-config_quarkus.log.syslog.async.overflow[quarkus.log.syslog.async.overflow]`
+
+[.description]
+--
+Determine whether to block the publisher (rather than drop the message) when the queue is full
+--|`block`, `discard` 
+|`block`
+
+
+a| [[quarkus-config-group-logging-async-config_quarkus.log.handler.console.-console-handlers-.async]]`link:#quarkus-config-group-logging-async-config_quarkus.log.handler.console.-console-handlers-.async[quarkus.log.handler.console."console-handlers".async]`
+
+[.description]
+--
+Indicates whether to log asynchronously
+--|boolean 
+|`false`
+
+
+a| [[quarkus-config-group-logging-async-config_quarkus.log.handler.console.-console-handlers-.async.queue-length]]`link:#quarkus-config-group-logging-async-config_quarkus.log.handler.console.-console-handlers-.async.queue-length[quarkus.log.handler.console."console-handlers".async.queue-length]`
+
+[.description]
+--
+The queue length to use before flushing writing
+--|int 
+|`512`
+
+
+a| [[quarkus-config-group-logging-async-config_quarkus.log.handler.console.-console-handlers-.async.overflow]]`link:#quarkus-config-group-logging-async-config_quarkus.log.handler.console.-console-handlers-.async.overflow[quarkus.log.handler.console."console-handlers".async.overflow]`
+
+[.description]
+--
+Determine whether to block the publisher (rather than drop the message) when the queue is full
+--|`block`, `discard` 
+|`block`
+
+
+a| [[quarkus-config-group-logging-async-config_quarkus.log.handler.file.-file-handlers-.async]]`link:#quarkus-config-group-logging-async-config_quarkus.log.handler.file.-file-handlers-.async[quarkus.log.handler.file."file-handlers".async]`
+
+[.description]
+--
+Indicates whether to log asynchronously
+--|boolean 
+|`false`
+
+
+a| [[quarkus-config-group-logging-async-config_quarkus.log.handler.file.-file-handlers-.async.queue-length]]`link:#quarkus-config-group-logging-async-config_quarkus.log.handler.file.-file-handlers-.async.queue-length[quarkus.log.handler.file."file-handlers".async.queue-length]`
+
+[.description]
+--
+The queue length to use before flushing writing
+--|int 
+|`512`
+
+
+a| [[quarkus-config-group-logging-async-config_quarkus.log.handler.file.-file-handlers-.async.overflow]]`link:#quarkus-config-group-logging-async-config_quarkus.log.handler.file.-file-handlers-.async.overflow[quarkus.log.handler.file."file-handlers".async.overflow]`
+
+[.description]
+--
+Determine whether to block the publisher (rather than drop the message) when the queue is full
+--|`block`, `discard` 
+|`block`
+
+
+a| [[quarkus-config-group-logging-async-config_quarkus.log.handler.syslog.-syslog-handlers-.async]]`link:#quarkus-config-group-logging-async-config_quarkus.log.handler.syslog.-syslog-handlers-.async[quarkus.log.handler.syslog."syslog-handlers".async]`
+
+[.description]
+--
+Indicates whether to log asynchronously
+--|boolean 
+|`false`
+
+
+a| [[quarkus-config-group-logging-async-config_quarkus.log.handler.syslog.-syslog-handlers-.async.queue-length]]`link:#quarkus-config-group-logging-async-config_quarkus.log.handler.syslog.-syslog-handlers-.async.queue-length[quarkus.log.handler.syslog."syslog-handlers".async.queue-length]`
+
+[.description]
+--
+The queue length to use before flushing writing
+--|int 
+|`512`
+
+
+a| [[quarkus-config-group-logging-async-config_quarkus.log.handler.syslog.-syslog-handlers-.async.overflow]]`link:#quarkus-config-group-logging-async-config_quarkus.log.handler.syslog.-syslog-handlers-.async.overflow[quarkus.log.handler.syslog."syslog-handlers".async.overflow]`
 
 [.description]
 --
