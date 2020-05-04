@@ -36,11 +36,6 @@ Key store password
 |required icon:exclamation-circle[title=Configuration property is required]
 
 
-h|[[quarkus-dynamodb-config-group-tls-managers-provider-config-file-store-tls-managers-provider-config_quarkus.dynamodb.async-client.tls-managers-provider.file-store]]link:#quarkus-dynamodb-config-group-tls-managers-provider-config-file-store-tls-managers-provider-config_quarkus.dynamodb.async-client.tls-managers-provider.file-store[Configuration of the file store provider]
-This configuration section is optional
-h|Type
-h|Default
-
 a| [[quarkus-dynamodb-config-group-tls-managers-provider-config-file-store-tls-managers-provider-config_quarkus.dynamodb.async-client.tls-managers-provider.file-store.path]]`link:#quarkus-dynamodb-config-group-tls-managers-provider-config-file-store-tls-managers-provider-config_quarkus.dynamodb.async-client.tls-managers-provider.file-store.path[quarkus.dynamodb.async-client.tls-managers-provider.file-store.path]`
 
 [.description]
